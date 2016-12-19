@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">MJO Mision Cba</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    // Label of navigation
+
+    <string name="navigation_item_itinerary">Itinerario</string>
+    <string name="navigation_item_prayer_of_missionary">Oracion misionera</string>
+    <string name="navigation_item_contact">Info de contacto</string>
+
+</resources>
