@@ -3,15 +3,15 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_camera"
-            android:icon="@drawable/ic_menu_camera"
+            android:id="@+id/nav_itinerary"
+            android:icon="@mipmap/ic_event_black_24dp"
             android:title="@string/navigation_item_itinerary" />
         <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/nav_prayer"
             android:icon="@drawable/ic_menu_gallery"
             android:title="@string/navigation_item_prayer_of_missionary" />
         <item
-            android:id="@+id/nav_slideshow"
+            android:id="@+id/nav_contact"
             android:icon="@drawable/ic_menu_slideshow"
             android:title="@string/navigation_item_contact" />
     </group>
