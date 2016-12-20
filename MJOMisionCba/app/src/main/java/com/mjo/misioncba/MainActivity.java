@@ -12,6 +12,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
 import com.mjo.misioncba.dummy.DummyContent;
+import com.mjo.misioncba.section.contact.ContactFragment;
+import com.mjo.misioncba.section.itinerary.ItineraryFragment;
+import com.mjo.misioncba.section.prayer.PrayerFragment;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, ItineraryFragment.OnListFragmentInteractionListener {
@@ -52,13 +55,16 @@ public class MainActivity extends AppCompatActivity
         // Check the id of the menu and replace fragment
 
         Fragment fragment = null;
+        // Create a new fragment and specify the planet to show based on position
 
         if(id == R.id.nav_itinerary){
-
-            // Create a new fragment and specify the planet to show based on position
              fragment =  ItineraryFragment.newInstance(1);
+        } else if (id == R.id.nav_prayer){
+            fragment =  new PrayerFragment();
+        } else if (id == R.id.nav_contact){
+            fragment = new ContactFragment();
         }
-
+        
         if(fragment != null){
             // Insert the fragment by replacing any existing fragment
             FragmentManager fragmentManager = getSupportFragmentManager();

@@ -1,4 +1,4 @@
-package com.mjo.misioncba;
+package com.mjo.misioncba.section.itinerary;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -6,7 +6,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.mjo.misioncba.ItineraryFragment.OnListFragmentInteractionListener;
+import com.mjo.misioncba.R;
+import com.mjo.misioncba.section.itinerary.ItineraryFragment.OnListFragmentInteractionListener;
 
 import com.mjo.misioncba.dummy.DummyContent.DummyItem;
 

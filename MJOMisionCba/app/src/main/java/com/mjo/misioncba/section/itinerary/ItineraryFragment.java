@@ -1,4 +1,4 @@
-package com.mjo.misioncba;
+package com.mjo.misioncba.section.itinerary;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -10,10 +10,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.mjo.misioncba.R;
 import com.mjo.misioncba.dummy.DummyContent;
 import com.mjo.misioncba.dummy.DummyContent.DummyItem;
-
-import java.util.List;
 
 /**
  * A fragment representing a list of Items.
