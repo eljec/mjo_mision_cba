@@ -11,7 +11,7 @@ public class ContactCottoModel {
     private String contactCottoModelAddressStreetLine;
 
 
-    public void ContactCottoModel(){
+    public  ContactCottoModel(){
 
         this.contactCottoModelTitle = "Cottolendo Don Orione";
         this.contactCottoModelUrlMaps ="https://goo.gl/maps/RnmaKMewFDH2";
@@ -19,6 +19,11 @@ public class ContactCottoModel {
         this.contactCottoModelAddressStreetLine = "Av. Armada Argentina 2440, 5017 Córdoba";
 
     }
+
+    public String getContactCottoModelPhoneNUmber() {
+        return contactCottoModelPhoneNUmber;
+    }
+
     public String getContactCottoModelTitle() {
         return contactCottoModelTitle;
     }
