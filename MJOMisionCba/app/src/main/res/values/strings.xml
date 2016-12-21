@@ -17,7 +17,10 @@
 
     // Prayer
 
-    <string name="prayer_of_missionary">Corazón de Jesús,\ntiende una mirada hacia todos aquellos que no te conocen y hacia los trabajos de los misioneros, quienes, por tu amor, han abandonado su casa, su patria y sus cariños más íntimos. Bendice sus trabajos y concédeles la gracia de repartir el pan de la divina Palabra entre los mendigos de la Verdad. Hazles sentir que Tú estás con ellos en sus trabajos y preocupaciones, y dales la gracia de perseverar hasta el fin en la vida de abnegación para la que los has escogido: Sagrado Corazón de Jesús, por amor de tu misma gloria, protege los esfuerzos de tus Misioneros.\n Amén.</string>
+    <string name="prayer_of_missionary">Corazón de Jesús,tiende una mirada hacia todos aquellos que no te conocen y hacia los trabajos de los misioneros, quienes, por tu amor, han abandonado su casa, su patria y sus cariños más íntimos.
+        \n \n Bendice sus trabajos y concédeles la gracia de repartir el pan de la divina Palabra entre los mendigos de la Verdad.
+        \n \n Hazles sentir que Tú estás con ellos en sus trabajos y preocupaciones, y dales la gracia de perseverar hasta el fin en la vida de abnegación para la que los has escogido: Sagrado Corazón de Jesús, por amor de tu misma gloria, protege los esfuerzos de tus Misioneros.
+        \n Amén.</string>
 
 
     <string-array name="referents_name">

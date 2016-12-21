@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -34,6 +35,13 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        // Default fragment
+
+        if(savedInstanceState == null) {
+            selectItem(R.id.nav_itinerary);
+            navigationView.getMenu().getItem(0).setChecked(true);
+        }
     }
 
     @Override
@@ -54,24 +62,7 @@ public class MainActivity extends AppCompatActivity
 
         // Check the id of the menu and replace fragment
 
-        Fragment fragment = null;
-        // Create a new fragment and specify the planet to show based on position
-
-        if(id == R.id.nav_itinerary){
-             fragment =  ItineraryFragment.newInstance(1);
-        } else if (id == R.id.nav_prayer){
-            fragment =  new PrayerFragment();
-        } else if (id == R.id.nav_contact){
-            fragment = new ContactFragment();
-        }
-        
-        if(fragment != null){
-            // Insert the fragment by replacing any existing fragment
-            FragmentManager fragmentManager = getSupportFragmentManager();
-            fragmentManager.beginTransaction()
-                    .replace(R.id.frame, fragment)
-                    .commit();
-        }
+        selectItem(id);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
@@ -82,5 +73,29 @@ public class MainActivity extends AppCompatActivity
     public void onListFragmentInteraction(DummyContent.DummyItem item) {
 
         // Click on the itinerary list
+    }
+
+    private  void selectItem(int id){
+
+        // Check the id of the menu and replace fragment
+
+        Fragment fragment = null;
+        // Create a new fragment and specify the planet to show based on position
+
+        if(id == R.id.nav_itinerary){
+            fragment =  ItineraryFragment.newInstance(1);
+        } else if (id == R.id.nav_prayer){
+            fragment =  new PrayerFragment();
+        } else if (id == R.id.nav_contact){
+            fragment = new ContactFragment();
+        }
+
+        if(fragment != null){
+            // Insert the fragment by replacing any existing fragment
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            fragmentManager.beginTransaction()
+                    .replace(R.id.frame, fragment)
+                    .commit();
+        }
     }
 }

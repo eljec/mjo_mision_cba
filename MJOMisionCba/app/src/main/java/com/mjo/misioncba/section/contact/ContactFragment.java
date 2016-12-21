@@ -1,6 +1,7 @@
 package com.mjo.misioncba.section.contact;
 
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -34,6 +35,8 @@ public class ContactFragment extends Fragment {
         this.contactContainer = (LinearLayout) fragmentView.findViewById(R.id.fragment_contact_referents_container_view);
         this.cottoContainer = (LinearLayout) fragmentView.findViewById(R.id.fragment_contact_cotto_container_view);
 
+        setUpView();
+
         return fragmentView;
     }
 
@@ -45,7 +48,15 @@ public class ContactFragment extends Fragment {
         ContactCottoModel contactCottoModel = infoGenerator.getCottoContactModel();
 
 
+        // Load the contact
 
+        for (ContactModel contact: contactModels) {
+
+            ContactView contactView = new ContactView(getContext());
+            contactView.configureForModel(contact);
+
+            this.contactContainer.addView(contactView);
+        }
     }
 
 }
