@@ -15,9 +15,6 @@ import com.mjo.misioncba.R;
  */
 public class ContactView  extends LinearLayout {
 
-
-    private ImageButton buttonCall;
-    private ImageButton buttonMsn;
     private TextView contactName;
     private String contactPhoneString;
     private OnContactViewButtonsListener mListener;
@@ -54,22 +51,12 @@ public class ContactView  extends LinearLayout {
         inflater.inflate(R.layout.contact_view, this, true);
 
         this.contactName = (TextView)findViewById(R.id.contact_view_name);
-        this.buttonCall = (ImageButton)findViewById(R.id.contact_view_button_call);
-        this.buttonMsn = (ImageButton)findViewById(R.id.contact_view_button_msn);
-        this.buttonCall.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View view) {
-               if( mListener != null){
-                   mListener.onCallButtonClick(contactPhoneString);
-               }
-            }
-        });
 
-        this.buttonMsn.setOnClickListener(new OnClickListener() {
+        this.contactName.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
                 if( mListener != null){
-                    mListener.onSendMsnButtonClick(contactPhoneString);
+                    mListener.onClickView(contactPhoneString);
                 }
             }
         });
@@ -79,8 +66,6 @@ public class ContactView  extends LinearLayout {
 
     public interface OnContactViewButtonsListener {
 
-        void onCallButtonClick(String phoneNumber);
-
-        void onSendMsnButtonClick(String phoneNumber);
+        void onClickView(String phoneNumber);
     }
 }

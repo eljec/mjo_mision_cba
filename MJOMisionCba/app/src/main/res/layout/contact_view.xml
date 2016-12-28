@@ -1,15 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:orientation="horizontal"
-    android:paddingTop="2dp"
-    android:layout_height="wrap_content">
-
-    <LinearLayout
-        android:layout_width="wrap_content"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_toLeftOf="@+id/contact_view_button_call"
         android:layout_alignParentLeft="true"
         android:paddingLeft="20dp"
         android:layout_alignParentStart="true">
@@ -26,30 +19,3 @@
 
     </LinearLayout>
 
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:src="@mipmap/ic_phone_black_24dp"
-        android:background="@android:color/transparent"
-        android:layout_marginRight="30dp"
-        android:id="@+id/contact_view_button_call"
-        android:layout_alignTop="@+id/contact_view_button_msn"
-        android:layout_toLeftOf="@+id/contact_view_button_msn"
-        android:layout_toStartOf="@+id/contact_view_button_msn"
-        android:layout_marginEnd="30dp" />
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:src="@mipmap/ic_chat_black_24dp"
-        android:background="@android:color/transparent"
-        android:id="@+id/contact_view_button_msn"
-        android:layout_centerVertical="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-
-
-</RelativeLayout>

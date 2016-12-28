@@ -3,6 +3,7 @@ package com.mjo.misioncba.section.contact;
 
 import android.Manifest;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
@@ -11,6 +12,7 @@ import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -101,20 +103,37 @@ public class ContactFragment extends Fragment implements ContactView.OnContactVi
     }
 
     @Override
-    public void onCallButtonClick(String phoneNumber) {
-        openDialApp(phoneNumber);
+    public void onClickView(String phoneNumber) {
+
+        final String  phoneNumberFinal = phoneNumber;
+
+        // Open menu dialog
+
+        CharSequence colors[] = new CharSequence[] {"LLamar", "Enviar mensaje"};
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+        builder.setTitle("¿ Que hago ?");
+        builder.setItems(colors, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                // the user clicked on colors[which]
+
+                if(which == 0){
+
+                    // Call
+
+                    openDialApp(phoneNumberFinal);
+                }else{
+
+                    // Msn
+
+                    openMessengerMenu (phoneNumberFinal);
+                }
+
+            }
+        });
+        builder.show();
     }
-
-    @Override
-    public void onSendMsnButtonClick(String phoneNumber) {
-
-        Intent sendIntent = new Intent();
-        sendIntent.setAction(Intent.ACTION_SEND);
-        sendIntent.putExtra(Intent.EXTRA_TEXT, "Hola !! Como va ?");
-        sendIntent.setType("text/plain");
-        startActivity(sendIntent);
-    }
-
 
     private void openDialApp(String phoneNumber){
 
@@ -133,6 +152,15 @@ public class ContactFragment extends Fragment implements ContactView.OnContactVi
         {
             startActivity(intent);
         }
+    }
+
+    private void openMessengerMenu(String phoneNumber){
+
+        Intent sendIntent = new Intent();
+        sendIntent.setAction(Intent.ACTION_SEND);
+        sendIntent.putExtra(Intent.EXTRA_TEXT, "Hola !! Como va ?");
+        sendIntent.setType("text/plain");
+        startActivity(sendIntent);
     }
 
 }

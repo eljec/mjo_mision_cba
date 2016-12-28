@@ -1,0 +1,18 @@
+{
+  "itinerary": {
+
+    "days": [{
+      "events": [{
+        "eventTitle": "Almuerzo y Bienvenida",
+        "eventDate": "13:00"
+      },
+
+        {
+          "eventTitle": "Mision",
+          "eventDate": "17:00"
+        }
+      ]
+    }]
+  }
+
+}
