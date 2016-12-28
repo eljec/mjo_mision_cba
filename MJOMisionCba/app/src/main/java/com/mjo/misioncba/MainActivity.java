@@ -4,18 +4,21 @@ import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.mjo.misioncba.dummy.DummyContent;
+import com.mjo.misioncba.model.ItineraryProvider;
 import com.mjo.misioncba.section.contact.ContactFragment;
 import com.mjo.misioncba.section.itinerary.ItineraryFragment;
 import com.mjo.misioncba.section.prayer.PrayerFragment;
+
+import static com.mjo.misioncba.model.ItineraryProviderConstants.ITINERARY_ASSET_FILE;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, ItineraryFragment.OnListFragmentInteractionListener {
@@ -37,11 +40,13 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         // Default fragment
-
-        if(savedInstanceState == null) {
+        if (savedInstanceState == null) {
             selectItem(R.id.nav_itinerary);
             navigationView.getMenu().getItem(0).setChecked(true);
         }
+
+        Itinerary result = new ItineraryProvider(getAssets(), ITINERARY_ASSET_FILE).obtain();
+        Toast.makeText(this, result.toString(), Toast.LENGTH_LONG).show();
     }
 
     @Override
@@ -75,22 +80,22 @@ public class MainActivity extends AppCompatActivity
         // Click on the itinerary list
     }
 
-    private  void selectItem(int id){
+    private void selectItem(int id) {
 
         // Check the id of the menu and replace fragment
 
         Fragment fragment = null;
         // Create a new fragment and specify the planet to show based on position
 
-        if(id == R.id.nav_itinerary){
-            fragment =  ItineraryFragment.newInstance(1);
-        } else if (id == R.id.nav_prayer){
-            fragment =  new PrayerFragment();
-        } else if (id == R.id.nav_contact){
+        if (id == R.id.nav_itinerary) {
+            fragment = ItineraryFragment.newInstance(1);
+        } else if (id == R.id.nav_prayer) {
+            fragment = new PrayerFragment();
+        } else if (id == R.id.nav_contact) {
             fragment = new ContactFragment();
         }
 
-        if(fragment != null){
+        if (fragment != null) {
             // Insert the fragment by replacing any existing fragment
             FragmentManager fragmentManager = getSupportFragmentManager();
             fragmentManager.beginTransaction()
