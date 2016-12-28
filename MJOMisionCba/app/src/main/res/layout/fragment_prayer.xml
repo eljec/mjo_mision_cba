@@ -12,33 +12,32 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-    <View
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:background="@mipmap/oracion_mision_2">
+             <View
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@mipmap/oracion_mision_2">
 
-    </View>
+            </View>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Oracion del Misionero"
+                android:paddingRight="30dp"
+                android:paddingTop="20dp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:textSize="20dp"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Oracion del Misionero"
-            android:paddingLeft="20dp"
+            android:paddingLeft="30dp"
             android:paddingRight="30dp"
             android:paddingTop="20dp"
-            android:textStyle="bold"
-            android:textColor="@android:color/black"
-            android:textSize="20dp"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingLeft="30dp"
-        android:paddingRight="30dp"
-        android:paddingTop="20dp"
-        android:textSize="20dp"
-        android:lineSpacingExtra="10dp"
-        android:text="@string/prayer_of_missionary" />
+            android:textSize="20dp"
+            android:lineSpacingExtra="10dp"
+            android:text="@string/prayer_of_missionary" />
 
     </LinearLayout>
 

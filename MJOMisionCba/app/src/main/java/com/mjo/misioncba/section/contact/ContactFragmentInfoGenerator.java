@@ -14,6 +14,10 @@ public class ContactFragmentInfoGenerator {
 
     private Context context;
 
+    private static final String FIREMAN_PHONE = "03514515361";
+    private static final String POLICE_PHONE = "0351101";
+    private static final String HOSPITAL_PHONE = "0351107";
+
     public ContactFragmentInfoGenerator(Context context) {
         this.context = context;
     }
@@ -43,5 +47,19 @@ public class ContactFragmentInfoGenerator {
     public ContactCottoModel getCottoContactModel(){
 
         return new ContactCottoModel();
+    }
+
+    public String getPolicePhoe(){
+
+        return POLICE_PHONE;
+    }
+
+    public  String getHospitalPhone(){
+
+        return  HOSPITAL_PHONE;
+    }
+
+    public  String getFiremanPhone(){
+        return FIREMAN_PHONE;
     }
 }

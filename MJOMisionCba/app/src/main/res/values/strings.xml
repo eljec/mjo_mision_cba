@@ -10,7 +10,7 @@
 
     <string name="navigation_item_itinerary">Itinerario</string>
     <string name="navigation_item_prayer_of_missionary">Oracion misionera</string>
-    <string name="navigation_item_contact">Info de contacto</string>
+    <string name="navigation_item_contact">Info</string>
 
 
     // Sections:
@@ -18,18 +18,18 @@
     // Prayer
 
     <string name="prayer_of_missionary">Corazón de Jesús,tiende una mirada hacia todos aquellos que no te conocen y hacia los trabajos de los misioneros, quienes, por tu amor, han abandonado su casa, su patria y sus cariños más íntimos.
-        \n \n Bendice sus trabajos y concédeles la gracia de repartir el pan de la divina Palabra entre los mendigos de la Verdad.
-        \n \n Hazles sentir que Tú estás con ellos en sus trabajos y preocupaciones, y dales la gracia de perseverar hasta el fin en la vida de abnegación para la que los has escogido: Sagrado Corazón de Jesús, por amor de tu misma gloria, protege los esfuerzos de tus Misioneros.
-        \n Amén.</string>
+        \n \nBendice sus trabajos y concédeles la gracia de repartir el pan de la divina Palabra entre los mendigos de la Verdad.
+        \n \nHazles sentir que Tú estás con ellos en sus trabajos y preocupaciones, y dales la gracia de perseverar hasta el fin en la vida de abnegación para la que los has escogido: Sagrado Corazón de Jesús, por amor de tu misma gloria, protege los esfuerzos de tus Misioneros.
+        \n \nAmén.</string>
 
 
     <string-array name="referents_name">
-        <item>Flor </item>
-        <item>Lauti</item>
-        <item>Tami</item>
-        <item>Sabri</item>
-        <item>Cachi</item>
-        <item>Ana laura</item>
+        <item>Florencia Rodriguez </item>
+        <item>Lautaro Abrigo</item>
+        <item>Tamara Rodriguez</item>
+        <item>Sabrina Chavez</item>
+        <item>Lucaz Lopez (Cachi)</item>
+        <item>Ana laura Peralta</item>
     </string-array>
 
     <string-array name="referents_phone_number">

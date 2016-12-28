@@ -16,7 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textStyle="bold"
-            android:paddingLeft="10dp"
+            android:paddingLeft="5dp"
             android:textSize="22dp"
             android:text="Referentes"/>
 
@@ -32,8 +32,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textStyle="bold"
+            android:paddingLeft="5dp"
             android:textSize="22dp"
-            android:text="¿Donde esta el Cotto?"/>
+            android:text="Cotto"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -77,15 +78,46 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textStyle="bold"
-            android:paddingLeft="10dp"
+            android:paddingLeft="5dp"
             android:layout_marginTop="10dp"
             android:textSize="22dp"
             android:text="Emergencias"/>
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
 
+            <Button
+                android:layout_width="wrap_content"
+                android:id="@+id/fragment_contact_cotto_button_hospital"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/nurse_image"
+                android:layout_centerInParent="true"
+                android:text="Hospital"
+                android:background="@android:color/transparent"
+                />
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/policeman_image"
+                android:layout_alignParentLeft="true"
+                android:text="Policia"
+                android:id="@+id/fragment_contact_cotto_button_police"
+                android:background="@android:color/transparent"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/fireman_image"
+                android:layout_alignParentRight="true"
+                android:text="Bomberos"
+                android:id="@+id/fragment_contact_cotto_button_fireman"
+                android:background="@android:color/transparent"
+                />
 
         </RelativeLayout>
 

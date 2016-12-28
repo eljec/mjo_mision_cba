@@ -16,6 +16,7 @@ import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -40,6 +41,10 @@ public class ContactFragment extends Fragment implements ContactView.OnContactVi
     private TextView cottoPhoneTextView;
     private ImageButton cottoImageButtonMap;
 
+    private Button firemanButton;
+    private Button policeButton;
+    private Button hospitalButton;
+
     public ContactFragment() {
         // Required empty public constructor
     }
@@ -56,6 +61,9 @@ public class ContactFragment extends Fragment implements ContactView.OnContactVi
         this.cottoAddressLineTextView = (TextView) fragmentView.findViewById(R.id.fragment_contact_cotto_address_line);
         this.cottoPhoneTextView = (TextView) fragmentView.findViewById(R.id.fragment_contact_cotto_phone);
         this.cottoImageButtonMap = (ImageButton) fragmentView.findViewById(R.id.fragment_contact_cotto_image);
+        this.firemanButton = (Button) fragmentView.findViewById(R.id.fragment_contact_cotto_button_fireman);
+        this.hospitalButton = (Button) fragmentView.findViewById(R.id.fragment_contact_cotto_button_hospital);
+        this.policeButton = (Button) fragmentView.findViewById(R.id.fragment_contact_cotto_button_police);
 
         setUpView();
 
@@ -64,7 +72,7 @@ public class ContactFragment extends Fragment implements ContactView.OnContactVi
 
     private void setUpView(){
 
-        ContactFragmentInfoGenerator infoGenerator = new ContactFragmentInfoGenerator(getContext());
+        final ContactFragmentInfoGenerator infoGenerator = new ContactFragmentInfoGenerator(getContext());
 
         ArrayList<ContactModel> contactModels = infoGenerator.getReferentsContactModels();
         final ContactCottoModel contactCottoModel = infoGenerator.getCottoContactModel();
@@ -83,14 +91,14 @@ public class ContactFragment extends Fragment implements ContactView.OnContactVi
 
         // Cotto
 
-        this.cottoPhoneTextView.setText("Telñefono: " + contactCottoModel.getContactCottoModelPhoneNUmber());
+        this.cottoPhoneTextView.setText("Tel: " + contactCottoModel.getContactCottoModelPhoneNUmber());
         this.cottoPhoneTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 openDialApp(contactCottoModel.getContactCottoModelPhoneNUmber());
             }
         });
-        this.cottoAddressLineTextView.setText("Direccion: " + contactCottoModel.getContactCottoModelAddressStreetLine());
+        this.cottoAddressLineTextView.setText(contactCottoModel.getContactCottoModelAddressStreetLine());
         this.cottoImageButtonMap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -98,6 +106,29 @@ public class ContactFragment extends Fragment implements ContactView.OnContactVi
                 String uri = contactCottoModel.getContactCottoModelUrlMaps();
                 Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(uri));
                 startActivity(intent);
+            }
+        });
+
+        // Setup help buttons
+
+        this.policeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openDialApp(infoGenerator.getPolicePhoe());
+            }
+        });
+
+        this.hospitalButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openDialApp(infoGenerator.getHospitalPhone());
+            }
+        });
+
+        this.firemanButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openDialApp(infoGenerator.getFiremanPhone());
             }
         });
     }
@@ -116,20 +147,13 @@ public class ContactFragment extends Fragment implements ContactView.OnContactVi
         builder.setItems(colors, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                // the user clicked on colors[which]
-
                 if(which == 0){
-
                     // Call
-
                     openDialApp(phoneNumberFinal);
                 }else{
-
                     // Msn
-
                     openMessengerMenu (phoneNumberFinal);
                 }
-
             }
         });
         builder.show();
