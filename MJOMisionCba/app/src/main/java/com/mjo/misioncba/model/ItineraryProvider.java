@@ -17,19 +17,16 @@ import java.io.InputStream;
 public class ItineraryProvider {
 
     private final AssetManager assetManager;
-    private final String assetFileName;
 
-    public ItineraryProvider(@NonNull AssetManager assetManager, @NonNull String assetFileName) {
+    public ItineraryProvider(@NonNull AssetManager assetManager) {
         this.assetManager = assetManager;
-        this.assetFileName = assetFileName;
     }
 
-    public Itinerary obtain() {
-        String jsonTextFromAssets = obtainJsonString(createInputStream());
-        return parseItinerary(jsonTextFromAssets);
+    public Itinerary obtain(@NonNull String assetFileName) {
+        return parseItinerary(createInputStream(assetFileName));
     }
 
-    private InputStream createInputStream() {
+    private InputStream createInputStream(@NonNull String assetFileName) {
         try {
             return assetManager.open(assetFileName);
         } catch (IOException e) {
@@ -37,24 +34,11 @@ public class ItineraryProvider {
         }
     }
 
-    private String obtainJsonString(@NonNull InputStream inputStream) {
+    private Itinerary parseItinerary(@NonNull InputStream inputStream) {
         try {
-            int size = inputStream.available();
-            byte[] buffer = new byte[size];
-            inputStream.read(buffer);
-            inputStream.close();
-
-            return new String(buffer);
+            return new ObjectMapper().readValue(inputStream, Itinerary.class);
         } catch (IOException e) {
-            throw new IllegalStateException("Cannot process asset file.", e);
-        }
-    }
-
-    private Itinerary parseItinerary(@NonNull String jsonText) {
-        try {
-            return new ObjectMapper().readValue(jsonText, Itinerary.class);
-        } catch (IOException e) {
-            throw new IllegalStateException("Cannot create an instance of Itinerary from asset resource. Invalid json: " + jsonText, e);
+            throw new IllegalStateException("Cannot create an instance of Itinerary from asset resource.", e);
         }
     }
 }

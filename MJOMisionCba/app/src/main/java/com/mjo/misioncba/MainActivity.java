@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity
             navigationView.getMenu().getItem(0).setChecked(true);
         }
 
-        Itinerary result = new ItineraryProvider(getAssets(), ITINERARY_ASSET_FILE).obtain();
+        Itinerary result = new ItineraryProvider(getAssets()).obtain(ITINERARY_ASSET_FILE);
         Toast.makeText(this, result.toString(), Toast.LENGTH_LONG).show();
     }
 
