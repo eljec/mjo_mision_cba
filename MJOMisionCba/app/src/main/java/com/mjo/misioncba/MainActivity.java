@@ -16,6 +16,7 @@ import com.mjo.misioncba.dummy.DummyContent;
 import com.mjo.misioncba.model.ItineraryProvider;
 import com.mjo.misioncba.section.contact.ContactFragment;
 import com.mjo.misioncba.section.itinerary.ItineraryFragment;
+import com.mjo.misioncba.section.itinerary.ItineraryListViewItemModel;
 import com.mjo.misioncba.section.prayer.PrayerFragment;
 
 import static com.mjo.misioncba.model.ItineraryProviderConstants.ITINERARY_ASSET_FILE;
@@ -44,9 +45,6 @@ public class MainActivity extends AppCompatActivity
             selectItem(R.id.nav_itinerary);
             navigationView.getMenu().getItem(0).setChecked(true);
         }
-
-        Itinerary result = new ItineraryProvider(getAssets()).obtain(ITINERARY_ASSET_FILE);
-        Toast.makeText(this, result.toString(), Toast.LENGTH_LONG).show();
     }
 
     @Override
@@ -75,7 +73,7 @@ public class MainActivity extends AppCompatActivity
     }
 
     @Override
-    public void onListFragmentInteraction(DummyContent.DummyItem item) {
+    public void onListFragmentInteraction(ItineraryListViewItemModel item) {
 
         // Click on the itinerary list
     }

@@ -40,5 +40,23 @@
         <item>555</item>
         <item>66</item>
     </string-array>
+    <string name="title_activity_cotto_detail">Cotto</string>
+
+    <string name="cotto_detail_part_one">
+        "El Pequeño Cottolengo Argentino fue abierto por el mismo San Luis Orione."
+        "Durante su segunda estadía en nuestro país, colocó en Claypole (al sur del gran Buenos Aires) la piedra fundamental de su construcción el 28 de abril de 1935."
+        "Sus comienzos en la ciudad de Córdoba, datan de 1957."
+    </string>
+
+    <string name="cotto_detail_part_two">
+        "El Pequeño Cottolengo Don Orione es una obra destinada a la atención integral de personas con discapacidad."
+        "Por albergar a personas con discapacidades múltiples, físicas y mentales, su abordaje terapéutico y educativo es complejo,"
+        "debiendo realizarse a través de equipos interdisciplinares, donde la tarea de cada uno (religiosos, profesionales, asistentes, voluntarios) se pone en común para un mejor servicio del residente y, en lo posible, de su familia, cuando ésta existe.
+    </string>
+
+    <string name="cotto_detail_part_three">
+        "Fundamentalmente, las tareas en favor de las personas con discapacidad, son las de asistir, cuidar, rehabilitar, educar y promover, siempre en un necesario clima de familia:"
+        "'La Pequeña Obra de la Divina Providencia debe ser como una familia en Jesucristo… porque nuestra fuerza está en la unión, cuyo vínculo es Cristo'."
+    </string>
 
 </resources>

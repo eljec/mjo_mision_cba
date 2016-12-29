@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.mjo.misioncba.ItineraryDay;
 import com.mjo.misioncba.R;
 import com.mjo.misioncba.section.itinerary.ItineraryFragment.OnListFragmentInteractionListener;
 
@@ -20,10 +21,10 @@ import java.util.List;
  */
 public class MyItineraryRecyclerViewAdapter extends RecyclerView.Adapter<MyItineraryRecyclerViewAdapter.ViewHolder> {
 
-    private final List<DummyItem> mValues;
+    private final List<ItineraryListViewItemModel> mValues;
     private final OnListFragmentInteractionListener mListener;
 
-    public MyItineraryRecyclerViewAdapter(List<DummyItem> items, OnListFragmentInteractionListener listener) {
+    public MyItineraryRecyclerViewAdapter(List<ItineraryListViewItemModel> items, OnListFragmentInteractionListener listener) {
         mValues = items;
         mListener = listener;
     }
@@ -38,8 +39,10 @@ public class MyItineraryRecyclerViewAdapter extends RecyclerView.Adapter<MyItine
     @Override
     public void onBindViewHolder(final ViewHolder holder, int position) {
         holder.mItem = mValues.get(position);
-        holder.mIdView.setText(mValues.get(position).id);
-        holder.mContentView.setText(mValues.get(position).content);
+        //holder.mIdView.setText(mValues.get(position).id);
+        //holder.mContentView.setText(mValues.get(position).content);
+
+        holder.mContentView.setText(mValues.get(position).text);
 
         holder.mView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,13 +65,13 @@ public class MyItineraryRecyclerViewAdapter extends RecyclerView.Adapter<MyItine
         public final View mView;
         public final TextView mIdView;
         public final TextView mContentView;
-        public DummyItem mItem;
+        public ItineraryListViewItemModel mItem;
 
         public ViewHolder(View view) {
             super(view);
             mView = view;
-            mIdView = (TextView) view.findViewById(R.id.id);
-            mContentView = (TextView) view.findViewById(R.id.content);
+            mIdView = (TextView) view.findViewById(R.id.grament_itinerary_list_event_title);
+            mContentView = (TextView) view.findViewById(R.id.grament_itinerary_list_event_date);
         }
 
         @Override

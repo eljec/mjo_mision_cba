@@ -7,6 +7,7 @@ import java.util.ArrayList;
  */
 public class Itinerary {
 
+
     private ArrayList<ItineraryDay> days;
 
     public ArrayList<ItineraryDay> getDays() {

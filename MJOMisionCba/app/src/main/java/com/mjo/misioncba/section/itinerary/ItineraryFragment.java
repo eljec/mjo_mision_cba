@@ -10,9 +10,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.mjo.misioncba.Itinerary;
+import com.mjo.misioncba.ItineraryDay;
+import com.mjo.misioncba.ItineraryDayEvent;
+import com.mjo.misioncba.MisionCbaApplication;
 import com.mjo.misioncba.R;
 import com.mjo.misioncba.dummy.DummyContent;
 import com.mjo.misioncba.dummy.DummyContent.DummyItem;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A fragment representing a list of Items.
@@ -68,12 +75,35 @@ public class ItineraryFragment extends Fragment {
             } else {
                 recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
             }
-            recyclerView.setAdapter(new MyItineraryRecyclerViewAdapter(DummyContent.ITEMS, mListener));
+            recyclerView.setAdapter(new MyItineraryRecyclerViewAdapter(modelForList(), mListener));
         }
         return view;
     }
 
 
+    private List<ItineraryListViewItemModel> modelForList(){
+
+        MisionCbaApplication appState = ((MisionCbaApplication)getActivity().getApplication());
+        Itinerary itinerary = appState.getItinerary();
+
+
+        List<ItineraryListViewItemModel> listItem = new ArrayList<ItineraryListViewItemModel>();
+
+        for (ItineraryDay day: itinerary.getDays())
+        {
+            // Create item for list
+            ItineraryListViewItemModel itemPerDay = new ItineraryListViewItemModel(ItineraryListViewItemModel.DAY_TYPE, "Dia",0);
+            listItem.add(itemPerDay);
+
+            for (ItineraryDayEvent event: day.getEvents())
+            {
+                ItineraryListViewItemModel eventPerDay = new ItineraryListViewItemModel(ItineraryListViewItemModel.EVENT_TYPE, event.getEventTitle(),0);
+                listItem.add(eventPerDay);
+            }
+        }
+
+        return listItem;
+    }
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
@@ -103,6 +133,6 @@ public class ItineraryFragment extends Fragment {
      */
     public interface OnListFragmentInteractionListener {
         // TODO: Update argument type and name
-        void onListFragmentInteraction(DummyItem item);
+        void onListFragmentInteraction(ItineraryListViewItemModel item);
     }
 }

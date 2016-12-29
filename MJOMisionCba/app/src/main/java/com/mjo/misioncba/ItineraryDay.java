@@ -7,6 +7,7 @@ import java.util.ArrayList;
  */
 public class ItineraryDay {
 
+    private String title;
     private ArrayList<ItineraryDayEvent> events;
 
     public ArrayList<ItineraryDayEvent> getEvents() {
@@ -15,5 +16,13 @@ public class ItineraryDay {
 
     public void setEvents(ArrayList<ItineraryDayEvent> events) {
         this.events = events;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 }

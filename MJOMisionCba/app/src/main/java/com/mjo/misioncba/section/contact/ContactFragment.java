@@ -23,6 +23,7 @@ import android.widget.TextView;
 
 import com.mjo.misioncba.MainActivity;
 import com.mjo.misioncba.R;
+import com.mjo.misioncba.section.cotto.CottoDetailActivity;
 
 import org.w3c.dom.Text;
 
@@ -95,7 +96,12 @@ public class ContactFragment extends Fragment implements ContactView.OnContactVi
         this.cottoPhoneTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openDialApp(contactCottoModel.getContactCottoModelPhoneNUmber());
+                //openDialApp(contactCottoModel.getContactCottoModelPhoneNUmber());
+
+                // Open cotto detail
+
+                Intent intent = new Intent(getContext(), CottoDetailActivity.class);
+                startActivity(intent);
             }
         });
         this.cottoAddressLineTextView.setText(contactCottoModel.getContactCottoModelAddressStreetLine());
