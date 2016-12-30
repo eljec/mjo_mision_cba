@@ -1,9 +1,11 @@
 package com.mjo.misioncba.section.itinerary;
 
+import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.mjo.misioncba.ItineraryDay;
@@ -14,37 +16,71 @@ import com.mjo.misioncba.dummy.DummyContent.DummyItem;
 
 import java.util.List;
 
-/**
- * {@link RecyclerView.Adapter} that can display a {@link DummyItem} and makes a call to the
- * specified {@link OnListFragmentInteractionListener}.
- * TODO: Replace the implementation with code for your data type.
- */
-public class MyItineraryRecyclerViewAdapter extends RecyclerView.Adapter<MyItineraryRecyclerViewAdapter.ViewHolder> {
+public class MyItineraryRecyclerViewAdapter extends RecyclerView.Adapter{
 
     private final List<ItineraryListViewItemModel> mValues;
     private final OnListFragmentInteractionListener mListener;
+    private Context mContext;
 
-    public MyItineraryRecyclerViewAdapter(List<ItineraryListViewItemModel> items, OnListFragmentInteractionListener listener) {
+
+    public MyItineraryRecyclerViewAdapter(List<ItineraryListViewItemModel> items, OnListFragmentInteractionListener listener, Context context) {
         mValues = items;
         mListener = listener;
+        mContext = context;
     }
 
     @Override
-    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.fragment_itinerary, parent, false);
-        return new ViewHolder(view);
+    public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View view;
+        RecyclerView.ViewHolder holder = null;
+
+        switch (viewType) {
+            case ItineraryListViewItemModel.DAY_TYPE:
+               view =  LayoutInflater.from(parent.getContext())
+                        .inflate(android.R.layout.simple_list_item_1, parent, false);
+                view.setBackgroundColor(mContext.getResources().getColor(android.R.color.background_dark));
+
+                holder = new HeaderSectionViewHolder (view);
+                break;
+            case ItineraryListViewItemModel.EVENT_TYPE:
+
+                view = LayoutInflater.from(parent.getContext())
+                        .inflate(R.layout.fragment_itinerary, parent, false);
+
+                holder = new EventViewHolder (view);
+                break;
+
+        }
+
+        return holder;
     }
 
     @Override
-    public void onBindViewHolder(final ViewHolder holder, int position) {
-        holder.mItem = mValues.get(position);
-        //holder.mIdView.setText(mValues.get(position).id);
-        //holder.mContentView.setText(mValues.get(position).content);
+    public void onBindViewHolder(final RecyclerView.ViewHolder holder, int position) {
 
-        holder.mContentView.setText(mValues.get(position).text);
 
-        holder.mView.setOnClickListener(new View.OnClickListener() {
+        ItineraryListViewItemModel modelItem = mValues.get(position);
+        if (modelItem != null) {
+
+            switch (modelItem.type) {
+                case ItineraryListViewItemModel.DAY_TYPE:
+
+                    ((HeaderSectionViewHolder) holder).mTitleTextView.setText(modelItem.text);
+
+                    break;
+
+                case ItineraryListViewItemModel.EVENT_TYPE:
+
+                    EventViewHolder eventHolder = (EventViewHolder) holder;
+
+                    eventHolder.mTitleTextView.setText(modelItem.text);
+                    eventHolder.mDateTextView.setText(modelItem.date);
+
+                    break;
+
+            }
+        }
+        /*holder.mView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (null != mListener) {
@@ -53,7 +89,7 @@ public class MyItineraryRecyclerViewAdapter extends RecyclerView.Adapter<MyItine
                     mListener.onListFragmentInteraction(holder.mItem);
                 }
             }
-        });
+        });*/
     }
 
     @Override
@@ -61,22 +97,52 @@ public class MyItineraryRecyclerViewAdapter extends RecyclerView.Adapter<MyItine
         return mValues.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
-        public final View mView;
-        public final TextView mIdView;
-        public final TextView mContentView;
-        public ItineraryListViewItemModel mItem;
 
-        public ViewHolder(View view) {
+    @Override
+    public int getItemViewType(int position) {
+        return mValues.get(position).type;
+    }
+
+    // Holder for header section
+
+    public class HeaderSectionViewHolder extends RecyclerView.ViewHolder {
+        public final View mView;
+        public final TextView mTitleTextView;
+
+        public HeaderSectionViewHolder(View view) {
             super(view);
             mView = view;
-            mIdView = (TextView) view.findViewById(R.id.grament_itinerary_list_event_title);
-            mContentView = (TextView) view.findViewById(R.id.grament_itinerary_list_event_date);
+            mTitleTextView = (TextView) view.findViewById(android.R.id.text1);
+            mTitleTextView.setTextColor(mContext.getResources().getColor(android.R.color.white));
         }
 
         @Override
         public String toString() {
-            return super.toString() + " '" + mContentView.getText() + "'";
+            return super.toString() + " '" + mTitleTextView.getText() + "'";
+        }
+    }
+
+    // Holder for raw
+
+    public class EventViewHolder extends RecyclerView.ViewHolder {
+        public final View mView;
+        public final TextView mTitleTextView;
+        public final TextView mDateTextView;
+        public final ImageView mEventImageView;
+
+        public ItineraryListViewItemModel mItem;
+
+        public EventViewHolder(View view) {
+            super(view);
+            mView = view;
+            mTitleTextView = (TextView) view.findViewById(R.id.frament_itinerary_list_event_title);
+            mDateTextView = (TextView) view.findViewById(R.id.frament_itinerary_list_event_date);
+            mEventImageView = (ImageView) view.findViewById(R.id.frament_itinerary_list_event_image);
+        }
+
+        @Override
+        public String toString() {
+            return super.toString() + " '" + mTitleTextView.getText() + "'";
         }
     }
 }

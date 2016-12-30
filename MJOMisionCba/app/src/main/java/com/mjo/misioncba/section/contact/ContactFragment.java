@@ -41,6 +41,7 @@ public class ContactFragment extends Fragment implements ContactView.OnContactVi
     private TextView cottoAddressLineTextView;
     private TextView cottoPhoneTextView;
     private ImageButton cottoImageButtonMap;
+    private TextView cottoSectionLabel;
 
     private Button firemanButton;
     private Button policeButton;
@@ -65,6 +66,8 @@ public class ContactFragment extends Fragment implements ContactView.OnContactVi
         this.firemanButton = (Button) fragmentView.findViewById(R.id.fragment_contact_cotto_button_fireman);
         this.hospitalButton = (Button) fragmentView.findViewById(R.id.fragment_contact_cotto_button_hospital);
         this.policeButton = (Button) fragmentView.findViewById(R.id.fragment_contact_cotto_button_police);
+
+        this.cottoSectionLabel = (TextView) fragmentView.findViewById(R.id.fragment_contact_cotto_section_label);
 
         setUpView();
 
@@ -93,15 +96,18 @@ public class ContactFragment extends Fragment implements ContactView.OnContactVi
         // Cotto
 
         this.cottoPhoneTextView.setText("Tel: " + contactCottoModel.getContactCottoModelPhoneNUmber());
+        this.cottoSectionLabel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Open cotto detail
+                Intent intent = new Intent(getContext(), CottoDetailActivity.class);
+                startActivity(intent);
+            }
+        });
         this.cottoPhoneTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //openDialApp(contactCottoModel.getContactCottoModelPhoneNUmber());
-
-                // Open cotto detail
-
-                Intent intent = new Intent(getContext(), CottoDetailActivity.class);
-                startActivity(intent);
+                openDialApp(contactCottoModel.getContactCottoModelPhoneNUmber());
             }
         });
         this.cottoAddressLineTextView.setText(contactCottoModel.getContactCottoModelAddressStreetLine());

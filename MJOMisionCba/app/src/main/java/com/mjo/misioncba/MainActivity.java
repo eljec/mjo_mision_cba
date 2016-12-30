@@ -1,5 +1,6 @@
 package com.mjo.misioncba;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
@@ -7,6 +8,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
@@ -75,7 +77,7 @@ public class MainActivity extends AppCompatActivity
     @Override
     public void onListFragmentInteraction(ItineraryListViewItemModel item) {
 
-        // Click on the itinerary list
+        // NO hacemos anda
     }
 
     private void selectItem(int id) {
@@ -86,7 +88,7 @@ public class MainActivity extends AppCompatActivity
         // Create a new fragment and specify the planet to show based on position
 
         if (id == R.id.nav_itinerary) {
-            fragment = ItineraryFragment.newInstance(1);
+            fragment = ItineraryFragment.newInstance();
         } else if (id == R.id.nav_prayer) {
             fragment = new PrayerFragment();
         } else if (id == R.id.nav_contact) {

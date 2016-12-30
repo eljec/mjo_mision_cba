@@ -3,6 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:scrollbars="none"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
     tools:context=".section.contact.ContactFragment">
 
 
@@ -18,7 +20,7 @@
             android:textStyle="bold"
             android:paddingLeft="5dp"
             android:textSize="22dp"
-            android:text="Referentes"/>
+            android:text="@string/fragment_contact_referentes_de_mision_label"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -33,8 +35,9 @@
             android:layout_height="wrap_content"
             android:textStyle="bold"
             android:paddingLeft="5dp"
+            android:id="@+id/fragment_contact_cotto_section_label"
             android:textSize="22dp"
-            android:text="Cotto"/>
+            android:text="@string/fragment_contact_cotto_label"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -81,7 +84,7 @@
             android:paddingLeft="5dp"
             android:layout_marginTop="10dp"
             android:textSize="22dp"
-            android:text="Emergencias"/>
+            android:text="@string/fragment_contact_emergencias_label"/>
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -94,7 +97,7 @@
                 android:layout_height="wrap_content"
                 android:drawableTop="@drawable/nurse_image"
                 android:layout_centerInParent="true"
-                android:text="Hospital"
+                android:text="@string/fragment_contact_hospital_label"
                 android:background="@android:color/transparent"
                 />
 
@@ -104,7 +107,7 @@
                 android:layout_height="wrap_content"
                 android:drawableTop="@drawable/policeman_image"
                 android:layout_alignParentLeft="true"
-                android:text="Policia"
+                android:text="@string/fragment_contact_policia_label"
                 android:id="@+id/fragment_contact_cotto_button_police"
                 android:background="@android:color/transparent"
                 />
@@ -114,7 +117,7 @@
                 android:layout_height="wrap_content"
                 android:drawableTop="@drawable/fireman_image"
                 android:layout_alignParentRight="true"
-                android:text="Bomberos"
+                android:text="@string/fragment_contact_bomberos_label"
                 android:id="@+id/fragment_contact_cotto_button_fireman"
                 android:background="@android:color/transparent"
                 />

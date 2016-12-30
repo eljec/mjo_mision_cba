@@ -28,17 +28,15 @@
         <item>Lautaro Abrigo</item>
         <item>Tamara Rodriguez</item>
         <item>Sabrina Chavez</item>
-        <item>Lucaz Lopez (Cachi)</item>
         <item>Ana laura Peralta</item>
     </string-array>
 
     <string-array name="referents_phone_number">
-        <item>111 </item>
-        <item>222</item>
-        <item>333</item>
-        <item>44</item>
-        <item>555</item>
-        <item>66</item>
+        <item>3515280086 </item>
+        <item>3516807934</item>
+        <item>3513739501</item>
+        <item>3518101704</item>
+        <item>3533412019</item>
     </string-array>
     <string name="title_activity_cotto_detail">Cotto</string>
 
@@ -58,5 +56,14 @@
         "Fundamentalmente, las tareas en favor de las personas con discapacidad, son las de asistir, cuidar, rehabilitar, educar y promover, siempre en un necesario clima de familia:"
         "'La Pequeña Obra de la Divina Providencia debe ser como una familia en Jesucristo… porque nuestra fuerza está en la unión, cuyo vínculo es Cristo'."
     </string>
+
+    // Label of contact view
+
+    <string name="fragment_contact_referentes_de_mision_label">Referentes misiòn</string>
+    <string name="fragment_contact_cotto_label">Cotto</string>
+    <string name="fragment_contact_emergencias_label">Emergencias</string>
+    <string name="fragment_contact_policia_label">Policia</string>
+    <string name="fragment_contact_bomberos_label">Bomberos</string>
+    <string name="fragment_contact_hospital_label">Hospital</string>
 
 </resources>

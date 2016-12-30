@@ -2,17 +2,28 @@
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:orientation="horizontal"
         android:layout_alignParentLeft="true"
         android:paddingLeft="20dp"
         android:layout_alignParentStart="true">
 
 
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/mjo_logo"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/frament_itinerary_list_event_image"
+        />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/contact_view_name"
-            android:textSize="17dp"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center_vertical"
+            android:textSize="17sp"
             android:text="Julio Castillo"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="20dp"/>

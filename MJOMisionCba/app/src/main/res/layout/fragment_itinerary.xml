@@ -1,23 +1,47 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@android:color/holo_orange_dark"
-    android:orientation="vertical">
+    android:background="@android:color/white">
 
-    <TextView
-        android:id="@+id/grament_itinerary_list_event_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Cena"
-        android:layout_margin="@dimen/text_margin"
-        android:textAppearance="?attr/textAppearanceListItem" />
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/mjo_logo"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:layout_centerVertical="true"
+        android:id="@+id/frament_itinerary_list_event_image"
+        />
 
-    <TextView
-        android:id="@+id/grament_itinerary_list_event_date"
-        android:layout_width="wrap_content"
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="10:40"
-        android:layout_margin="@dimen/text_margin"
-        android:textAppearance="?attr/textAppearanceListItem" />
-</LinearLayout>
+        android:orientation="vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/frament_itinerary_list_event_image"
+        android:layout_toEndOf="@+id/frament_itinerary_list_event_image">
+
+        <TextView
+            android:id="@+id/frament_itinerary_list_event_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cena"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginBottom="5dp"
+            android:textAppearance="?attr/textAppearanceListItem" />
+
+        <TextView
+            android:id="@+id/frament_itinerary_list_event_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="10:40"
+            android:textStyle="italic"
+            android:textColor="@android:color/darker_gray"
+            android:layout_marginLeft="16dp"
+            android:textAppearance="?attr/textAppearanceListItem" />
+    </LinearLayout>
+
+</RelativeLayout>

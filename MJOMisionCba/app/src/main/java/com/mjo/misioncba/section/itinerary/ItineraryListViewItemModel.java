@@ -9,13 +9,15 @@ public class ItineraryListViewItemModel {
     public static final int EVENT_TYPE=1;
 
     public int type;
-    public int data;
+    public String date;
     public String text;
+    public int imageType;
 
-    public ItineraryListViewItemModel(int type, String text, int data)
+    public ItineraryListViewItemModel(int type, String text, String date, int imageType )
     {
         this.type=type;
-        this.data=data;
+        this.date=date;
         this.text=text;
+        this.imageType = imageType;
     }
 }
