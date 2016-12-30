@@ -1,6 +1,6 @@
 package com.mjo.misioncba;
 
-import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
@@ -8,23 +8,20 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
-import android.widget.Toast;
 
-import com.mjo.misioncba.dummy.DummyContent;
-import com.mjo.misioncba.model.ItineraryProvider;
 import com.mjo.misioncba.section.contact.ContactFragment;
+import com.mjo.misioncba.section.cotto.CottoDetailActivity;
 import com.mjo.misioncba.section.itinerary.ItineraryFragment;
 import com.mjo.misioncba.section.itinerary.ItineraryListViewItemModel;
 import com.mjo.misioncba.section.prayer.PrayerFragment;
-
-import static com.mjo.misioncba.model.ItineraryProviderConstants.ITINERARY_ASSET_FILE;
+import com.mjo.misioncba.section.readings.ReadingFragmentListFragment;
+import com.mjo.misioncba.section.readings.ReadingsItemLIst;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, ItineraryFragment.OnListFragmentInteractionListener {
+        implements NavigationView.OnNavigationItemSelectedListener, ItineraryFragment.OnListFragmentInteractionListener, ReadingFragmentListFragment.OnReadingListFragmentInteractionListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -90,7 +87,7 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_itinerary) {
             fragment = ItineraryFragment.newInstance();
         } else if (id == R.id.nav_prayer) {
-            fragment = new PrayerFragment();
+            fragment = ReadingFragmentListFragment.newInstance();
         } else if (id == R.id.nav_contact) {
             fragment = new ContactFragment();
         }
@@ -102,5 +99,11 @@ public class MainActivity extends AppCompatActivity
                     .replace(R.id.frame, fragment)
                     .commit();
         }
+    }
+
+    @Override
+    public void onReadingListFragmentInteraction(int position) {
+        Intent intent = new Intent(this, ReadingsDatailsActivity.class);
+        startActivity(intent);
     }
 }

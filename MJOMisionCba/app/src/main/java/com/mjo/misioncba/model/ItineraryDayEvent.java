@@ -1,4 +1,4 @@
-package com.mjo.misioncba;
+package com.mjo.misioncba.model;
 
 /**
  * Created by jucastillo on 20/12/16.

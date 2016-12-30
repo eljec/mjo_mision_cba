@@ -1,8 +1,8 @@
 package com.mjo.misioncba;
 
 import android.app.Application;
-import android.widget.Toast;
 
+import com.mjo.misioncba.model.Itinerary;
 import com.mjo.misioncba.model.ItineraryProvider;
 
 import static com.mjo.misioncba.model.ItineraryProviderConstants.ITINERARY_ASSET_FILE;

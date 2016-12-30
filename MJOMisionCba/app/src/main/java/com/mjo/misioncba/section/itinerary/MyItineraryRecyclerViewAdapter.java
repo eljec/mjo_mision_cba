@@ -7,25 +7,18 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import com.mjo.misioncba.ItineraryDay;
 import com.mjo.misioncba.R;
-import com.mjo.misioncba.section.itinerary.ItineraryFragment.OnListFragmentInteractionListener;
-
-import com.mjo.misioncba.dummy.DummyContent.DummyItem;
 
 import java.util.List;
 
 public class MyItineraryRecyclerViewAdapter extends RecyclerView.Adapter{
 
     private final List<ItineraryListViewItemModel> mValues;
-    private final OnListFragmentInteractionListener mListener;
     private Context mContext;
 
 
-    public MyItineraryRecyclerViewAdapter(List<ItineraryListViewItemModel> items, OnListFragmentInteractionListener listener, Context context) {
+    public MyItineraryRecyclerViewAdapter(List<ItineraryListViewItemModel> items, Context context) {
         mValues = items;
-        mListener = listener;
         mContext = context;
     }
 
@@ -80,16 +73,6 @@ public class MyItineraryRecyclerViewAdapter extends RecyclerView.Adapter{
 
             }
         }
-        /*holder.mView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (null != mListener) {
-                    // Notify the active callbacks interface (the activity, if the
-                    // fragment is attached to one) that an item has been selected.
-                    mListener.onListFragmentInteraction(holder.mItem);
-                }
-            }
-        });*/
     }
 
     @Override
@@ -130,7 +113,6 @@ public class MyItineraryRecyclerViewAdapter extends RecyclerView.Adapter{
         public final TextView mDateTextView;
         public final ImageView mEventImageView;
 
-        public ItineraryListViewItemModel mItem;
 
         public EventViewHolder(View view) {
             super(view);

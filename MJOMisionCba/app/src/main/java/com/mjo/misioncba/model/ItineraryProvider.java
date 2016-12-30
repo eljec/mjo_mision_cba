@@ -4,7 +4,6 @@ import android.content.res.AssetManager;
 import android.support.annotation.NonNull;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.mjo.misioncba.Itinerary;
 
 import java.io.IOException;
 import java.io.InputStream;

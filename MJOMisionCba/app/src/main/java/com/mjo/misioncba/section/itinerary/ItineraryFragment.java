@@ -3,21 +3,17 @@ package com.mjo.misioncba.section.itinerary;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.mjo.misioncba.Itinerary;
-import com.mjo.misioncba.ItineraryDay;
-import com.mjo.misioncba.ItineraryDayEvent;
+import com.mjo.misioncba.model.Itinerary;
+import com.mjo.misioncba.model.ItineraryDay;
+import com.mjo.misioncba.model.ItineraryDayEvent;
 import com.mjo.misioncba.MisionCbaApplication;
 import com.mjo.misioncba.R;
-import com.mjo.misioncba.dummy.DummyContent;
-import com.mjo.misioncba.dummy.DummyContent.DummyItem;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -56,7 +52,7 @@ public class ItineraryFragment extends Fragment {
             RecyclerView recyclerView = (RecyclerView) view;
             recyclerView.setLayoutManager(new LinearLayoutManager(context));
 
-            recyclerView.setAdapter(new MyItineraryRecyclerViewAdapter(this.listItem, mListener, getContext()));
+            recyclerView.setAdapter(new MyItineraryRecyclerViewAdapter(this.listItem, getContext()));
             recyclerView.addOnItemTouchListener(
                     new RecyclerViewItemClickListener(context, new RecyclerViewItemClickListener.OnItemClickListener() {
                         @Override public void onItemClick(View view, int position) {

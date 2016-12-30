@@ -1,4 +1,4 @@
-package com.mjo.misioncba;
+package com.mjo.misioncba.model;
 
 import java.util.ArrayList;
 
