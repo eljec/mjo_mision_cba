@@ -17,6 +17,8 @@ public class ContactView  extends LinearLayout {
 
     private TextView contactName;
     private String contactPhoneString;
+    ContactModel contactModel;
+
     private OnContactViewButtonsListener mListener;
 
     public ContactView(Context context) {
@@ -40,6 +42,7 @@ public class ContactView  extends LinearLayout {
 
     public void configureForModel (ContactModel model){
 
+        this.contactModel = model;
         this.contactName.setText(model.getContactName());
         this.contactPhoneString = model.getContactNumber();
 
@@ -56,7 +59,7 @@ public class ContactView  extends LinearLayout {
             @Override
             public void onClick(View view) {
                 if( mListener != null){
-                    mListener.onClickView(contactPhoneString);
+                    mListener.onClickView(contactModel);
                 }
             }
         });
@@ -66,6 +69,6 @@ public class ContactView  extends LinearLayout {
 
     public interface OnContactViewButtonsListener {
 
-        void onClickView(String phoneNumber);
+        void onClickView(ContactModel contactModel);
     }
 }

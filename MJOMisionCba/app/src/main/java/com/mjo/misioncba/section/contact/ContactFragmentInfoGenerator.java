@@ -5,6 +5,7 @@ import android.content.res.Resources;
 
 import com.mjo.misioncba.R;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 /**
@@ -31,13 +32,15 @@ public class ContactFragmentInfoGenerator {
         Resources res = this.context.getResources();
         String[] referentsName = res.getStringArray(R.array.referents_name);
         String[] referentsPhoneNumber = res.getStringArray(R.array.referents_phone_number);
+        int[] profileImageType = res.getIntArray(R.array.referents_profile_type_imager);
 
 
         for (int i = 0; i < referentsName.length; i++) {
             String name = referentsName[i];
             String phoneNUmber = referentsPhoneNumber[i];
+            int imageType = profileImageType[i];
 
-            ContactModel contact = new ContactModel(name, phoneNUmber);
+            ContactModel contact = new ContactModel(name, phoneNUmber, imageType);
 
             contacts.add(contact);
         }

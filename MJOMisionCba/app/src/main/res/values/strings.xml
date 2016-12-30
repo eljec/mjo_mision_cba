@@ -26,19 +26,25 @@
 
     <string-array name="referents_name">
         <item>Florencia Rodriguez </item>
-        <item>Lautaro Abrigo</item>
         <item>Tamara Rodriguez</item>
-        <item>Sabrina Chavez</item>
         <item>Ana laura Peralta</item>
+        <!--<item>Lautaro Abrigo</item>
+        <item>Sabrina Chavez</item>-->
     </string-array>
 
     <string-array name="referents_phone_number">
         <item>3515280086 </item>
-        <item>3516807934</item>
         <item>3513739501</item>
-        <item>3518101704</item>
         <item>3533412019</item>
+        <!--<item>3516807934</item>
+        <item>3518101704</item>-->
     </string-array>
+
+    <array name="referents_profile_type_imager">
+        <item >1</item>
+        <item >2</item>
+        <item >3</item>
+    </array>
     <string name="title_activity_cotto_detail">Cotto</string>
 
     <string name="cotto_detail_part_one">

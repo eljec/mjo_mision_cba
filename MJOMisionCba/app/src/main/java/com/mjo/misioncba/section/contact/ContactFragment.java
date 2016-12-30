@@ -146,28 +146,32 @@ public class ContactFragment extends Fragment implements ContactView.OnContactVi
     }
 
     @Override
-    public void onClickView(String phoneNumber) {
+    public void onClickView(ContactModel contactModel) {
 
-        final String  phoneNumberFinal = phoneNumber;
+        final String  phoneNumberFinal = contactModel.getContactNumber();
 
         // Open menu dialog
 
         CharSequence colors[] = new CharSequence[] {"LLamar", "Enviar mensaje"};
 
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
-        builder.setTitle("¿ Que hago ?");
-        builder.setItems(colors, new DialogInterface.OnClickListener() {
+        builder.setTitle(contactModel.getContactName());
+        builder.setView(new ContactModalDetailView (getContext(),contactModel.getType()));
+        builder.setIcon(R.drawable.mjo_logo);
+
+        builder.setPositiveButton("Llamar", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                if(which == 0){
-                    // Call
-                    openDialApp(phoneNumberFinal);
-                }else{
-                    // Msn
-                    openMessengerMenu (phoneNumberFinal);
-                }
+
+                openDialApp(phoneNumberFinal);
+            }
+        }).setNegativeButton("Enviar mensaje", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                openMessengerMenu (phoneNumberFinal);
             }
         });
+
         builder.show();
     }
 
@@ -192,10 +196,9 @@ public class ContactFragment extends Fragment implements ContactView.OnContactVi
 
     private void openMessengerMenu(String phoneNumber){
 
-        Intent sendIntent = new Intent();
-        sendIntent.setAction(Intent.ACTION_SEND);
-        sendIntent.putExtra(Intent.EXTRA_TEXT, "Hola !! Como va ?");
-        sendIntent.setType("text/plain");
+        Uri uri = Uri.parse("smsto:" + phoneNumber);
+        Intent sendIntent = new Intent(Intent.ACTION_SENDTO, uri);
+        sendIntent.putExtra("sms_body", "Hola !! Como va ?");
         startActivity(sendIntent);
     }
 
