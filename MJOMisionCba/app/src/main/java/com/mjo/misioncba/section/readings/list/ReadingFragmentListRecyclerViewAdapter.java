@@ -1,4 +1,4 @@
-package com.mjo.misioncba.section.readings;
+package com.mjo.misioncba.section.readings.list;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;

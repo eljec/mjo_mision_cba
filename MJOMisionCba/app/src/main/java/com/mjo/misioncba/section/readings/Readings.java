@@ -15,12 +15,21 @@ public class Readings {
 
     private int readingType;
     private String readingTitle;
+    private String readingSubtitle;
     private String readingText;
 
-    public Readings(int readingType, String readingTitle, String readingText) {
+    public Readings(int readingType, String readingTitle, String readingSubitle, String readingText) {
         this.readingType = readingType;
         this.readingTitle = readingTitle;
+        this.readingSubtitle = readingSubitle;
         this.readingText = readingText;
+    }
+
+    public Readings(String readingTitle, String readingSubtitle, String readingText) {
+        this.readingTitle = readingTitle;
+        this.readingSubtitle = readingSubtitle;
+        this.readingText = readingText;
+        this.readingType = -1;
     }
 
     public int getReadingType() {
@@ -45,5 +54,13 @@ public class Readings {
 
     public void setReadingText(String readingText) {
         this.readingText = readingText;
+    }
+
+    public String getReadingSubtitle() {
+        return readingSubtitle;
+    }
+
+    public void setReadingSubtitle(String readingSubtitle) {
+        this.readingSubtitle = readingSubtitle;
     }
 }

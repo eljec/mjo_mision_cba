@@ -1,4 +1,4 @@
-package com.mjo.misioncba.section.readings;
+package com.mjo.misioncba.section.readings.list;
 
 import android.content.Context;
 import android.content.res.Resources;
@@ -13,7 +13,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.mjo.misioncba.R;
-import com.mjo.misioncba.section.itinerary.ItineraryListViewItemModel;
 import com.mjo.misioncba.section.itinerary.RecyclerViewItemClickListener;
 
 public class ReadingFragmentListFragment extends Fragment {

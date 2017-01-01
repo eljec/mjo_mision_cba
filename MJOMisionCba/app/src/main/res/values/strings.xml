@@ -84,4 +84,54 @@
         <item>Sabado 14</item>
         <item>Domingo 15</item>
     </string-array>
+
+
+    // Lecturas
+
+    // Headers
+    <string name="firs_reading_text">Primnera lectura </string>
+    <string name="psalms_reading_text">Salmo</string>
+    <string name="second_reading_text">Segunda lectura</string>
+    <string name="gospel_reading_text">Evangelio</string>
+
+
+    //+++++++++ DAY 1 +++++++++++++++++ //
+
+    <string name="first_redaing_for_day_1"> "Cuanto pedimos lo recibimos de Dios, porque guardamos sus mandamientos y hacemos lo que le agrada. Y éste es su mandamiento: que creamos en el nombre de su Hijo Jesucristo, y que nos amemos unos a otros, tal como nos lo mandó. Quien guarda sus mandamientos permanece en Dios, y Dios en él; en esto conocemos que permanece en nosotros: por el Espíritu que nos dio. Queridos: no os fiéis de cualquier espíritu, sino examinad si los espíritus vienen de Dios, pues muchos falsos profetas han salido al mundo. Podréis conocer en esto el espíritu de Dios: todo espíritu que confiesa a Jesucristo venido en carne es de Dios; y todo espíritu que no confiesa a Jesús no es de Dios: es del Anticristo. El cual habéis oído que iba a venir; pues bien, ya está en el mundo. Vosotros, hijos míos, sois de Dios y lo habéis vencido. Pues el que está en vosotros es más que el que está en el mundo. Ellos son del mundo; por eso hablan según el mundo y el mundo los escucha. Nosotros somos de Dios. Quien conoce a Dios nos escucha, quien no es de Dios no nos escucha. En esto conocemos el espíritu de la verdad y el espíritu del error.\n\n Palabra de Dios"</string>
+    <string name="secong_redaing_for_day_1"></string>
+    <string name="psalms_redaing_for_day_1"> "Voy a proclamar el decreto del Señor;él me ha dicho: «Tú eres mi Hijo:\nyo te he engendrado hoy. Pídemelo: te daré en herencia las naciones, en posesión, los confines de la tierra.» R/.\n\nY ahora, reyes, sed sensatos; escarmentad, los que regís la tierra: servid al Señor con temor, rendidle homenaje temblando. R/."</string>
+    <string name="gospel_redaing_for_day_1"> "En aquel tiempo, al enterarse Jesús de que habían arrestado a Juan se retiró a Galilea. Dejando Nazaret, se estableció en Cafarnaún, junto al lago, en el territorio de Zabulón y Neftalí. Así se cumplió lo que había dicho el profeta Isaías: «País de Zabulón y país de Neftalí, camino del mar, al otro lado del Jordán, Galilea de los gentiles. El pueblo que habitaba en tinieblas vio una luz grande; a los que habitaban en tierra y sombras de muerte, una luz les brilló.»Entonces comenzó Jesús a predicar diciendo: «Convertíos, porque está cerca el reino de los cielos.»Recorría toda Galilea, enseñando en las sinagogas y proclamando el Evangelio del reino, curando las enfermedades y dolencias del pueblo. Su fama se extendió por toda Siria y le traían todos los enfermos aquejados de toda clase de enfermedades y dolores, endemoniados, lunáticos y paralíticos. Y él los curaba. Y le seguían multitudes venidas de Galilea, Decápolis, Jerusalén, Judea y Trasjordania.\n\n Palabra del Señor"</string>
+
+    <string name="first_redaing_subtitle_for_day_1">"Lectura de la primera carta del apóstol san Juan (3,22–4,6):"</string>
+    <string name="secong_redaing_subtitle_for_day_1"></string>
+    <string name="psalms_redaing_subtitle_for_day_1">"Sal 2,7-8.10-12a \n\nR/. Te daré en herencia las naciones"</string>
+    <string name="gospel_redaing_subtitle_for_day_1">"Lectura del santo evangelio según san Mateo (4,12-17.23-25):"</string>
+
+
+
+    // Arrays
+    <string-array name="readings_for_day_1_content">
+        <item>@string/first_redaing_for_day_1</item>
+        <item>@string/psalms_redaing_for_day_1 </item>
+        <item>@string/gospel_redaing_for_day_1</item>
+    </string-array>
+
+    <string-array name="readings_for_day_1_subtitle">
+        <item>@string/first_redaing_subtitle_for_day_1</item>
+        <item>@string/psalms_redaing_subtitle_for_day_1 </item>
+        <item>@string/gospel_redaing_subtitle_for_day_1</item>
+    </string-array>
+
+
+    <string-array name="readings_for_day_1_title">
+        <item>@string/firs_reading_text</item>
+        <item>@string/psalms_reading_text </item>
+        <item>@string/gospel_reading_text</item>
+    </string-array>
+
+
+    // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ //
+
+
+    <string name="mock_primera_lectura">Cuanto pedimos lo recibimos de Dios, porque guardamos sus mandamientos y hacemos lo que le agrada. Y éste es su mandamiento: que creamos en el nombre de su Hijo Jesucristo, y que nos amemos unos a otros, tal como nos lo mandó. Quien guarda sus mandamientos permanece en Dios, y Dios en él; en esto conocemos que permanece en nosotros: por el Espíritu que nos dio. Queridos: no os fiéis de cualquier espíritu, sino examinad si los espíritus vienen de Dios, pues muchos falsos profetas han salido al mundo. Podréis conocer en esto el espíritu de Dios: todo espíritu que confiesa a Jesucristo venido en carne es de Dios; y todo espíritu que no confiesa a Jesús no es de Dios: es del Anticristo. El cual habéis oído que iba a venir; pues bien, ya está en el mundo. Vosotros, hijos míos, sois de Dios y lo habéis vencido. Pues el que está en vosotros es más que el que está en el mundo. Ellos son del mundo; por eso hablan según el mundo y el mundo los escucha. Nosotros somos de Dios. Quien conoce a Dios nos escucha, quien no es de Dios no nos escucha. En esto conocemos el espíritu de la verdad y el espíritu del error.</string>
 </resources>

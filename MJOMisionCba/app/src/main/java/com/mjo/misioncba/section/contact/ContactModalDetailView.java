@@ -20,7 +20,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
  */
 public class ContactModalDetailView extends LinearLayout {
 
-    private ImageView profileImageView;
+    private CircleImageView profileImageView;
 
     public ContactModalDetailView(Context context) {
         super(context);
@@ -48,7 +48,7 @@ public class ContactModalDetailView extends LinearLayout {
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         inflater.inflate(R.layout.contact_alert_detail_view, this, true);
 
-        this.profileImageView = (ImageView) findViewById(R.id.profile_image);
+        this.profileImageView = (CircleImageView) findViewById(R.id.profile_image);
         this.profileImageView.setImageDrawable(imageForType(type));
     }
 

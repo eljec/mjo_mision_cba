@@ -159,13 +159,13 @@ public class ContactFragment extends Fragment implements ContactView.OnContactVi
         builder.setView(new ContactModalDetailView (getContext(),contactModel.getType()));
         builder.setIcon(R.drawable.mjo_logo);
 
-        builder.setPositiveButton("Llamar", new DialogInterface.OnClickListener() {
+        builder.setNegativeButton("Llamar", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
 
                 openDialApp(phoneNumberFinal);
             }
-        }).setNegativeButton("Enviar mensaje", new DialogInterface.OnClickListener() {
+        }).setPositiveButton("Enviar mensaje", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 openMessengerMenu (phoneNumberFinal);

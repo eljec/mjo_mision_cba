@@ -13,12 +13,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
 import com.mjo.misioncba.section.contact.ContactFragment;
-import com.mjo.misioncba.section.cotto.CottoDetailActivity;
 import com.mjo.misioncba.section.itinerary.ItineraryFragment;
 import com.mjo.misioncba.section.itinerary.ItineraryListViewItemModel;
-import com.mjo.misioncba.section.prayer.PrayerFragment;
-import com.mjo.misioncba.section.readings.ReadingFragmentListFragment;
-import com.mjo.misioncba.section.readings.ReadingsItemLIst;
+import com.mjo.misioncba.section.readings.list.ReadingFragmentListFragment;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, ItineraryFragment.OnListFragmentInteractionListener, ReadingFragmentListFragment.OnReadingListFragmentInteractionListener {
@@ -104,6 +101,7 @@ public class MainActivity extends AppCompatActivity
     @Override
     public void onReadingListFragmentInteraction(int position) {
         Intent intent = new Intent(this, ReadingsDatailsActivity.class);
+        intent.putExtra("READING_DAY_SELECTED", position + 1);
         startActivity(intent);
     }
 }

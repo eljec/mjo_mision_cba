@@ -1,9 +1,11 @@
-package com.mjo.misioncba.section.readings;
+package com.mjo.misioncba.section.readings.detail;
+
+import com.mjo.misioncba.section.readings.Readings;
 
 /**
  * Created by jucastillo on 30/12/16.
  */
-public class ReadingsItemLIst {
+public class ReadingsDetailItemLIst {
 
     public static final int READINBG_ITEM_LIST_TYPE_HEADER=0;
     public static final int READINBG_ITEM_LIST_TYPE_CONTENT=1;
@@ -12,11 +14,11 @@ public class ReadingsItemLIst {
     private int readingItemListType;
     private Readings readingModel;
 
-    public ReadingsItemLIst(int readingItemListType) {
+    public ReadingsDetailItemLIst(int readingItemListType) {
         this.readingItemListType = readingItemListType;
     }
 
-    public ReadingsItemLIst(int readingItemListType, Readings readingModel) {
+    public ReadingsDetailItemLIst(int readingItemListType, Readings readingModel) {
         this.readingItemListType = readingItemListType;
         this.readingModel = readingModel;
     }
