@@ -6,7 +6,7 @@
     <ImageView
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:src="@drawable/mjo_logo"
+        android:src="@drawable/mjo_logo_nuevo"
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="10dp"
         android:layout_centerVertical="true"

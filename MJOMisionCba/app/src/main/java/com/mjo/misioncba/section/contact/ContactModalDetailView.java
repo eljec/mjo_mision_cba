@@ -69,7 +69,7 @@ public class ContactModalDetailView extends LinearLayout {
                 break;
 
             default:
-                drawable = ContextCompat.getDrawable(getContext(),R.drawable.mjo_logo );
+                drawable = ContextCompat.getDrawable(getContext(),R.drawable.mjo_logo_nuevo );
                 break;
         }
 

@@ -74,9 +74,73 @@ public class ReadingDetailListItemGenerator {
         switch (day){
 
             case 1 :
+                // Sabado 7
+
                 titlesResId = R.array.readings_for_day_1_title;
                 subtitlesResId = R.array.readings_for_day_1_subtitle;
                 contentResId = R.array.readings_for_day_1_content;
+
+                break;
+
+            case 2 :
+                // Domingo 8
+
+                titlesResId = R.array.readings_for_day_2_title;
+                subtitlesResId = R.array.readings_for_day_2_subtitle;
+                contentResId = R.array.readings_for_day_2_content;
+
+                break;
+
+            case 3 :
+                // Lunes 9
+
+                titlesResId = R.array.readings_for_day_3_title;
+                subtitlesResId = R.array.readings_for_day_3_subtitle;
+                contentResId = R.array.readings_for_day_3_content;
+
+                break;
+
+            case 4 :
+                // Martes 10
+
+                titlesResId = R.array.readings_for_day_4_title;
+                subtitlesResId = R.array.readings_for_day_4_subtitle;
+                contentResId = R.array.readings_for_day_4_content;
+
+                break;
+
+            case 5 :
+                // Miercoles 11
+
+                titlesResId = R.array.readings_for_day_5_title;
+                subtitlesResId = R.array.readings_for_day_5_subtitle;
+                contentResId = R.array.readings_for_day_5_content;
+
+                break;
+
+            case 6 :
+                // Jueves 12
+
+                titlesResId = R.array.readings_for_day_6_title;
+                subtitlesResId = R.array.readings_for_day_6_subtitle;
+                contentResId = R.array.readings_for_day_6_content;
+
+                break;
+            case 7 :
+                // Viernes 13
+
+                titlesResId = R.array.readings_for_day_7_title;
+                subtitlesResId = R.array.readings_for_day_7_subtitle;
+                contentResId = R.array.readings_for_day_7_content;
+
+                break;
+
+            case 8 :
+                // Sabado 14
+
+                titlesResId = R.array.readings_for_day_8_title;
+                subtitlesResId = R.array.readings_for_day_8_subtitle;
+                contentResId = R.array.readings_for_day_8_content;
 
                 break;
 

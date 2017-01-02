@@ -36,7 +36,7 @@ public class ContactView  extends LinearLayout {
         init();
     }
 
-    public void setmListener(OnContactViewButtonsListener mListener) {
+    public void setListener(OnContactViewButtonsListener mListener) {
         this.mListener = mListener;
     }
 
@@ -55,7 +55,7 @@ public class ContactView  extends LinearLayout {
 
         this.contactName = (TextView)findViewById(R.id.contact_view_name);
 
-        this.contactName.setOnClickListener(new OnClickListener() {
+        this.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
                 if( mListener != null){

@@ -12,7 +12,7 @@
     <ImageView
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:src="@drawable/mjo_logo"
+        android:src="@drawable/mjo_logo_nuevo"
         android:layout_gravity="center_vertical"
         android:id="@+id/frament_itinerary_list_event_image"
         />

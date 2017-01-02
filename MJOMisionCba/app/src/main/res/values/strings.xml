@@ -45,7 +45,7 @@
         <item >2</item>
         <item >3</item>
     </array>
-    <string name="title_activity_cotto_detail">Cotto</string>
+    <string name="title_activity_cotto_detail">\'Cotto\' de Córdoba</string>
 
     <string name="cotto_detail_part_one">
         "El Pequeño Cottolengo Argentino fue abierto por el mismo San Luis Orione."
@@ -133,5 +133,264 @@
     // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ //
 
 
-    <string name="mock_primera_lectura">Cuanto pedimos lo recibimos de Dios, porque guardamos sus mandamientos y hacemos lo que le agrada. Y éste es su mandamiento: que creamos en el nombre de su Hijo Jesucristo, y que nos amemos unos a otros, tal como nos lo mandó. Quien guarda sus mandamientos permanece en Dios, y Dios en él; en esto conocemos que permanece en nosotros: por el Espíritu que nos dio. Queridos: no os fiéis de cualquier espíritu, sino examinad si los espíritus vienen de Dios, pues muchos falsos profetas han salido al mundo. Podréis conocer en esto el espíritu de Dios: todo espíritu que confiesa a Jesucristo venido en carne es de Dios; y todo espíritu que no confiesa a Jesús no es de Dios: es del Anticristo. El cual habéis oído que iba a venir; pues bien, ya está en el mundo. Vosotros, hijos míos, sois de Dios y lo habéis vencido. Pues el que está en vosotros es más que el que está en el mundo. Ellos son del mundo; por eso hablan según el mundo y el mundo los escucha. Nosotros somos de Dios. Quien conoce a Dios nos escucha, quien no es de Dios no nos escucha. En esto conocemos el espíritu de la verdad y el espíritu del error.</string>
+    // +++ Day 2 ++++++ //
+
+    <string name="first_redaing_for_day_2">"Así dice el Señor: «Mirad a mi siervo, a quien sostengo; mi elegido, a quien prefiero. Sobre él he puesto mi espíritu, para que traiga el derecho a las naciones. No gritará, no clamará, no voceará por las calles. La caña cascada no la quebrará, el pábilo vacilante no lo apagará. Promoverá fielmente el derecho, no vacilará ni se quebrará, hasta implantar el derecho en la tierra, y sus leyes que esperan las islas. Yo, el Señor, te he llamado con justicia, te he cogido de la mano, te he formado, y te he hecho alianza de un pueblo, luz de las naciones. Para que abras los ojos de los ciegos, saques a los cautivos de la prisión, y de la mazmorra a los que habitan las tinieblas.» \n\nPalabra de Dios"</string>
+    <string name="secong_redaing_for_day_2">"En aquellos días, Pedro tomó la palabra y dijo: «Está claro que Dios no hace distinciones; acepta al que lo teme y practica la justicia, sea de la nación que sea. Envió su palabra a los israelitas, anunciando la paz que traería Jesucristo, el Señor de todos. Conocéis lo que sucedió en el país de los judíos, cuando Juan predicaba el bautismo, aunque la cosa empezó en Galilea. Me refiero a Jesús de Nazaret, ungido por Dios con la fuerza del Espíritu Santo, que pasó haciendo el bien y curando a los oprimidos por el diablo, porque Dios estaba con él.» \n\nPalabra de Dios"</string>
+    <string name="psalms_redaing_for_day_2"> "Hijos de Dios, aclamad al Señor, aclamad la gloria del nombre del Señor, postraos ante el Señor en el atrio sagrado. R/.\n\nLa voz del Señor sobre las aguas, el Señor sobre las aguas torrenciales. La voz del Señor es potente, la voz del Señor es magnífica. R/.\n\nEl Dios de la gloria ha tronado.En su templo un grito unánime: «¡Gloria!» El Señor se sienta por encima del aguacero, el Señor se sienta como rey eterno. R/."</string>
+    <string name="gospel_redaing_for_day_2"> "En aquel tiempo, fue Jesús de Galilea al Jordán y se presentó a Juan para que lo bautizara. Pero Juan intentaba disuadirlo, diciéndole: «Soy yo el que necesito que tú me bautices, ¿y tú acudes a mí?»Jesús le contestó: «Déjalo ahora. Está bien que cumplamos así todo lo que Dios quiere.» Entonces Juan se lo permitió. Apenas se bautizó Jesús, salió del agua; se abrió el cielo y vio que el Espíritu de Dios bajaba como una paloma y se posaba sobre él. y vino una voz del cielo que decía: «Éste es mi Hijo, el amado, mi predilecto.»\n\n Palabra del Señor"</string>
+
+    <string name="first_redaing_subtitle_for_day_2">"Lectura del libro de Isaías (42,1-4.6-7):"</string>
+    <string name="secong_redaing_subtitle_for_day_2">Lectura del libro de los Hechos de los apóstoles (10,34-38):</string>
+    <string name="psalms_redaing_subtitle_for_day_2">"Sal 28,1a.2.3ac-4.3b.9b-10\n\nR/. El Señor bendice a su pueblo con la paz"</string>
+    <string name="gospel_redaing_subtitle_for_day_2">"Lectura del santo evangelio según san Mateo (3,13-17):"</string>
+
+
+    // Arrays
+    <string-array name="readings_for_day_2_content">
+        <item>@string/first_redaing_for_day_2</item>
+        <item>@string/psalms_redaing_for_day_2 </item>
+        <item>@string/secong_redaing_for_day_2</item>
+        <item>@string/gospel_redaing_for_day_2</item>
+    </string-array>
+
+    <string-array name="readings_for_day_2_subtitle">
+        <item>@string/first_redaing_subtitle_for_day_2</item>
+        <item>@string/psalms_redaing_subtitle_for_day_2 </item>
+        <item>@string/secong_redaing_subtitle_for_day_2</item>
+        <item>@string/gospel_redaing_subtitle_for_day_2</item>
+    </string-array>
+
+
+    <string-array name="readings_for_day_2_title">
+        <item>@string/firs_reading_text</item>
+        <item>@string/psalms_reading_text </item>
+        <item>@string/second_reading_text</item>
+        <item>@string/gospel_reading_text</item>
+    </string-array>
+
+    // ++++++++++++++++++++++++++++++ //
+
+
+    // +++ Day 3 ++++++ //
+
+    <string name="first_redaing_for_day_3">"En distintas ocasiones y de muchas maneras habló Dios antiguamente a nuestros padres por los profetas. Ahora, en esta etapa final, nos ha hablado por el Hijo, al que ha nombrado heredero de todo, y por medio del cual ha ido realizando las edades del mundo. Él es reflejo de su gloria, impronta de su ser. Él sostiene el universo con su palabra poderosa. Y, habiendo realizado la purificación de los pecados, está sentado a la derecha de su majestad en las alturas; tanto más encumbrado sobre los ángeles, cuanto más sublime es el nombre que ha heredado. Pues, ¿a qué ángel dijo jamás: «Hijo mío eres tú, hoy te he engendrado», o: «Yo seré para él un padre, y él será para mí un hijo»? Y en otro pasaje, al introducir en el mundo al primogénito, dice: «Adórenlo todos los ángeles de Dios.»\n\nPalabra de Dios"</string>
+    <string name="secong_redaing_for_day_3"></string>
+    <string name="psalms_redaing_for_day_3"> "El Señor reina, la tierra goza, se alegran las islas innumerables. Justicia y derecho sostienen su trono. R/.\n\nLos cielos pregonan su justicia, y todos los pueblos contemplan su gloria. Ante él se postran todos los dioses.R/.\n\n Porque tú eres, Señor, altísimo sobre toda la tierra, encumbrado sobre todos los dioses.R/."</string>
+    <string name="gospel_redaing_for_day_3"> "Cuando arrestaron a Juan, Jesús se marchó a Galilea a proclamar el Evangelio de Dios. Decía: «Se ha cumplido el plazo, está cerca el reino de Dios: convertíos y creed en el Evangelio.» Pasando junto al lago de Galilea, vio a Simón y a su hermano Andrés, que eran pescadores y estaban echando el copo en el lago. Jesús les dijo: «Venid conmigo y os haré pescadores de hombres.» Inmediatamente dejaron las redes y lo siguieron. Un poco más adelante vio a Santiago, hijo de Zebedeo, y a su hermano Juan, que estaban en la barca repasando las redes. Los llamó, dejaron a su padre Zebedeo en la barca con los jornaleros y se marcharon con él.\n\n Palabra del Señor"</string>
+
+    <string name="first_redaing_subtitle_for_day_3">"Comienzo de la carta a los Hebreos (1,1-6):"</string>
+    <string name="secong_redaing_subtitle_for_day_3"></string>
+    <string name="psalms_redaing_subtitle_for_day_3">"Sal 96,1.2b.6.7c.9\n\nR/. Adorad a Dios, todos sus ángeles"</string>
+    <string name="gospel_redaing_subtitle_for_day_3">"Lectura del santo evangelio según san Marcos (1,14-20):"</string>
+
+
+    // Arrays
+    <string-array name="readings_for_day_3_content">
+        <item>@string/first_redaing_for_day_3</item>
+        <item>@string/psalms_redaing_for_day_3</item>
+        <item>@string/gospel_redaing_for_day_3</item>
+    </string-array>
+
+    <string-array name="readings_for_day_3_subtitle">
+        <item>@string/first_redaing_subtitle_for_day_3</item>
+        <item>@string/psalms_redaing_subtitle_for_day_3 </item>
+        <item>@string/gospel_redaing_subtitle_for_day_3</item>
+    </string-array>
+
+
+    <string-array name="readings_for_day_3_title">
+        <item>@string/firs_reading_text</item>
+        <item>@string/psalms_reading_text </item>
+        <item>@string/gospel_reading_text</item>
+    </string-array>
+
+    // +++++++++++++++++++++++++++++++ //
+
+
+    // +++ Day 4 ++++++ //
+
+    <string name="first_redaing_for_day_4">"Dios no sometió a los ángeles el mundo venidero, del que estamos hablando; de ello dan fe estas palabras: «¿Qué es el hombre, para que te acuerdes de él, o el hijo del hombre, para que mires por él? Lo hiciste poco inferior a los ángeles, lo coronaste de gloria y dignidad, todo lo sometiste bajo sus pies.» En efecto, puesto a someterle todo, nada dejó fuera de su dominio. Pero ahora no vemos todavía que todo le esté sometido. Al que Dios habla hecho un poco inferior a los ángeles, a Jesús, lo vemos ahora coronado de gloria y honor por su pasión y muerte. Así, por la gracia de Dios, ha padecido la muerte para bien de todos. Dios, para quien y por quien existe todo, juzgó conveniente, para llevar a una multitud de hijos a la gloria, perfeccionar y consagrar con sufrimientos al guía de su salvación. El santificador y los santificados proceden todos del mismo. Por eso no se avergüenza de llamarlos hermanos, cuando dice: «Anunciaré tu nombre a mis hermanos, en medio de la asamblea te alabaré.»\n\nPalabra de Dios"</string>
+    <string name="secong_redaing_for_day_4"></string>
+    <string name="psalms_redaing_for_day_4"> "¡Señor, dueño nuestro, qué admirable es tu nombre en toda la tierra! ¿Qué es el hombre, para que te acuerdes de él, el ser humano, para darle poder? R/.\n\n.Lo hiciste poco inferior a los ángeles, lo coronaste de gloria y dignidad, le diste el mando sobre las obras de tus manos. R/.\n\nTodo lo sometiste bajo sus pies: rebaños de ovejas y toros, y hasta las bestias del campo, las aves del cielo, los peces del mar, que trazan sendas por el mar. R/."</string>
+    <string name="gospel_redaing_for_day_4"> "En aquel tiempo, Jesús y sus discípulos entraron en Cafarnaún, y cuando el sábado siguiente fue a la sinagoga a enseñar, se quedaron asombrados de su doctrina, porque no enseñaba como los escribas, sino con autoridad. Estaba preisamente en la sinagoga un hombre que tenía un espíritu inmundo, y se puso a gritar: «¿Qué quieres de nosotros, Jesús Nazareno? ¿Has venido a acabar con nosotros? Sé quién eres: el Santo de Dios.» Jesús lo increpó: «Cállate y sal de él.» El espíritu inmundo lo retorció y, dando un grito muy fuerte, salió. Todos se preguntaron estupefactos: «¿Qué es esto? Este enseñar con autoridad es nuevo. Hasta a los espíritus inmundos les manda y le obedecen.»Su fama se extendió en seguida por todas partes, alcanzando la comarca entera de Galilea. Palabra de Dios\n\n Palabra del Señor"</string>
+
+    <string name="first_redaing_subtitle_for_day_4">"Lectura de la carta a los Hebreos (2,5-12):"</string>
+    <string name="secong_redaing_subtitle_for_day_4"></string>
+    <string name="psalms_redaing_subtitle_for_day_4">"Sal 8,2a.5.6-7.8-9\n\nR/. Diste a tu Hijo el mando sobre las obras de tus manos"</string>
+    <string name="gospel_redaing_subtitle_for_day_4">"Lectura del santo evangelio según san Marcos (1,21-28):"</string>
+
+
+    // Arrays
+    <string-array name="readings_for_day_4_content">
+        <item>@string/first_redaing_for_day_4</item>
+        <item>@string/psalms_redaing_for_day_4</item>
+        <item>@string/gospel_redaing_for_day_4</item>
+    </string-array>
+
+    <string-array name="readings_for_day_4_subtitle">
+        <item>@string/first_redaing_subtitle_for_day_4</item>
+        <item>@string/psalms_redaing_subtitle_for_day_4 </item>
+        <item>@string/gospel_redaing_subtitle_for_day_4</item>
+    </string-array>
+
+
+    <string-array name="readings_for_day_4_title">
+        <item>@string/firs_reading_text</item>
+        <item>@string/psalms_reading_text </item>
+        <item>@string/gospel_reading_text</item>
+    </string-array>
+
+    // ++++++++++++++++++++++++++++++++++++  //
+
+    // +++ Day 5 ++++++ //
+
+    <string name="first_redaing_for_day_5">"Los hijos de una familia son todos de la misma carne y sangre, y de nuestra carne y sangre participó también Jesús; así, muriendo, aniquiló al que tenía el poder de la muerte, es decir, al diablo, y liberó a todos los que por miedo a la muerte pasaban la vida entera como esclavos. Notad que tiende una mano a los hijos de Abrahán, no a los ángeles. Por eso tenia que parecerse en todo a sus hermanos, para ser sumo sacerdote compasivo y fiel en lo que a Dios se refiere, y expiar así los pecados del pueblo. Como él ha pasado por la prueba del dolor, puede auxiliar a los que ahora pasan por ella.\n\nPalabra de Dios"</string>
+    <string name="secong_redaing_for_day_5"></string>
+    <string name="psalms_redaing_for_day_5"> "Dad gracias al Señor, invocad su nombre,dad a conocer sus hazañas a los pueblos.Cantadle al son de instrumentos, hablad de sus maravillas. R/.\n\nGloriaos de su nombre santo, que se alegren los que buscan al Señor. Recurrid al Señor y a su poder,buscad continuamente su rostro. R/.\n\n¡Estirpe de Abrahán, su siervo; hijos de Jacob, su elegido! El Señor es nuestro Dios,él gobierna toda la tierra. R/.\n\n Se acuerda de su alianza eternamente,de la palabra dada, por mil generaciones;de la alianza sellada con Abrahán,del juramento hecho a Isaac. R/."</string>
+    <string name="gospel_redaing_for_day_5"> "En aquel tiempo, al salir Jesús de la sinagoga, fue con Santiago y Juan a casa de Simón y Andrés. La suegra de Simón estaba en cama con fiebre, y se lo dijeron. Jesús se acercó, la cogió de la mano y la levantó. Se le pasó la fiebre y se puso a servirles. Al anochecer, cuando se puso el sol, le llevaron todos los enfermos y endemoniados. La población entera se agolpaba a la puerta. Curó a muchos enfermos de diversos males y expulsó muchos demonios; y como los demonios lo conocían, no les permitía hablar. Se levantó de madrugada, se marchó al descampado y allí se puso a orar. Simón y sus compañeros fueron y, al encontrarlo, le dijeron: «Todo el mundo te busca.» Él les respondió: «Vámonos a otra parte, a las aldeas cercanas, para predicar también allí; que para eso he salido.»Así recorrió toda Galilea, predicando en las sinagogas y expulsando los demonios.\n\n Palabra del Señor"</string>
+
+    <string name="first_redaing_subtitle_for_day_5">"Lectura de la carta a los Hebreos (2,14-18):"</string>
+    <string name="secong_redaing_subtitle_for_day_5"></string>
+    <string name="psalms_redaing_subtitle_for_day_5">"Sal 104,1-2.3-4.6-7.8-9\n\nR/. El Señor se acuerda de su alianza eternamente"</string>
+    <string name="gospel_redaing_subtitle_for_day_5">"Lectura del santo evangelio según san Marcos (1,29-39):"</string>
+
+
+    // Arrays
+    <string-array name="readings_for_day_5_content">
+        <item>@string/first_redaing_for_day_5</item>
+        <item>@string/psalms_redaing_for_day_5</item>
+        <item>@string/gospel_redaing_for_day_5</item>
+    </string-array>
+
+    <string-array name="readings_for_day_5_subtitle">
+        <item>@string/first_redaing_subtitle_for_day_5</item>
+        <item>@string/psalms_redaing_subtitle_for_day_5 </item>
+        <item>@string/gospel_redaing_subtitle_for_day_5</item>
+    </string-array>
+
+
+    <string-array name="readings_for_day_5_title">
+        <item>@string/firs_reading_text</item>
+        <item>@string/psalms_reading_text </item>
+        <item>@string/gospel_reading_text</item>
+    </string-array>
+
+    // ++++++++++++++++++++++++++++++++++++  //
+
+    // +++ Day 6 ++++++ //
+
+    <string name="first_redaing_for_day_6">"Como dice el Espíritu Santo: «Si escucháis hoy su voz, no endurezcáis el corazón, como cuando la rebelión, cuando la prueba del desierto, donde me pusieron a prueba vuestros padres y me tentaron, a pesar de haber visto mis obras durante cuarenta años; por eso me indigné contra aquella generación, y dije: "Siempre tienen el corazón extraviado; no han conocido mis caminos, por eso he jurado en mi cólera que no entrarán en mi descanso."» ¡Atención, hermanos! Que ninguno de vosotros tenga un corazón malo e incrédulo, que lo lleve a desertar del Dios vivo. Animaos, por el contrario, los unos a los otros, día tras día, mientras dure este «hoy», para que ninguno de vosotros se endurezca, engañado por el pecado. En efecto, somos partícipes de Cristo, si conservamos firme hasta el final la actitud del principio.\n\nPalabra de Dios"</string>
+    <string name="secong_redaing_for_day_6"></string>
+    <string name="psalms_redaing_for_day_6"> "Entrad, postrémonos por tierra,bendiciendo al Señor, creador nuestro. Porque él es nuestro Dios, y nosotros su pueblo, el rebaño que él guía. R/.\n\nOjalá escuchéis hoy su voz:«No endurezcáis el corazón como en Meribá,como el día de Masa en el desierto;cuando vuestros padres me pusieron a prueba y me tentaron,aunque habían visto mis obras.» R/.\n\n«Durante cuarenta años aquella generación me asqueó,y dije: "Es un pueblo de corazón extraviado,que no reconoce mi camino; por eso he jurado en mi cólera que no entrarán en mi descanso."» R/."</string>
+    <string name="gospel_redaing_for_day_6"> "En aquel tiempo, se acercó a Jesús un leproso, suplicándole de rodillas: «Si quieres, puedes limpiarme.»Sintiendo lástima, extendió la mano y lo tocó, diciendo: «Quiero: queda limpio.» La lepra se le quitó inmediatamente, y quedó limpio. Él lo despidió, encargándole severamente: «No se lo digas a nadie; pero, para que conste, ve a presentarte al sacerdote y ofrece por tu purificación lo que mandó Moisés.» Pero, cuando se fue, empezó a divulgar el hecho con grandes ponderaciones, de modo que Jesús ya no podía entrar abiertamente en ningún pueblo; se quedaba fuera, en descampado; y aun así acudían a él de todas partes.\n\n Palabra del Señor"</string>
+
+    <string name="first_redaing_subtitle_for_day_6">"Lectura de la carta a los Hebreos (3,7-14):"</string>
+    <string name="secong_redaing_subtitle_for_day_6"></string>
+    <string name="psalms_redaing_subtitle_for_day_6">"Sal 94,6-7.8-9.10-11\n\nR/. Ojalá escuchéis hoy la voz del Señor:«No endurezcáis vuestro corazón»"</string>
+    <string name="gospel_redaing_subtitle_for_day_6">"Lectura del santo evangelio según san Marcos (1,40-45):"</string>
+
+
+    // Arrays
+    <string-array name="readings_for_day_6_content">
+        <item>@string/first_redaing_for_day_6</item>
+        <item>@string/psalms_redaing_for_day_6</item>
+        <item>@string/gospel_redaing_for_day_6</item>
+    </string-array>
+
+    <string-array name="readings_for_day_6_subtitle">
+        <item>@string/first_redaing_subtitle_for_day_6</item>
+        <item>@string/psalms_redaing_subtitle_for_day_6 </item>
+        <item>@string/gospel_redaing_subtitle_for_day_6</item>
+    </string-array>
+
+
+    <string-array name="readings_for_day_6_title">
+        <item>@string/firs_reading_text</item>
+        <item>@string/psalms_reading_text </item>
+        <item>@string/gospel_reading_text</item>
+    </string-array>
+
+    // ++++++++++++++++++++++++++++++++++++  //
+
+    // +++ Day 7 ++++++ //
+
+    <string name="first_redaing_for_day_7">"Temamos, no sea que, estando aún en vigor la promesa de entrar en su descanso, alguno de vosotros crea que ha perdido la oportunidad. También nosotros hemos recibido la buena noticia, igual que ellos; pero el mensaje que oyeron de nada les sirvió, porque no se adhirieron por la fe a los que lo habían escuchado. En efecto, entramos en el descanso los creyentes, de acuerdo con lo dicho: «He jurado en mi cólera que no entrarán en mi descanso», y eso que sus obras estaban terminadas desde la creación del mundo. Acerca del día séptimo se dijo: «Y descansó Dios el día séptimo de todo el trabajo que había hecho.» En nuestro pasaje añade: «No entrarán en mi descanso.» Empeñémonos, por tanto, en entrar en aquel descanso, para que nadie caiga, siguiendo aquel ejemplo de rebeldía.\n\nPalabra de Dios"</string>
+    <string name="secong_redaing_for_day_7"></string>
+    <string name="psalms_redaing_for_day_7"> "Lo que oímos y aprendimos,lo que nuestros padres nos contaron,lo contaremos a la futura generación:las alabanzas del Señor, su poder. R/.\n\nQue surjan y lo cuenten a sus hijos, para que pongan en Dios su confianza y no olviden las acciones de Dios, sino que guarden sus mandamientos. R/.\n\nPara que no imiten a sus padres, generación rebelde y pertinaz; generación de corazón inconstante, de espíritu infiel a Dios. R/."</string>
+    <string name="gospel_redaing_for_day_7"> "Cuando a los pocos días volvió Jesús a Cafarnaún, se supo que estaba en casa. Acudieron tantos que no quedaba sitio ni a la puerta. Él les proponía la palabra. Llegaron cuatro llevando un paralítico y, como no podían meterlo, por el gentío, levantaron unas tejas encima de donde estaba Jesús, abrieron un boquete y descolgaron la camilla con el paralítico.\n"
+"Viendo Jesús la fe que tenían, le dijo al paralítico: «Hijo, tus pecados quedan perdonados.»Unos escribas, que estaban allí sentados, pensaban para sus adentros: «Por qué habla éste así? Blasfema.\n"
+        "¿Quién puede perdonar pecados, fuera de Dios?»Jesús se dio cuenta de lo que pensaban y les dijo: «¿Por qué pensáis eso? ¿Qué es más fácil: decirle al paralítico "tus pecados quedan perdonados" o decirle "levántate, coge la camilla y echa a andar"? Pues, para que veáis que el Hijo del hombre tiene potestad en la tierra para perdonar pecados ... »Entonces le dijo al paralítico: «Contigo hablo: Levántate, coge tu camilla y vete a tu casa.»Se levantó inmediatamente, cogió la camilla y salió a la vista de todos.Se quedaron atónitos y daban gloria a Dios, diciendo: «Nunca hemos visto una cosa igual.»\n\n Palabra del Señor"</string>
+
+    <string name="first_redaing_subtitle_for_day_7">"Lectura de la carta a los Hebreos (4,1-5.11):"</string>
+    <string name="secong_redaing_subtitle_for_day_7"></string>
+    <string name="psalms_redaing_subtitle_for_day_7">"Sal 77,3.4bc.6c-7.8\n\nR/. No olvidéis las acciones de Dios"</string>
+    <string name="gospel_redaing_subtitle_for_day_7">"Lectura del santo evangelio según san Marcos (2,1-12):"</string>
+
+
+    // Arrays
+    <string-array name="readings_for_day_7_content">
+        <item>@string/first_redaing_for_day_7</item>
+        <item>@string/psalms_redaing_for_day_7</item>
+        <item>@string/gospel_redaing_for_day_7</item>
+    </string-array>
+
+    <string-array name="readings_for_day_7_subtitle">
+        <item>@string/first_redaing_subtitle_for_day_7</item>
+        <item>@string/psalms_redaing_subtitle_for_day_7 </item>
+        <item>@string/gospel_redaing_subtitle_for_day_7</item>
+    </string-array>
+
+
+    <string-array name="readings_for_day_7_title">
+        <item>@string/firs_reading_text</item>
+        <item>@string/psalms_reading_text </item>
+        <item>@string/gospel_reading_text</item>
+    </string-array>
+
+    // ++++++++++++++++++++++++++++++++++++  //
+
+    // +++ Day 8 ++++++ //
+
+    <string name="first_redaing_for_day_8">"La palabra de Dios es viva y eficaz, más tajante que espada de doble filo, penetrante hasta el punto donde se dividen alma y espíritu, coyunturas y tuétanos. Juzga los deseos e intenciones del corazón. No hay criatura que escape a su mirada. Todo está patente y descubierto a los ojos de aquel a quien hemos de rendir cuentas. Mantengamos la confesión de la fe, ya que tenemos un sumo sacerdote grande, que ha atravesado el cielo, Jesús, Hijo de Dios. No tenemos un sumo sacerdote incapaz de compadecerse de nuestras debilidades, sino que ha sido probado en todo exactamente como nosotros, menos en el pecado. Por eso, acerquémonos con seguridad al trono de la gracia, para alcanzar misericordia y encontrar gracia que nos auxilie oportunamente.\n\nPalabra de Dios"</string>
+    <string name="secong_redaing_for_day_8"></string>
+    <string name="psalms_redaing_for_day_8">
+        "La ley del Señor es perfecta y es descanso del alma; el precepto del Señor es fiel e instruye al ignorante. R/."
+        "Los mandatos del Señor son rectos y alegran el corazón; la norma del Señor es límpida y da luz a los ojos. R/."
+        "La voluntad del Señor es pura y eternamente estable; los mandamientos del Señor son verdaderos y enteramente justos. R/."
+        "Que te agraden las palabras de mi boca, y llegue a tu presencia el meditar de mi corazón, Señor, roca mía, redentor mío. R/."
+    </string>
+    <string name="gospel_redaing_for_day_8">
+        "En aquel tiempo, Jesús salió de nuevo a la orilla del lago; la gente acudía a él, y les enseñaba.Al pasar, vio a Leví, el de Alfeo, sentado al mostrador de los impuestos, y le dijo: «Sígueme.» Se levantó y lo siguió. Estando Jesús a la mesa en su casa, de entre los muchos que lo seguían un grupo de publicanos y pecadores se sentaron con Jesús y sus discípulos.\n"
+        "Algunos escribas fariseos, al ver que comía con publicanos y pecadores, les dijeron a los discípulos: «¡De modo que come con publicanos y pecadores!»\n"
+        "Jesús lo oyó y les dijo: «No necesitan médico los sanos, sino los enfermos. No he venido a llamar a los justos, sino a los pecadores.»\n\n Palabra del Señor"
+    </string>
+    <string name="first_redaing_subtitle_for_day_8">"Lectura de la carta a los Hebreos (4,12-16):"</string>
+    <string name="secong_redaing_subtitle_for_day_8"></string>
+    <string name="psalms_redaing_subtitle_for_day_8">"Sal 18.8.9.10.15\n\nR/. Tus palabras, Señor, son espíritu y vida"</string>
+    <string name="gospel_redaing_subtitle_for_day_8">"Lectura del santo evangelio según san Marcos (2,13-17):"</string>
+
+
+    // Arrays
+    <string-array name="readings_for_day_8_content">
+        <item>@string/first_redaing_for_day_8</item>
+        <item>@string/psalms_redaing_for_day_8</item>
+        <item>@string/gospel_redaing_for_day_8</item>
+    </string-array>
+
+    <string-array name="readings_for_day_8_subtitle">
+        <item>@string/first_redaing_subtitle_for_day_8</item>
+        <item>@string/psalms_redaing_subtitle_for_day_8 </item>
+        <item>@string/gospel_redaing_subtitle_for_day_8</item>
+    </string-array>
+
+
+    <string-array name="readings_for_day_8_title">
+        <item>@string/firs_reading_text</item>
+        <item>@string/psalms_reading_text </item>
+        <item>@string/gospel_reading_text</item>
+    </string-array>
+
+    // ++++++++++++++++++++++++++++++++++++  //
+
 </resources>

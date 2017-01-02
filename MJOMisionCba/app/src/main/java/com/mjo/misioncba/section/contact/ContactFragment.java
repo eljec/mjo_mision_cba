@@ -87,7 +87,7 @@ public class ContactFragment extends Fragment implements ContactView.OnContactVi
         for (ContactModel contact: contactModels) {
 
             ContactView contactView = new ContactView(getContext());
-            contactView.setmListener(this);
+            contactView.setListener(this);
             contactView.configureForModel(contact);
 
             this.contactContainer.addView(contactView);
@@ -157,7 +157,6 @@ public class ContactFragment extends Fragment implements ContactView.OnContactVi
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
         builder.setTitle(contactModel.getContactName());
         builder.setView(new ContactModalDetailView (getContext(),contactModel.getType()));
-        builder.setIcon(R.drawable.mjo_logo);
 
         builder.setNegativeButton("Llamar", new DialogInterface.OnClickListener() {
             @Override
@@ -165,7 +164,7 @@ public class ContactFragment extends Fragment implements ContactView.OnContactVi
 
                 openDialApp(phoneNumberFinal);
             }
-        }).setPositiveButton("Enviar mensaje", new DialogInterface.OnClickListener() {
+        }).setPositiveButton("Mensaje", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 openMessengerMenu (phoneNumberFinal);
