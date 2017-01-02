@@ -85,6 +85,18 @@
         <item>Domingo 15</item>
     </string-array>
 
+    <string-array name="spinner_days_titles">
+        <item>Todos los dias</item>
+        <item>Sabado 7 </item>
+        <item>Domingo 8</item>
+        <item>Lunes 9</item>
+        <item>Martes 10</item>
+        <item>Miercoles 11</item>
+        <item>Jueves 12</item>
+        <item>Viernes 13</item>
+        <item>Sabado 14</item>
+        <item>Domingo 15</item>
+    </string-array>
 
     // Lecturas
 
@@ -388,6 +400,50 @@
     <string-array name="readings_for_day_8_title">
         <item>@string/firs_reading_text</item>
         <item>@string/psalms_reading_text </item>
+        <item>@string/gospel_reading_text</item>
+    </string-array>
+
+    // ++++++++++++++++++++++++++++++++++++  //
+
+
+    // +++ Day 9 ++++++ //
+
+    <string name="first_redaing_for_day_9">"El Señor me dijo: «Tú eres mi siervo, de quien estoy orgulloso.» Y ahora habla el Señor, que desde el vientre me formó siervo suyo, para que le trajese a Jacob, para que le reuniese a Israel –tanto me honró el Señor, y mi Dios fue mi fuerza–: «Es poco que seas mi siervo y restablezcas las tribus de Jacob y conviertas a los supervivientes de Israel; te hago luz de las naciones, para que mi salvación alcance hasta el confín de la tierra.»\n\nPalabra de Dios"</string>
+    <string name="secong_redaing_for_day_9">"Yo, Pablo, llamado a ser apóstol de Cristo Jesús por designio de Dios, y Sóstenes, nuestro hermano, escribimos a la Iglesia de Dios en Corinto, a los consagrados por Cristo Jesús, a los santos que él llamó y a todos los demás que en cualquier lugar invocan el nombre de Jesucristo, Señor de ellos y nuestro. La gracia y la paz de parte de Dios, nuestro Padre, y del Señor Jesucristo sean con vosotros.\n\nPalabra de Dios"</string>
+    <string name="psalms_redaing_for_day_9">
+            "Yo esperaba con ansia al Señor; él se inclinó y escuchó mi grito; me puso en la boca un cántico nuevo, un himno a nuestro Dios. R/."
+            "Tú no quieres sacrificios ni ofrendas, y, en cambio, me abriste el oído; no pides sacrificio expiatorio, entonces yo digo: «Aquí estoy.» R/."
+            "Como está escrito en mi libro: «Para hacer tu voluntad.»Dios mío, lo quiero,y llevo tu ley en las entrañas. R/."
+            "He proclamado tu salvación ante la gran asamblea; no he cerrado los labios: Señor, tú lo sabes. R/."
+    </string>
+    <string name="gospel_redaing_for_day_9">
+        "En aquel tiempo, al ver Juan a Jesús que venía hacia él, exclamó: «Éste es el Cordero de Dios, que quita el pecado del mundo. Ése es aquel de quien yo dije: "Tras de mí viene un hombre que está por delante de mí, porque existía antes que yo." Yo no lo conocía, pero he salido a bautizar con agua, para que sea manifestado a Israel.» Y Juan dio testimonio diciendo: «He contemplado al Espíritu que bajaba del cielo como una paloma, y se posó sobre él. Yo no lo conocía, pero el que me envió a bautizar con agua me dijo: "Aquél sobre quien veas bajar el Espíritu y posarse sobre él, ése es el que ha de bautizar con Espíritu Santo." Y yo lo he visto, y he dado testimonio de que éste es el Hijo de Dios.»\n\nPalabra del Señor"
+    </string>
+    <string name="first_redaing_subtitle_for_day_9">"Lectura del libro de Isaías (49,3.5-6):"</string>
+    <string name="secong_redaing_subtitle_for_day_9">"Comienzo de la primera carta del apóstol san Pablo a los Corintios (1,1-3):"</string>
+    <string name="psalms_redaing_subtitle_for_day_9">"Sal 39,2.4ab.7-8a.8b-9.10\n\nR/. Aquí estoy, Señor, para hacer tu voluntad"</string>
+    <string name="gospel_redaing_subtitle_for_day_9">"Lectura del santo evangelio según san Juan (1,29-34):"</string>
+
+    // Arrays
+    <string-array name="readings_for_day_9_content">
+        <item>@string/first_redaing_for_day_9</item>
+        <item>@string/psalms_redaing_for_day_9 </item>
+        <item>@string/secong_redaing_for_day_9</item>
+        <item>@string/gospel_redaing_for_day_9</item>
+    </string-array>
+
+    <string-array name="readings_for_day_9_subtitle">
+        <item>@string/first_redaing_subtitle_for_day_9</item>
+        <item>@string/psalms_redaing_subtitle_for_day_9 </item>
+        <item>@string/secong_redaing_subtitle_for_day_9</item>
+        <item>@string/gospel_redaing_subtitle_for_day_9</item>
+    </string-array>
+
+
+    <string-array name="readings_for_day_9_title">
+        <item>@string/firs_reading_text</item>
+        <item>@string/psalms_reading_text </item>
+        <item>@string/second_reading_text</item>
         <item>@string/gospel_reading_text</item>
     </string-array>
 

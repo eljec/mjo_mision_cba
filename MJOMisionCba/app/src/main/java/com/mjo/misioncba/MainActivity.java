@@ -6,19 +6,30 @@ import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.GravityCompat;
+import android.support.v4.view.MenuItemCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 
 import com.mjo.misioncba.section.contact.ContactFragment;
 import com.mjo.misioncba.section.itinerary.ItineraryFragment;
 import com.mjo.misioncba.section.itinerary.ItineraryListViewItemModel;
 import com.mjo.misioncba.section.readings.list.ReadingFragmentListFragment;
 
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, ItineraryFragment.OnListFragmentInteractionListener, ReadingFragmentListFragment.OnReadingListFragmentInteractionListener {
+        implements NavigationView.OnNavigationItemSelectedListener, ItineraryFragment.OnListFragmentInteractionListener, ReadingFragmentListFragment.OnReadingListFragmentInteractionListener, AdapterView.OnItemSelectedListener {
+
+
+    private View spinnerViewContainer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +46,20 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        // Spinner
+
+        spinnerViewContainer = findViewById(R.id.spinner_nav_container);
+
+        Spinner spinnerDays = (Spinner)findViewById(R.id.spinner_nav);
+
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                R.array.spinner_days_titles, R.layout.itinerary_spinner_item);
+
+        adapter.setDropDownViewResource(R.layout.itinerary_spinner_dropdown_item);
+
+        spinnerDays.setAdapter(adapter);
+        spinnerDays.setOnItemSelectedListener(this);
 
         // Default fragment
         if (savedInstanceState == null) {
@@ -82,10 +107,13 @@ public class MainActivity extends AppCompatActivity
         // Create a new fragment and specify the planet to show based on position
 
         if (id == R.id.nav_itinerary) {
+            spinnerViewContainer.setVisibility(View.VISIBLE);
             fragment = ItineraryFragment.newInstance();
         } else if (id == R.id.nav_prayer) {
+            spinnerViewContainer.setVisibility(View.GONE);
             fragment = ReadingFragmentListFragment.newInstance();
         } else if (id == R.id.nav_contact) {
+            spinnerViewContainer.setVisibility(View.GONE);
             fragment = new ContactFragment();
         }
 
@@ -104,4 +132,33 @@ public class MainActivity extends AppCompatActivity
         intent.putExtra("READING_DAY_SELECTED", position + 1);
         startActivity(intent);
     }
+
+    @Override
+    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+
+        // if index == 0 is Full Itinerary
+
+        // Update the list view
+
+        List<Fragment> allFragments = getSupportFragmentManager().getFragments();
+        if (allFragments != null) {
+            for (Fragment fragment : allFragments) {
+
+
+                if(fragment instanceof  ItineraryFragment) {
+
+                    ItineraryFragment itineraryFragment = (ItineraryFragment)fragment;
+                    itineraryFragment.updateDataForDay(i);
+                }
+
+            }
+        }
+
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> adapterView) {
+
+    }
 }
+

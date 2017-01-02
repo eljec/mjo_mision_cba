@@ -144,6 +144,17 @@ public class ReadingDetailListItemGenerator {
 
                 break;
 
+            case 9 :
+                // Sabado 14
+
+                titlesResId = R.array.readings_for_day_9_title;
+                subtitlesResId = R.array.readings_for_day_9_subtitle;
+                contentResId = R.array.readings_for_day_9_content;
+
+                break;
+
+
+
             default:
                 titlesResId = -1;
                 subtitlesResId = -1;

@@ -22,6 +22,8 @@ public class ItineraryFragment extends Fragment {
 
     private OnListFragmentInteractionListener mListener;
     private List<ItineraryListViewItemModel> listItem;
+    private  RecyclerView list;
+    private Itinerary itineraryRawData;
 
     public ItineraryFragment() {
     }
@@ -32,13 +34,19 @@ public class ItineraryFragment extends Fragment {
         return fragment;
     }
 
+
+    public void updateDataForDay(int day){
+
+        modelForList(day);
+        list.setAdapter(new MyItineraryRecyclerViewAdapter(this.listItem, getContext()));
+    }
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // Load the items
+        // Load full itinerary
+        modelForList(0);
 
-        modelForList();
     }
 
     @Override
@@ -49,11 +57,11 @@ public class ItineraryFragment extends Fragment {
         // Set the adapter
         if (view instanceof RecyclerView) {
             Context context = view.getContext();
-            RecyclerView recyclerView = (RecyclerView) view;
-            recyclerView.setLayoutManager(new LinearLayoutManager(context));
+            list = (RecyclerView) view;
+            list.setLayoutManager(new LinearLayoutManager(context));
 
-            recyclerView.setAdapter(new MyItineraryRecyclerViewAdapter(this.listItem, getContext()));
-            recyclerView.addOnItemTouchListener(
+            list.setAdapter(new MyItineraryRecyclerViewAdapter(this.listItem, getContext()));
+            list.addOnItemTouchListener(
                     new RecyclerViewItemClickListener(context, new RecyclerViewItemClickListener.OnItemClickListener() {
                         @Override public void onItemClick(View view, int position) {
 
@@ -68,27 +76,56 @@ public class ItineraryFragment extends Fragment {
     }
 
 
-    private void modelForList(){
+    private void modelForList(int day){
 
-        if(this.listItem == null) {
+            // Obtengo data original
 
+        if(this.itineraryRawData == null) {
             MisionCbaApplication appState = ((MisionCbaApplication) getActivity().getApplication());
-            Itinerary itinerary = appState.getItinerary();
+            itineraryRawData = appState.getItinerary();
+        }
 
+       Itinerary itinerary = null;
 
+        if(day == 0){
+            // Show full itinerary
+            itinerary = this.itineraryRawData;
+        }
+        else{
+            itinerary = itineraryByDay (day);
+        }
             this.listItem = new ArrayList<ItineraryListViewItemModel>();
 
-            for (ItineraryDay day : itinerary.getDays()) {
+            for (ItineraryDay itineraryDay : itinerary.getDays()) {
                 // Create item for list
-                ItineraryListViewItemModel itemPerDay = new ItineraryListViewItemModel(ItineraryListViewItemModel.DAY_TYPE, day.getTitle(), null, 0);
+                ItineraryListViewItemModel itemPerDay = new ItineraryListViewItemModel(ItineraryListViewItemModel.DAY_TYPE, itineraryDay.getTitle(), null, 0);
                 listItem.add(itemPerDay);
 
-                for (ItineraryDayEvent event : day.getEvents()) {
+                for (ItineraryDayEvent event : itineraryDay.getEvents()) {
                     ItineraryListViewItemModel eventPerDay = new ItineraryListViewItemModel(ItineraryListViewItemModel.EVENT_TYPE, event.getEventTitle(), event.getEventDate(), 0);
                     listItem.add(eventPerDay);
                 }
             }
+
+    }
+
+    private Itinerary itineraryByDay(int day){
+
+        Itinerary itineraryByDay = new Itinerary();
+
+        for (ItineraryDay itineraryDay : this.itineraryRawData.getDays()) {
+
+            if(itineraryDay.getId() == day){
+
+                ArrayList<ItineraryDay> arrayDays =  new ArrayList<ItineraryDay>();
+                arrayDays.add(itineraryDay);
+
+                itineraryByDay.setDays(arrayDays);
+                break;
+            }
         }
+
+        return itineraryByDay;
     }
     @Override
     public void onAttach(Context context) {
