@@ -41,9 +41,9 @@
     </string-array>
 
     <array name="referents_profile_type_imager">
-        <item >1</item>
-        <item >2</item>
-        <item >3</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
     </array>
     <string name="title_activity_cotto_detail">\'Cotto\' de Córdoba</string>
 
@@ -66,7 +66,7 @@
 
     // Label of contact view
 
-    <string name="fragment_contact_referentes_de_mision_label">Referentes misiòn</string>
+    <string name="fragment_contact_referentes_de_mision_label">Referentes misión</string>
     <string name="fragment_contact_cotto_label">Cotto</string>
     <string name="fragment_contact_emergencias_label">Emergencias</string>
     <string name="fragment_contact_policia_label">Policia</string>
@@ -118,7 +118,6 @@
     <string name="secong_redaing_subtitle_for_day_1"></string>
     <string name="psalms_redaing_subtitle_for_day_1">"Sal 2,7-8.10-12a \n\nR/. Te daré en herencia las naciones"</string>
     <string name="gospel_redaing_subtitle_for_day_1">"Lectura del santo evangelio según san Mateo (4,12-17.23-25):"</string>
-
 
 
     // Arrays
@@ -253,7 +252,7 @@
         <item>@string/gospel_reading_text</item>
     </string-array>
 
-    // ++++++++++++++++++++++++++++++++++++  //
+    // ++++++++++++++++++++++++++++++++++++ //
 
     // +++ Day 5 ++++++ //
 
@@ -288,7 +287,7 @@
         <item>@string/gospel_reading_text</item>
     </string-array>
 
-    // ++++++++++++++++++++++++++++++++++++  //
+    // ++++++++++++++++++++++++++++++++++++ //
 
     // +++ Day 6 ++++++ //
 
@@ -323,7 +322,7 @@
         <item>@string/gospel_reading_text</item>
     </string-array>
 
-    // ++++++++++++++++++++++++++++++++++++  //
+    // ++++++++++++++++++++++++++++++++++++ //
 
     // +++ Day 7 ++++++ //
 
@@ -360,7 +359,7 @@
         <item>@string/gospel_reading_text</item>
     </string-array>
 
-    // ++++++++++++++++++++++++++++++++++++  //
+    // ++++++++++++++++++++++++++++++++++++ //
 
     // +++ Day 8 ++++++ //
 
@@ -403,7 +402,7 @@
         <item>@string/gospel_reading_text</item>
     </string-array>
 
-    // ++++++++++++++++++++++++++++++++++++  //
+    // ++++++++++++++++++++++++++++++++++++ //
 
 
     // +++ Day 9 ++++++ //
@@ -447,6 +446,43 @@
         <item>@string/gospel_reading_text</item>
     </string-array>
 
-    // ++++++++++++++++++++++++++++++++++++  //
+    // ++++++++++++++++++++++++++++++++++++ //
+
+
+    // Seccion grupos misioneros
+
+    <string-array name="location_group_section_title">
+        <item>Grupos del 1-2</item>
+        <item>Grupos del 3-4</item>
+        <item>Grupos del 5-6</item>
+        <item>Grupos del 7-8</item>
+        <item>Grupos del 9-10</item>
+        <item>Grupos del 11-12</item>
+    </string-array>
+
+    <string-array name="location_group_section_content">
+        <item>Santa Isabel 3º</item>
+        <item>Vicor y Vicor Anexo</item>
+        <item>Amplicación Vicor y Heroes de Malvinas</item>
+        <item>Kairo, Santa Isabel Anexo y San Luis de Francia</item>
+        <item>Parque Futura</item>
+        <item>La Esperanza</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="fragment_map_description">Durante esta misión se recorrerá la parte sur de la ciudad, uno de los laterales del Don Orione Córdoba.\nLos barrios son:
+        "\n    - Santa Isabel 3º Sección"
+        "\n    - Vicor"
+        "\n    - Vicor Anexo"
+        "\n    - Ampliación Vicor"
+        "\n    - Héroes de Malvinas"
+        "\n    - Kairo"
+        "\n    - San Isable Anexo"
+        "\n    - San Luis de Francia"
+    </string>
+    <string name="navigation_item_group">Grupos misioneros</string>
+    <string name="navigation_item_maps">Mapa de barrios</string>
+    <string name="fragment_map_title">Mapa de los barrios</string>
 
 </resources>

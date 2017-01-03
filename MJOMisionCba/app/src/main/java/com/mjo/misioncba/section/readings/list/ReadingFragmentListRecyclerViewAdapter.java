@@ -27,6 +27,12 @@ public class ReadingFragmentListRecyclerViewAdapter extends RecyclerView.Adapter
     public void onBindViewHolder(final RecyclerView.ViewHolder holder, int position) {
         ReadingItemViewHolder ownHolder = (ReadingItemViewHolder) holder;
         ownHolder.mTitleView.setText(mValues[position]);
+        ownHolder.mSeparatorLine.setVisibility(View.VISIBLE);
+
+        if(position == mValues.length -1){
+            // Hide the separator line
+            ownHolder.mSeparatorLine.setVisibility(View.GONE);
+        }
     }
 
     @Override
@@ -36,12 +42,14 @@ public class ReadingFragmentListRecyclerViewAdapter extends RecyclerView.Adapter
 
     public class ReadingItemViewHolder extends RecyclerView.ViewHolder {
         public final View mView;
+        public final View mSeparatorLine;
         public final TextView mTitleView;
 
         public ReadingItemViewHolder(View view) {
             super(view);
             mView = view;
             mTitleView = (TextView) view.findViewById(R.id.fragment_reading_list_item_title);
+            mSeparatorLine = view.findViewById(R.id.fragment_reading_list_item_separator_line);
         }
 
         @Override

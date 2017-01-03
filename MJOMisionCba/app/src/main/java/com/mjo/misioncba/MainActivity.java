@@ -21,12 +21,15 @@ import android.widget.Spinner;
 import com.mjo.misioncba.section.contact.ContactFragment;
 import com.mjo.misioncba.section.itinerary.ItineraryFragment;
 import com.mjo.misioncba.section.itinerary.ItineraryListViewItemModel;
+import com.mjo.misioncba.section.locations.LocationGroupFragment;
+import com.mjo.misioncba.section.locations.LocationGroupItem;
+import com.mjo.misioncba.section.maps.MapFragment;
 import com.mjo.misioncba.section.readings.list.ReadingFragmentListFragment;
 
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, ItineraryFragment.OnListFragmentInteractionListener, ReadingFragmentListFragment.OnReadingListFragmentInteractionListener, AdapterView.OnItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener, ItineraryFragment.OnListFragmentInteractionListener, ReadingFragmentListFragment.OnReadingListFragmentInteractionListener, AdapterView.OnItemSelectedListener, LocationGroupFragment.OnLocationGroupListFragmentInteractionListener {
 
 
     private View spinnerViewContainer;
@@ -115,6 +118,12 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_contact) {
             spinnerViewContainer.setVisibility(View.GONE);
             fragment = new ContactFragment();
+        } else if (id == R.id.nav_location_group) {
+            spinnerViewContainer.setVisibility(View.GONE);
+            fragment = new LocationGroupFragment();
+        } else if (id == R.id.nav_map) {
+            spinnerViewContainer.setVisibility(View.GONE);
+            fragment = new MapFragment();
         }
 
         if (fragment != null) {
@@ -158,6 +167,11 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public void onNothingSelected(AdapterView<?> adapterView) {
+
+    }
+
+    @Override
+    public void onLocationGroupListFragmentInteraction(LocationGroupItem item) {
 
     }
 }
