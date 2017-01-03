@@ -1,4 +1,4 @@
-package com.mjo.misioncba.section.locations;
+package com.mjo.misioncba.section.locations.list;
 
 /**
  * Created by jucastillo on 2/1/17.

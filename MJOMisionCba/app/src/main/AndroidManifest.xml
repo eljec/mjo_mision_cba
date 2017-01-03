@@ -34,7 +34,8 @@
             android:label="@string/title_activity_cotto_detail"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".ReadingsDatailsActivity"></activity>
+        <activity android:name=".ReadingsDatailsActivity" />
+        <activity android:name=".LocationGroupDetailActivity"></activity>
     </application>
 
 </manifest>

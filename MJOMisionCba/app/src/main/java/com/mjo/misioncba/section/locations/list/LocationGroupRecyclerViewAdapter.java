@@ -1,4 +1,4 @@
-package com.mjo.misioncba.section.locations;
+package com.mjo.misioncba.section.locations.list;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;

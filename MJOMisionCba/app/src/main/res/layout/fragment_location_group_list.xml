@@ -9,5 +9,5 @@
     android:layout_marginLeft="16dp"
     android:layout_marginRight="16dp"
     app:layoutManager="LinearLayoutManager"
-    tools:context="com.mjo.misioncba.section.locations.LocationGroupFragment"
+    tools:context=".section.locations.list.LocationGroupFragment"
     tools:listitem="@layout/fragment_location_group_item" />

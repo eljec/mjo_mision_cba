@@ -8,12 +8,10 @@ import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.GravityCompat;
-import android.support.v4.view.MenuItemCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -23,8 +21,8 @@ import android.widget.Spinner;
 import com.mjo.misioncba.section.contact.ContactFragment;
 import com.mjo.misioncba.section.itinerary.ItineraryFragment;
 import com.mjo.misioncba.section.itinerary.ItineraryListViewItemModel;
-import com.mjo.misioncba.section.locations.LocationGroupFragment;
-import com.mjo.misioncba.section.locations.LocationGroupItem;
+import com.mjo.misioncba.section.locations.list.LocationGroupFragment;
+import com.mjo.misioncba.section.locations.list.LocationGroupItem;
 import com.mjo.misioncba.section.maps.MapFragment;
 import com.mjo.misioncba.section.readings.list.ReadingFragmentListFragment;
 
@@ -186,6 +184,9 @@ public class MainActivity extends AppCompatActivity
     @Override
     public void onLocationGroupListFragmentInteraction(LocationGroupItem item) {
 
+        // Open detail location maps
+        Intent intent = new Intent(this, LocationGroupDetailActivity.class);
+        startActivity(intent);
     }
 
     private void saveIndexOnPreferences(int index){

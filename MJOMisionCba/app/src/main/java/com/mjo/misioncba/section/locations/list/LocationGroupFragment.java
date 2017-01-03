@@ -1,4 +1,4 @@
-package com.mjo.misioncba.section.locations;
+package com.mjo.misioncba.section.locations.list;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import com.mjo.misioncba.R;
+import com.mjo.misioncba.section.itinerary.RecyclerViewItemClickListener;
 
 
 import java.util.List;
@@ -16,6 +17,7 @@ import java.util.List;
 public class LocationGroupFragment extends Fragment {
 
     private OnLocationGroupListFragmentInteractionListener mListener;
+    private List<LocationGroupItem> data;
 
     public LocationGroupFragment() {
     }
@@ -39,9 +41,19 @@ public class LocationGroupFragment extends Fragment {
 
 
             LocationGroupDataGenerator generator = new LocationGroupDataGenerator();
-            List<LocationGroupItem> data = generator.getData(getContext());
+            data = generator.getData(getContext());
 
             recyclerView.setAdapter(new LocationGroupRecyclerViewAdapter(data, mListener, getContext()));
+
+            recyclerView.addOnItemTouchListener(
+                    new RecyclerViewItemClickListener(context, new RecyclerViewItemClickListener.OnItemClickListener() {
+                        @Override public void onItemClick(View view, int position) {
+
+                            LocationGroupItem item = data.get(position);
+                            mListener.onLocationGroupListFragmentInteraction(item);
+                        }
+                    })
+            );
         }
         return view;
     }

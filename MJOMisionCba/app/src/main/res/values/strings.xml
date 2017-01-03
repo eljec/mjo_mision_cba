@@ -452,12 +452,12 @@
     // Seccion grupos misioneros
 
     <string-array name="location_group_section_title">
-        <item>Grupos del 1-2</item>
-        <item>Grupos del 3-4</item>
-        <item>Grupos del 5-6</item>
-        <item>Grupos del 7-8</item>
-        <item>Grupos del 9-10</item>
-        <item>Grupos del 11-12</item>
+        <item>Grupos 1-2</item>
+        <item>Grupos 3-4</item>
+        <item>Grupos 5-6</item>
+        <item>Grupos 7-8</item>
+        <item>Grupos 9-10</item>
+        <item>Grupos 11-12</item>
     </string-array>
 
     <string-array name="location_group_section_content">
@@ -469,8 +469,6 @@
         <item>La Esperanza</item>
     </string-array>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="fragment_map_description">Durante esta misión se recorrerá la parte sur de la ciudad, uno de los laterales del Don Orione Córdoba.\nLos barrios son:
         "\n    - Santa Isabel 3º Sección"
         "\n    - Vicor"
@@ -480,9 +478,23 @@
         "\n    - Kairo"
         "\n    - San Isable Anexo"
         "\n    - San Luis de Francia"
+        "\n    - Parque Futura"
+        "\n    - La Esperanza"
     </string>
     <string name="navigation_item_group">Grupos misioneros</string>
     <string name="navigation_item_maps">Mapa de barrios</string>
     <string name="fragment_map_title">Mapa de los barrios</string>
 
+    <string-array name="location_detail_title">
+        <item>Santa Isabel 3º</item>
+        <item>Vicor</item>
+        <item>Vicor Anexo</item>
+        <item>Amplicación Vicor</item>
+        <item>Héroes de Malvinas</item>
+        <item>Kairo</item>
+        <item>Santa Isabel Anexo</item>
+        <item>San Luis de Francia</item>
+        <item>Parque Futura</item>
+        <item>La Esperanza</item>
+    </string-array>
 </resources>
