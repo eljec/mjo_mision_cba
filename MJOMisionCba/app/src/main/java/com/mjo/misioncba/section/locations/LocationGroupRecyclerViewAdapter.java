@@ -61,9 +61,14 @@ public class LocationGroupRecyclerViewAdapter extends RecyclerView.Adapter {
 
                 case LocationGroupItem.LOCATION_TYPE:
 
-                    LocationViewHolder eventHolder = (LocationViewHolder) holder;
+                    LocationViewHolder locationHolder = (LocationViewHolder) holder;
                     // Update data
-                    eventHolder.mContentTextView.setText(modelItem.getContent());
+                    locationHolder.mContentTextView.setText(modelItem.getContent());
+                    locationHolder.mSeparatorLine.setVisibility(View.VISIBLE);
+
+                    if(position == mValues.size() -1){
+                        locationHolder.mSeparatorLine.setVisibility(View.GONE);
+                    }
 
                     break;
             }
@@ -98,6 +103,7 @@ public class LocationGroupRecyclerViewAdapter extends RecyclerView.Adapter {
     public class LocationViewHolder extends RecyclerView.ViewHolder {
         public final View mView;
         public final TextView mContentTextView;
+        public  final  View mSeparatorLine;
 
 
         public LocationViewHolder(View view) {
@@ -105,6 +111,7 @@ public class LocationGroupRecyclerViewAdapter extends RecyclerView.Adapter {
             mView = view;
             mContentTextView = (TextView) view.findViewById(R.id.location_group_item_label);
             mContentTextView.setTextColor(mContext.getResources().getColor(android.R.color.black));
+            mSeparatorLine = view.findViewById(R.id.location_group_item_separator_line);
         }
     }
 }

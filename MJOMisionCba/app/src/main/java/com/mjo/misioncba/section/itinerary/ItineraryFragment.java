@@ -20,6 +20,8 @@ import java.util.List;
 
 public class ItineraryFragment extends Fragment {
 
+    public static final String FRAGMENT_ITINERARY_SELECTED_INDEX="fragment_selected_index";
+
     private OnListFragmentInteractionListener mListener;
     private List<ItineraryListViewItemModel> listItem;
     private  RecyclerView list;
@@ -29,8 +31,13 @@ public class ItineraryFragment extends Fragment {
     }
 
     @SuppressWarnings("unused")
-    public static ItineraryFragment newInstance() {
+    public static ItineraryFragment newInstance(int selectedIndex) {
         ItineraryFragment fragment = new ItineraryFragment();
+
+        Bundle args = new Bundle();
+        args.putInt(FRAGMENT_ITINERARY_SELECTED_INDEX, selectedIndex);
+        fragment.setArguments(args);
+
         return fragment;
     }
 
@@ -45,8 +52,14 @@ public class ItineraryFragment extends Fragment {
         super.onCreate(savedInstanceState);
 
         // Load full itinerary
-        modelForList(0);
 
+        int indexSelected = 0;
+
+        if(getArguments() != null){
+            Bundle args = getArguments();
+            indexSelected = args.getInt(FRAGMENT_ITINERARY_SELECTED_INDEX, 0);
+        }
+        modelForList(indexSelected);
     }
 
     @Override

@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:lineSpacingExtra="10dp"
-        android:textSize="20dp"
+        android:textSize="16dp"
         android:text="@string/fragment_map_description" />
 
     <ImageView

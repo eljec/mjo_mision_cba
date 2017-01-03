@@ -1,6 +1,8 @@
 package com.mjo.misioncba;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
@@ -31,6 +33,9 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, ItineraryFragment.OnListFragmentInteractionListener, ReadingFragmentListFragment.OnReadingListFragmentInteractionListener, AdapterView.OnItemSelectedListener, LocationGroupFragment.OnLocationGroupListFragmentInteractionListener {
 
+
+    public static final String KEY_PREFRENCES_FILE_NAME="mjo_mision_cba_itinerary_preferences";
+    public static final String KEY_PREFRENCES_SELECTED_INDEX="itinerary_selected_index";
 
     private View spinnerViewContainer;
 
@@ -66,6 +71,7 @@ public class MainActivity extends AppCompatActivity
 
         // Default fragment
         if (savedInstanceState == null) {
+            // Check if we have a previous selected index
             selectItem(R.id.nav_itinerary);
             navigationView.getMenu().getItem(0).setChecked(true);
         }
@@ -111,7 +117,9 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.nav_itinerary) {
             spinnerViewContainer.setVisibility(View.VISIBLE);
-            fragment = ItineraryFragment.newInstance();
+
+            int indexSelected = getIndexFromPreferences();
+            fragment = ItineraryFragment.newInstance(indexSelected);
         } else if (id == R.id.nav_prayer) {
             spinnerViewContainer.setVisibility(View.GONE);
             fragment = ReadingFragmentListFragment.newInstance();
@@ -158,6 +166,11 @@ public class MainActivity extends AppCompatActivity
 
                     ItineraryFragment itineraryFragment = (ItineraryFragment)fragment;
                     itineraryFragment.updateDataForDay(i);
+
+                    // Save index
+                    saveIndexOnPreferences(i);
+
+                    break;
                 }
 
             }
@@ -173,6 +186,25 @@ public class MainActivity extends AppCompatActivity
     @Override
     public void onLocationGroupListFragmentInteraction(LocationGroupItem item) {
 
+    }
+
+    private void saveIndexOnPreferences(int index){
+
+        SharedPreferences sharedPref = this.getSharedPreferences(KEY_PREFRENCES_FILE_NAME
+                , Context.MODE_PRIVATE);
+
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.putInt(KEY_PREFRENCES_SELECTED_INDEX, index);
+        editor.commit();
+
+
+    }
+
+    private int getIndexFromPreferences(){
+
+        SharedPreferences sharedPref = this.getSharedPreferences(KEY_PREFRENCES_FILE_NAME
+                , Context.MODE_PRIVATE);
+        return sharedPref.getInt(KEY_PREFRENCES_SELECTED_INDEX, 0);
     }
 }
 

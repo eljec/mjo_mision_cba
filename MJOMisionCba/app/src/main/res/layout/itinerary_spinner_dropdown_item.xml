@@ -7,4 +7,5 @@
     android:layout_height="?android:attr/listPreferredItemHeight"
     android:ellipsize="marquee"
     android:text="Domingo 12"
+    android:paddingLeft="15dp"
     android:textColor="@android:color/white"/>

@@ -4,5 +4,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Sabado 14"
+        android:paddingLeft="15dp"
         android:textSize="18sp"
         android:textColor="@color/colorAccent" />
