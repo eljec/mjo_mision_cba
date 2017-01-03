@@ -1,5 +1,6 @@
 package com.mjo.misioncba;
 
+import android.content.res.Resources;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
@@ -42,11 +43,23 @@ public class ReadingsDatailsActivity extends AppCompatActivity {
         List<Readings> data = generator.getReadingForDay(day);
 
         recyclerView.setAdapter(new ReadingDetailRecyclerViewAdapter(data));
+
+        String title = getTitleByDay(day);
+
+        getSupportActionBar().setTitle(getString(R.string.reading_detail_title) + title);
     }
 
     @Override
     public boolean onSupportNavigateUp(){
         finish();
         return true;
+    }
+
+    public String getTitleByDay(int day){
+
+        Resources res = getResources();
+        String [] titles = res.getStringArray(R.array.reading_days_titles);
+
+        return day != 0 && day <= titles.length ? titles[day -1] : "";
     }
 }

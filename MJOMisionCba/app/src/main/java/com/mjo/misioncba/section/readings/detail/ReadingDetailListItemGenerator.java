@@ -45,7 +45,7 @@ public class ReadingDetailListItemGenerator {
 
         List<Readings> readingForDay = new ArrayList<Readings>();
 
-        if(day > 0 && day <= 8){
+        if(day > 0 && day <= 9){
 
             loadArraysByDay(day);
 
