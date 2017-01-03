@@ -80,7 +80,12 @@ public class ItineraryFragment extends Fragment {
 
                             // Callback to activity
                             ItineraryListViewItemModel item =   listItem.get(position);
-                            mListener.onListFragmentInteraction(item);
+
+                            // 2 == Misa
+
+                            if(item.imageType == 2) {
+                                mListener.onListFragmentInteraction(item);
+                            }
                         }
                     })
             );
@@ -111,11 +116,11 @@ public class ItineraryFragment extends Fragment {
 
             for (ItineraryDay itineraryDay : itinerary.getDays()) {
                 // Create item for list
-                ItineraryListViewItemModel itemPerDay = new ItineraryListViewItemModel(ItineraryListViewItemModel.DAY_TYPE, itineraryDay.getTitle(), null, 0);
+                ItineraryListViewItemModel itemPerDay = new ItineraryListViewItemModel(ItineraryListViewItemModel.DAY_TYPE, itineraryDay.getTitle(), null, 0,-1);
                 listItem.add(itemPerDay);
 
                 for (ItineraryDayEvent event : itineraryDay.getEvents()) {
-                    ItineraryListViewItemModel eventPerDay = new ItineraryListViewItemModel(ItineraryListViewItemModel.EVENT_TYPE, event.getEventTitle(), event.getEventDate(), 0);
+                    ItineraryListViewItemModel eventPerDay = new ItineraryListViewItemModel(ItineraryListViewItemModel.EVENT_TYPE, event.getEventTitle(), event.getEventDate(), event.getEventImageType(), event.getDayId());
                     listItem.add(eventPerDay);
                 }
             }

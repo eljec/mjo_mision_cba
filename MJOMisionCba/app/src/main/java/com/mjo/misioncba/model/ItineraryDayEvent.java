@@ -8,6 +8,7 @@ public class ItineraryDayEvent {
     private String eventTitle;
     private String eventDate;
     private int eventImageType;
+    private  int dayId;
 
 
     public String getEventTitle() {
@@ -32,5 +33,13 @@ public class ItineraryDayEvent {
 
     public void setEventImageType(int eventImageType) {
         this.eventImageType = eventImageType;
+    }
+
+    public int getDayId() {
+        return dayId;
+    }
+
+    public void setDayId(int dayId) {
+        this.dayId = dayId;
     }
 }

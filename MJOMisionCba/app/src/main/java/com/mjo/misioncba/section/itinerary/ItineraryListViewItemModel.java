@@ -12,12 +12,14 @@ public class ItineraryListViewItemModel {
     public String date;
     public String text;
     public int imageType;
+    public int dayId;
 
-    public ItineraryListViewItemModel(int type, String text, String date, int imageType )
+    public ItineraryListViewItemModel(int type, String text, String date, int imageType , int dayId)
     {
         this.type=type;
         this.date=date;
         this.text=text;
         this.imageType = imageType;
+        this.dayId = dayId;
     }
 }

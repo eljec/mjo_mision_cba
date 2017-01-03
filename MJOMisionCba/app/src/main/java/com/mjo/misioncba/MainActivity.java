@@ -102,8 +102,8 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public void onListFragmentInteraction(ItineraryListViewItemModel item) {
-
-        // NO hacemos anda
+        // Click on item of itinerary list
+        openReadingDetailActivity(item.dayId);
     }
 
     private void selectItem(int id) {
@@ -143,9 +143,7 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public void onReadingListFragmentInteraction(int position) {
-        Intent intent = new Intent(this, ReadingsDatailsActivity.class);
-        intent.putExtra("READING_DAY_SELECTED", position + 1);
-        startActivity(intent);
+        openReadingDetailActivity (position + 1);
     }
 
     @Override
@@ -206,6 +204,13 @@ public class MainActivity extends AppCompatActivity
         SharedPreferences sharedPref = this.getSharedPreferences(KEY_PREFRENCES_FILE_NAME
                 , Context.MODE_PRIVATE);
         return sharedPref.getInt(KEY_PREFRENCES_SELECTED_INDEX, 0);
+    }
+
+    private void openReadingDetailActivity(int dayId){
+
+        Intent intent = new Intent(this, ReadingsDatailsActivity.class);
+        intent.putExtra("READING_DAY_SELECTED", dayId);
+        startActivity(intent);
     }
 }
 

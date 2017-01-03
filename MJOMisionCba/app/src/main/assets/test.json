@@ -7,46 +7,54 @@
         {
           "eventTitle": "Almuerzo y Bienvenida",
           "eventDate": "13:00",
-          "eventImageType" : 1
+          "eventImageType" : 1,
+          "dayId": 1
         },
         {
           "eventTitle": "División de grupos- Presentación del cronograma de las actividades.",
           "eventDate": "15:00",
-          "eventImageType" : 6
+          "eventImageType" : 6,
+          "dayId": 1
         },
         {
           "eventTitle": "Visita a barrios (invitacion a Misa)",
           "eventDate": "16:00",
-          "eventImageType" : 3
+          "eventImageType" : 3,
+          "dayId": 1
         },
         {
           "eventTitle": "Misa",
           "eventDate": "18:30",
-          "eventImageType" : 2
+          "eventImageType" : 2,
+          "dayId": 1
         }
       ,
         {
           "eventTitle": "Duchas",
           "eventDate": "20:30",
-          "eventImageType" : 8
+          "eventImageType" : 8,
+          "dayId": 1
         }
       ,
         {
           "eventTitle": "Cena",
           "eventDate": "21:30",
-          "eventImageType" : 1
+          "eventImageType" : 1,
+          "dayId": 1
         }
       ,
         {
           "eventTitle": "Presentación de Córdoba y entrega del KIT MISIONERO",
           "eventDate": "22:30",
-          "eventImageType" : 10
+          "eventImageType" : 10,
+          "dayId": 1
         }
       ,
         {
           "eventTitle": "Hora de dormir.",
           "eventDate": "24:00",
-          "eventImageType" : 4
+          "eventImageType" : 4,
+          "dayId": 1
         }
       ]
     },
@@ -57,72 +65,86 @@
         {
           "eventTitle": "Levantarse",
           "eventDate": "7:30",
-          "eventImageType" : 7
+          "eventImageType" : 7,
+          "dayId": 2
         },
         {
           "eventTitle": "Desayuno",
           "eventDate": "8:00",
-          "eventImageType" : 1
+          "eventImageType" : 1,
+          "dayId": 2
         },
         {
           "eventTitle": "Tiempo de actividades diarias",
           "eventDate": "8:30",
-          "eventImageType" : 6
+          "eventImageType" : 6,
+          "dayId": 2
         },
         {
           "eventTitle": "Oración (Córdoba) Formación",
           "eventDate": "9:15",
-          "eventImageType" : 5
+          "eventImageType" : 5,
+          "dayId": 2
         },
         {
           "eventTitle": "Salida a misionar",
           "eventDate": "10:00",
-          "eventImageType" : 3
+          "eventImageType" : 3,
+          "dayId": 2
         },
         {
           "eventTitle": "Almuerzo",
           "eventDate": "14:00",
-          "eventImageType" : 1
+          "eventImageType" : 1,
+          "dayId": 2
         },
         {
           "eventTitle": "Siesta-Ducha",
           "eventDate": "15:00",
-          "eventImageType" : 4
+          "eventImageType" : 4,
+          "dayId": 2
         },
         {
           "eventTitle": "Merienda y trabajos grupales",
           "eventDate": "16:30",
-          "eventImageType" : 6
+          "eventImageType" : 6,
+          "dayId": 2
         },
         {
           "eventTitle": "Recorrido por el Cottolengo",
           "eventDate": "17:30",
-          "eventImageType" : 6
+          "eventImageType" : 6,
+          "dayId": 2
         },
         {
           "eventTitle": "Misa de envío",
           "eventDate": "19:00",
-          "eventImageType" : 2
+          "eventImageType" : 2,
+          "dayId": 2
         },
         {
           "eventTitle": "Duchas",
           "eventDate": "20:30",
-          "eventImageType" : 8
+          "eventImageType" : 8,
+          "dayId": 2
         },
         {
           "eventTitle": "Cena.",
           "eventDate": "21:30",
-          "eventImageType" : 1
+          "eventImageType" : 1,
+          "dayId": 2
         },
         {
           "eventTitle": "Presentación de comunidades",
           "eventDate": "22:30",
-          "eventImageType" : 10
+          "eventImageType" : 10,
+          "dayId": 2
         },
         {
           "eventTitle": "Hora de dormir",
           "eventDate": "01:00",
-          "eventImageType" : 4
+          "eventImageType" : 4,
+          "dayId": 2
         }
       ]
     },
@@ -133,67 +155,80 @@
         {
           "eventTitle": "Levantarse",
           "eventDate": "7:30",
-          "eventImageType" : 7
+          "eventImageType" : 7,
+          "dayId": 3
         },
         {
           "eventTitle": "Desayuno",
           "eventDate": "8:00",
-          "eventImageType" : 1
+          "eventImageType" : 1,
+          "dayId": 3
         },
         {
           "eventTitle": "Tiempo de actividades diarias",
           "eventDate": "8:30",
-          "eventImageType" : 6
+          "eventImageType" : 6,
+          "dayId": 3
         },
         {
           "eventTitle": "Oración (Sagrado Corazón- Bs. As) Formación",
           "eventDate": "9:15",
-          "eventImageType" : 5
+          "eventImageType" : 5,
+          "dayId": 3
         },
         {
           "eventTitle": "Salida a misionar",
           "eventDate": "10:00",
-          "eventImageType" : 3
+          "eventImageType" : 3,
+          "dayId": 3
         },
         {
           "eventTitle": "Almuerzo",
           "eventDate": "13:30",
-          "eventImageType" : 1
+          "eventImageType" : 1,
+          "dayId": 3
         },
         {
           "eventTitle": "Siesta- Momento de oración (San Francisco)",
           "eventDate": "14:30",
-          "eventImageType" : 6
+          "eventImageType" : 6,
+          "dayId": 3
         },
         {
           "eventTitle": "Merienda y trabajos grupales",
           "eventDate": "16:00",
-          "eventImageType" : 6
+          "eventImageType" : 6,
+          "dayId": 3
         },
         {
           "eventTitle": "Salida a misionar",
           "eventDate": "17:00",
-          "eventImageType" : 3
+          "eventImageType" : 3,
+          "dayId": 3
         },
         {
           "eventTitle": "Misa",
           "eventDate": "19:30",
-          "eventImageType" : 2
+          "eventImageType" : 2,
+          "dayId": 3
         },
         {
           "eventTitle": "Duchas.",
           "eventDate": "21:00",
-          "eventImageType" : 8
+          "eventImageType" : 8,
+          "dayId": 3
         },
         {
           "eventTitle": "Cena",
           "eventDate": "22:00",
-          "eventImageType" : 1
+          "eventImageType" : 1,
+          "dayId": 3
         },
         {
           "eventTitle": "Momento recreativo",
           "eventDate": "23:00",
-          "eventImageType" : 10
+          "eventImageType" : 10,
+          "dayId": 3
         }
       ]
     },
@@ -204,67 +239,80 @@
         {
           "eventTitle": "Levantarse",
           "eventDate": "7:30",
-          "eventImageType" : 7
+          "eventImageType" : 7,
+          "dayId": 4
         },
         {
           "eventTitle": "Desayuno",
           "eventDate": "8:00",
-          "eventImageType" : 1
+          "eventImageType" : 1,
+          "dayId": 4
         },
         {
           "eventTitle": "Tiempo de actividades diarias",
           "eventDate": "8:30",
-          "eventImageType" : 6
+          "eventImageType" : 6,
+          "dayId": 4
         },
         {
           "eventTitle": "Oración (Mendoza) Formación",
           "eventDate": "9:15",
-          "eventImageType" : 5
+          "eventImageType" : 5,
+          "dayId": 4
         },
         {
           "eventTitle": "Salida a misionar",
           "eventDate": "10:00",
-          "eventImageType" : 3
+          "eventImageType" : 3,
+          "dayId": 4
         },
         {
           "eventTitle": "Almuerzo",
           "eventDate": "13:30",
-          "eventImageType" : 1
+          "eventImageType" : 1,
+          "dayId": 4
         },
         {
           "eventTitle": "Siesta- Momento recreativo",
           "eventDate": "14:30",
-          "eventImageType" : 10
+          "eventImageType" : 10,
+          "dayId": 4
         },
         {
           "eventTitle": "Merienda y trabajos grupales",
           "eventDate": "16:00",
-          "eventImageType" : 6
+          "eventImageType" : 6,
+          "dayId": 4
         },
         {
           "eventTitle": "Salida a misionar",
           "eventDate": "17:00",
-          "eventImageType" : 3
+          "eventImageType" : 3,
+          "dayId": 4
         },
         {
           "eventTitle": "Misa",
           "eventDate": "19:30",
-          "eventImageType" : 2
+          "eventImageType" : 2,
+          "dayId": 4
         },
         {
           "eventTitle": "Duchas.",
           "eventDate": "21:00",
-          "eventImageType" : 8
+          "eventImageType" : 8,
+          "dayId": 4
         },
         {
           "eventTitle": "Cena",
           "eventDate": "22:00",
-          "eventImageType" : 1
+          "eventImageType" : 1,
+          "dayId": 4
         },
         {
           "eventTitle": "Adoración",
           "eventDate": "23:00",
-          "eventImageType" : 11
+          "eventImageType" : 11,
+          "dayId": 4
         }
       ]
     },
@@ -275,67 +323,80 @@
         {
           "eventTitle": "Levantarse",
           "eventDate": "7:30",
-          "eventImageType" : 7
+          "eventImageType" : 7,
+          "dayId": 5
         },
         {
           "eventTitle": "Desayuno",
           "eventDate": "8:00",
-          "eventImageType" : 1
+          "eventImageType" : 1,
+          "dayId": 5
         },
         {
           "eventTitle": "Tiempo de actividades diarias",
           "eventDate": "8:30",
-          "eventImageType" : 6
+          "eventImageType" : 6,
+          "dayId": 5
         },
         {
           "eventTitle": "Oración (Lujan - Bs As) Formación",
           "eventDate": "9:15",
-          "eventImageType" : 5
+          "eventImageType" : 5,
+          "dayId": 5
         },
         {
           "eventTitle": "Salida a misionar",
           "eventDate": "10:00",
-          "eventImageType" : 3
+          "eventImageType" : 3,
+          "dayId": 5
         },
         {
           "eventTitle": "Almuerzo",
           "eventDate": "13:30",
-          "eventImageType" : 1
+          "eventImageType" : 1,
+          "dayId": 5
         },
         {
           "eventTitle": "Siesta – Momento de oración (Tucumán) - Confesiones",
           "eventDate": "14:30",
-          "eventImageType" : 5
+          "eventImageType" : 5,
+          "dayId": 5
         },
         {
           "eventTitle": "Merienda y trabajos grupales",
           "eventDate": "16:00",
-          "eventImageType" : 6
+          "eventImageType" : 6,
+          "dayId": 5
         },
         {
           "eventTitle": "Salida a misionar",
           "eventDate": "17:00",
-          "eventImageType" : 3
+          "eventImageType" : 3,
+          "dayId": 5
         },
         {
           "eventTitle": "Misa",
           "eventDate": "19:30",
-          "eventImageType" : 2
+          "eventImageType" : 2,
+          "dayId": 5
         },
         {
           "eventTitle": "Duchas.",
           "eventDate": "21:00",
-          "eventImageType" : 8
+          "eventImageType" : 8,
+          "dayId": 5
         },
         {
           "eventTitle": "Peña Zonal. Cena incluida",
           "eventDate": "22:00",
-          "eventImageType" : 10
+          "eventImageType" : 10,
+          "dayId": 5
         },
         {
           "eventTitle": "Descanso",
           "eventDate": "00:30",
-          "eventImageType" : 4
+          "eventImageType" : 4,
+          "dayId": 5
         }
       ]
     },
@@ -346,67 +407,80 @@
         {
           "eventTitle": "Levantarse",
           "eventDate": "7:30",
-          "eventImageType" : 7
+          "eventImageType" : 7,
+          "dayId": 6
         },
         {
           "eventTitle": "Desayuno",
           "eventDate": "8:00",
-          "eventImageType" : 1
+          "eventImageType" : 1,
+          "dayId": 6
         },
         {
           "eventTitle": "Tiempo de actividades diarias",
           "eventDate": "8:30",
-          "eventImageType" : 6
+          "eventImageType" : 6,
+          "dayId": 6
         },
         {
           "eventTitle": "Oración ((Postulantes)) Formación",
           "eventDate": "9:15",
-          "eventImageType" : 5
+          "eventImageType" : 5,
+          "dayId": 6
         },
         {
           "eventTitle": "Salida a misionar",
           "eventDate": "10:00",
-          "eventImageType" : 3
+          "eventImageType" : 3,
+          "dayId": 6
         },
         {
           "eventTitle": "Almuerzo",
           "eventDate": "13:30",
-          "eventImageType" : 1
+          "eventImageType" : 1,
+          "dayId": 6
         },
         {
           "eventTitle": "Siesta – Momento recreativo",
           "eventDate": "14:30",
-          "eventImageType" : 10
+          "eventImageType" : 10,
+          "dayId": 6
         },
         {
           "eventTitle": "Merienda y trabajos grupales",
           "eventDate": "16:00",
-          "eventImageType" : 6
+          "eventImageType" : 6,
+          "dayId": 6
         },
         {
           "eventTitle": "Salida a misionar",
           "eventDate": "17:00",
-          "eventImageType" : 3
+          "eventImageType" : 3,
+          "dayId": 6
         },
         {
           "eventTitle": "Misa",
           "eventDate": "19:30",
-          "eventImageType" : 2
+          "eventImageType" : 2,
+          "dayId": 6
         },
         {
           "eventTitle": "Duchas.",
           "eventDate": "21:00",
-          "eventImageType" : 8
+          "eventImageType" : 8,
+          "dayId": 6
         },
         {
           "eventTitle": "Cena",
           "eventDate": "22:00",
-          "eventImageType" : 1
+          "eventImageType" : 1,
+          "dayId": 6
         },
         {
           "eventTitle": "Rosario Misionero",
           "eventDate": "23:00",
-          "eventImageType" : 12
+          "eventImageType" : 12,
+          "dayId": 6
         }
       ]
     },
@@ -417,67 +491,80 @@
         {
           "eventTitle": "Levantarse",
           "eventDate": "7:30",
-          "eventImageType" : 7
+          "eventImageType" : 7,
+          "dayId": 7
         },
         {
           "eventTitle": "Desayuno",
           "eventDate": "8:00",
-          "eventImageType" : 1
+          "eventImageType" : 1,
+          "dayId": 7
         },
         {
           "eventTitle": "Tiempo de actividades diarias",
           "eventDate": "8:30",
-          "eventImageType" : 6
+          "eventImageType" : 6,
+          "dayId": 7
         },
         {
           "eventTitle": "Oración-Formación",
           "eventDate": "9:15",
-          "eventImageType" : 5
+          "eventImageType" : 5,
+          "dayId": 7
         },
         {
           "eventTitle": "Salida a misionar",
           "eventDate": "10:00",
-          "eventImageType" : 3
+          "eventImageType" : 3,
+          "dayId": 7
         },
         {
           "eventTitle": "Almuerzo en la Comunidad “San Luis Orione”",
           "eventDate": "13:00",
-          "eventImageType" : 1
+          "eventImageType" : 1,
+          "dayId": 7
         },
         {
           "eventTitle": "Siesta - Confesiones",
           "eventDate": "14:30",
-          "eventImageType" : 5
+          "eventImageType" : 5,
+          "dayId": 7
         },
         {
           "eventTitle": "Merienda y trabajos grupales",
           "eventDate": "16:00",
-          "eventImageType" : 6
+          "eventImageType" : 6,
+          "dayId": 7
         },
         {
           "eventTitle": "Salida a misionar",
           "eventDate": "17:00",
-          "eventImageType" : 3
+          "eventImageType" : 3,
+          "dayId": 7
         },
         {
           "eventTitle": "Misa",
           "eventDate": "19:30",
-          "eventImageType" : 2
+          "eventImageType" : 2,
+          "dayId": 7
         },
         {
           "eventTitle": "Duchas.",
           "eventDate": "21:00",
-          "eventImageType" : 8
+          "eventImageType" : 8,
+          "dayId": 7
         },
         {
           "eventTitle": "Cena",
           "eventDate": "22:00",
-          "eventImageType" : 1
+          "eventImageType" : 1,
+          "dayId": 7
         },
         {
           "eventTitle": "Jornada deportiva",
           "eventDate": "23:00",
-          "eventImageType" : 10
+          "eventImageType" : 10,
+          "dayId": 7
         }
       ]
     },
@@ -488,82 +575,98 @@
         {
           "eventTitle": "Levantarse",
           "eventDate": "7:30",
-          "eventImageType" : 7
+          "eventImageType" : 7,
+          "dayId": 8
         },
         {
           "eventTitle": "Desayuno",
           "eventDate": "8:00",
-          "eventImageType" : 1
+          "eventImageType" : 1,
+          "dayId": 8
         },
         {
           "eventTitle": "Oración(Córdoba) y otras actividades",
           "eventDate": "9:15",
-          "eventImageType" : 5
+          "eventImageType" : 5,
+          "dayId": 8
         },
         {
           "eventTitle": "Última visita misionera",
           "eventDate": "10:00",
-          "eventImageType" : 3
+          "eventImageType" : 3,
+          "dayId": 8
         },
         {
           "eventTitle": "Almuerzo",
           "eventDate": "13:30",
-          "eventImageType" : 1
+          "eventImageType" : 1,
+          "dayId": 8
         },
         {
           "eventTitle": "Duchas -Organización de vigilia",
           "eventDate": "14:30",
-          "eventImageType" : 10
+          "eventImageType" : 10,
+          "dayId": 8
         },
         {
           "eventTitle": "Salida hacia la “Carpa Misionera",
           "eventDate": "15:30",
-          "eventImageType" : 10
+          "eventImageType" : 10,
+          "dayId": 8
         },
         {
           "eventTitle": "Comienzo de Actividades “Carpa Misionera”. Merienda",
           "eventDate": "16:00",
-          "eventImageType" : 10
+          "eventImageType" : 10,
+          "dayId": 8
         },
         {
           "eventTitle": "Te con los Abuelos",
           "eventDate": "18:00",
-          "eventImageType" : 10
+          "eventImageType" : 10,
+          "dayId": 8
         },
         {
           "eventTitle": "Misa-Bautismos",
           "eventDate": "19:30",
-          "eventImageType" : 2
+          "eventImageType" : 2,
+          "dayId": 8
         },
         {
           "eventTitle": "Cantata Juvenil",
           "eventDate": "21:00",
-          "eventImageType" : 10
+          "eventImageType" : 10,
+          "dayId": 8
         },
         {
           "eventTitle": "Cena",
           "eventDate": "22:30",
-          "eventImageType" : 1
+          "eventImageType" : 1,
+          "dayId": 8
         },
         {
           "eventTitle": "Adoración",
           "eventDate": "00:00",
-          "eventImageType" : 11
+          "eventImageType" : 11,
+          "dayId": 8
         },
         {
           "eventTitle": "Fogón Misionero",
           "eventDate": "01:00",
-          "eventImageType" : 9
+          "eventImageType" : 9,
+          "dayId": 8
         },
         {
           "eventTitle": "Procesión hasta el Cottolengo, junto al Santísimo",
           "eventDate": "03:30",
-          "eventImageType" : 13
+          "eventImageType" : 13,
+          "dayId": 8
         },
         {
           "eventTitle": "Llegada al Cottolengo. Descanso.",
           "eventDate": "04:30",
-          "eventImageType" : 4
+          "eventImageType" : 4,
+          "dayId": 8
         }
       ]
     },
@@ -574,32 +677,38 @@
         {
           "eventTitle": "Levantarse",
           "eventDate": "7:30",
-          "eventImageType" : 7
+          "eventImageType" : 7,
+          "dayId": 9
         },
         {
           "eventTitle": "Desayuno",
           "eventDate": "7:30",
-          "eventImageType" : 1
+          "eventImageType" : 1,
+          "dayId": 9
         },
         {
           "eventTitle": "Misa de cierre",
           "eventDate": "8:00",
-          "eventImageType" : 2
+          "eventImageType" : 2,
+          "dayId": 9
         },
         {
           "eventTitle": "Compartir con la comunidad y tiempo libre",
           "eventDate": "9:00",
-          "eventImageType" : 10
+          "eventImageType" : 10,
+          "dayId": 9
         },
         {
           "eventTitle": "Almuerzo",
           "eventDate": "14:00",
-          "eventImageType" : 1
+          "eventImageType" : 1,
+          "dayId": 9
         },
         {
           "eventTitle": "Paseo",
           "eventDate": "15:00",
-          "eventImageType" : 10
+          "eventImageType" : 10,
+          "dayId": 9
         }
       ]
     }
