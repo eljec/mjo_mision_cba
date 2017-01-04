@@ -36,7 +36,8 @@ import java.util.Locale;
  */
 public class ContactFragment extends Fragment implements ContactView.OnContactViewButtonsListener {
 
-    private static final int REQUEST_PHONE_CALL = 1;
+    public static final int REQUEST_PHONE_CALL = 1;
+
     private LinearLayout contactContainer;
     private LinearLayout cottoContainer;
     private TextView cottoAddressLineTextView;
@@ -148,29 +149,7 @@ public class ContactFragment extends Fragment implements ContactView.OnContactVi
 
     @Override
     public void onClickView(ContactModel contactModel) {
-
-        /*final String  phoneNumberFinal = contactModel.getContactNumber();
-
-        // Open menu dialog
-
-        AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
-        builder.setTitle(contactModel.getContactName());
-        builder.setView(new ContactModalDetailView (getContext(),contactModel.getType()));
-
-        builder.setNegativeButton("Llamar", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-
-                openDialApp(phoneNumberFinal);
-            }
-        }).setPositiveButton("Mensaje", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                openMessengerMenu (phoneNumberFinal);
-            }
-        });
-
-        builder.show();*/
+        // Open detail contact view
 
         Intent contactDetail = new Intent(getActivity(), ContactDetailActivity.class);
         contactDetail.putExtra("CONTACT_DETAIL_CONTACT_MODEL", contactModel);
@@ -194,14 +173,6 @@ public class ContactFragment extends Fragment implements ContactView.OnContactVi
         {
             startActivity(intent);
         }
-    }
-
-    private void openMessengerMenu(String phoneNumber){
-
-        Uri uri = Uri.parse("smsto:" + phoneNumber);
-        Intent sendIntent = new Intent(Intent.ACTION_SENDTO, uri);
-        sendIntent.putExtra("sms_body", "Hola !! Como va ?");
-        startActivity(sendIntent);
     }
 
 }
