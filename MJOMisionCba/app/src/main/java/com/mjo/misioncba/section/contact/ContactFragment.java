@@ -21,6 +21,7 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.mjo.misioncba.ContactDetailActivity;
 import com.mjo.misioncba.MainActivity;
 import com.mjo.misioncba.R;
 import com.mjo.misioncba.section.cotto.CottoDetailActivity;
@@ -148,11 +149,9 @@ public class ContactFragment extends Fragment implements ContactView.OnContactVi
     @Override
     public void onClickView(ContactModel contactModel) {
 
-        final String  phoneNumberFinal = contactModel.getContactNumber();
+        /*final String  phoneNumberFinal = contactModel.getContactNumber();
 
         // Open menu dialog
-
-        CharSequence colors[] = new CharSequence[] {"LLamar", "Enviar mensaje"};
 
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
         builder.setTitle(contactModel.getContactName());
@@ -171,7 +170,11 @@ public class ContactFragment extends Fragment implements ContactView.OnContactVi
             }
         });
 
-        builder.show();
+        builder.show();*/
+
+        Intent contactDetail = new Intent(getActivity(), ContactDetailActivity.class);
+        contactDetail.putExtra("CONTACT_DETAIL_CONTACT_MODEL", contactModel);
+        startActivity(contactDetail);
     }
 
     private void openDialApp(String phoneNumber){

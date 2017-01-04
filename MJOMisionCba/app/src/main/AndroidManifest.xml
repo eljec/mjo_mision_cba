@@ -35,7 +35,8 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".ReadingsDatailsActivity" />
-        <activity android:name=".LocationGroupDetailActivity"></activity>
+        <activity android:name=".LocationGroupDetailActivity" />
+        <activity android:name=".ContactDetailActivity"></activity>
     </application>
 
 </manifest>

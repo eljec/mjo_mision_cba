@@ -10,10 +10,6 @@
             android:id="@+id/nav_prayer"
             android:icon="@mipmap/ic_import_contacts_black_24dp"
             android:title="@string/navigation_item_reading_per_day" />
-        <item
-            android:id="@+id/nav_contact"
-            android:icon="@mipmap/ic_info_black_24dp"
-            android:title="@string/navigation_item_contact" />
 
         <item
             android:id="@+id/nav_location_group"
@@ -24,6 +20,11 @@
             android:id="@+id/nav_map"
             android:icon="@android:drawable/ic_dialog_map"
             android:title="@string/navigation_item_maps" />
+
+        <item
+            android:id="@+id/nav_contact"
+            android:icon="@mipmap/ic_info_black_24dp"
+            android:title="@string/navigation_item_contact" />
     </group>
 
 
