@@ -9,7 +9,7 @@
     // Label of navigation
 
     <string name="navigation_item_itinerary">Itinerario</string>
-    <string name="navigation_item_prayer_of_missionary">Oracion misionera</string>
+    <string name="navigation_item_prayer_of_missionary">Oraciones</string>
     <string name="navigation_item_reading_per_day">Lecturas</string>
     <string name="navigation_item_contact">Info</string>
 
@@ -499,4 +499,48 @@
         <item>Parque Futura</item>
         <item>La Esperanza</item>
     </string-array>
+
+
+
+    // Oraciones
+
+    <string-array name="prayer_titles">
+        <item>A tu disposición</item>
+        <item>Bendición del hogar 1</item>
+        <item>Bendición del hogar 2</item>
+        <item>Oración para embarazadas</item>
+        <item>Oración de agradecimiento por el trabajo</item>
+        <item>Oración a Jesús para encontrar trabajo</item>
+        <item>Oración ante la pérdida de un ser querido</item>
+    </string-array>
+
+    <string-array name="prayer_content">
+        <item>
+            "Señor Jesús, me pongo a tu disposición, para el servicio de tu reino, para el trabajo que creas conveniente, para empezar y volver a empezar cuantas veces sea necesario.\n"
+            "Jesús, quiero contar contigo como un aliado seguro que me defienda y me guie, sin imponerme qué hacer; invitándome a colaborar en libertad como es propio de tu amor.\n"
+            "Señor Jesús, deseo servirte con lo que tengo , como soy, aunque sea débil y te falle, cuenta conmigo de nuevo, porque para mí, poder servirte es un premio, una bendición. Por eso hoy me pongo a tu disposición.\n"
+            "Amen"
+        </item>
+        <item>
+            Bendice a quienes habitan esta casa, bendice a todo el que entra y sale de ella. Guarda nuestro hogar y danos tu paz, danos coraje para enfrentar con sabiduría y amor las necesidades de cada día, transformándonos  en instrumentos de tu voluntad. Amén.
+        </item>
+
+        <item>
+            La Bendición de Dios descienda sobre esta casa y sobre todos los que viven en ella. Y la gracia del Espíritu Santo santifique a todos. El Santísimo y dulce nombre de Jesús, en el que está toda la salvación, derrame copiosamente salud y bendición sobre esta casa y sobre todos los que viven en ella. La Santísima Virgen y Madre de Dios, cuide a todos con su materna protección y libere a todos de los males del alma y del cuerpo. La poderosa intercesión del bienaventurado San José, dé a nuestros trabajos prosperidad y muchos méritos a nuestros sufrimientos. Los ángeles de la guarda protejan a cuantos hay en esta casa de las asechanzas del maligno enemigo y nos conduzcan a la patria eterna. Descienda sobre nosotros la bendición de Dios, del + Padre, y del + Hijo y del + Espíritu Santo y permanezca siempre con nosotros, Amén.
+        </item>
+        <item>
+            Señor todo poderoso, que a través del Espíritu Santo das vida y amor a todos tus hijos te pido con fe que cuides de este ser que crece dentro de mí y que permitas que nazca sano en un mundo maravilloso bendecido por Ti. Ayúdame a enseñarle tu amor desde dentro de mi vientre y a ser una madre ejemplo para su vida. Bendice cada minuto de los 9 meses que lo tendré dentro de mí y toda la larga vida que le brindes en este mundo,  Amén.
+        </item>
+        <item>
+            Señor, hoy quiero darte gracias por mi trabajo, fuente de grandes bienes y gratas realizaciones. Dame, Dios mío, el don de superar en mi labor los problemas, soportar las contrariedades y gozar de esa calma que ofrece la paciencia. Gracias Señor, por mi trabajo, el cual me permite desarrollar mis capacidades y dar buen fruto con los talentos. Mi trabajo me hace madurar, me impide sumirme en el sopor de la pasividad y me vuelve dinámico. Mi trabajo es el campo que se me brinda para ser creativo, solidario, generoso y para dar lo mucho que he recibido. Gracias, Oh Dios, por mi trabajo. Si laboro con entusiasmo, lo difícil torna fácil y lo pesado se hace ligero. Cuando trabajo con amor alcanzo metas que creía imposibles y gracias a mi esfuerzo hay más sonrisas y más paz. Haz, Señor, que hoy no haga mi trabajo más fatigoso con las quejas y el mal genio, sino que, al contrario, tome mi labor como un servicio y una oportunidad de hacer el bien.​
+        </item>
+
+        <item>
+            Señor Jesús, tú que nos dijiste que no nos aflijamos por nada, sino que te lo presentemos en oración, hoy te suplico para que yo encuentre un trabajo que realice mi dignidad humana, que me provea lo necesario para mi familia, un trabajo que me lleve a Ti y haga de mi vida un servicio a los demás. Muéstrame como participar de un trabajo que construya una sociedad más justa, más fraterna, más solidaria y honesta. Líbrame de búsquedas egoístas, de aceptar trabajos que me corrompan o corrompan a otros, de buscar empleos que dificulten mi vida familiar y/o de cristiano. Quita de mi toda pereza, todo orgullo o todo otro desorden de mi naturaleza que dificulte la obtención del trabajo. Amen.
+        </item>
+        <item>
+            Señor de la vida y de la muerte,  Tú que ves el dolor que nos causa la separación de nuestro ser querido; en este momento de tristeza, no sabemos qué decirte. Nuestra oración es, por la pena de su ausencia, nos deja un gran vacío que solo tú, Señor lo puedes llenar.  Tú, Señor, lo (la) has llamado a gozar de tu presencia; recíbelo (la) en tu Reino de paz y felicidad, y guía nuestros pasos para que un día lleguemos a reunirnos con él (ella) en tu presencia, por los siglos de los siglos. Amén.​
+        </item>
+    </string-array>
+
 </resources>

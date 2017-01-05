@@ -7,9 +7,14 @@
             android:icon="@mipmap/ic_event_black_24dp"
             android:title="@string/navigation_item_itinerary" />
         <item
-            android:id="@+id/nav_prayer"
+            android:id="@+id/nav_readings"
             android:icon="@mipmap/ic_import_contacts_black_24dp"
             android:title="@string/navigation_item_reading_per_day" />
+
+        <item
+            android:id="@+id/nav_prayer"
+            android:icon="@mipmap/ic_import_contacts_black_24dp"
+            android:title="@string/navigation_item_prayer_of_missionary" />
 
         <item
             android:id="@+id/nav_location_group"

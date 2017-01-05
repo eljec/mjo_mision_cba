@@ -24,6 +24,7 @@ import com.mjo.misioncba.section.itinerary.ItineraryListViewItemModel;
 import com.mjo.misioncba.section.locations.list.LocationGroupFragment;
 import com.mjo.misioncba.section.locations.list.LocationGroupItem;
 import com.mjo.misioncba.section.maps.MapFragment;
+import com.mjo.misioncba.section.prayer.PrayerFragment;
 import com.mjo.misioncba.section.readings.list.ReadingFragmentListFragment;
 
 import java.util.List;
@@ -118,10 +119,13 @@ public class MainActivity extends AppCompatActivity
 
             int indexSelected = getIndexFromPreferences();
             fragment = ItineraryFragment.newInstance(indexSelected);
-        } else if (id == R.id.nav_prayer) {
+        } else if (id == R.id.nav_readings) {
             spinnerViewContainer.setVisibility(View.GONE);
             fragment = ReadingFragmentListFragment.newInstance();
-        } else if (id == R.id.nav_contact) {
+        } else if (id == R.id.nav_prayer) {
+            spinnerViewContainer.setVisibility(View.GONE);
+            fragment = new PrayerFragment();
+        }else if (id == R.id.nav_contact) {
             spinnerViewContainer.setVisibility(View.GONE);
             fragment = new ContactFragment();
         } else if (id == R.id.nav_location_group) {
