@@ -101,7 +101,7 @@
     // Lecturas
 
     // Headers
-    <string name="firs_reading_text">Primnera lectura </string>
+    <string name="firs_reading_text">Primera lectura </string>
     <string name="psalms_reading_text">Salmo</string>
     <string name="second_reading_text">Segunda lectura</string>
     <string name="gospel_reading_text">Evangelio</string>

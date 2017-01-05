@@ -15,18 +15,18 @@
         android:textColor="@android:color/black"
         android:textStyle="bold"
         android:textSize="24dp"
-        android:text="Oraciones: "
+        android:text="Oraciones"
         android:layout_marginTop="2dp"
         android:gravity="center_horizontal"
         android:background="#E8EAF6"
         android:layout_marginBottom="16dp"/>
 
-    <android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+    <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/player_list"
         app:layoutManager="LinearLayoutManager"
         tools:context=".section.prayer.PrayerFragment"
-        tools:listitem="@android:layout/simple_list_item_2" />
+        tools:listitem="@layout/prayer_list_item" />
 
 </LinearLayout>

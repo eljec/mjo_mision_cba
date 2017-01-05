@@ -1,8 +1,6 @@
 package com.mjo.misioncba.section.prayer;
 
 import android.content.Context;
-import android.graphics.Typeface;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,11 +17,9 @@ import java.util.List;
 public class PlayerListRecyclerViewAdapter extends RecyclerView.Adapter {
 
     private final List<Prayer> mValues;
-    private final Context ctx;
 
-    public PlayerListRecyclerViewAdapter(List<Prayer> mValues, Context ctx) {
+    public PlayerListRecyclerViewAdapter(List<Prayer> mValues) {
         this.mValues = mValues;
-        this.ctx = ctx;
     }
 
 
@@ -31,7 +27,7 @@ public class PlayerListRecyclerViewAdapter extends RecyclerView.Adapter {
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(android.R.layout.simple_list_item_2, parent, false);
+                .inflate(R.layout.prayer_list_item, parent, false);
         return new PrayerItemViewHolder(view);
     }
 
@@ -58,15 +54,9 @@ public class PlayerListRecyclerViewAdapter extends RecyclerView.Adapter {
         public PrayerItemViewHolder(View view) {
             super(view);
             mView = view;
-            mTitleLabel = (TextView) view.findViewById(android.R.id.text1);
-            mTitleLabel.setTextSize(20);
-            mTitleLabel.setTypeface(Typeface.DEFAULT_BOLD);
+            mTitleLabel = (TextView) view.findViewById(R.id.prayer_list_item_title);
+            mSubtitleLabel = (TextView) view.findViewById(R.id.prayer_list_item_subtitle);
 
-
-            mSubtitleLabel = (TextView) view.findViewById(android.R.id.text2);
-            mSubtitleLabel.setTextSize(18);
-            mSubtitleLabel.setTextColor(ContextCompat.getColor(ctx, android.R.color.darker_gray));
-            mSubtitleLabel.setLineSpacing(0, 1.5f);
         }
 
     }

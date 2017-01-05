@@ -41,7 +41,7 @@ public class PrayerFragment extends Fragment {
 
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
-        recyclerView.setAdapter(new PlayerListRecyclerViewAdapter(loadData(), context));
+        recyclerView.setAdapter(new PlayerListRecyclerViewAdapter(loadData()));
 
         return view;
     }
