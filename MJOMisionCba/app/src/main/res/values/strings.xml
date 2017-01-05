@@ -485,6 +485,7 @@
     <string name="navigation_item_maps">Mapa de barrios</string>
     <string name="fragment_map_title">Mapa de los barrios</string>
     <string name="reading_detail_title">"Lecturas:  "</string>
+    <string name="fragment_itinerary_list_item_mass_title_container">Lugar:</string>
 
     <string-array name="location_detail_title">
         <item>Santa Isabel 3º</item>

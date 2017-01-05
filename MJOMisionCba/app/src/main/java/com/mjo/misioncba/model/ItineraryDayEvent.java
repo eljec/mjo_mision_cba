@@ -1,5 +1,7 @@
 package com.mjo.misioncba.model;
 
+import java.util.List;
+
 /**
  * Created by jucastillo on 20/12/16.
  */
@@ -9,6 +11,7 @@ public class ItineraryDayEvent {
     private String eventDate;
     private int eventImageType;
     private  int dayId;
+    private List<ItineraryDayEventPlace> places;
 
 
     public String getEventTitle() {
@@ -41,5 +44,13 @@ public class ItineraryDayEvent {
 
     public void setDayId(int dayId) {
         this.dayId = dayId;
+    }
+
+    public List<ItineraryDayEventPlace> getPlaces() {
+        return places;
+    }
+
+    public void setPlaces(List<ItineraryDayEventPlace> places) {
+        this.places = places;
     }
 }

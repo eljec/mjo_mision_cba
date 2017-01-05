@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 import com.mjo.misioncba.R;
+import com.mjo.misioncba.model.ItineraryDayEventPlace;
 
 import java.util.List;
 
@@ -69,12 +70,23 @@ public class MyItineraryRecyclerViewAdapter extends RecyclerView.Adapter{
                     EventViewHolder eventHolder = (EventViewHolder) holder;
 
                     eventHolder.mTitleTextView.setText(modelItem.text);
-                    eventHolder.mDateTextView.setText(modelItem.date);
+                    eventHolder.mDateTextView.setText(modelItem.event.getEventDate());
                     eventHolder.mTitleTextView.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
+                    eventHolder.mContainerMassIndicators.setVisibility(View.GONE);
+                    // Info de misas
 
+                    if(modelItem.event.getPlaces() != null && modelItem.event.getPlaces().size() > 0){
+                        String placesString = generatePlacesStringByPlaces(modelItem.event.getPlaces());
+
+                        if(placesString != null){
+
+                            eventHolder.mMassLabel.setText(placesString);
+                            eventHolder.mContainerMassIndicators.setVisibility(View.VISIBLE);
+                        }
+                    }
                     // Solo para tipos Misa muestra la flecha
 
-                    if(modelItem.imageType == 2) {
+                    if(modelItem.event.getEventImageType() == 2) {
                         eventHolder.mTitleTextView.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.mipmap.ic_trending_flat_black_24dp, 0);
                     }
 
@@ -121,6 +133,8 @@ public class MyItineraryRecyclerViewAdapter extends RecyclerView.Adapter{
         public final TextView mTitleTextView;
         public final TextView mDateTextView;
         public final ImageView mEventImageView;
+        public final View mContainerMassIndicators;
+        public final  TextView mMassLabel;
 
 
         public EventViewHolder(View view) {
@@ -129,11 +143,44 @@ public class MyItineraryRecyclerViewAdapter extends RecyclerView.Adapter{
             mTitleTextView = (TextView) view.findViewById(R.id.frament_itinerary_list_event_title);
             mDateTextView = (TextView) view.findViewById(R.id.frament_itinerary_list_event_date);
             mEventImageView = (ImageView) view.findViewById(R.id.frament_itinerary_list_event_image);
+            mContainerMassIndicators = view.findViewById(R.id.frament_itinerary_list_mass_containers);
+            mMassLabel = (TextView) view.findViewById(R.id.frament_itinerary_list_mass_label);
+
         }
 
         @Override
         public String toString() {
             return super.toString() + " '" + mTitleTextView.getText() + "'";
         }
+    }
+
+
+    private String generatePlacesStringByPlaces(List<ItineraryDayEventPlace> places){
+
+        StringBuilder placesString = new StringBuilder();
+
+        for (ItineraryDayEventPlace place: places) {
+
+            String line = null;
+
+            if( isNotEmpty(place.getPlace()) ){
+                line = "+ " + place.getPlace();
+                if (isNotEmpty(place.getPriest())){
+                    line = line + ", Padre " + place.getPriest() + "\n";
+                }else{
+                    line = line + "\n";
+                }
+                placesString.append(line);
+            }
+        }
+
+        return placesString.toString();
+    }
+
+
+    private boolean isNotEmpty(String value){
+
+        return  value != null && value.length() > 0;
+
     }
 }

@@ -1,5 +1,10 @@
 package com.mjo.misioncba.section.itinerary;
 
+import com.mjo.misioncba.model.ItineraryDayEvent;
+import com.mjo.misioncba.model.ItineraryDayEventPlace;
+
+import java.util.List;
+
 /**
  * Created by jucastillo on 28/12/16.
  */
@@ -9,17 +14,21 @@ public class ItineraryListViewItemModel {
     public static final int EVENT_TYPE=1;
 
     public int type;
-    public String date;
     public String text;
-    public int imageType;
-    public int dayId;
+    public ItineraryDayEvent event;
 
-    public ItineraryListViewItemModel(int type, String text, String date, int imageType , int dayId)
-    {
+
+    public ItineraryListViewItemModel (int type, String text, ItineraryDayEvent event){
+
         this.type=type;
-        this.date=date;
         this.text=text;
-        this.imageType = imageType;
-        this.dayId = dayId;
+        this.event = event;
+    }
+
+    public ItineraryListViewItemModel (int type, String text){
+
+        this.type=type;
+        this.text=text;
+        this.event = null;
     }
 }

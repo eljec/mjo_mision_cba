@@ -18,14 +18,12 @@ public class MisionCbaApplication extends Application {
         return itinerary;
     }
 
+    public void setItinerary(Itinerary itinerary) {
+        this.itinerary = itinerary;
+    }
+
     @Override
     public void onCreate() {
         super.onCreate();
-
-        // Load the file
-
-        Itinerary result = new ItineraryProvider(getAssets()).obtain(ITINERARY_ASSET_FILE);
-        this.itinerary = result;
-
     }
 }
