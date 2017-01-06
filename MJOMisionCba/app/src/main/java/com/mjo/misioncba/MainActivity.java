@@ -17,6 +17,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.mjo.misioncba.section.contact.ContactFragment;
 import com.mjo.misioncba.section.itinerary.ItineraryFragment;
@@ -37,6 +38,8 @@ public class MainActivity extends AppCompatActivity
     public static final String KEY_PREFRENCES_SELECTED_INDEX="itinerary_selected_index";
 
     private View spinnerViewContainer;
+    private int counterBack = 0;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,12 +80,28 @@ public class MainActivity extends AppCompatActivity
     }
 
     @Override
+    protected void onResume() {
+        super.onResume();
+        counterBack = 0;
+    }
+
+    @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
-            super.onBackPressed();
+
+            // Check counter for back
+
+            counterBack ++;
+
+            if(counterBack >= 2){
+                super.onBackPressed();
+            }else{
+                Toast.makeText(this, "Oprimir una vez mas para salir la app",Toast.LENGTH_SHORT).show();
+            }
+
         }
     }
 
@@ -95,6 +114,8 @@ public class MainActivity extends AppCompatActivity
         // Check the id of the menu and replace fragment
 
         selectItem(id);
+
+        counterBack = 0;
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

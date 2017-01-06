@@ -547,7 +547,7 @@
           "places": []
         },
         {
-          "eventTitle": "Oración ((Postulantes)) Formación",
+          "eventTitle": "Oración (Postulantes) Formación",
           "eventDate": "9:15",
           "eventImageType" : 5,
           "dayId": 6,
@@ -609,7 +609,7 @@
           ]
         },
         {
-          "eventTitle": "Duchas.",
+          "eventTitle": "Duchas",
           "eventDate": "21:00",
           "eventImageType" : 8,
           "dayId": 6,
@@ -723,7 +723,7 @@
           ]
         },
         {
-          "eventTitle": "Duchas.",
+          "eventTitle": "Duchas",
           "eventDate": "21:00",
           "eventImageType" : 8,
           "dayId": 7,

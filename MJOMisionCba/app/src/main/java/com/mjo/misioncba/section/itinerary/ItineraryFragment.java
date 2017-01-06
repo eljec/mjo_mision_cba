@@ -14,6 +14,8 @@ import com.mjo.misioncba.model.ItineraryDay;
 import com.mjo.misioncba.model.ItineraryDayEvent;
 import com.mjo.misioncba.MisionCbaApplication;
 import com.mjo.misioncba.R;
+import com.mjo.misioncba.model.ItineraryProvider;
+import com.mjo.misioncba.model.ItineraryProviderConstants;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -96,11 +98,15 @@ public class ItineraryFragment extends Fragment {
 
     private void modelForList(int day){
 
-            // Obtengo data original
-
+        // Obtengo data original
         if(this.itineraryRawData == null) {
             MisionCbaApplication appState = ((MisionCbaApplication) getActivity().getApplication());
-            itineraryRawData = appState.getItinerary();
+            this.itineraryRawData = appState.getItinerary();
+
+            if(this.itineraryRawData == null){
+                // Load teh file again
+                this.itineraryRawData  = new ItineraryProvider(getActivity().getAssets()).obtain(ItineraryProviderConstants.ITINERARY_ASSET_FILE);
+            }
         }
 
        Itinerary itinerary = null;
