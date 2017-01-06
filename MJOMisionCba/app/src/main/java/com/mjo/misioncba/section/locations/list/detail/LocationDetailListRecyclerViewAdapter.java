@@ -72,7 +72,4 @@ public class LocationDetailListRecyclerViewAdapter extends RecyclerView.Adapter 
             mImage = (ImageView) view.findViewById(R.id.location_group_detail_item_list_image);
         }
     }
-
-
-
 }

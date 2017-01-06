@@ -1,9 +1,12 @@
 package com.mjo.misioncba.section.locations.list.detail;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 /**
  * Created by jucastillo on 3/1/17.
  */
-public class LocationDetailItemList {
+public class LocationDetailItemList implements Parcelable {
 
     static public final int LOCATION_TYPE_SANTA_ISABLE_TERCERA = 0;
     static public final int LOCATION_TYPE_VICOR = 1;
@@ -31,4 +34,33 @@ public class LocationDetailItemList {
     public String getNeighborhoodName() {
         return neighborhoodName;
     }
+
+    protected LocationDetailItemList(Parcel in) {
+        imageType = in.readInt();
+        neighborhoodName = in.readString();
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeInt(imageType);
+        dest.writeString(neighborhoodName);
+    }
+
+    @SuppressWarnings("unused")
+    public static final Parcelable.Creator<LocationDetailItemList> CREATOR = new Parcelable.Creator<LocationDetailItemList>() {
+        @Override
+        public LocationDetailItemList createFromParcel(Parcel in) {
+            return new LocationDetailItemList(in);
+        }
+
+        @Override
+        public LocationDetailItemList[] newArray(int size) {
+            return new LocationDetailItemList[size];
+        }
+    };
 }

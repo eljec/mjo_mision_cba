@@ -525,7 +525,6 @@
     </string-array>
 
 
-
     // Oraciones
 
     <string-array name="prayer_titles">
@@ -566,5 +565,6 @@
             Señor de la vida y de la muerte,  Tú que ves el dolor que nos causa la separación de nuestro ser querido; en este momento de tristeza, no sabemos qué decirte. Nuestra oración es, por la pena de su ausencia, nos deja un gran vacío que solo tú, Señor lo puedes llenar.  Tú, Señor, lo (la) has llamado a gozar de tu presencia; recíbelo (la) en tu Reino de paz y felicidad, y guía nuestros pasos para que un día lleguemos a reunirnos con él (ella) en tu presencia, por los siglos de los siglos. Amén.​
         </item>
     </string-array>
+    <string name="title_activity_location_zoom_map">LocationZoomMapActivity</string>
 
 </resources>
