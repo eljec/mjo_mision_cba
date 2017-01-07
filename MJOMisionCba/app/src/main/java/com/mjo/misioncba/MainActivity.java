@@ -27,6 +27,7 @@ import com.mjo.misioncba.section.locations.list.LocationGroupItem;
 import com.mjo.misioncba.section.maps.MapFragment;
 import com.mjo.misioncba.section.prayer.PrayerFragment;
 import com.mjo.misioncba.section.readings.list.ReadingFragmentListFragment;
+import com.mjo.misioncba.section.songbook.SongbookFragment;
 
 import java.util.List;
 
@@ -155,6 +156,9 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_map) {
             spinnerViewContainer.setVisibility(View.GONE);
             fragment = new MapFragment();
+        }else if (id == R.id.nav_songbook){
+            spinnerViewContainer.setVisibility(View.GONE);
+            fragment = new SongbookFragment();
         }
 
         if (fragment != null) {

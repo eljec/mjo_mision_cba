@@ -531,6 +531,7 @@
     <string name="navigation_item_group">Grupos misioneros</string>
     <string name="navigation_item_group_places">Lugares por grupo</string>
     <string name="navigation_item_maps">Mapa de barrios</string>
+    <string name="navigation_item_songbook">Cancionero</string>
     <string name="fragment_map_title">Mapa de los barrios</string>
     <string name="reading_detail_title">"Lecturas:  "</string>
     <string name="fragment_itinerary_list_item_mass_title_container">Lugar:</string>
@@ -590,5 +591,24 @@
         </item>
     </string-array>
     <string name="title_activity_location_zoom_map">LocationZoomMapActivity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <!-- Cancionero-->
+
+    <string-array name="songbook_titles">
+        <item>Zamba del bautismo</item>
+    </string-array>
+
+
+    <string-array name="songbook_content">
+        <item>
+            "Cantemos la alegría de ser hijos de Dios y libres del pecado, por obra del amor nacimos de la fuente del agua bautismal, con una vida nueva de luz y eternidad. (2)\n\n"
+            "Brillo para nosotros la Pascua de Jesús y fuimos otros Cristos cargados con su cruz. De Dios un templo somos hermosa realidad y habita en nuestras almas la misma trinidad.(2)\n\n"
+            "Si la piedad de un Padre la humanidad salvó,  respuesta y compromiso debemos a su amor. Señor, tu amor de padre, protégenos del mal para alcanzar un día, la patria celestial. (2)\n"
+        </item>
+    </string-array>
 
 </resources>
