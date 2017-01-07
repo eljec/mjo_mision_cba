@@ -11,6 +11,9 @@ import com.mjo.misioncba.R;
  */
 public class LocationDetailItemListImageFactory {
 
+
+    static public final int LOCATION_TYPE_ZONA = 99;
+
     static public Drawable getImageForType(int type, Context context){
 
         Drawable image = null;
@@ -53,8 +56,12 @@ public class LocationDetailItemListImageFactory {
                 break;
 
             case LocationDetailItemList.LOCATION_TYPE_LA_ESPERANZA:
+                image = ContextCompat.getDrawable(context, R.drawable.mapa_esperanza );
                 break;
 
+            case LOCATION_TYPE_ZONA:
+                image = ContextCompat.getDrawable(context, R.drawable.mapa_barrios_mision );
+                break;
             default:
                 image = ContextCompat.getDrawable(context, R.drawable.mapa_amp_vicor );
                 break;

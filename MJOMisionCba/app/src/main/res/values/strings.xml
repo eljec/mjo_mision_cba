@@ -67,6 +67,7 @@
     // Label of contact view
 
     <string name="fragment_contact_referentes_de_mision_label">Referentes misión</string>
+    <string name="fragment_contact_animadores_label">Animadores</string>
     <string name="fragment_contact_cotto_label">Cotto</string>
     <string name="fragment_contact_emergencias_label">Emergencias</string>
     <string name="fragment_contact_policia_label">Policia</string>
@@ -506,6 +507,7 @@
         "\n    - La Esperanza"
     </string>
     <string name="navigation_item_group">Grupos misioneros</string>
+    <string name="navigation_item_group_places">Lugares por grupo</string>
     <string name="navigation_item_maps">Mapa de barrios</string>
     <string name="fragment_map_title">Mapa de los barrios</string>
     <string name="reading_detail_title">"Lecturas:  "</string>

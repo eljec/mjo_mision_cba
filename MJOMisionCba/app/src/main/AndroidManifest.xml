@@ -37,7 +37,9 @@
         <activity android:name=".ReadingsDatailsActivity" />
         <activity android:name=".LocationGroupDetailActivity" />
         <activity android:name=".ContactDetailActivity" />
-        <activity android:name=".section.locations.list.zoom.LocationGroupMapZoomActivity"></activity>
+
+        <activity android:name=".section.locations.list.zoom.LocationGroupMapZoomActivity">
+        </activity>
     </application>
 
 </manifest>

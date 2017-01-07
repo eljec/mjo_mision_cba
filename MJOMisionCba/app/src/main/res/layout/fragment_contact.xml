@@ -13,7 +13,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-
+        <!-- Referentes -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -30,12 +30,32 @@
             android:id="@+id/fragment_contact_referents_container_view">
 
         </LinearLayout>
+
+        <!-- Animadores -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textStyle="bold"
             android:paddingLeft="5dp"
+            android:textSize="22dp"
+            android:text="@string/fragment_contact_animadores_label"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:orientation="vertical"
+            android:id="@+id/fragment_contact_animadores_container_view">
+
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:textStyle="bold"
+            android:paddingLeft="5dp"
             android:id="@+id/fragment_contact_cotto_section_label"
+            android:drawableRight="@mipmap/ic_info_black_24dp"
             android:textSize="22dp"
             android:text="@string/fragment_contact_cotto_label"/>
 

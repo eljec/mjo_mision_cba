@@ -18,8 +18,8 @@
 
         <item
             android:id="@+id/nav_location_group"
-            android:icon="@mipmap/ic_group_black_24dp"
-            android:title="@string/navigation_item_group" />
+            android:icon="@mipmap/ic_place_black_24dp"
+            android:title="@string/navigation_item_group_places" />
 
         <item
             android:id="@+id/nav_map"
