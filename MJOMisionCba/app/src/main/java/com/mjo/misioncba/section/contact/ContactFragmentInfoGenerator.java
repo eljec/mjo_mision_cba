@@ -34,23 +34,48 @@ public class ContactFragmentInfoGenerator {
         String[] referentsPhoneNumber = res.getStringArray(R.array.referents_phone_number);
         int[] profileImageType = res.getIntArray(R.array.referents_profile_type_imager);
 
+        contacts = getContactArray(referentsName, referentsPhoneNumber, profileImageType);
 
-        for (int i = 0; i < referentsName.length; i++) {
-            String name = referentsName[i];
-            String phoneNUmber = referentsPhoneNumber[i];
-            int imageType = profileImageType[i];
+        return contacts;
+    }
+
+
+    private ArrayList<ContactModel> getContactArray(String[] names, String[] phones, int[] imageTypes) {
+
+        ArrayList<ContactModel> contacts = new ArrayList<>();
+
+        for (int i = 0; i < names.length; i++) {
+            String name = names[i];
+            String phoneNUmber = phones[i];
+            int imageType = imageTypes[i];
 
             ContactModel contact = new ContactModel(name, phoneNUmber, imageType);
 
             contacts.add(contact);
         }
+
         return contacts;
     }
 
+    public ArrayList<ContactModel> getAnimadoresContactModels() {
+
+        ArrayList<ContactModel> animadores = new ArrayList<>();
+
+        Resources res = this.context.getResources();
+        String[] referentsName = res.getStringArray(R.array.animadores_name);
+        String[] referentsPhoneNumber = res.getStringArray(R.array.animadores_phone_number);
+        int[] profileImageType = res.getIntArray(R.array.animadores_profile_type_imager);
+
+        animadores = getContactArray(referentsName, referentsPhoneNumber, profileImageType);
+
+        return animadores;
+    }
     public ContactCottoModel getCottoContactModel(){
 
         return new ContactCottoModel();
     }
+
+
 
     public String getPolicePhoe(){
 

@@ -48,6 +48,7 @@ public class ContactFragment extends Fragment implements ContactView.OnContactVi
     private Button firemanButton;
     private Button policeButton;
     private Button hospitalButton;
+    private LinearLayout aniamdoresContainer;
 
     public ContactFragment() {
         // Required empty public constructor
@@ -62,6 +63,8 @@ public class ContactFragment extends Fragment implements ContactView.OnContactVi
 
         this.contactContainer = (LinearLayout) fragmentView.findViewById(R.id.fragment_contact_referents_container_view);
         this.cottoContainer = (LinearLayout) fragmentView.findViewById(R.id.fragment_contact_cotto_container_view);
+        this.aniamdoresContainer = (LinearLayout) fragmentView.findViewById(R.id.fragment_contact_animadores_container_view);
+
         this.cottoAddressLineTextView = (TextView) fragmentView.findViewById(R.id.fragment_contact_cotto_address_line);
         this.cottoPhoneTextView = (TextView) fragmentView.findViewById(R.id.fragment_contact_cotto_phone);
         this.cottoImageButtonMap = (ImageButton) fragmentView.findViewById(R.id.fragment_contact_cotto_image);
@@ -81,6 +84,7 @@ public class ContactFragment extends Fragment implements ContactView.OnContactVi
         final ContactFragmentInfoGenerator infoGenerator = new ContactFragmentInfoGenerator(getContext());
 
         ArrayList<ContactModel> contactModels = infoGenerator.getReferentsContactModels();
+        ArrayList<ContactModel> aniamdores = infoGenerator.getAnimadoresContactModels();
         final ContactCottoModel contactCottoModel = infoGenerator.getCottoContactModel();
 
 
@@ -93,6 +97,17 @@ public class ContactFragment extends Fragment implements ContactView.OnContactVi
             contactView.configureForModel(contact);
 
             this.contactContainer.addView(contactView);
+        }
+
+        // Animadores
+
+        for (ContactModel contact: aniamdores) {
+
+            ContactView contactView = new ContactView(getContext());
+            contactView.setListener(this);
+            contactView.configureForModel(contact);
+
+            this.aniamdoresContainer.addView(contactView);
         }
 
         // Cotto

@@ -45,6 +45,28 @@
         <item>2</item>
         <item>3</item>
     </array>
+
+    <!-- Animadores -->
+
+    <string-array name="animadores_name">
+        <item>Lautaro Abrigo</item>
+        <item>Sabrina Chavez</item>
+        <item>Lucas Lopez</item>
+    </string-array>
+
+    <string-array name="animadores_phone_number">
+        <item>3516807934</item>
+        <item>3518101704</item>
+        <item>3515080172</item>
+    </string-array>
+
+    <array name="animadores_profile_type_imager">
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </array>
+
+
     <string name="title_activity_cotto_detail">\'Cotto\' de Córdoba</string>
 
     <string name="cotto_detail_part_one">

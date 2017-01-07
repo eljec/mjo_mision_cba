@@ -92,6 +92,15 @@ public class ContactDetailActivity extends AppCompatActivity {
             case 3:
                 drawable = ContextCompat.getDrawable(this,R.drawable.ana_laura_foto_perfil );
                 break;
+            case 4:
+                drawable = ContextCompat.getDrawable(this,R.drawable.lautaro_foto_perfil );
+                break;
+            case 5:
+                drawable = ContextCompat.getDrawable(this,R.drawable.sabrina_foto_perfil );
+                break;
+            case 6:
+                drawable = ContextCompat.getDrawable(this,R.drawable.cachi_foto_perfil );
+                break;
 
             default:
                 drawable = ContextCompat.getDrawable(this,R.drawable.mjo_logo_nuevo );
