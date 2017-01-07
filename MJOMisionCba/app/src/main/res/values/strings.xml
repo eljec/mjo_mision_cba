@@ -599,7 +599,14 @@
     <!-- Cancionero-->
 
     <string-array name="songbook_titles">
-        <item>Zamba del bautismo</item>
+        <item>ZAMBA DEL BAUTISMO</item>
+        <item>TU BENDICIÓN</item>
+        <item>A LA MESA DEL SEÑOR</item>
+        <item>AL PARTIR EL PAN</item>
+        <item>COMO EL PADRE ME ENVIÓ</item>
+        <item>VEN Y SÍGUEME</item>
+        <item>ALMA MISIONERA</item>
+        <item>SE LLAMA MARIA</item>
     </string-array>
 
 
@@ -608,6 +615,58 @@
             "Cantemos la alegría de ser hijos de Dios y libres del pecado, por obra del amor nacimos de la fuente del agua bautismal, con una vida nueva de luz y eternidad. (2)\n\n"
             "Brillo para nosotros la Pascua de Jesús y fuimos otros Cristos cargados con su cruz. De Dios un templo somos hermosa realidad y habita en nuestras almas la misma trinidad.(2)\n\n"
             "Si la piedad de un Padre la humanidad salvó,  respuesta y compromiso debemos a su amor. Señor, tu amor de padre, protégenos del mal para alcanzar un día, la patria celestial. (2)\n"
+        </item>
+        <item>
+            "Cuando nos das tu Palabra, la vida palpita tanto que el pueblo entero te nombra, con verso, música y canto.\n\n"
+            "Es que tu Palabra es vida que consuela al caminante. Y al débil lo reanima a que siga pa' delante.\n\n"
+            "TU PALABRA ES QUERENDONA, SUAVE Y DULCE COMO MIEL, NOS TOCA Y NOS ENAMORA, Y NOS HACE PUEBLO FIEL.\n\n"
+            "Es agua limpia y fresquita que alivia tantos penares. Es simple porque es clarita serenata de cantares.\n\n"
+            "Así sentimos clarito que la historia es caminata Y es tarea de hermanarse con la vida arremangada.\n\n"
+            "Con empeño siempre firme aceptando la Palabra, la vida del suelo crece y un tiempo nuevo amanece.\n\n"
+            "Por eso Tatita Dios, déjanos tu bendición, y esa caricia del cielo que es tu palabra, Señor.\n"
+        </item>
+        <item>
+            "Llegamos a tu mesa amado Señor trayendo en nuestros labios un canto de amor, para que nos alumbre tu gracia y bondad. Así podamos siempre tu amor reflejar (2)\n\n"
+            "El pan que es tu cuerpo nos confortará el vino que es tu sangre valor nos dará, para enfrentar la vida con fe y con amor, confiando plenamente en tu gracia Señor (2)\n\n"
+            "BENDITO SEAS SEÑOR POR TODO EL BIEN QUE NOS DAS, BENDITO PORQUE QUIERES ESTA HOY AQUÍ BRINDANDONOS TU VIDA EN VINO Y EN PAN. (2)\n\n"
+            "El pan que compartimos es trigo de Dios y es fruto de la tierra en trabajo y dolor. En nuestros corazones semilla se hará para una nueva siembra de paz y amistad (2)\n\n"
+            "La copa que tomamos es vino de Dios, es  sangre derramada por Cristo en la cruz. Se hará en nuestras venas latidos de amor para enfrentar la vida en amor con Jesús (2)\n"
+
+        </item>
+        <item>
+            "Somos tu pueblo que se reúne y quiere celebrar, esa promesa que nos hiciste y que vida nos da, que seguís siempre entre nosotros en la fracción del pan.\n\n"
+            "Yo soy el pan de vida que da la fuerza en el caminar, soy alimento para el cansado pan de fraternidad, soy ese gesto de pan y vino que permanecerá.\n\n"
+            "EN NUESTRO CAMINAR TU PALABRA NOS DAS Y TE RECONOCEMOS AL PARTIR EL PAN: Y NOS RECONOCEMOS PARTIENDO EL MISMO PAN.\n\n"
+            "Sos manantial de misericordia, ternura y compasión, fuente de gracia transformadora que llega al corazón. Nos reconcilia, nos hace hermanos signo de comunión.\n\n"
+            "Un mandamiento nuevo les dejo que se amen de verdad, porque mi reino se hace presente desde la caridad, sea el servicio deuda entre ustedes: y el mundo creerá.\n\n"
+            "Por el camino nos lamentamos porque Jesús murió. Sentados a la mesa lo descubrimos, resucitó: cuando escuchamos que nos hablaba nos ardió el corazón.\n\n"
+            "Yo los envío no se acobarden la fuerza llegará, han recibido amor verdadero vayan a contagiar, sean testigos del gran milagro en la mesa fraternal.\n"
+        </item>
+        <item>
+            "COMO EL PADRE ME ENVIÓ YO LOS ENVÍO A USTEDES, COMO EL PADRE  ME ENVIÓ YO LOS ENVÍO A USTEDES.\n\n"
+            "Somos una Iglesia nueva que llama Jesús, sus apóstoles seremos en el mundo de hoy. Alzaremos nuestros brazos hasta el cielo y el espíritu del padre nos impulsará.\n\n"
+            "Somos una Iglesia viva que quiere servir, el modelo de María fructificará. Ir mostrando con la vida la alegría que nos da el amor fraterno y la caridad.\n\n"
+            "Somos una Iglesia joven que vive en Jesús, es su fuerza la que inunda nuestro corazón. De la mano del maestro lograremos compartir con los hermanos vida en comunión.\n"
+        </item>
+        <item>
+            "Me pides, Señor, que yo siga, me pides que me ponga a caminar. Difícil para mi es complacerte, es mucho lo que tengo que dejar.\n\n"
+            "Me llamas Señor a ser Apóstol y sabes que es mucho para mí. Quisiera algún día yo seguirte es mucho lo que tengo que dejar.\n\n"
+            "VEN Y SÍGUEME NO ESPERES MÁS, YO JUNTO A TI ESTARÉ. NO TEMAS QUE PALABRAS TENDRÁS QUE DECIR YO POR TU BOCA HABLARÉ\n\n"
+            "Porque te fijas tanto en mi persona habiendo otros mejores que yo. De mi no esperes nunca algo grande soy débil y cobarde sabes bien.\n\n"
+            "Señor, quiero decirte otra cosa mis amigos de mi se reirán. Dame la fuerza y valentía, dame Tú la vida y la fe.\n"
+        </item>
+        <item>
+            "Señor toma mi vida nueva,  antes de que la espera,  desgaste años en mí. Estoy dispuesto a lo que quieras,  no importa lo que sea,  tú llámame a servir.\n\n"
+            "LLEVAME DONDE LOS HOMBRES NECESITEN TU PALABRA,  NECESITEN MIS GANAS DE VIVIR…DONDE FALTE LA ESPERANZA,  DONDE TODO SEA TRISTE,  SIMPLEMENTE POR NO SABER DE TI.\n\n"
+            "Te doy mi corazón sincero, para gritar sin miedo, lo hermoso que es tu amor. Señor tengo alma misionera,  condúceme a la tierra, que tenga sed de Vos.\n\n"
+            "Y así en marcha iré cantando, por pueblos predicando, tu grandeza Señor. Tendré mis manos sin cansancio, tu historia entre mis labios, tu fuerza en la oración.\n"
+        </item>
+        <item>
+            "Como se llama esa persona que acompañó siempre tu historia, que se graduó con vos… en la academia de la vida y fue curando las heridas que la guerra dejó en tu corazón.\n\n"
+            "Como se llama esa persona que fue bordándose en su manto tu sueño de volar, y se metiera en tus zapatos para seguir tu débil paso, y hacer todo esto solo por amor.\n\n"
+            "SE LLAMA MARIA (2) LA ESTRELLA QUE GUIA EL DIA LA MADRE DEL SOL.\n"
+            "SE LLAMA MARIA (2) LA ETERNA COMPAÑÍA DE MI CORAZON, DE MI CORAZON\n\n"
+            "Como se llama esa persona que en las arrugas de su mano dibuja una ilusión, de que tú y yo seamos hermanos y que su voz sea nuestro canto y nos convoque siempre para llegar a Dios.\n"
         </item>
     </string-array>
 
