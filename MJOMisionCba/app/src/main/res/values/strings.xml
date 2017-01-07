@@ -28,16 +28,12 @@
         <item>Florencia Rodriguez </item>
         <item>Tamara Rodriguez</item>
         <item>Ana laura Peralta</item>
-        <!--<item>Lautaro Abrigo</item>
-        <item>Sabrina Chavez</item>-->
     </string-array>
 
     <string-array name="referents_phone_number">
         <item>3515280086 </item>
         <item>3513739501</item>
         <item>3533412019</item>
-        <!--<item>3516807934</item>
-        <item>3518101704</item>-->
     </string-array>
 
     <array name="referents_profile_type_imager">
@@ -73,6 +69,10 @@
         "El Pequeño Cottolengo Argentino fue abierto por el mismo San Luis Orione."
         "Durante su segunda estadía en nuestro país, colocó en Claypole (al sur del gran Buenos Aires) la piedra fundamental de su construcción el 28 de abril de 1935."
         "Sus comienzos en la ciudad de Córdoba, datan de 1957."
+        "Dentro del predio del Cottolengo de Córdoba, estan funcionando tres entidades unidas por el mismo carisma:\n- El Colegio Don Orione.\n- El Cottolengo.\n- La parroquia.\n\n"
+        "En cuanto al Colegio, tenemos dos:\n+El Instituto Don Orione\n+El Colegio Especial.\n\n"
+        "En cuanto al Cotto, este tiene 126 residentes que poseen distintas discapacidades mentales y fisicas. Esta formado por 4 casas u hogares (3 de mujeres y 1 de varones), las cuales son:\n-Itati.\n-Lourdes.\n-San Jose.\n-Divina Providencia.\n\n"
+        "En cuanto a la parroquia en la misma se dan catequesis, estan los grupos juveniles, grupos de ayuda a personas, etc. La parroquia esta integrada por mas de 5 capillas, algunas de las cuales se van a misionar este año."
     </string>
 
     <string name="cotto_detail_part_two">

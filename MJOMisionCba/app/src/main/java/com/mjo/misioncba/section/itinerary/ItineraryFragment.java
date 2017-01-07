@@ -1,7 +1,12 @@
 package com.mjo.misioncba.section.itinerary;
 
+import android.content.ActivityNotFoundException;
 import android.content.Context;
+import android.content.Intent;
+import android.content.res.AssetManager;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -17,6 +22,8 @@ import com.mjo.misioncba.R;
 import com.mjo.misioncba.model.ItineraryProvider;
 import com.mjo.misioncba.model.ItineraryProviderConstants;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
