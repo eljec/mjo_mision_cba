@@ -22,9 +22,11 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/fragment_map_label"
         android:layout_marginTop="10dp"
         android:lineSpacingExtra="10dp"
         android:textSize="16dp"
+        android:drawableRight="@mipmap/ic_trending_flat_black_24dp"
         android:text="@string/fragment_map_description" />
 
     <ImageView

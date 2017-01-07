@@ -8,7 +8,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
+import com.mjo.misioncba.LocationGroupDetailActivity;
 import com.mjo.misioncba.R;
 import com.mjo.misioncba.section.locations.list.detail.LocationDetailItemList;
 import com.mjo.misioncba.section.locations.list.detail.LocationDetailItemListImageFactory;
@@ -43,6 +45,17 @@ public class MapFragment extends Fragment {
 
                 Intent intent = new Intent(getActivity(), LocationGroupMapZoomActivity.class);
                 intent.putExtra(LocationGroupMapZoomActivity.GROUP_MAP_MODEL_SECETED, item);
+                startActivity(intent);
+            }
+        });
+
+        TextView contentLabel = (TextView) view.findViewById(R.id.fragment_map_label);
+        contentLabel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                // Open map list
+                Intent intent = new Intent(getActivity(), LocationGroupDetailActivity.class);
                 startActivity(intent);
             }
         });
