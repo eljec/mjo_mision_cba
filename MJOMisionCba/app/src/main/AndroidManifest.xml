@@ -37,8 +37,21 @@
         <activity android:name=".ReadingsDatailsActivity" />
         <activity android:name=".LocationGroupDetailActivity" />
         <activity android:name=".ContactDetailActivity" />
-        <activity android:name=".section.locations.list.zoom.LocationGroupMapZoomActivity"></activity>
-        <activity android:name=".ImageZoomActivity"></activity>
+        <activity android:name=".section.locations.list.zoom.LocationGroupMapZoomActivity" />
+        <activity android:name=".ImageZoomActivity" />
+        <activity
+            android:name=".section.feedback.FeedbackActivity"
+            android:label="@string/title_activity_feedback"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity android:name=".section.feedback.stepTwo.FeedbackActivityStepTwo"
+            android:parentActivityName=".MainActivity">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
     </application>
 
 </manifest>

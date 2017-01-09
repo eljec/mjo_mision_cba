@@ -669,5 +669,6 @@
             "Como se llama esa persona que en las arrugas de su mano dibuja una ilusión, de que tú y yo seamos hermanos y que su voz sea nuestro canto y nos convoque siempre para llegar a Dios.\n"
         </item>
     </string-array>
+    <string name="title_activity_feedback">FeedbackActivity</string>
 
 </resources>
