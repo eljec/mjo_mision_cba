@@ -14,6 +14,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.mjo.misioncba.ImageZoomActivity;
 import com.mjo.misioncba.model.Itinerary;
 import com.mjo.misioncba.model.ItineraryDay;
 import com.mjo.misioncba.model.ItineraryDayEvent;
@@ -21,6 +22,9 @@ import com.mjo.misioncba.MisionCbaApplication;
 import com.mjo.misioncba.R;
 import com.mjo.misioncba.model.ItineraryProvider;
 import com.mjo.misioncba.model.ItineraryProviderConstants;
+import com.mjo.misioncba.section.locations.list.detail.LocationDetailItemList;
+import com.mjo.misioncba.section.locations.list.detail.LocationDetailItemListImageFactory;
+import com.mjo.misioncba.section.locations.list.zoom.LocationGroupMapZoomActivity;
 
 import java.io.File;
 import java.io.IOException;
@@ -94,6 +98,11 @@ public class ItineraryFragment extends Fragment {
 
                             if(item.event.getEventImageType() == 2) {
                                 mListener.onListFragmentInteraction(item);
+                            }else if (item.event.getDayId() == 3 && item.event.getEventImageType() == 5){
+
+                                // Formacion del padre Santiago
+                                Intent intent = new Intent(getActivity(), ImageZoomActivity.class);
+                                startActivity(intent);
                             }
                         }
                     })

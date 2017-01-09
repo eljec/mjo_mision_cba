@@ -62,6 +62,7 @@ public class LocationDetailItemListImageFactory {
             case LOCATION_TYPE_ZONA:
                 image = ContextCompat.getDrawable(context, R.drawable.mapa_barrios_mision );
                 break;
+
             default:
                 image = ContextCompat.getDrawable(context, R.drawable.mapa_amp_vicor );
                 break;

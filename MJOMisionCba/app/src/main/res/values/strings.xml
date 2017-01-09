@@ -499,12 +499,12 @@
     // Seccion grupos misioneros
 
     <string-array name="location_group_section_title">
-        <item>Grupos 1-2</item>
+        <item>Grupos 1-2-12</item>
         <item>Grupos 3-4</item>
         <item>Grupos 5-6</item>
         <item>Grupos 7-8</item>
         <item>Grupos 9-10</item>
-        <item>Grupos 11-12</item>
+        <item>Grupos 11</item>
     </string-array>
 
     <string-array name="location_group_section_content">
