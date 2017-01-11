@@ -7,10 +7,12 @@ public class ItemFeedbackModelList {
 
     private String text;
     private float startValue;
+    private String keyType;
 
-    public ItemFeedbackModelList(String text, float startValue) {
+    public ItemFeedbackModelList(String text, float startValue, String keyType) {
         this.text = text;
         this.startValue = startValue;
+        this.keyType = keyType;
     }
 
     public ItemFeedbackModelList() {
@@ -21,6 +23,7 @@ public class ItemFeedbackModelList {
     public ItemFeedbackModelList(String text) {
         this.text = text;
         this.startValue = 0;
+        this.keyType = null;
     }
 
     public String getText() {
@@ -37,5 +40,13 @@ public class ItemFeedbackModelList {
 
     public void setStartValue(float startValue) {
         this.startValue = startValue;
+    }
+
+    public String getKeyType() {
+        return keyType;
+    }
+
+    public void setKeyType(String keyType) {
+        this.keyType = keyType;
     }
 }

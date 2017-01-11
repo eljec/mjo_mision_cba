@@ -14,12 +14,26 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:background="@android:color/holo_blue_light"
+        android:layout_margin="10dp"
+        android:text="Paso 2" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:textSize="20dp"
+        android:gravity="center_horizontal"
         android:text="@string/feedback_step_two_title_label"/>
 
-    <EditText
+    <!--<EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/feedback_suggestion"
+        android:layout_margin="10dp"
         android:layout_alignParentLeft="true"
         android:layout_centerVertical="true"
         android:autoLink="all"
@@ -29,12 +43,31 @@
         android:gravity="top|left"
         android:maxLines="10"
         android:scrollbars="none"
-        android:inputType="textMultiLine|textCapSentences"/>
+        android:inputType="textMultiLine|textCapSentences"/>-->
+
+    <EditText
+        android:id="@+id/textArea_information"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="#E8EAF6"
+        android:gravity="top|left"
+        android:inputType="textMultiLine"
+        android:overScrollMode="always"
+        android:scrollbarStyle="insideInset"
+        android:scrollbars="vertical"
+        android:lines="8"
+        android:maxLines="20"
+        android:textSize="18dp"
+        android:hint="@string/feedback_step_two_suggestions_label"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:scrollHorizontally="false" />
 
     <Button
         android:id="@+id/feedback_submit_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
         android:text="@string/feedback_step_two_sunmit_btn_label"
         android:background="@color/colorAccent"/>
 

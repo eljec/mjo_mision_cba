@@ -21,6 +21,7 @@ public class FeedbackActivityStepTwo extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_feedback_activity_step_two);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle("Ya casi terminas..");
     }
 
     @Override

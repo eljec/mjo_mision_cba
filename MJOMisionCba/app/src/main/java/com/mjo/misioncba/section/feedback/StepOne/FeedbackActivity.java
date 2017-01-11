@@ -14,11 +14,13 @@ import com.mjo.misioncba.R;
 import com.mjo.misioncba.section.feedback.stepTwo.FeedbackActivityStepTwo;
 
 import java.util.List;
+import java.util.Map;
 
-public class FeedbackActivity extends AppCompatActivity {
+public class FeedbackActivity extends AppCompatActivity implements FeedbackStepOneListRecyclerViewAdapter.OnFeedbackListStartChangeListener {
 
     private FloatingActionButton fab;
     private FeedbackStepOneListRecyclerViewAdapter adapterList;
+    private List<ItemFeedbackModelList> data;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,11 +52,15 @@ public class FeedbackActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         ItemFeedbackModelListGenerator generator = new ItemFeedbackModelListGenerator();
-        List<ItemFeedbackModelList> data = generator.getData(this);
+        data = generator.getData(this);
 
         adapterList = new FeedbackStepOneListRecyclerViewAdapter(data, this);
 
         recyclerView.setAdapter(adapterList);
+
+        // Default hide
+
+        this.fab.setVisibility(View.GONE);
     }
 
     @Override
@@ -76,5 +82,15 @@ public class FeedbackActivity extends AppCompatActivity {
         Bundle bndlAnimation =
                 ActivityOptions.makeCustomAnimation(getApplicationContext(), R.anim.anim1,R.anim.anim2).toBundle();
         startActivity(stepTwo, bndlAnimation);
+    }
+
+    @Override
+    public void onFeedbackListStartChange(Map<String, Float> selectedValues) {
+
+        // Ver si esta toda la lista cargada, en tal caso mostrar el fab button
+
+        if(data.size() == selectedValues.size()){
+            fab.setVisibility(View.VISIBLE);
+        }
     }
 }
