@@ -43,7 +43,7 @@
         <activity android:name=".section.locations.list.zoom.LocationGroupMapZoomActivity" />
         <activity android:name=".ImageZoomActivity" />
         <activity
-            android:name=".section.feedback.FeedbackActivity"
+            android:name=".section.feedback.StepOne.FeedbackActivity"
             android:label="@string/title_activity_feedback"
             android:theme="@style/AppTheme.NoActionBar" />
 

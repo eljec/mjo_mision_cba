@@ -20,7 +20,7 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.mjo.misioncba.section.contact.ContactFragment;
-import com.mjo.misioncba.section.feedback.FeedbackActivity;
+import com.mjo.misioncba.section.feedback.StepOne.FeedbackActivity;
 import com.mjo.misioncba.section.itinerary.ItineraryFragment;
 import com.mjo.misioncba.section.itinerary.ItineraryListViewItemModel;
 import com.mjo.misioncba.section.locations.list.LocationGroupFragment;

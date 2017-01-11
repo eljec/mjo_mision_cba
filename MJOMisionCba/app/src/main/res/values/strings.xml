@@ -669,6 +669,26 @@
             "Como se llama esa persona que en las arrugas de su mano dibuja una ilusión, de que tú y yo seamos hermanos y que su voz sea nuestro canto y nos convoque siempre para llegar a Dios.\n"
         </item>
     </string-array>
-    <string name="title_activity_feedback">FeedbackActivity</string>
 
+
+    // Feedback
+
+    <string name="title_activity_feedback">FeedbackActivity</string>
+    <string name="navigation_item_feedback">¿Que tal la misión?</string>
+    <string name="feedback_step_two_title_label">¿ En que podemos mejorar ?</string>
+    <string name="feedback_step_two_suggestions_label">Sugerencias para la proxima misión</string>
+    <string name="feedback_step_two_sunmit_btn_label">Enviar</string>
+
+
+    <string-array name="feedback_item_list_title">
+        <item>¿Como consideras el desarrollo de la mision?</item>
+        <item>¿Que te parecio el CLIMA DE FRATERNIDAD?</item>
+        <item>¿Que te parecio la COMIDA?</item>
+        <item>¿Que te parecio el ALOJAMIENTO?</item>
+        <item>¿Que te parecio LA FORMACION?</item>
+        <item>¿Que te parecio LA ESPIRITUALIDAD?</item>
+        <item>¿Que te parecieron LAS CELEBRACIONES?</item>
+        <item>¿Que te parecio LA ORGANIZACION DE LOS GRUPOS?</item>
+        <item>¿Que te parecio LA RECREACION y MOMENTOS LIBRES?</item>
+    </string-array>
 </resources>

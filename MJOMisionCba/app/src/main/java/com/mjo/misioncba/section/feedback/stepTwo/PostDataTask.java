@@ -1,4 +1,4 @@
-package com.mjo.misioncba.section.feedback;
+package com.mjo.misioncba.section.feedback.stepTwo;
 
 import android.content.Context;
 import android.os.AsyncTask;
