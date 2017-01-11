@@ -23,8 +23,14 @@ public class PostDataTask extends AsyncTask<String, Void, Boolean> {
             = MediaType.parse("application/x-www-form-urlencoded; charset=utf-8");
 
     private Context ctx;
+    private OnPostTaskListener listener;
+
 
     public static final String URL="https://docs.google.com/forms/d/e/1FAIpQLSdmstJH8tE-JDAFNuc_pRiazD93AgNoCP2n4U979-6r84Ht3g/formResponse";
+
+    public PostDataTask(OnPostTaskListener listener) {
+        this.listener = listener;
+    }
 
     @Override
     protected Boolean doInBackground(String... contactData) {
@@ -62,6 +68,23 @@ public class PostDataTask extends AsyncTask<String, Void, Boolean> {
     @Override
     protected void onPostExecute(Boolean result){
         //Print Success or failure message accordingly
-        Toast.makeText(ctx,result?"Message successfully sent!":"There was some error in sending message. Please try again after some time.",Toast.LENGTH_LONG).show();
+        //Toast.makeText(ctx,result?"Message successfully sent!":"There was some error in sending message. Please try again after some time.",Toast.LENGTH_LONG).show();
+
+        if(this.listener != null){
+
+            if(result){
+                this.listener.onPostTaskSuccess();
+            }else{
+                this.listener.onPostTaskError();
+            }
+        }
+    }
+
+
+    public interface OnPostTaskListener {
+
+        void onPostTaskSuccess();
+
+        void onPostTaskError();
     }
 }

@@ -45,10 +45,12 @@
         <activity
             android:name=".section.feedback.StepOne.FeedbackActivity"
             android:label="@string/title_activity_feedback"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"/>
 
         <activity android:name=".section.feedback.stepTwo.FeedbackActivityStepTwo"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait">
 
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
