@@ -21,7 +21,7 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_feedback" />
+    <include layout="@layout/feedback_section_item" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
