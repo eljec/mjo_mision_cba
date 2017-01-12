@@ -49,6 +49,7 @@ public class ContactFragment extends Fragment implements ContactView.OnContactVi
     private Button policeButton;
     private Button hospitalButton;
     private LinearLayout aniamdoresContainer;
+    private TextView misionWeb;
 
     public ContactFragment() {
         // Required empty public constructor
@@ -74,6 +75,8 @@ public class ContactFragment extends Fragment implements ContactView.OnContactVi
 
         this.cottoSectionLabel = (TextView) fragmentView.findViewById(R.id.fragment_contact_cotto_section_label);
 
+        this.misionWeb = (TextView) fragmentView.findViewById(R.id.fragment_contact_mision_web_content_label);
+
         setUpView();
 
         return fragmentView;
@@ -81,6 +84,17 @@ public class ContactFragment extends Fragment implements ContactView.OnContactVi
 
     private void setUpView(){
 
+        // Open browser
+        this.misionWeb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                String url = "https://donorione.org.ar/web/index.php/miradoras/5639-sembrando-esperanza-en-cordoba";
+                Intent i = new Intent(Intent.ACTION_VIEW);
+                i.setData(Uri.parse(url));
+                startActivity(i);
+            }
+        });
         final ContactFragmentInfoGenerator infoGenerator = new ContactFragmentInfoGenerator(getContext());
 
         ArrayList<ContactModel> contactModels = infoGenerator.getReferentsContactModels();
