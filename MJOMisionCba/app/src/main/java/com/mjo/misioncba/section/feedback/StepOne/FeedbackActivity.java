@@ -78,6 +78,7 @@ public class FeedbackActivity extends AppCompatActivity implements FeedbackStepO
     private void goToNextStep(){
 
         Intent stepTwo = new Intent(getApplicationContext(), FeedbackActivityStepTwo.class);
+        //stepTwo.putParcelableArrayListExtra();
 
         Bundle bndlAnimation =
                 ActivityOptions.makeCustomAnimation(getApplicationContext(), R.anim.anim1,R.anim.anim2).toBundle();
@@ -91,6 +92,17 @@ public class FeedbackActivity extends AppCompatActivity implements FeedbackStepO
 
         if(data.size() == selectedValues.size()){
             fab.setVisibility(View.VISIBLE);
+
+            // Generator the items para la proxima activity
+
+        }else{
+            fab.setVisibility(View.GONE);
         }
+    }
+
+    private void generateDataForStepTwo(Map<String, Float> selectedValues){
+
+
+
     }
 }

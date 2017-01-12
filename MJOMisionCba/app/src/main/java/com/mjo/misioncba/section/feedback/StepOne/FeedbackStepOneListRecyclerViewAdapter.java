@@ -26,10 +26,6 @@ public class FeedbackStepOneListRecyclerViewAdapter extends RecyclerView.Adapter
     public FeedbackStepOneListRecyclerViewAdapter(List<ItemFeedbackModelList> items, OnFeedbackListStartChangeListener listener) {
         mValues = items;
         mlistener = listener;
-
-        /*for (ItemFeedbackModelList item: items) {
-            mSelectedValues.put(item.getKeyType(), 0.0f);
-        }*/
     }
 
     @Override
@@ -83,9 +79,16 @@ public class FeedbackStepOneListRecyclerViewAdapter extends RecyclerView.Adapter
         boolean isInMap = mSelectedValues.containsKey(keyType);
 
         if (isInMap || rating > 0){
-            mSelectedValues.put(keyType, rating);
-            // Call listener to know if we have to show fab button
-            mlistener.onFeedbackListStartChange(mSelectedValues);
+
+            if(rating > 0){
+                mSelectedValues.put(keyType, rating);
+                // Call listener to know if we have to show fab button
+                mlistener.onFeedbackListStartChange(mSelectedValues);
+            }else{
+                // saco la key del mapa
+                mSelectedValues.remove(keyType);
+                mlistener.onFeedbackListStartChange(mSelectedValues);
+            }
         }
     }
 

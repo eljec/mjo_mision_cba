@@ -28,14 +28,49 @@
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         android:layout_height="match_parent">
 
-        <TextView
+        <!-- Indicador de steps -->
+
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:textSize="20dp"
-            android:background="@android:color/holo_blue_light"
-            android:layout_margin="10dp"
-            android:text="Paso 1" />
+            android:layout_marginBottom="10dp"
+            android:background="#E8EAF6"
+
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_centerInParent="true"
+                android:background="#006DF0">
+            </View>
+
+            <LinearLayout
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true">
+
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="#E8EAF6"
+                    android:src="@drawable/number_one"
+                    android:layout_marginRight="30dp"/>
+
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="#E8EAF6"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/number_two_grey"/>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
 
         <android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:app="http://schemas.android.com/apk/res-auto"
