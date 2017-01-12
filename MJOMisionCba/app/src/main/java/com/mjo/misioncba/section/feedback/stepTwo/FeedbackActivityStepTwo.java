@@ -1,6 +1,7 @@
 package com.mjo.misioncba.section.feedback.stepTwo;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.support.v4.app.ActivityCompat;
@@ -15,6 +16,11 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.mjo.misioncba.R;
+import com.mjo.misioncba.section.feedback.StepOne.FeedbackActivity;
+import com.mjo.misioncba.section.feedback.StepOne.ItemFeedbackDataResult;
+import com.mjo.misioncba.section.feedback.congrats.FeedbackCongratsActivity;
+
+import java.util.ArrayList;
 
 public class FeedbackActivityStepTwo extends AppCompatActivity implements PostDataTask.OnPostTaskListener {
 
@@ -23,6 +29,8 @@ public class FeedbackActivityStepTwo extends AppCompatActivity implements PostDa
     private View loadingContainer;
     private Button submitButton;
     private EditText textArea;
+    private ArrayList<ItemFeedbackDataResult> resultStepOne;
+    private FeedbackActivityStepTwoUrlGenerator generator;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,8 +39,12 @@ public class FeedbackActivityStepTwo extends AppCompatActivity implements PostDa
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle("Ya casi terminas..");
 
-
         // Get the date of the previous activity
+        if(getIntent().getExtras() != null){
+            resultStepOne = getIntent().getExtras().getParcelableArrayList(FeedbackActivity.FEEDBACK_LIST_RESULTS);
+        }
+
+        this.generator = new FeedbackActivityStepTwoUrlGenerator(this);
 
         this.loadingContainer = findViewById(R.id.progressbar_container);
         this.submitButton = (Button) findViewById(R.id.feedback_submit_btn);
@@ -40,9 +52,19 @@ public class FeedbackActivityStepTwo extends AppCompatActivity implements PostDa
             @Override
             public void onClick(View view) {
 
-                // Make request to form
-                loadingContainer.setVisibility(View.VISIBLE);
-                checkPermissions();
+                // Check text
+                if(textArea.getText() == null || textArea.getText().length() == 0){
+                    // Show error
+                    Toast.makeText(getApplicationContext(), "Por favor pon alguna sugerencia :-)", Toast.LENGTH_SHORT).show();
+                }else{
+                    // Make request to form
+                    loadingContainer.setVisibility(View.VISIBLE);
+                    //checkPermissions();
+
+                    Intent congrats = new Intent(getApplicationContext(), FeedbackCongratsActivity.class);
+                    startActivity(congrats);
+                }
+
             }
         });
 
@@ -80,13 +102,11 @@ public class FeedbackActivityStepTwo extends AppCompatActivity implements PostDa
                 if (grantResults.length > 0
                         && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
 
-                    PostDataTask postDataTask = new PostDataTask(this);
-                    postDataTask.execute("EXC", "Mejorar la app");
+                    startPostDataTask();
 
                 } else {
 
                     // Toast
-
                     Toast toast = Toast.makeText(getApplicationContext(), "Necesitamos tu permiso para ejecutar esta accion", Toast.LENGTH_LONG);
                     toast.show();
                 }
@@ -105,14 +125,12 @@ public class FeedbackActivityStepTwo extends AppCompatActivity implements PostDa
             }
             else
             {
-                PostDataTask postDataTask = new PostDataTask(this);
-                postDataTask.execute("EXC", "Mejorar la app");
+                startPostDataTask();
             }
         }
         else
         {
-            PostDataTask postDataTask = new PostDataTask(this);
-            postDataTask.execute("EXC", "Mejorar la app");
+            startPostDataTask();
         }
     }
 
@@ -120,13 +138,21 @@ public class FeedbackActivityStepTwo extends AppCompatActivity implements PostDa
     public void onPostTaskSuccess() {
         loadingContainer.setVisibility(View.GONE);
         // Ver si voy a otra pantalla
-        Toast.makeText(this,"Gracias por darnos tu opinion",Toast.LENGTH_LONG).show();
-
+        Intent congrats = new Intent(this, FeedbackCongratsActivity.class);
+        startActivity(congrats);
     }
 
     @Override
     public void onPostTaskError() {
         loadingContainer.setVisibility(View.GONE);
         Toast.makeText(this,"Ocurrio un error, intenta mas tarde",Toast.LENGTH_LONG).show();
+    }
+
+    private void startPostDataTask(){
+
+        PostDataTask postDataTask = new PostDataTask(this);
+
+        String body = this.generator.generatePostBody(resultStepOne, textArea.getText().toString());
+        postDataTask.execute(body);
     }
 }

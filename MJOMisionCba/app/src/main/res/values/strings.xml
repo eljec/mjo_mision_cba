@@ -703,4 +703,16 @@
         <item>GRUPOS</item>
         <item>RECREACION-MOMENTOS-LIBRES</item>
     </string-array>
+
+    <string-array name="feedback_item_form_id">
+        <item>entry.587722581</item>
+        <item>entry.1331277503</item>
+        <item>entry.1321486617</item>
+        <item>entry.934926358</item>
+        <item>entry.1232120608</item>
+        <item>entry.21442653</item>
+        <item>entry.394280934</item>
+        <item>entry.1947696641</item>
+        <item>entry.1612800312</item>
+    </string-array>
 </resources>

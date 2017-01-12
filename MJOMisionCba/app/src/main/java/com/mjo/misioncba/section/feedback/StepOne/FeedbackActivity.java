@@ -13,14 +13,18 @@ import android.view.View;
 import com.mjo.misioncba.R;
 import com.mjo.misioncba.section.feedback.stepTwo.FeedbackActivityStepTwo;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
 public class FeedbackActivity extends AppCompatActivity implements FeedbackStepOneListRecyclerViewAdapter.OnFeedbackListStartChangeListener {
 
+    public static final String  FEEDBACK_LIST_RESULTS = "FEEDBACK_LIST_RESULTS";
+
     private FloatingActionButton fab;
     private FeedbackStepOneListRecyclerViewAdapter adapterList;
     private List<ItemFeedbackModelList> data;
+    ArrayList<ItemFeedbackDataResult> result;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,14 +75,13 @@ public class FeedbackActivity extends AppCompatActivity implements FeedbackStepO
 
 
     private boolean isInfoCompleted(){
-
-        return true;
+        return data.size() == result.size();
     }
 
     private void goToNextStep(){
 
         Intent stepTwo = new Intent(getApplicationContext(), FeedbackActivityStepTwo.class);
-        //stepTwo.putParcelableArrayListExtra();
+        stepTwo.putParcelableArrayListExtra(FEEDBACK_LIST_RESULTS,result);
 
         Bundle bndlAnimation =
                 ActivityOptions.makeCustomAnimation(getApplicationContext(), R.anim.anim1,R.anim.anim2).toBundle();
@@ -94,15 +97,25 @@ public class FeedbackActivity extends AppCompatActivity implements FeedbackStepO
             fab.setVisibility(View.VISIBLE);
 
             // Generator the items para la proxima activity
+            generateDataForStepTwo(selectedValues);
 
         }else{
             fab.setVisibility(View.GONE);
+            result = null;
         }
     }
 
     private void generateDataForStepTwo(Map<String, Float> selectedValues){
 
+        result = new ArrayList<>();
 
+        for(Map.Entry<String, Float> entry : selectedValues.entrySet()) {
+            String key = entry.getKey();
+            float rating = entry.getValue();
 
+            ItemFeedbackDataResult model = new ItemFeedbackDataResult(rating,key);
+
+            result.add(model);
+        }
     }
 }

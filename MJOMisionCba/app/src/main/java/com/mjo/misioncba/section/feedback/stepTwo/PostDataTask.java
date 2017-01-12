@@ -26,7 +26,10 @@ public class PostDataTask extends AsyncTask<String, Void, Boolean> {
     private OnPostTaskListener listener;
 
 
-    public static final String URL="https://docs.google.com/forms/d/e/1FAIpQLSdmstJH8tE-JDAFNuc_pRiazD93AgNoCP2n4U979-6r84Ht3g/formResponse";
+    //public static final String URL="https://docs.google.com/forms/d/e/1FAIpQLSdmstJH8tE-JDAFNuc_pRiazD93AgNoCP2n4U979-6r84Ht3g/formResponse";
+
+    public static final String URL="https://docs.google.com/forms/d/e/1FAIpQLSfd9tvaG7wUUuImeyhR-R7qgYde1QEObfLFr3BZnKSLkeDgEg/formResponse";
+
 
     public PostDataTask(OnPostTaskListener listener) {
         this.listener = listener;
@@ -35,18 +38,22 @@ public class PostDataTask extends AsyncTask<String, Void, Boolean> {
     @Override
     protected Boolean doInBackground(String... contactData) {
         Boolean result = true;
-        String comida = contactData[0];
-        String sugerencia = contactData[1];
-        String postBody="";
 
-        try {
+        String postBody = contactData[0];
+
+        /*String comida = contactData[0];
+        String sugerencia = contactData[1];
+        String postBody="";*/
+
+
+        /*try {
             //all values must be URL encoded to make sure that special characters like & | ",etc.
             //do not cause problems
             postBody = "entry.1811832601"+"=" + URLEncoder.encode(comida,"UTF-8") +
                     "&" + "entry.1136129796" + "=" + URLEncoder.encode(sugerencia,"UTF-8");
         } catch (UnsupportedEncodingException ex) {
             result=false;
-        }
+        }*/
 
         try{
             //Create OkHttpClient for sending request
@@ -67,9 +74,6 @@ public class PostDataTask extends AsyncTask<String, Void, Boolean> {
 
     @Override
     protected void onPostExecute(Boolean result){
-        //Print Success or failure message accordingly
-        //Toast.makeText(ctx,result?"Message successfully sent!":"There was some error in sending message. Please try again after some time.",Toast.LENGTH_LONG).show();
-
         if(this.listener != null){
 
             if(result){

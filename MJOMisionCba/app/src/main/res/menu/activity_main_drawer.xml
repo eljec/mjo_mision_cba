@@ -32,14 +32,14 @@
             android:title="@string/navigation_item_maps" />
 
         <item
-            android:id="@+id/nav_contact"
-            android:icon="@mipmap/ic_info_black_24dp"
-            android:title="@string/navigation_item_contact" />
-
-        <item
             android:id="@+id/nav_feedback"
             android:icon="@mipmap/ic_star_black_24dp"
             android:title="@string/navigation_item_feedback" />
+
+        <item
+            android:id="@+id/nav_contact"
+            android:icon="@mipmap/ic_info_black_24dp"
+            android:title="@string/navigation_item_contact" />
     </group>
 
 
