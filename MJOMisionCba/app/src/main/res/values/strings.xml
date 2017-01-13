@@ -680,22 +680,22 @@
     // Feedback
 
     <string name="title_activity_feedback">FeedbackActivity</string>
-    <string name="navigation_item_feedback">¿Que tal la misión?</string>
-    <string name="feedback_step_two_title_label">¿ En que podemos mejorar ?</string>
-    <string name="feedback_step_two_suggestions_label">Sugerencias para la proxima misión</string>
+    <string name="navigation_item_feedback">¿Qué tal la misión?</string>
+    <string name="feedback_step_two_title_label">¿En qué podemos mejorar?</string>
+    <string name="feedback_step_two_suggestions_label">Sugerencias para la próxima misión</string>
     <string name="feedback_step_two_sunmit_btn_label">Enviar</string>
 
 
     <string-array name="feedback_item_list_title">
-        <item>¿Como consideras el desarrollo de la mision?</item>
-        <item>¿Que te parecio el CLIMA DE FRATERNIDAD?</item>
-        <item>¿Que te parecio la COMIDA?</item>
-        <item>¿Que te parecio el ALOJAMIENTO?</item>
-        <item>¿Que te parecio LA FORMACION?</item>
-        <item>¿Que te parecio LA ESPIRITUALIDAD?</item>
-        <item>¿Que te parecieron LAS CELEBRACIONES?</item>
-        <item>¿Que te parecio LA ORGANIZACION DE LOS GRUPOS?</item>
-        <item>¿Que te parecio LA RECREACION y MOMENTOS LIBRES?</item>
+        <item>¿Cómo considerás el desarrollo de la misión?</item>
+        <item>¿Qué te pareció el CLIMA DE FRATERNIDAD?</item>
+        <item>¿Qué te pareció la COMIDA?</item>
+        <item>¿Qué te pareció el ALOJAMIENTO?</item>
+        <item>¿Qué te pareció la FORMACION?</item>
+        <item>¿Qué te pareció la ESPIRITUALIDAD?</item>
+        <item>¿Qué te parecieron las CELEBRACIONES?</item>
+        <item>¿Qué te pareció la ORGANIZACION DE LOS GRUPOS?</item>
+        <item>¿Qué te pareció la RECREACION y MOMENTOS LIBRES?</item>
     </string-array>
 
     <string-array name="feedback_item_list_key">
@@ -723,13 +723,13 @@
     </string-array>
     <string name="title_activity_feedback_start_flow">FeedbackStartFlowActivity</string>
     <string name="feedback_start_flow_title">
-        "¡Ya estamos pensando en nuestro proximo encuentro!\n\n"
-        "Evaluacion de la Misión"
+        "¡Ya estamos pensando en nuestro próximo encuentro!\n\n"
+        "Evaluación de la Misión"
     </string>
     <string name="feedback_step_two_title">Ya casi terminas..</string>
     <string name="feedback_step_two_suggestion_warning">Por favor danos alguna sugerencia :-)</string>
-    <string name="warning_permissions">Necesitamos tu permiso para ejecutar esta accion</string>
-    <string name="feedback_step_two_error_post">Ocurrio un error, intenta mas tarde</string>
+    <string name="warning_permissions">Necesitamos tu permiso para ejecutar esta acción</string>
+    <string name="feedback_step_two_error_post">Ocurrió un error, intenta mas tarde</string>
     <string name="feedback_step_one_warning_start">Te queda alguna sin calificar !! :)</string>
-    <string name="feedback_step_one_title">Danos tu opinion..</string>
+    <string name="feedback_step_one_title">Danos tu opinión..</string>
 </resources>
