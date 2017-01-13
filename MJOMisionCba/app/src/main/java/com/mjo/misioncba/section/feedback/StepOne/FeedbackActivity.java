@@ -35,7 +35,7 @@ public class FeedbackActivity extends AppCompatActivity implements FeedbackStepO
         setSupportActionBar(toolbar);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle("Danos tu opinion..");
+        getSupportActionBar().setTitle(R.string.feedback_step_one_title);
 
         fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -47,7 +47,7 @@ public class FeedbackActivity extends AppCompatActivity implements FeedbackStepO
                     goToNextStep();
                 }else{
                     // Show error
-                     Snackbar.make(view, "Te queda alguna sin calificar !! :)", Snackbar.LENGTH_LONG)
+                     Snackbar.make(view, R.string.feedback_step_one_warning_start, Snackbar.LENGTH_LONG)
                         .show();
                 }
             }
@@ -73,6 +73,12 @@ public class FeedbackActivity extends AppCompatActivity implements FeedbackStepO
         finish();
         NavUtils.navigateUpFromSameTask(this);
         return true;
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        NavUtils.navigateUpFromSameTask(this);
     }
 
 

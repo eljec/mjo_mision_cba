@@ -78,6 +78,7 @@
         <activity
             android:name=".section.feedback.StarFlow.FeedbackStartFlowActivity"
             android:label="@string/title_activity_feedback_start_flow"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

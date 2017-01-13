@@ -22,12 +22,7 @@ public class PostDataTask extends AsyncTask<String, Void, Boolean> {
     public static final MediaType FORM_DATA_TYPE
             = MediaType.parse("application/x-www-form-urlencoded; charset=utf-8");
 
-    private Context ctx;
     private OnPostTaskListener listener;
-
-
-    //public static final String URL="https://docs.google.com/forms/d/e/1FAIpQLSdmstJH8tE-JDAFNuc_pRiazD93AgNoCP2n4U979-6r84Ht3g/formResponse";
-
     public static final String URL="https://docs.google.com/forms/d/e/1FAIpQLSfd9tvaG7wUUuImeyhR-R7qgYde1QEObfLFr3BZnKSLkeDgEg/formResponse";
 
 
@@ -40,20 +35,6 @@ public class PostDataTask extends AsyncTask<String, Void, Boolean> {
         Boolean result = true;
 
         String postBody = contactData[0];
-
-        /*String comida = contactData[0];
-        String sugerencia = contactData[1];
-        String postBody="";*/
-
-
-        /*try {
-            //all values must be URL encoded to make sure that special characters like & | ",etc.
-            //do not cause problems
-            postBody = "entry.1811832601"+"=" + URLEncoder.encode(comida,"UTF-8") +
-                    "&" + "entry.1136129796" + "=" + URLEncoder.encode(sugerencia,"UTF-8");
-        } catch (UnsupportedEncodingException ex) {
-            result=false;
-        }*/
 
         try{
             //Create OkHttpClient for sending request
@@ -75,7 +56,6 @@ public class PostDataTask extends AsyncTask<String, Void, Boolean> {
     @Override
     protected void onPostExecute(Boolean result){
         if(this.listener != null){
-
             if(result){
                 this.listener.onPostTaskSuccess();
             }else{

@@ -726,4 +726,10 @@
         "¡Ya estamos pensando en nuestro proximo encuentro!\n\n"
         "Evaluacion de la Misión"
     </string>
+    <string name="feedback_step_two_title">Ya casi terminas..</string>
+    <string name="feedback_step_two_suggestion_warning">Por favor danos alguna sugerencia :-)</string>
+    <string name="warning_permissions">Necesitamos tu permiso para ejecutar esta accion</string>
+    <string name="feedback_step_two_error_post">Ocurrio un error, intenta mas tarde</string>
+    <string name="feedback_step_one_warning_start">Te queda alguna sin calificar !! :)</string>
+    <string name="feedback_step_one_title">Danos tu opinion..</string>
 </resources>

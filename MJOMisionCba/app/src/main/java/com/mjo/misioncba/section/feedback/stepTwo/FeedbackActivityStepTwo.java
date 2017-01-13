@@ -37,7 +37,7 @@ public class FeedbackActivityStepTwo extends AppCompatActivity implements PostDa
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_feedback_activity_step_two);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle("Ya casi terminas..");
+        getSupportActionBar().setTitle(R.string.feedback_step_two_title);
 
         // Get the date of the previous activity
         if(getIntent().getExtras() != null){
@@ -55,14 +55,11 @@ public class FeedbackActivityStepTwo extends AppCompatActivity implements PostDa
                 // Check text
                 if(textArea.getText() == null || textArea.getText().length() == 0){
                     // Show error
-                    Toast.makeText(getApplicationContext(), "Por favor pon alguna sugerencia :-)", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), R.string.feedback_step_two_suggestion_warning, Toast.LENGTH_SHORT).show();
                 }else{
                     // Make request to form
                     loadingContainer.setVisibility(View.VISIBLE);
-                    //checkPermissions();
-
-                    Intent congrats = new Intent(getApplicationContext(), FeedbackCongratsActivity.class);
-                    startActivity(congrats);
+                    checkPermissions();
                 }
 
             }
@@ -107,7 +104,7 @@ public class FeedbackActivityStepTwo extends AppCompatActivity implements PostDa
                 } else {
 
                     // Toast
-                    Toast toast = Toast.makeText(getApplicationContext(), "Necesitamos tu permiso para ejecutar esta accion", Toast.LENGTH_LONG);
+                    Toast toast = Toast.makeText(getApplicationContext(), R.string.warning_permissions, Toast.LENGTH_LONG);
                     toast.show();
                 }
                 return;
@@ -137,7 +134,6 @@ public class FeedbackActivityStepTwo extends AppCompatActivity implements PostDa
     @Override
     public void onPostTaskSuccess() {
         loadingContainer.setVisibility(View.GONE);
-        // Ver si voy a otra pantalla
         Intent congrats = new Intent(this, FeedbackCongratsActivity.class);
         startActivity(congrats);
     }
@@ -145,7 +141,7 @@ public class FeedbackActivityStepTwo extends AppCompatActivity implements PostDa
     @Override
     public void onPostTaskError() {
         loadingContainer.setVisibility(View.GONE);
-        Toast.makeText(this,"Ocurrio un error, intenta mas tarde",Toast.LENGTH_LONG).show();
+        Toast.makeText(this, R.string.feedback_step_two_error_post,Toast.LENGTH_LONG).show();
     }
 
     private void startPostDataTask(){
