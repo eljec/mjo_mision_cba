@@ -721,4 +721,9 @@
         <item>entry.1947696641</item>
         <item>entry.1612800312</item>
     </string-array>
+    <string name="title_activity_feedback_start_flow">FeedbackStartFlowActivity</string>
+    <string name="feedback_start_flow_title">
+        "¡Ya estamos pensando en nuestro proximo encuentro!\n\n"
+        "Evaluacion de la Misión"
+    </string>
 </resources>

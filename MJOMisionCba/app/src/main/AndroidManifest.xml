@@ -45,7 +45,15 @@
             android:name=".section.feedback.StepOne.FeedbackActivity"
             android:label="@string/title_activity_feedback"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+
+        </activity>
         <activity
             android:name=".section.feedback.stepTwo.FeedbackActivityStepTwo"
             android:parentActivityName=".MainActivity"
@@ -56,8 +64,8 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
-
-        <activity android:name=".section.feedback.congrats.FeedbackCongratsActivity"
+        <activity
+            android:name=".section.feedback.congrats.FeedbackCongratsActivity"
             android:parentActivityName=".MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
@@ -67,6 +75,10 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
+        <activity
+            android:name=".section.feedback.StarFlow.FeedbackStartFlowActivity"
+            android:label="@string/title_activity_feedback_start_flow"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

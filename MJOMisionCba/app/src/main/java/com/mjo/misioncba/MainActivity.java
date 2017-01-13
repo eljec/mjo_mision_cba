@@ -20,6 +20,7 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.mjo.misioncba.section.contact.ContactFragment;
+import com.mjo.misioncba.section.feedback.StarFlow.FeedbackStartFlowActivity;
 import com.mjo.misioncba.section.feedback.StepOne.FeedbackActivity;
 import com.mjo.misioncba.section.itinerary.ItineraryFragment;
 import com.mjo.misioncba.section.itinerary.ItineraryListViewItemModel;
@@ -117,7 +118,7 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.nav_feedback){
             // Open feedback flow
-            Intent intent = new Intent(this, FeedbackActivity.class);
+            Intent intent = new Intent(this, FeedbackStartFlowActivity.class);
             startActivity(intent);
         }else {
             selectItem(id);
