@@ -31,6 +31,7 @@ public class FeedbackActivityStepTwo extends AppCompatActivity implements PostDa
     private EditText textArea;
     private ArrayList<ItemFeedbackDataResult> resultStepOne;
     private FeedbackActivityStepTwoUrlGenerator generator;
+    private PostDataTask task;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -146,9 +147,24 @@ public class FeedbackActivityStepTwo extends AppCompatActivity implements PostDa
 
     private void startPostDataTask(){
 
-        PostDataTask postDataTask = new PostDataTask(this);
+        task = new PostDataTask(this);
 
         String body = this.generator.generatePostBody(resultStepOne, textArea.getText().toString());
-        postDataTask.execute(body);
+        task.execute(body);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+
+        if(task != null){
+            task.removeListener();
+        }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        loadingContainer.setVisibility(View.GONE);
     }
 }

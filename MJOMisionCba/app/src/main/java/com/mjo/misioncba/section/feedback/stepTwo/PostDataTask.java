@@ -30,6 +30,14 @@ public class PostDataTask extends AsyncTask<String, Void, Boolean> {
         this.listener = listener;
     }
 
+    public void setListener(OnPostTaskListener listener) {
+        this.listener = listener;
+    }
+
+    public void removeListener(){
+        this.listener = null;
+    }
+
     @Override
     protected Boolean doInBackground(String... contactData) {
         Boolean result = true;
@@ -47,6 +55,7 @@ public class PostDataTask extends AsyncTask<String, Void, Boolean> {
                     .build();
             //Send the request
             Response response = client.newCall(request).execute();
+
         }catch (IOException exception){
             result=false;
         }
