@@ -20,6 +20,8 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.mjo.misioncba.section.contact.ContactFragment;
+import com.mjo.misioncba.section.feedback.StarFlow.FeedbackStartFlowActivity;
+import com.mjo.misioncba.section.feedback.StepOne.FeedbackActivity;
 import com.mjo.misioncba.section.itinerary.ItineraryFragment;
 import com.mjo.misioncba.section.itinerary.ItineraryListViewItemModel;
 import com.mjo.misioncba.section.locations.list.LocationGroupFragment;
@@ -114,13 +116,20 @@ public class MainActivity extends AppCompatActivity
 
         // Check the id of the menu and replace fragment
 
-        selectItem(id);
+        if (id == R.id.nav_feedback){
+            // Open feedback flow
+            Intent intent = new Intent(this, FeedbackStartFlowActivity.class);
+            startActivity(intent);
+        }else {
+            selectItem(id);
+        }
 
         counterBack = 0;
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
-        return true;
+
+        return !(id == R.id.nav_feedback);
     }
 
     @Override

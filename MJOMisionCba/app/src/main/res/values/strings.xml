@@ -89,12 +89,18 @@
     // Label of contact view
 
     <string name="fragment_contact_referentes_de_mision_label">Referentes misión</string>
+    <string name="fragment_contact_mision_web_label">La misión en la Web</string>
     <string name="fragment_contact_animadores_label">Animadores</string>
     <string name="fragment_contact_cotto_label">Cotto</string>
     <string name="fragment_contact_emergencias_label">Emergencias</string>
     <string name="fragment_contact_policia_label">Policia</string>
     <string name="fragment_contact_bomberos_label">Bomberos</string>
     <string name="fragment_contact_hospital_label">Hospital</string>
+
+
+    <string name="fragment_contact_mision_web_content">
+        Mira el post de la misión en nuestra pagina oficial..
+    </string>
 
     <string-array name="reading_days_titles">
         <item>Sabado 7 </item>
@@ -670,4 +676,60 @@
         </item>
     </string-array>
 
+
+    // Feedback
+
+    <string name="title_activity_feedback">FeedbackActivity</string>
+    <string name="navigation_item_feedback">¿Qué tal la misión?</string>
+    <string name="feedback_step_two_title_label">¿En qué podemos mejorar?</string>
+    <string name="feedback_step_two_suggestions_label">Sugerencias para la próxima misión</string>
+    <string name="feedback_step_two_sunmit_btn_label">Enviar</string>
+
+
+    <string-array name="feedback_item_list_title">
+        <item>¿Cómo considerás el desarrollo de la misión?</item>
+        <item>¿Qué te pareció el CLIMA DE FRATERNIDAD?</item>
+        <item>¿Qué te pareció la COMIDA?</item>
+        <item>¿Qué te pareció el ALOJAMIENTO?</item>
+        <item>¿Qué te pareció la FORMACION?</item>
+        <item>¿Qué te pareció la ESPIRITUALIDAD?</item>
+        <item>¿Qué te parecieron las CELEBRACIONES?</item>
+        <item>¿Qué te pareció la ORGANIZACION DE LOS GRUPOS?</item>
+        <item>¿Qué te pareció la RECREACION y MOMENTOS LIBRES?</item>
+    </string-array>
+
+    <string-array name="feedback_item_list_key">
+        <item>GENERAL</item>
+        <item>FRATERNIDAD</item>
+        <item>COMIDA</item>
+        <item>ALOJAMIENTO</item>
+        <item>FORMACION?</item>
+        <item>ESPIRITUALIDAD</item>
+        <item>CELEBRACIONES</item>
+        <item>GRUPOS</item>
+        <item>RECREACION-MOMENTOS-LIBRES</item>
+    </string-array>
+
+    <string-array name="feedback_item_form_id">
+        <item>entry.587722581</item>
+        <item>entry.1331277503</item>
+        <item>entry.1321486617</item>
+        <item>entry.934926358</item>
+        <item>entry.1232120608</item>
+        <item>entry.21442653</item>
+        <item>entry.394280934</item>
+        <item>entry.1947696641</item>
+        <item>entry.1612800312</item>
+    </string-array>
+    <string name="title_activity_feedback_start_flow">FeedbackStartFlowActivity</string>
+    <string name="feedback_start_flow_title">
+        "¡Ya estamos pensando en nuestro próximo encuentro!\n\n"
+        "Evaluación de la Misión"
+    </string>
+    <string name="feedback_step_two_title">Ya casi terminas..</string>
+    <string name="feedback_step_two_suggestion_warning">Por favor danos alguna sugerencia :-)</string>
+    <string name="warning_permissions">Necesitamos tu permiso para ejecutar esta acción</string>
+    <string name="feedback_step_two_error_post">Ocurrió un error, intenta mas tarde</string>
+    <string name="feedback_step_one_warning_start">Te queda alguna sin calificar !! :)</string>
+    <string name="feedback_step_one_title">Danos tu opinión..</string>
 </resources>
