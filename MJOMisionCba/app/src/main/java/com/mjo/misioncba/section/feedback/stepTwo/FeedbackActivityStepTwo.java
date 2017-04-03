@@ -134,9 +134,9 @@ public class FeedbackActivityStepTwo extends AppCompatActivity implements PostDa
 
     @Override
     public void onPostTaskSuccess() {
-        loadingContainer.setVisibility(View.GONE);
         Intent congrats = new Intent(this, FeedbackCongratsActivity.class);
         startActivity(congrats);
+        loadingContainer.setVisibility(View.GONE);
     }
 
     @Override
