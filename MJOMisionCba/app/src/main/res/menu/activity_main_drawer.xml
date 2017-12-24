@@ -38,7 +38,7 @@
 
         <item
             android:id="@+id/nav_merchandising"
-            android:icon="@android:drawable/ic_menu_myplaces"
+            android:icon="@mipmap/ic_remera_icon"
             android:title="@string/navigation_item_merchandising" />
 
         <item
