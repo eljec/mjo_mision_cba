@@ -6,13 +6,10 @@ import android.content.pm.PackageManager;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Build;
-import android.support.design.widget.CoordinatorLayout;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -84,22 +81,22 @@ public class ContactDetailActivity extends AppCompatActivity {
         switch (type){
 
             case 1:
-                drawable = ContextCompat.getDrawable(this,R.drawable.flor_foto_perfil );
+                drawable = ContextCompat.getDrawable(this,R.drawable.coordinadores_flor_foto);
                 break;
             case 2:
-                drawable = ContextCompat.getDrawable(this,R.drawable.tamara_foto_perfil );
+                drawable = ContextCompat.getDrawable(this,R.drawable.coordinadores_tamara_foto);
                 break;
             case 3:
-                drawable = ContextCompat.getDrawable(this,R.drawable.ana_laura_foto_perfil );
+                drawable = ContextCompat.getDrawable(this,R.drawable.coordinadores_ana_laura_fotop);
                 break;
             case 4:
-                drawable = ContextCompat.getDrawable(this,R.drawable.lautaro_foto_perfil );
+                drawable = ContextCompat.getDrawable(this,R.drawable.coordinadores_lautaro_foto_perfil);
                 break;
             case 5:
-                drawable = ContextCompat.getDrawable(this,R.drawable.sabrina_foto_perfil );
+                drawable = ContextCompat.getDrawable(this,R.drawable.coordinadores_sabrina_foto);
                 break;
             case 6:
-                drawable = ContextCompat.getDrawable(this,R.drawable.cachi_foto_perfil );
+                drawable = ContextCompat.getDrawable(this,R.drawable.coordinadores_cachi_foto);
                 break;
 
             default:

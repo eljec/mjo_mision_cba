@@ -21,12 +21,12 @@ import android.widget.Toast;
 
 import com.mjo.misioncba.section.contact.ContactFragment;
 import com.mjo.misioncba.section.feedback.StarFlow.FeedbackStartFlowActivity;
-import com.mjo.misioncba.section.feedback.StepOne.FeedbackActivity;
 import com.mjo.misioncba.section.itinerary.ItineraryFragment;
 import com.mjo.misioncba.section.itinerary.ItineraryListViewItemModel;
 import com.mjo.misioncba.section.locations.list.LocationGroupFragment;
 import com.mjo.misioncba.section.locations.list.LocationGroupItem;
 import com.mjo.misioncba.section.maps.MapFragment;
+import com.mjo.misioncba.section.merchandasing.MerchandisingFragment;
 import com.mjo.misioncba.section.prayer.PrayerFragment;
 import com.mjo.misioncba.section.readings.list.ReadingFragmentListFragment;
 import com.mjo.misioncba.section.songbook.SongbookFragment;
@@ -168,6 +168,9 @@ public class MainActivity extends AppCompatActivity
         }else if (id == R.id.nav_songbook){
             spinnerViewContainer.setVisibility(View.GONE);
             fragment = new SongbookFragment();
+        }else if (id == R.id.nav_merchandising){
+            spinnerViewContainer.setVisibility(View.GONE);
+            fragment = new MerchandisingFragment();
         }
 
         if (fragment != null) {
