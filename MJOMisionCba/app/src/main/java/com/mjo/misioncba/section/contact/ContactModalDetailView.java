@@ -2,14 +2,10 @@ package com.mjo.misioncba.section.contact;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
-import android.support.annotation.DrawableRes;
 import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
-import android.view.View;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import com.mjo.misioncba.R;
 
@@ -59,13 +55,13 @@ public class ContactModalDetailView extends LinearLayout {
         switch (type){
 
             case 1:
-                drawable = ContextCompat.getDrawable(getContext(),R.drawable.flor_foto_perfil );
+                drawable = ContextCompat.getDrawable(getContext(),R.drawable.coordinadores_flor_foto);
                 break;
             case 2:
-                drawable = ContextCompat.getDrawable(getContext(),R.drawable.tamara_foto_perfil );
+                drawable = ContextCompat.getDrawable(getContext(),R.drawable.coordinadores_tamara_foto);
                 break;
             case 3:
-                drawable = ContextCompat.getDrawable(getContext(),R.drawable.ana_laura_foto_perfil );
+                drawable = ContextCompat.getDrawable(getContext(),R.drawable.coordinadores_ana_laura_fotop);
                 break;
 
             default:
