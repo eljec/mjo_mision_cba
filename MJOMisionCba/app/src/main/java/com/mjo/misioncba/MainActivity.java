@@ -140,7 +140,7 @@ public class MainActivity extends AppCompatActivity
 
         if(sections.hasGroups())
         {
-            menu.add(R.id.section_groups,R.id.nav_groups,Menu.NONE,"Grupos").setIcon(android.R.drawable.ic_media_pause).setCheckable(true).setChecked(false);
+            menu.add(R.id.section_groups,R.id.nav_groups,Menu.NONE, R.string.navigation_item_groups).setIcon(R.mipmap.ic_group_black_24dp).setCheckable(true).setChecked(false);
             visibleSections.add(R.id.nav_groups);
         }
 
@@ -151,7 +151,7 @@ public class MainActivity extends AppCompatActivity
 
         if(sections.hasMerchandising())
         {
-            menu.add(R.id.section_groups,R.id.nav_merchandising,Menu.NONE,R.string.navigation_item_merchandising).setIcon(R.mipmap.ic_remera_icon).setCheckable(true).setChecked(false);;
+            menu.add(R.id.section_groups,R.id.nav_merchandising,Menu.NONE,R.string.navigation_item_merchandising).setIcon(R.mipmap.ic_store_black_24dp).setCheckable(true).setChecked(false);;
             visibleSections.add(R.id.nav_merchandising);
         }
 

@@ -737,5 +737,6 @@
     <!-- Merchandising -->
 
     <string name="navigation_item_merchandising">Remeras</string>
+    <string name="navigation_item_groups">Grupos</string>
 
 </resources>
