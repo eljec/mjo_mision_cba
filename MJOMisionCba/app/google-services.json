@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "422752738714",
+    "firebase_url": "https://mjo-mision-cba.firebaseio.com",
+    "project_id": "mjo-mision-cba",
+    "storage_bucket": "mjo-mision-cba.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:422752738714:android:f3e4da2fd9e45a80",
+        "android_client_info": {
+          "package_name": "com.mjo.misioncba"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "422752738714-vi1jepv2rjfpmtf8gr086okgibpulqpr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-Tt1qFpT-gBSMjrI7kaOu-Lv0Jt3teE8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

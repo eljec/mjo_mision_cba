@@ -1,45 +1,75 @@
 package com.mjo.misioncba;
 
+import android.content.DialogInterface;
 import android.content.Intent;
-import android.os.AsyncTask;
-import android.support.v7.app.AppCompatActivity;
+import android.os.Build;
 import android.os.Bundle;
-import com.mjo.misioncba.model.Itinerary;
-import com.mjo.misioncba.model.ItineraryProvider;
-import com.mjo.misioncba.model.ItineraryProviderConstants;
+import android.support.v7.app.AlertDialog;
+import android.support.v7.app.AppCompatActivity;
 
-public class SplashActivity extends AppCompatActivity {
+import com.mjo.misioncba.Server.DataSourceDelegate;
+import com.mjo.misioncba.Server.SectionDataSource;
+import com.mjo.misioncba.model.Sections;
+
+public class SplashActivity extends AppCompatActivity  implements DataSourceDelegate {
+
+    private SectionDataSource sectionDataSource;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //setContentView(R.layout.activity_splash);
 
-        new LoadJsonFiles().execute();
+        sectionDataSource = new SectionDataSource(this);
+        sectionDataSource.loadData();
+
     }
 
-    private class LoadJsonFiles extends AsyncTask<Void, Void, Itinerary> {
+    @Override
+    public void loadSuccess(Object result)
+    {
+        //Save it on application object and go to next activity
 
-        protected Itinerary doInBackground(Void... urls) {
+        MisionCbaApplication application = ((MisionCbaApplication) getApplication());
+        application.setSections((Sections) result);
 
+        // Open main activity
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(intent);
+        finish();
+    }
 
-            Itinerary itinerary = new ItineraryProvider(getAssets()).obtain(ItineraryProviderConstants.ITINERARY_ASSET_FILE);
+    @Override
+    public void loadFail(Object error)
+    {
+        // Show modal error and exit app
+        showErrorAlertView();
+    }
 
-            return itinerary;
+    protected void showErrorAlertView()
+    {
+        AlertDialog.Builder builder;
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            builder = new AlertDialog.Builder(this, android.R.style.Theme_Material_Dialog_Alert);
+        } else {
+            builder = new AlertDialog.Builder(this);
         }
 
-        protected void onPostExecute(Itinerary result) {
+        builder.setMessage("Error al traer los datos de inicio, intentalo mas tarde");
+        builder.setCancelable(true);
 
-            // Save data on application object
-            MisionCbaApplication application = ((MisionCbaApplication) getApplication());
-            application.setItinerary(result);
+        builder.setPositiveButton(
+                "OK",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id)
+                    {
+                        dialog.cancel();
+                        finish();
+                    }
+                });
 
-            // Open main activity
-            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-            startActivity(intent);
-            finish();
-
-        }
+        AlertDialog alertDownload = builder.create();
+        alertDownload.show();
     }
-
-    }
+}

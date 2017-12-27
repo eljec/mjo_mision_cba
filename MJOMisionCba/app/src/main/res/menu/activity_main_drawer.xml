@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <group android:checkableBehavior="single">
-        <item
+    <group
+        android:id="@+id/section_groups"
+        android:checkableBehavior="single">
+
+        <!--<item
             android:id="@+id/nav_itinerary"
             android:icon="@mipmap/ic_event_black_24dp"
             android:title="@string/navigation_item_itinerary" />
@@ -44,7 +47,8 @@
         <item
             android:id="@+id/nav_contact"
             android:icon="@mipmap/ic_info_black_24dp"
-            android:title="@string/navigation_item_contact" />
+            android:title="@string/navigation_item_contact" />-->
+
     </group>
 
 

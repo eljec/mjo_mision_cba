@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="nav_itinerary" type="id"/>
+    <item name="nav_readings" type="id"/>
+    <item name="nav_prayer" type="id"/>
+    <item name="nav_songbook" type="id"/>
+    <item name="nav_location_group" type="id"/>
+    <item name="nav_map" type="id"/>
+    <item name="nav_feedback" type="id"/>
+    <item name="nav_merchandising" type="id"/>
+    <item name="nav_contact" type="id"/>
+    <item name="nav_groups" type="id"/>
+
+</resources>
