@@ -738,5 +738,7 @@
 
     <string name="navigation_item_merchandising">Remeras</string>
     <string name="navigation_item_groups">Grupos</string>
+    <string name="multimedia_image_detail_modal_options_yes">SI</string>
+    <string name="multimedia_image_detail_modal_options_no">NO</string>
 
 </resources>

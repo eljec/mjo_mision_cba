@@ -12,8 +12,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.mjo.misioncba.MisionCbaApplication;
 import com.mjo.misioncba.R;
-import com.mjo.misioncba.section.prayer.Prayer;
+import com.mjo.misioncba.section.DonwloadFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,13 +22,12 @@ import java.util.List;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class SongbookFragment extends Fragment {
+public class SongbookFragment extends DonwloadFragment {
 
 
     public SongbookFragment() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -44,9 +44,16 @@ public class SongbookFragment extends Fragment {
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setAdapter(new SongbookListRecyclerViewAdapter(loadData()));
 
+
+        titleAlertMessage = "¿ Descargar el cancionero completo?";
+        filenameDownload = "Cancionero-Mision-2018";
+        titleNotificationDownload = filenameDownload;
+
+        MisionCbaApplication application = ((MisionCbaApplication) getActivity().getApplication());
+        url = application.getSections().getSongbook().getUrl();
+
         return view;
     }
-
 
     private List<Song> loadData(){
 

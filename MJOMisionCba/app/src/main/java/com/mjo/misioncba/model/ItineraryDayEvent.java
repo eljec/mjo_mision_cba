@@ -1,5 +1,8 @@
 package com.mjo.misioncba.model;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
 import java.util.List;
 
 /**
@@ -7,10 +10,20 @@ import java.util.List;
  */
 public class ItineraryDayEvent {
 
+    @SerializedName("eventTitle")
+    @Expose
     private String eventTitle;
+    @SerializedName("eventDate")
+    @Expose
     private String eventDate;
+    @SerializedName("eventImageType")
+    @Expose
     private int eventImageType;
+    @SerializedName("dayId")
+    @Expose
     private  int dayId;
+    @SerializedName("places")
+    @Expose
     private List<ItineraryDayEventPlace> places;
 
 

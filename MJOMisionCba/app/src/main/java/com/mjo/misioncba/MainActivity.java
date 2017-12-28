@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -16,6 +17,7 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -49,6 +51,7 @@ public class MainActivity extends AppCompatActivity
     private View spinnerViewContainer;
     private int counterBack = 0;
     private ArrayList<Integer> visibleSections;
+    private MenuItem downloadItem;
 
 
     @Override
@@ -261,6 +264,9 @@ public class MainActivity extends AppCompatActivity
             fragment = new MerchandisingFragment();
         }
 
+        // Update download item
+        updateDownloadActionVarMenu(id);
+
         if (fragment != null) {
             // Insert the fragment by replacing any existing fragment
             FragmentManager fragmentManager = getSupportFragmentManager();
@@ -278,7 +284,7 @@ public class MainActivity extends AppCompatActivity
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
 
-        // if index == 0 is Full Itinerary
+        // if index == 0 is Full SectionItinerary
 
         // Update the list view
 
@@ -367,6 +373,56 @@ public class MainActivity extends AppCompatActivity
 
         AlertDialog alertDownload = builder.create();
         alertDownload.show();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main, menu);
+
+        downloadItem = menu.findItem(R.id.download_content);
+
+        NavigationView navView = (NavigationView) findViewById(R.id.nav_view);
+        int selectedMenu = getCheckedItem (navView);
+
+        updateDownloadActionVarMenu(selectedMenu);
+
+        return true;
+    }
+
+    private void updateDownloadActionVarMenu(int navigationItemId)
+    {
+        if(downloadItem != null)
+        {
+            boolean showItem = false;
+
+            if(navigationItemId == R.id.nav_readings || navigationItemId == R.id.nav_songbook || navigationItemId == R.id.nav_prayer)
+            {
+                showItem = true;
+            }
+
+
+            downloadItem.setVisible(showItem);
+        }
+    }
+
+    private int getCheckedItem(NavigationView navigationView)
+    {
+        Menu menu = navigationView.getMenu();
+
+        for (int i = 0; i < menu.size(); i++) {
+            MenuItem item = menu.getItem(i);
+            if (item.isChecked()) {
+                return item.getItemId();
+            }
+        }
+
+        return -1;
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
     }
 }
 

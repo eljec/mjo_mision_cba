@@ -1,12 +1,8 @@
 package com.mjo.misioncba.section.itinerary;
 
-import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
-import android.content.res.AssetManager;
-import android.net.Uri;
 import android.os.Bundle;
-import android.os.Environment;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -15,19 +11,14 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.mjo.misioncba.ImageZoomActivity;
-import com.mjo.misioncba.model.Itinerary;
+import com.mjo.misioncba.model.SectionItinerary;
 import com.mjo.misioncba.model.ItineraryDay;
 import com.mjo.misioncba.model.ItineraryDayEvent;
 import com.mjo.misioncba.MisionCbaApplication;
 import com.mjo.misioncba.R;
 import com.mjo.misioncba.model.ItineraryProvider;
 import com.mjo.misioncba.model.ItineraryProviderConstants;
-import com.mjo.misioncba.section.locations.list.detail.LocationDetailItemList;
-import com.mjo.misioncba.section.locations.list.detail.LocationDetailItemListImageFactory;
-import com.mjo.misioncba.section.locations.list.zoom.LocationGroupMapZoomActivity;
 
-import java.io.File;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -38,7 +29,7 @@ public class ItineraryFragment extends Fragment {
     private OnListFragmentInteractionListener mListener;
     private List<ItineraryListViewItemModel> listItem;
     private  RecyclerView list;
-    private Itinerary itineraryRawData;
+    private SectionItinerary sectionItineraryRawData;
 
     public ItineraryFragment() {
     }
@@ -115,28 +106,28 @@ public class ItineraryFragment extends Fragment {
     private void modelForList(int day){
 
         // Obtengo data original
-        if(this.itineraryRawData == null) {
+        if(this.sectionItineraryRawData == null) {
             MisionCbaApplication appState = ((MisionCbaApplication) getActivity().getApplication());
-            this.itineraryRawData = appState.getItinerary();
+            this.sectionItineraryRawData = appState.getSectionItinerary();
 
-            if(this.itineraryRawData == null){
+            if(this.sectionItineraryRawData == null){
                 // Load teh file again
-                this.itineraryRawData  = new ItineraryProvider(getActivity().getAssets()).obtain(ItineraryProviderConstants.ITINERARY_ASSET_FILE);
+                this.sectionItineraryRawData = new ItineraryProvider(getActivity().getAssets()).obtain(ItineraryProviderConstants.ITINERARY_ASSET_FILE);
             }
         }
 
-       Itinerary itinerary = null;
+       SectionItinerary sectionItinerary = null;
 
         if(day == 0){
-            // Show full itinerary
-            itinerary = this.itineraryRawData;
+            // Show full sectionItinerary
+            sectionItinerary = this.sectionItineraryRawData;
         }
         else{
-            itinerary = itineraryByDay (day);
+            sectionItinerary = itineraryByDay (day);
         }
             this.listItem = new ArrayList<ItineraryListViewItemModel>();
 
-            for (ItineraryDay itineraryDay : itinerary.getDays()) {
+            for (ItineraryDay itineraryDay : sectionItinerary.getDays()) {
                 // Create item for list
                 ItineraryListViewItemModel itemPerDay = new ItineraryListViewItemModel(ItineraryListViewItemModel.DAY_TYPE, itineraryDay.getTitle());
                 listItem.add(itemPerDay);
@@ -149,23 +140,23 @@ public class ItineraryFragment extends Fragment {
 
     }
 
-    private Itinerary itineraryByDay(int day){
+    private SectionItinerary itineraryByDay(int day){
 
-        Itinerary itineraryByDay = new Itinerary();
+        SectionItinerary sectionItineraryByDay = new SectionItinerary();
 
-        for (ItineraryDay itineraryDay : this.itineraryRawData.getDays()) {
+        for (ItineraryDay itineraryDay : this.sectionItineraryRawData.getDays()) {
 
             if(itineraryDay.getId() == day){
 
                 ArrayList<ItineraryDay> arrayDays =  new ArrayList<ItineraryDay>();
                 arrayDays.add(itineraryDay);
 
-                itineraryByDay.setDays(arrayDays);
+                sectionItineraryByDay.setDays(arrayDays);
                 break;
             }
         }
 
-        return itineraryByDay;
+        return sectionItineraryByDay;
     }
     @Override
     public void onAttach(Context context) {
