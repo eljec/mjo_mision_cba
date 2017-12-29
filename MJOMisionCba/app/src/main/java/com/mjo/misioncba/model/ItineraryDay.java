@@ -13,6 +13,9 @@ public class ItineraryDay {
     @SerializedName("title")
     @Expose
     private String title;
+    @SerializedName("title_spinner")
+    @Expose
+    private String titleSpinner;
     @SerializedName("id")
     @Expose
     private int id;
@@ -42,5 +45,13 @@ public class ItineraryDay {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public String getTitleSpinner() {
+        return titleSpinner;
+    }
+
+    public void setTitleSpinner(String titleSpinner) {
+        this.titleSpinner = titleSpinner;
     }
 }

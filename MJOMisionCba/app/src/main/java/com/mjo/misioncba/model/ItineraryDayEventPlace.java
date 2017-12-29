@@ -19,7 +19,7 @@ public class ItineraryDayEventPlace {
     private String specificPlace;
     @SerializedName("specificPlaceMap")
     @Expose
-    private String specificPlaceMap;
+    private PlaceMap specificPlaceMap;
 
     public String getPlace() {
         return place;
@@ -45,11 +45,11 @@ public class ItineraryDayEventPlace {
         this.specificPlace = specificPlace;
     }
 
-    public String getSpecificPlaceMap() {
+    public PlaceMap getSpecificPlaceMap() {
         return specificPlaceMap;
     }
 
-    public void setSpecificPlaceMap(String specificPlaceMap) {
+    public void setSpecificPlaceMap(PlaceMap specificPlaceMap) {
         this.specificPlaceMap = specificPlaceMap;
     }
 }

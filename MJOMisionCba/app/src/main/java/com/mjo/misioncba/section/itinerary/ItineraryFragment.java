@@ -2,6 +2,7 @@ package com.mjo.misioncba.section.itinerary;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -9,20 +10,24 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 
 import com.mjo.misioncba.ImageZoomActivity;
-import com.mjo.misioncba.model.SectionItinerary;
-import com.mjo.misioncba.model.ItineraryDay;
-import com.mjo.misioncba.model.ItineraryDayEvent;
 import com.mjo.misioncba.MisionCbaApplication;
 import com.mjo.misioncba.R;
-import com.mjo.misioncba.model.ItineraryProvider;
-import com.mjo.misioncba.model.ItineraryProviderConstants;
+import com.mjo.misioncba.model.ItineraryDay;
+import com.mjo.misioncba.model.ItineraryDayEvent;
+import com.mjo.misioncba.model.SectionItinerary;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ItineraryFragment extends Fragment {
+import static com.mjo.misioncba.MainActivity.KEY_PREFRENCES_FILE_NAME;
+import static com.mjo.misioncba.MainActivity.KEY_PREFRENCES_SELECTED_INDEX;
+
+public class ItineraryFragment extends Fragment implements AdapterView.OnItemSelectedListener {
 
     public static final String FRAGMENT_ITINERARY_SELECTED_INDEX="fragment_selected_index";
 
@@ -51,6 +56,7 @@ public class ItineraryFragment extends Fragment {
         modelForList(day);
         list.setAdapter(new MyItineraryRecyclerViewAdapter(this.listItem, getContext()));
     }
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,6 +69,7 @@ public class ItineraryFragment extends Fragment {
             Bundle args = getArguments();
             indexSelected = args.getInt(FRAGMENT_ITINERARY_SELECTED_INDEX, 0);
         }
+
         modelForList(indexSelected);
     }
 
@@ -86,7 +93,6 @@ public class ItineraryFragment extends Fragment {
                             ItineraryListViewItemModel item =   listItem.get(position);
 
                             // 2 == Misa
-
                             if(item.event.getEventImageType() == 2) {
                                 mListener.onListFragmentInteraction(item);
                             }else if (item.event.getDayId() == 3 && item.event.getEventImageType() == 5){
@@ -99,21 +105,45 @@ public class ItineraryFragment extends Fragment {
                     })
             );
         }
+
+
+        Spinner spinnerDays = (Spinner) getActivity().findViewById(R.id.spinner_nav);
+
+        String [] listItems = getDataForSpinner();
+
+        ArrayAdapter<CharSequence> adapter = new ArrayAdapter<CharSequence>(getActivity(), R.layout.itinerary_spinner_item, listItems);
+        adapter.setDropDownViewResource(R.layout.itinerary_spinner_dropdown_item);
+        spinnerDays.setAdapter(adapter);
+        spinnerDays.setOnItemSelectedListener(this);
+
         return view;
     }
 
+    private  String [] getDataForSpinner()
+    {
+        ArrayList<String> list = new ArrayList<>();
+
+        if(this.sectionItineraryRawData != null)
+        {
+            for (ItineraryDay itineraryDay : this.sectionItineraryRawData.getDays()) {
+                list.add(itineraryDay.getTitleSpinner());
+            }
+        }
+
+        return list.toArray(new String [list.size()]);
+    }
 
     private void modelForList(int day){
 
         // Obtengo data original
         if(this.sectionItineraryRawData == null) {
             MisionCbaApplication appState = ((MisionCbaApplication) getActivity().getApplication());
-            this.sectionItineraryRawData = appState.getSectionItinerary();
+            this.sectionItineraryRawData = appState.getSections().getItinerary();
 
-            if(this.sectionItineraryRawData == null){
+            //if(this.sectionItineraryRawData == null){
                 // Load teh file again
-                this.sectionItineraryRawData = new ItineraryProvider(getActivity().getAssets()).obtain(ItineraryProviderConstants.ITINERARY_ASSET_FILE);
-            }
+                //this.sectionItineraryRawData = new ItineraryProvider(getActivity().getAssets()).obtain(ItineraryProviderConstants.ITINERARY_ASSET_FILE);
+            //}
         }
 
        SectionItinerary sectionItinerary = null;
@@ -175,8 +205,36 @@ public class ItineraryFragment extends Fragment {
         mListener = null;
     }
 
+    @Override
+    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l)
+    {
+        // if index == 0 is Full SectionItinerary
+        // Update the list view
+        updateDataForDay(i);
+
+        // Save index
+        saveIndexOnPreferences(i);
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> adapterView) {
+
+    }
+
+    private void saveIndexOnPreferences(int index){
+
+        SharedPreferences sharedPref = getActivity().getSharedPreferences(KEY_PREFRENCES_FILE_NAME
+                , Context.MODE_PRIVATE);
+
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.putInt(KEY_PREFRENCES_SELECTED_INDEX, index);
+        editor.commit();
+    }
+
     public interface OnListFragmentInteractionListener {
 
         void onListFragmentInteraction(ItineraryListViewItemModel item);
     }
+
+
 }

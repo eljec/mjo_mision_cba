@@ -33,4 +33,9 @@ public class SectionItinerary {
     public void setActive(boolean active) {
         this.active = active;
     }
+
+    public SectionItinerary()
+    {
+        this.days = new ArrayList<>();
+    }
 }

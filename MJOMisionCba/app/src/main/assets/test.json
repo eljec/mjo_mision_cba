@@ -148,7 +148,11 @@
               "place": "Sede-El Cotto",
               "priest": "",
               "specificPlace": "Templo parroquial",
-              "specificPlaceMap": ""
+              "specificPlaceMap":
+              {
+                 "latitude": "1121212",
+                 "longitude": "-1221"
+              }
             }
           ]
         },
