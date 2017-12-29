@@ -1,7 +1,6 @@
 package com.mjo.misioncba.section.itinerary;
 
 import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -14,7 +13,6 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
-import com.mjo.misioncba.ImageZoomActivity;
 import com.mjo.misioncba.MisionCbaApplication;
 import com.mjo.misioncba.R;
 import com.mjo.misioncba.model.ItineraryDay;
@@ -93,14 +91,18 @@ public class ItineraryFragment extends Fragment implements AdapterView.OnItemSel
                             ItineraryListViewItemModel item =   listItem.get(position);
 
                             // 2 == Misa
-                            if(item.event.getEventImageType() == 2) {
+                            /*if(item.event.getEventImageType() == 2) {
                                 mListener.onListFragmentInteraction(item);
                             }else if (item.event.getDayId() == 3 && item.event.getEventImageType() == 5){
 
                                 // Formacion del padre Santiago
                                 Intent intent = new Intent(getActivity(), ImageZoomActivity.class);
                                 startActivity(intent);
-                            }
+                            }*/
+
+                            mListener.onListFragmentInteraction(item.event);
+
+
                         }
                     })
             );
@@ -233,7 +235,7 @@ public class ItineraryFragment extends Fragment implements AdapterView.OnItemSel
 
     public interface OnListFragmentInteractionListener {
 
-        void onListFragmentInteraction(ItineraryListViewItemModel item);
+        void onListFragmentInteraction(ItineraryDayEvent item);
     }
 
 

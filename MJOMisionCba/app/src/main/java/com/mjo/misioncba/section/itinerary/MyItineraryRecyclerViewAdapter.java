@@ -1,14 +1,13 @@
 package com.mjo.misioncba.section.itinerary;
 
 import android.content.Context;
-import android.graphics.drawable.Drawable;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import com.mjo.misioncba.R;
 import com.mjo.misioncba.model.ItineraryDayEventPlace;
 
@@ -84,9 +83,12 @@ public class MyItineraryRecyclerViewAdapter extends RecyclerView.Adapter{
                             eventHolder.mContainerMassIndicators.setVisibility(View.VISIBLE);
                         }
                     }
-                    // Solo para tipos Misa muestra la flecha
+                    // Solo para tipos Misa o que tenga contenido muestro flecha
 
-                    if(modelItem.event.getEventImageType() == 2) {
+                    boolean misa = modelItem.event.getEventImageType() == 2;
+                    boolean hasContent = modelItem.event.getUrl()!= null;
+
+                    if(misa || hasContent) {
                         eventHolder.mTitleTextView.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.mipmap.ic_trending_flat_black_24dp, 0);
                     }
 

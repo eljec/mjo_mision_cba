@@ -81,6 +81,12 @@
             android:label="@string/title_activity_feedback_start_flow"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"></activity>
+
+        <activity
+            android:name=".section.itinerary.detail.ItineraryActivityEventDetail"
+            android:screenOrientation="portrait"></activity>
+
+
     </application>
 
 </manifest>

@@ -124,7 +124,7 @@ public class DonwloadFragment extends Fragment
         request.setTitle(title);
         request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
 
-        String name = filenameDownload + "." + "doc"; // url.getExtension();
+        String name = filenameDownload + "." + url.getExtension();
 
         //Save file to destination folder
         request.setDestinationInExternalPublicDir("/Downloads", name);

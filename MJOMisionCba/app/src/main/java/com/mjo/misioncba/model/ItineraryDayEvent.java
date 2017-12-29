@@ -22,9 +22,14 @@ public class ItineraryDayEvent {
     @SerializedName("dayId")
     @Expose
     private  int dayId;
+    @SerializedName("url_file")
+    @Expose
+    private UrlFIle url;
     @SerializedName("places")
     @Expose
     private List<ItineraryDayEventPlace> places;
+    private  int id;
+    @SerializedName("id")
 
 
     public String getEventTitle() {
@@ -65,5 +70,21 @@ public class ItineraryDayEvent {
 
     public void setPlaces(List<ItineraryDayEventPlace> places) {
         this.places = places;
+    }
+
+    public UrlFIle getUrl() {
+        return url;
+    }
+
+    public void setUrl(UrlFIle url) {
+        this.url = url;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

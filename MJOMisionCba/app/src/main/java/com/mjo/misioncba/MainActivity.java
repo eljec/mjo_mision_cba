@@ -22,11 +22,12 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import com.mjo.misioncba.model.ItineraryDayEvent;
 import com.mjo.misioncba.model.Sections;
 import com.mjo.misioncba.section.contact.ContactFragment;
 import com.mjo.misioncba.section.feedback.StarFlow.FeedbackStartFlowActivity;
 import com.mjo.misioncba.section.itinerary.ItineraryFragment;
-import com.mjo.misioncba.section.itinerary.ItineraryListViewItemModel;
+import com.mjo.misioncba.section.itinerary.detail.ItineraryActivityEventDetail;
 import com.mjo.misioncba.section.locations.list.LocationGroupFragment;
 import com.mjo.misioncba.section.locations.list.LocationGroupItem;
 import com.mjo.misioncba.section.maps.MapFragment;
@@ -36,6 +37,9 @@ import com.mjo.misioncba.section.readings.list.ReadingFragmentListFragment;
 import com.mjo.misioncba.section.songbook.SongbookFragment;
 
 import java.util.ArrayList;
+
+import static com.mjo.misioncba.section.itinerary.detail.ItineraryActivityEventDetail.EVENT_DAY_ID_SELECTED;
+import static com.mjo.misioncba.section.itinerary.detail.ItineraryActivityEventDetail.EVENT_ID_SELECTED;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, ItineraryFragment.OnListFragmentInteractionListener, ReadingFragmentListFragment.OnReadingListFragmentInteractionListener, LocationGroupFragment.OnLocationGroupListFragmentInteractionListener {
@@ -209,9 +213,10 @@ public class MainActivity extends AppCompatActivity
     }
 
     @Override
-    public void onListFragmentInteraction(ItineraryListViewItemModel item) {
+    public void onListFragmentInteraction(ItineraryDayEvent item) {
         // Click on item of itinerary list
-        openReadingDetailActivity(item.event.getDayId());
+        //openReadingDetailActivity(item.event.getDayId());
+        openEventDetail(item);
     }
 
     private void selectItem(int id) {
@@ -285,6 +290,16 @@ public class MainActivity extends AppCompatActivity
 
         Intent intent = new Intent(this, ReadingsDatailsActivity.class);
         intent.putExtra("READING_DAY_SELECTED", dayId);
+        startActivity(intent);
+    }
+
+    private void openEventDetail(ItineraryDayEvent event)
+    {
+
+        Intent intent = new Intent(this, ItineraryActivityEventDetail.class);
+        intent.putExtra(EVENT_DAY_ID_SELECTED, event.getDayId());
+        intent.putExtra(EVENT_ID_SELECTED, event.getId());
+
         startActivity(intent);
     }
 
