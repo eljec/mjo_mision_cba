@@ -2,8 +2,6 @@ package com.mjo.misioncba.section.contact;
 
 
 import android.Manifest;
-import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
@@ -12,7 +10,6 @@ import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,14 +19,12 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.mjo.misioncba.ContactDetailActivity;
-import com.mjo.misioncba.MainActivity;
+import com.mjo.misioncba.MisionCbaApplication;
 import com.mjo.misioncba.R;
+import com.mjo.misioncba.model.ContactCoordinator;
 import com.mjo.misioncba.section.cotto.CottoDetailActivity;
 
-import org.w3c.dom.Text;
-
 import java.util.ArrayList;
-import java.util.Locale;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -95,16 +90,20 @@ public class ContactFragment extends Fragment implements ContactView.OnContactVi
                 startActivity(i);
             }
         });
-        final ContactFragmentInfoGenerator infoGenerator = new ContactFragmentInfoGenerator(getContext());
 
-        ArrayList<ContactModel> contactModels = infoGenerator.getReferentsContactModels();
-        ArrayList<ContactModel> aniamdores = infoGenerator.getAnimadoresContactModels();
-        final ContactCottoModel contactCottoModel = infoGenerator.getCottoContactModel();
+        MisionCbaApplication application = ((MisionCbaApplication) getActivity().getApplication());
+
+        final ContactFragmentInfoGenerator infoGenerator = new ContactFragmentInfoGenerator(getContext(),application.getSections().getContact());
+
+        ArrayList<ContactCoordinator> generalCoordinators = infoGenerator.getReferentsContactCoordinators();
+        ArrayList<ContactCoordinator> groupCoordinators = infoGenerator.getGroupsContactCoordinators();
+
+        final ContactCottoModel contactCottoModel = infoGenerator.getCottoContactCoordinator();
 
 
-        // Load the contact
+        // Coordinadores generales
 
-        for (ContactModel contact: contactModels) {
+        for (ContactCoordinator contact: generalCoordinators) {
 
             ContactView contactView = new ContactView(getContext());
             contactView.setListener(this);
@@ -113,9 +112,9 @@ public class ContactFragment extends Fragment implements ContactView.OnContactVi
             this.contactContainer.addView(contactView);
         }
 
-        // Animadores
+        // Coordinadores de grupos
 
-        for (ContactModel contact: aniamdores) {
+        for (ContactCoordinator contact: groupCoordinators) {
 
             ContactView contactView = new ContactView(getContext());
             contactView.setListener(this);
@@ -177,7 +176,7 @@ public class ContactFragment extends Fragment implements ContactView.OnContactVi
     }
 
     @Override
-    public void onClickView(ContactModel contactModel) {
+    public void onClickView(ContactCoordinator contactModel) {
         // Open detail contact view
 
         Intent contactDetail = new Intent(getActivity(), ContactDetailActivity.class);

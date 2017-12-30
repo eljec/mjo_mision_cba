@@ -1,5 +1,8 @@
 package com.mjo.misioncba.model;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
 import java.util.ArrayList;
 
 /**
@@ -7,8 +10,17 @@ import java.util.ArrayList;
  */
 public class ItineraryDay {
 
+    @SerializedName("title")
+    @Expose
     private String title;
+    @SerializedName("title_spinner")
+    @Expose
+    private String titleSpinner;
+    @SerializedName("id")
+    @Expose
     private int id;
+    @SerializedName("events")
+    @Expose
     private ArrayList<ItineraryDayEvent> events;
 
     public ArrayList<ItineraryDayEvent> getEvents() {
@@ -33,5 +45,13 @@ public class ItineraryDay {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public String getTitleSpinner() {
+        return titleSpinner;
+    }
+
+    public void setTitleSpinner(String titleSpinner) {
+        this.titleSpinner = titleSpinner;
     }
 }

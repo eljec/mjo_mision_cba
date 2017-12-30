@@ -1,11 +1,10 @@
 package com.mjo.misioncba.section.contact;
 
 import android.content.Context;
-import android.content.res.Resources;
 
-import com.mjo.misioncba.R;
+import com.mjo.misioncba.model.ContactCoordinator;
+import com.mjo.misioncba.model.SectionContact;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 /**
@@ -19,58 +18,44 @@ public class ContactFragmentInfoGenerator {
     private static final String POLICE_PHONE = "0351101";
     private static final String HOSPITAL_PHONE = "0351107";
 
-    public ContactFragmentInfoGenerator(Context context) {
+    private SectionContact sectionGroups;
+
+    public ContactFragmentInfoGenerator(Context context, SectionContact sectionGroups) {
         this.context = context;
+        this.sectionGroups = sectionGroups;
     }
 
-    public ArrayList<ContactModel> getReferentsContactModels(){
+    public ArrayList<ContactCoordinator> getReferentsContactCoordinators(){
 
-        ArrayList<ContactModel> contacts = new ArrayList<>();
+        ArrayList<ContactCoordinator> contacts = new ArrayList<>();
 
-        // Load the array of resources and create de classes
-
-        Resources res = this.context.getResources();
-        String[] referentsName = res.getStringArray(R.array.referents_name);
-        String[] referentsPhoneNumber = res.getStringArray(R.array.referents_phone_number);
-        int[] profileImageType = res.getIntArray(R.array.referents_profile_type_imager);
-
-        contacts = getContactArray(referentsName, referentsPhoneNumber, profileImageType);
-
-        return contacts;
-    }
-
-
-    private ArrayList<ContactModel> getContactArray(String[] names, String[] phones, int[] imageTypes) {
-
-        ArrayList<ContactModel> contacts = new ArrayList<>();
-
-        for (int i = 0; i < names.length; i++) {
-            String name = names[i];
-            String phoneNUmber = phones[i];
-            int imageType = imageTypes[i];
-
-            ContactModel contact = new ContactModel(name, phoneNUmber, imageType);
-
-            contacts.add(contact);
+        for (ContactCoordinator contact: sectionGroups.getCoordinators())
+        {
+            if(contact.isGeneralCoordinatior())
+            {
+                contacts.add(contact);
+            }
         }
 
+
         return contacts;
     }
 
-    public ArrayList<ContactModel> getAnimadoresContactModels() {
+    public ArrayList<ContactCoordinator> getGroupsContactCoordinators() {
 
-        ArrayList<ContactModel> animadores = new ArrayList<>();
+        ArrayList<ContactCoordinator> animadores = new ArrayList<>();
 
-        Resources res = this.context.getResources();
-        String[] referentsName = res.getStringArray(R.array.animadores_name);
-        String[] referentsPhoneNumber = res.getStringArray(R.array.animadores_phone_number);
-        int[] profileImageType = res.getIntArray(R.array.animadores_profile_type_imager);
-
-        animadores = getContactArray(referentsName, referentsPhoneNumber, profileImageType);
+        for (ContactCoordinator contact: sectionGroups.getCoordinators())
+        {
+            if(contact.isGeneralCoordinatior() == false)
+            {
+                animadores.add(contact);
+            }
+        }
 
         return animadores;
     }
-    public ContactCottoModel getCottoContactModel(){
+    public ContactCottoModel getCottoContactCoordinator(){
 
         return new ContactCottoModel();
     }

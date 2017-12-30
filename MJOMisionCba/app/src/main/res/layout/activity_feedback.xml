@@ -81,7 +81,7 @@
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             app:layoutManager="LinearLayoutManager"
-            tools:context=".section.itinerary.ItineraryFragment"
+            tools:context=".section.sectionItinerary.ItineraryFragment"
             app:layout_behavior="@string/appbar_scrolling_view_behavior"
             tools:listitem="@layout/feedback_section_item" />
 

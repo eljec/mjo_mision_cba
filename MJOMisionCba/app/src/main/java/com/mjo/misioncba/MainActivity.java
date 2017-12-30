@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -16,18 +17,17 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.mjo.misioncba.model.ItineraryDayEvent;
 import com.mjo.misioncba.model.Sections;
 import com.mjo.misioncba.section.contact.ContactFragment;
 import com.mjo.misioncba.section.feedback.StarFlow.FeedbackStartFlowActivity;
 import com.mjo.misioncba.section.itinerary.ItineraryFragment;
-import com.mjo.misioncba.section.itinerary.ItineraryListViewItemModel;
+import com.mjo.misioncba.section.itinerary.detail.ItineraryActivityEventDetail;
 import com.mjo.misioncba.section.locations.list.LocationGroupFragment;
 import com.mjo.misioncba.section.locations.list.LocationGroupItem;
 import com.mjo.misioncba.section.maps.MapFragment;
@@ -37,10 +37,12 @@ import com.mjo.misioncba.section.readings.list.ReadingFragmentListFragment;
 import com.mjo.misioncba.section.songbook.SongbookFragment;
 
 import java.util.ArrayList;
-import java.util.List;
+
+import static com.mjo.misioncba.section.itinerary.detail.ItineraryActivityEventDetail.EVENT_DAY_ID_SELECTED;
+import static com.mjo.misioncba.section.itinerary.detail.ItineraryActivityEventDetail.EVENT_ID_SELECTED;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, ItineraryFragment.OnListFragmentInteractionListener, ReadingFragmentListFragment.OnReadingListFragmentInteractionListener, AdapterView.OnItemSelectedListener, LocationGroupFragment.OnLocationGroupListFragmentInteractionListener {
+        implements NavigationView.OnNavigationItemSelectedListener, ItineraryFragment.OnListFragmentInteractionListener, ReadingFragmentListFragment.OnReadingListFragmentInteractionListener, LocationGroupFragment.OnLocationGroupListFragmentInteractionListener {
 
 
     public static final String KEY_PREFRENCES_FILE_NAME="mjo_mision_cba_itinerary_preferences";
@@ -49,6 +51,7 @@ public class MainActivity extends AppCompatActivity
     private View spinnerViewContainer;
     private int counterBack = 0;
     private ArrayList<Integer> visibleSections;
+    private MenuItem downloadItem;
 
 
     @Override
@@ -68,18 +71,7 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         // Spinner
-
         spinnerViewContainer = findViewById(R.id.spinner_nav_container);
-
-        Spinner spinnerDays = (Spinner)findViewById(R.id.spinner_nav);
-
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-                R.array.spinner_days_titles, R.layout.itinerary_spinner_item);
-
-        adapter.setDropDownViewResource(R.layout.itinerary_spinner_dropdown_item);
-
-        spinnerDays.setAdapter(adapter);
-        spinnerDays.setOnItemSelectedListener(this);
 
         addMenuItemInNavMenuDrawer();
 
@@ -221,9 +213,10 @@ public class MainActivity extends AppCompatActivity
     }
 
     @Override
-    public void onListFragmentInteraction(ItineraryListViewItemModel item) {
+    public void onListFragmentInteraction(ItineraryDayEvent item) {
         // Click on item of itinerary list
-        openReadingDetailActivity(item.event.getDayId());
+        //openReadingDetailActivity(item.event.getDayId());
+        openEventDetail(item);
     }
 
     private void selectItem(int id) {
@@ -261,6 +254,9 @@ public class MainActivity extends AppCompatActivity
             fragment = new MerchandisingFragment();
         }
 
+        // Update download item
+        updateDownloadActionVarMenu(id);
+
         if (fragment != null) {
             // Insert the fragment by replacing any existing fragment
             FragmentManager fragmentManager = getSupportFragmentManager();
@@ -276,56 +272,11 @@ public class MainActivity extends AppCompatActivity
     }
 
     @Override
-    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-
-        // if index == 0 is Full Itinerary
-
-        // Update the list view
-
-        List<Fragment> allFragments = getSupportFragmentManager().getFragments();
-        if (allFragments != null) {
-            for (Fragment fragment : allFragments) {
-
-
-                if(fragment instanceof  ItineraryFragment) {
-
-                    ItineraryFragment itineraryFragment = (ItineraryFragment)fragment;
-                    itineraryFragment.updateDataForDay(i);
-
-                    // Save index
-                    saveIndexOnPreferences(i);
-
-                    break;
-                }
-
-            }
-        }
-
-    }
-
-    @Override
-    public void onNothingSelected(AdapterView<?> adapterView) {
-
-    }
-
-    @Override
     public void onLocationGroupListFragmentInteraction(LocationGroupItem item) {
 
         // Open detail location maps
         Intent intent = new Intent(this, LocationGroupDetailActivity.class);
         startActivity(intent);
-    }
-
-    private void saveIndexOnPreferences(int index){
-
-        SharedPreferences sharedPref = this.getSharedPreferences(KEY_PREFRENCES_FILE_NAME
-                , Context.MODE_PRIVATE);
-
-        SharedPreferences.Editor editor = sharedPref.edit();
-        editor.putInt(KEY_PREFRENCES_SELECTED_INDEX, index);
-        editor.commit();
-
-
     }
 
     private int getIndexFromPreferences(){
@@ -339,6 +290,16 @@ public class MainActivity extends AppCompatActivity
 
         Intent intent = new Intent(this, ReadingsDatailsActivity.class);
         intent.putExtra("READING_DAY_SELECTED", dayId);
+        startActivity(intent);
+    }
+
+    private void openEventDetail(ItineraryDayEvent event)
+    {
+
+        Intent intent = new Intent(this, ItineraryActivityEventDetail.class);
+        intent.putExtra(EVENT_DAY_ID_SELECTED, event.getDayId());
+        intent.putExtra(EVENT_ID_SELECTED, event.getId());
+
         startActivity(intent);
     }
 
@@ -367,6 +328,54 @@ public class MainActivity extends AppCompatActivity
 
         AlertDialog alertDownload = builder.create();
         alertDownload.show();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main, menu);
+
+        downloadItem = menu.findItem(R.id.download_content);
+
+        NavigationView navView = (NavigationView) findViewById(R.id.nav_view);
+        int selectedMenu = getCheckedItem (navView);
+
+        updateDownloadActionVarMenu(selectedMenu);
+
+        return true;
+    }
+
+    private void updateDownloadActionVarMenu(int navigationItemId)
+    {
+        if(downloadItem != null)
+        {
+            boolean showItem = false;
+
+            if(navigationItemId == R.id.nav_songbook)
+            {
+                showItem = true;
+            }
+            downloadItem.setVisible(showItem);
+        }
+    }
+
+    private int getCheckedItem(NavigationView navigationView)
+    {
+        Menu menu = navigationView.getMenu();
+
+        for (int i = 0; i < menu.size(); i++) {
+            MenuItem item = menu.getItem(i);
+            if (item.isChecked()) {
+                return item.getItemId();
+            }
+        }
+
+        return -1;
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
     }
 }
 

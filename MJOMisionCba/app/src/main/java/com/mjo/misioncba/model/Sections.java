@@ -15,6 +15,24 @@ public class Sections
     @SerializedName("songbook")
     @Expose
     private SectionSongbook songbook;
+    @SerializedName("contact")
+    @Expose
+    private SectionContact contact;
+    @SerializedName("feedback")
+    @Expose
+    private SectionFeedback feedback;
+    @SerializedName("groups")
+    @Expose
+    private SectionGroups groups;
+    @SerializedName("reading")
+    @Expose
+    private SectionReadings reading;
+    @SerializedName("merchandising")
+    @Expose
+    private SectionMerchandising merchandising;
+    @SerializedName("itinerary")
+    @Expose
+    private SectionItinerary itinerary;
 
 
     public SectionPrayers getPrayers() {
@@ -33,36 +51,84 @@ public class Sections
         this.songbook = songbook;
     }
 
+    public SectionContact getContact() {
+        return contact;
+    }
+
+    public void setContact(SectionContact contact) {
+        this.contact = contact;
+    }
+
+    public SectionFeedback getFeedback() {
+        return feedback;
+    }
+
+    public void setFeedback(SectionFeedback feedback) {
+        this.feedback = feedback;
+    }
+
+    public SectionGroups getGroups() {
+        return groups;
+    }
+
+    public void setGroups(SectionGroups groups) {
+        this.groups = groups;
+    }
+
+    public SectionReadings getReading() {
+        return reading;
+    }
+
+    public void setReading(SectionReadings reading) {
+        this.reading = reading;
+    }
+
+    public SectionMerchandising getMerchandising() {
+        return merchandising;
+    }
+
+    public void setMerchandising(SectionMerchandising merchandising) {
+        this.merchandising = merchandising;
+    }
+
+    public SectionItinerary getItinerary() {
+        return itinerary;
+    }
+
+    public void setItinerary(SectionItinerary itinerary) {
+        this.itinerary = itinerary;
+    }
+
+
     // Available helpers
 
     public boolean hasItinerary()
     {
-        return false;
+        return this.itinerary!=null && this.itinerary.isActive();
     }
 
     public boolean hasReadings()
     {
-        return false;
+        return this.reading!= null && this.reading.isActive();
     }
 
-    public boolean hasMerchandising()
-    {
-        return false;
+    public boolean hasMerchandising() {
+        return this.merchandising!= null && this.merchandising.isActive();
     }
 
     public boolean hasContactSection()
     {
-        return false;
+        return this.contact != null && this.contact.isActive();
     }
 
     public boolean hasGroups()
     {
-        return false;
+        return this.groups!=null && this.groups.isActive();
     }
 
     public boolean hasFeedback()
     {
-        return true;
+        return this.feedback != null && this.feedback.isActive();
     }
 
     public boolean hasPrayers()

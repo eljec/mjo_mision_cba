@@ -23,46 +23,6 @@
         \n \nHazles sentir que Tú estás con ellos en sus trabajos y preocupaciones, y dales la gracia de perseverar hasta el fin en la vida de abnegación para la que los has escogido: Sagrado Corazón de Jesús, por amor de tu misma gloria, protege los esfuerzos de tus Misioneros.
         \n \nAmén.</string>
 
-
-    <string-array name="referents_name">
-        <item>Florencia Rodriguez </item>
-        <item>Tamara Rodriguez</item>
-        <item>Ana laura Peralta</item>
-    </string-array>
-
-    <string-array name="referents_phone_number">
-        <item>3515280086 </item>
-        <item>3513739501</item>
-        <item>3533412019</item>
-    </string-array>
-
-    <array name="referents_profile_type_imager">
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-    </array>
-
-    <!-- Animadores -->
-
-    <string-array name="animadores_name">
-        <item>Lautaro Abrigo</item>
-        <item>Sabrina Chavez</item>
-        <item>Lucas Lopez</item>
-    </string-array>
-
-    <string-array name="animadores_phone_number">
-        <item>3516807934</item>
-        <item>3518101704</item>
-        <item>3515080172</item>
-    </string-array>
-
-    <array name="animadores_profile_type_imager">
-        <item>4</item>
-        <item>5</item>
-        <item>6</item>
-    </array>
-
-
     <string name="title_activity_cotto_detail">\'Cotto\' de Córdoba</string>
 
     <string name="cotto_detail_part_one">
@@ -88,9 +48,9 @@
 
     // Label of contact view
 
-    <string name="fragment_contact_referentes_de_mision_label">Referentes misión</string>
+    <string name="fragment_contact_referentes_de_mision_label">Coordinadores generales</string>
     <string name="fragment_contact_mision_web_label">La misión en la Web</string>
-    <string name="fragment_contact_animadores_label">Animadores</string>
+    <string name="fragment_contact_animadores_label">Coordinadores grupales</string>
     <string name="fragment_contact_cotto_label">Cotto</string>
     <string name="fragment_contact_emergencias_label">Emergencias</string>
     <string name="fragment_contact_policia_label">Policia</string>
@@ -103,28 +63,15 @@
     </string>
 
     <string-array name="reading_days_titles">
-        <item>Sabado 7 </item>
-        <item>Domingo 8</item>
-        <item>Lunes 9</item>
-        <item>Martes 10</item>
-        <item>Miercoles 11</item>
-        <item>Jueves 12</item>
-        <item>Viernes 13</item>
-        <item>Sabado 14</item>
-        <item>Domingo 15</item>
-    </string-array>
-
-    <string-array name="spinner_days_titles">
-        <item>Todos los dias</item>
-        <item>Sabado 7 </item>
-        <item>Domingo 8</item>
-        <item>Lunes 9</item>
-        <item>Martes 10</item>
-        <item>Miercoles 11</item>
-        <item>Jueves 12</item>
-        <item>Viernes 13</item>
-        <item>Sabado 14</item>
-        <item>Domingo 15</item>
+        <item>Sabado 6 </item>
+        <item>Domingo 7</item>
+        <item>Lunes 8</item>
+        <item>Martes 9</item>
+        <item>Miercoles 10</item>
+        <item>Jueves 11</item>
+        <item>Viernes 12</item>
+        <item>Sabado 13</item>
+        <item>Domingo 14</item>
     </string-array>
 
     // Lecturas
@@ -738,5 +685,7 @@
 
     <string name="navigation_item_merchandising">Remeras</string>
     <string name="navigation_item_groups">Grupos</string>
+    <string name="multimedia_image_detail_modal_options_yes">SI</string>
+    <string name="multimedia_image_detail_modal_options_no">NO</string>
 
 </resources>

@@ -21,7 +21,7 @@ public class ItineraryProvider {
         this.assetManager = assetManager;
     }
 
-    public Itinerary obtain(@NonNull String assetFileName) {
+    public SectionItinerary obtain(@NonNull String assetFileName) {
         return parseItinerary(createInputStream(assetFileName));
     }
 
@@ -33,11 +33,11 @@ public class ItineraryProvider {
         }
     }
 
-    private Itinerary parseItinerary(@NonNull InputStream inputStream) {
+    private SectionItinerary parseItinerary(@NonNull InputStream inputStream) {
         try {
-            return new ObjectMapper().readValue(inputStream, Itinerary.class);
+            return new ObjectMapper().readValue(inputStream, SectionItinerary.class);
         } catch (IOException e) {
-            throw new IllegalStateException("Cannot create an instance of Itinerary from asset resource.", e);
+            throw new IllegalStateException("Cannot create an instance of SectionItinerary from asset resource.", e);
         }
     }
 }
