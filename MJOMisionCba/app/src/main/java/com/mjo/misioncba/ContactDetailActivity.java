@@ -12,6 +12,7 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.mjo.misioncba.Server.ContactDrawableHandler;
@@ -26,6 +27,7 @@ public class ContactDetailActivity extends AppCompatActivity {
     private CircleImageView profileImageView;
     private Button callBtn;
     private Button msnBtn;
+    TextView infoLabel;
     private ContactCoordinator contact;
 
     @Override
@@ -73,8 +75,8 @@ public class ContactDetailActivity extends AppCompatActivity {
             // Uso Picasso
             Picasso.with(this)
                     .load(contact.getImageUrl())
-                    .placeholder(R.drawable.mjo_logo_nuevo)
-                    .error(R.drawable.mjo_logo_nuevo)
+                    .placeholder(R.drawable.user_default_icon)
+                    .error(R.drawable.user_default_icon)
                     .into(this.profileImageView);
         }else
         {
@@ -85,6 +87,9 @@ public class ContactDetailActivity extends AppCompatActivity {
                 this.profileImageView.setImageDrawable(drawable);
             }
         }
+
+        infoLabel = (TextView) findViewById(R.id.contact_detail_info);
+        infoLabel.setText(contact.getInfo());
     }
 
     @Override

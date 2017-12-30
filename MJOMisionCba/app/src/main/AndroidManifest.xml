@@ -41,7 +41,6 @@
         <activity android:name=".LocationGroupDetailActivity" />
         <activity android:name=".ContactDetailActivity" />
         <activity android:name=".section.locations.list.zoom.LocationGroupMapZoomActivity" />
-        <activity android:name=".ImageZoomActivity" />
         <activity
             android:name=".section.feedback.StepOne.FeedbackActivity"
             android:label="@string/title_activity_feedback"

@@ -21,8 +21,8 @@
         <de.hdodenhof.circleimageview.CircleImageView
             xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/contact_detail_profile_image"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
             android:layout_gravity="center_horizontal"
             android:src="@drawable/mjo_logo_nuevo"
             app:civ_border_width="2dp"
@@ -30,6 +30,15 @@
             app:civ_border_color="@color/colorAccent"/>
 
     </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/contact_detail_info"
+        android:textSize="15dp"
+        android:gravity="center"
+        android:text="This User icon has Android KitKat style. If you use the icons for Android apps, we recommend using our latest Material Icons icon pack (please check our sidebar on the ">
+    </TextView>
 
     <LinearLayout
         android:layout_width="match_parent"
