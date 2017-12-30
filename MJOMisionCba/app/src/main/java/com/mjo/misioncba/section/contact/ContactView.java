@@ -4,11 +4,11 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.mjo.misioncba.R;
+import com.mjo.misioncba.model.ContactCoordinator;
 
 /**
  * Created by jucastillo on 20/12/16.
@@ -17,7 +17,7 @@ public class ContactView  extends LinearLayout {
 
     private TextView contactName;
     private String contactPhoneString;
-    ContactModel contactModel;
+    ContactCoordinator contactModel;
 
     private OnContactViewButtonsListener mListener;
 
@@ -40,11 +40,11 @@ public class ContactView  extends LinearLayout {
         this.mListener = mListener;
     }
 
-    public void configureForModel (ContactModel model){
+    public void configureForModel (ContactCoordinator model){
 
         this.contactModel = model;
-        this.contactName.setText(model.getContactName());
-        this.contactPhoneString = model.getContactNumber();
+        this.contactName.setText(model.getName());
+        this.contactPhoneString = model.getPhone();
 
     }
     private void init() {
@@ -69,6 +69,6 @@ public class ContactView  extends LinearLayout {
 
     public interface OnContactViewButtonsListener {
 
-        void onClickView(ContactModel contactModel);
+        void onClickView(ContactCoordinator contactModel);
     }
 }

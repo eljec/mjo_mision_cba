@@ -88,9 +88,9 @@
 
     // Label of contact view
 
-    <string name="fragment_contact_referentes_de_mision_label">Referentes misión</string>
+    <string name="fragment_contact_referentes_de_mision_label">Coordinadores generales</string>
     <string name="fragment_contact_mision_web_label">La misión en la Web</string>
-    <string name="fragment_contact_animadores_label">Animadores</string>
+    <string name="fragment_contact_animadores_label">Coordinadores grupales</string>
     <string name="fragment_contact_cotto_label">Cotto</string>
     <string name="fragment_contact_emergencias_label">Emergencias</string>
     <string name="fragment_contact_policia_label">Policia</string>

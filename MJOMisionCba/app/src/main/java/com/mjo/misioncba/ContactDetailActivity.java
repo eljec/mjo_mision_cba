@@ -6,16 +6,18 @@ import android.content.pm.PackageManager;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Build;
+import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.mjo.misioncba.Server.ContactDrawableHandler;
+import com.mjo.misioncba.model.ContactCoordinator;
 import com.mjo.misioncba.section.contact.ContactFragment;
-import com.mjo.misioncba.section.contact.ContactModel;
+import com.squareup.picasso.Picasso;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -24,7 +26,7 @@ public class ContactDetailActivity extends AppCompatActivity {
     private CircleImageView profileImageView;
     private Button callBtn;
     private Button msnBtn;
-    private ContactModel contact;
+    private ContactCoordinator contact;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,30 +42,48 @@ public class ContactDetailActivity extends AppCompatActivity {
 
         if(getIntent().getExtras() != null){
             contact = getIntent().getExtras().getParcelable("CONTACT_DETAIL_CONTACT_MODEL");
-            type = contact.getType();
+            type = contact.getId();
         }
 
-        this.msnBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openMessengerMenu(contact.getContactNumber());
-            }
-        });
+        if(contact.getPhone() != null && contact.getPhone().isEmpty() == false)
+        {
+            this.msnBtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    openMessengerMenu(contact.getPhone());
+                }
+            });
 
-        this.callBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openDialApp(contact.getContactNumber());
-            }
-        });
+            this.callBtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    openDialApp(contact.getPhone());
+                }
+            });
+        }else
+        {
+            findViewById(R.id.contact_detail_communication_container).setVisibility(View.GONE);
+        }
 
-        getSupportActionBar().setTitle(contact.getContactName());
+        getSupportActionBar().setTitle(contact.getName());
 
         // Load the image
-        Drawable drawable = imageForType (type);
+        if(contact.getImageUrl()!= null)
+        {
+            // Uso Picasso
+            Picasso.with(this)
+                    .load(contact.getImageUrl())
+                    .placeholder(R.drawable.mjo_logo_nuevo)
+                    .error(R.drawable.mjo_logo_nuevo)
+                    .into(this.profileImageView);
+        }else
+        {
+            // First check for image from server
+            Drawable drawable = ContactDrawableHandler.imageForType(type, this);
 
-        if(drawable != null){
-            this.profileImageView.setImageDrawable(drawable);
+            if(drawable != null){
+                this.profileImageView.setImageDrawable(drawable);
+            }
         }
     }
 
@@ -71,40 +91,6 @@ public class ContactDetailActivity extends AppCompatActivity {
     public boolean onSupportNavigateUp(){
         finish();
         return true;
-    }
-
-
-    Drawable imageForType(int type){
-
-        Drawable  drawable= null;
-
-        switch (type){
-
-            case 1:
-                drawable = ContextCompat.getDrawable(this,R.drawable.coordinadores_flor_foto);
-                break;
-            case 2:
-                drawable = ContextCompat.getDrawable(this,R.drawable.coordinadores_tamara_foto);
-                break;
-            case 3:
-                drawable = ContextCompat.getDrawable(this,R.drawable.coordinadores_ana_laura_fotop);
-                break;
-            case 4:
-                drawable = ContextCompat.getDrawable(this,R.drawable.coordinadores_lautaro_foto_perfil);
-                break;
-            case 5:
-                drawable = ContextCompat.getDrawable(this,R.drawable.coordinadores_sabrina_foto);
-                break;
-            case 6:
-                drawable = ContextCompat.getDrawable(this,R.drawable.coordinadores_cachi_foto);
-                break;
-
-            default:
-                drawable = ContextCompat.getDrawable(this,R.drawable.mjo_logo_nuevo );
-                break;
-        }
-
-        return drawable;
     }
 
     private void openDialApp(String phoneNumber){
@@ -144,7 +130,7 @@ public class ContactDetailActivity extends AppCompatActivity {
                 if (grantResults.length > 0
                         && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
 
-                    openDialApp(contact.getContactNumber());
+                    openDialApp(contact.getPhone());
 
                 } else {
 
