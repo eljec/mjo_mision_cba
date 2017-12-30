@@ -90,17 +90,12 @@ public class ItineraryFragment extends Fragment implements AdapterView.OnItemSel
                             // Callback to activity
                             ItineraryListViewItemModel item =   listItem.get(position);
 
-                            // 2 == Misa
-                            /*if(item.event.getEventImageType() == 2) {
-                                mListener.onListFragmentInteraction(item);
-                            }else if (item.event.getDayId() == 3 && item.event.getEventImageType() == 5){
+                            boolean misa = item.event.getEventImageType() == 2;
+                            boolean hasContent = item.event.getUrl()!= null;
 
-                                // Formacion del padre Santiago
-                                Intent intent = new Intent(getActivity(), ImageZoomActivity.class);
-                                startActivity(intent);
-                            }*/
-
-                            mListener.onListFragmentInteraction(item.event);
+                            if(misa || hasContent) {
+                                mListener.onListFragmentInteraction(item.event);
+                            }
 
 
                         }
@@ -124,6 +119,7 @@ public class ItineraryFragment extends Fragment implements AdapterView.OnItemSel
     private  String [] getDataForSpinner()
     {
         ArrayList<String> list = new ArrayList<>();
+        list.add("Todos los dias");
 
         if(this.sectionItineraryRawData != null)
         {

@@ -90,7 +90,7 @@ public class ItineraryActivityEventDetail extends AppCompatActivity
                 );
             }else
             {
-                list.setVisibility(View.GONE);
+                findViewById(R.id.place_container).setVisibility(View.GONE);
             }
 
             scheduleView = (TextView) findViewById(R.id.schedule_view);
