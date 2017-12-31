@@ -33,6 +33,10 @@ public class Sections
     @SerializedName("itinerary")
     @Expose
     private SectionItinerary itinerary;
+    @SerializedName("places")
+    @Expose
+    private SectionPlaces places;
+
 
 
     public SectionPrayers getPrayers() {
@@ -99,6 +103,13 @@ public class Sections
         this.itinerary = itinerary;
     }
 
+    public SectionPlaces getPlaces() {
+        return places;
+    }
+
+    public void setPlaces(SectionPlaces places) {
+        this.places = places;
+    }
 
     // Available helpers
 
@@ -139,5 +150,10 @@ public class Sections
     public boolean hasSongbook()
     {
         return this.songbook != null && this.songbook.isActive();
+    }
+
+    public boolean hasPlaces()
+    {
+        return this.places != null && this.places.isActive();
     }
 }

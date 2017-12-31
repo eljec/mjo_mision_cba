@@ -1,12 +1,8 @@
 package com.mjo.misioncba.section.feedback.stepTwo;
 
-import android.content.Context;
 import android.os.AsyncTask;
-import android.widget.Toast;
 
 import java.io.IOException;
-import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
 
 import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
@@ -23,11 +19,14 @@ public class PostDataTask extends AsyncTask<String, Void, Boolean> {
             = MediaType.parse("application/x-www-form-urlencoded; charset=utf-8");
 
     private OnPostTaskListener listener;
-    public static final String URL="https://docs.google.com/forms/d/e/1FAIpQLSfd9tvaG7wUUuImeyhR-R7qgYde1QEObfLFr3BZnKSLkeDgEg/formResponse";
 
+    //public static final String URL="https://docs.google.com/forms/d/e/1FAIpQLSfd9tvaG7wUUuImeyhR-R7qgYde1QEObfLFr3BZnKSLkeDgEg/formResponse";
 
-    public PostDataTask(OnPostTaskListener listener) {
+    private String urlForm;
+
+    public PostDataTask(OnPostTaskListener listener, String urlForm) {
         this.listener = listener;
+        this.urlForm = urlForm;
     }
 
     public void setListener(OnPostTaskListener listener) {
@@ -50,7 +49,7 @@ public class PostDataTask extends AsyncTask<String, Void, Boolean> {
             //Create the request body with the help of Media Type
             RequestBody body = RequestBody.create(FORM_DATA_TYPE, postBody);
             Request request = new Request.Builder()
-                    .url(URL)
+                    .url(this.urlForm)
                     .post(body)
                     .build();
             //Send the request

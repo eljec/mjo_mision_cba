@@ -1,9 +1,9 @@
 package com.mjo.misioncba.section.feedback.stepTwo;
 
 import android.content.Context;
-import android.content.res.Resources;
 
-import com.mjo.misioncba.R;
+import com.mjo.misioncba.model.SectionFeedback;
+import com.mjo.misioncba.model.SectionFeedbackQuestion;
 import com.mjo.misioncba.section.feedback.StepOne.ItemFeedbackDataResult;
 
 import java.io.UnsupportedEncodingException;
@@ -21,7 +21,7 @@ public class FeedbackActivityStepTwoUrlGenerator {
 
     public FeedbackActivityStepTwoUrlGenerator(Context ctx) {
 
-        Resources res = ctx.getResources();
+        /*Resources res = ctx.getResources();
         String[] feedbackItemsFormId = res.getStringArray(R.array.feedback_item_form_id);
         String[] feedbackItemsKeys = res.getStringArray(R.array.feedback_item_list_key);
 
@@ -31,16 +31,17 @@ public class FeedbackActivityStepTwoUrlGenerator {
             String key = feedbackItemsKeys[i];
 
             mapKeyFormId.put(key, formId);
-        }
+        }*/
     }
 
-    public String generatePostBody (ArrayList<ItemFeedbackDataResult> resultStepOne, String suggestionText){
+    public String generatePostBody (ArrayList<ItemFeedbackDataResult> resultStepOne, String suggestionText, SectionFeedback sectionFeedback)
+    {
 
         StringBuilder postBody = new StringBuilder();
 
         for (ItemFeedbackDataResult item : resultStepOne) {
 
-            if(mapKeyFormId.containsKey(item.getKey())){
+            //if(mapKeyFormId.containsKey(item.getKey())){
 
                 String formId = mapKeyFormId.get(item.getKey());
                 String value = stringValueForRating(item.getValue());
@@ -49,11 +50,12 @@ public class FeedbackActivityStepTwoUrlGenerator {
                 postBody.append("=");
                 postBody.append(value);
                 postBody.append("&");
-            }
+            //}
         }
 
         try {
-            postBody.append("entry.692504424");
+            String keySuggestionInput = getSuggestionQuestion(sectionFeedback).getFormKey();
+            postBody.append(keySuggestionInput);
             postBody.append("=");
             postBody.append( URLEncoder.encode(suggestionText,"UTF-8"));
 
@@ -62,6 +64,22 @@ public class FeedbackActivityStepTwoUrlGenerator {
         }
 
         return postBody.toString();
+    }
+
+    private SectionFeedbackQuestion getSuggestionQuestion(SectionFeedback feedback)
+    {
+        SectionFeedbackQuestion suggestionQuestion = null;
+
+        for (SectionFeedbackQuestion feedbackQuestion : feedback.getQuestions())
+        {
+            if(feedbackQuestion.isOpenQuestion())
+            {
+                suggestionQuestion = feedbackQuestion;
+                break;
+            }
+        }
+
+        return suggestionQuestion;
     }
 
     private String stringValueForRating(float rating){

@@ -140,10 +140,11 @@ public class MainActivity extends AppCompatActivity
             visibleSections.add(R.id.nav_groups);
         }
 
-
-        // Mapa barrios
-        menu.add(R.id.section_groups,R.id.nav_map,Menu.NONE,R.string.navigation_item_maps).setIcon(android.R.drawable.ic_dialog_map).setCheckable(true).setChecked(false);;
-        visibleSections.add(R.id.nav_map);
+        if(sections.hasPlaces()) {
+            menu.add(R.id.section_groups, R.id.nav_map, Menu.NONE, R.string.navigation_item_maps).setIcon(android.R.drawable.ic_dialog_map).setCheckable(true).setChecked(false);
+            ;
+            visibleSections.add(R.id.nav_map);
+        }
 
         if(sections.hasMerchandising())
         {
