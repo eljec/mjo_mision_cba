@@ -28,6 +28,7 @@ import com.mjo.misioncba.model.Sections;
 import com.mjo.misioncba.section.contact.ContactFragment;
 import com.mjo.misioncba.section.feedback.StarFlow.FeedbackStartFlowActivity;
 import com.mjo.misioncba.section.groups.GroupsListFragment;
+import com.mjo.misioncba.section.groups.detail.GroupDetailActivity;
 import com.mjo.misioncba.section.itinerary.ItineraryFragment;
 import com.mjo.misioncba.section.itinerary.detail.ItineraryActivityEventDetail;
 import com.mjo.misioncba.section.locations.list.LocationGroupFragment;
@@ -40,6 +41,7 @@ import com.mjo.misioncba.section.songbook.SongbookFragment;
 
 import java.util.ArrayList;
 
+import static com.mjo.misioncba.section.groups.detail.GroupDetailActivity.GROUP_ID_SELECTED;
 import static com.mjo.misioncba.section.itinerary.detail.ItineraryActivityEventDetail.EVENT_DAY_ID_SELECTED;
 import static com.mjo.misioncba.section.itinerary.detail.ItineraryActivityEventDetail.EVENT_ID_SELECTED;
 
@@ -379,6 +381,12 @@ public class MainActivity extends AppCompatActivity
     public void onGroupsListFragmentInteraction(SectionGroupsItem groupsItem)
     {
       // Open Detail
+
+        Intent groupDetail = new Intent(this, GroupDetailActivity.class);
+        groupDetail.putExtra(GROUP_ID_SELECTED, groupsItem.getId());
+
+        startActivity(groupDetail);
+
     }
 }
 
