@@ -33,4 +33,9 @@ public class SectionGroups
     public void setList(ArrayList<SectionGroupsItem> list) {
         this.list = list;
     }
+
+    public SectionGroupsItem getGroupByPosition(int position)
+    {
+        return this.list.get(position);
+    }
 }

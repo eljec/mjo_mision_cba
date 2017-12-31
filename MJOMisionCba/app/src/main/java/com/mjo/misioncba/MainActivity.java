@@ -23,9 +23,11 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.mjo.misioncba.model.ItineraryDayEvent;
+import com.mjo.misioncba.model.SectionGroupsItem;
 import com.mjo.misioncba.model.Sections;
 import com.mjo.misioncba.section.contact.ContactFragment;
 import com.mjo.misioncba.section.feedback.StarFlow.FeedbackStartFlowActivity;
+import com.mjo.misioncba.section.groups.GroupsListFragment;
 import com.mjo.misioncba.section.itinerary.ItineraryFragment;
 import com.mjo.misioncba.section.itinerary.detail.ItineraryActivityEventDetail;
 import com.mjo.misioncba.section.locations.list.LocationGroupFragment;
@@ -42,7 +44,7 @@ import static com.mjo.misioncba.section.itinerary.detail.ItineraryActivityEventD
 import static com.mjo.misioncba.section.itinerary.detail.ItineraryActivityEventDetail.EVENT_ID_SELECTED;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, ItineraryFragment.OnListFragmentInteractionListener, ReadingFragmentListFragment.OnReadingListFragmentInteractionListener, LocationGroupFragment.OnLocationGroupListFragmentInteractionListener {
+        implements NavigationView.OnNavigationItemSelectedListener, ItineraryFragment.OnListFragmentInteractionListener, ReadingFragmentListFragment.OnReadingListFragmentInteractionListener, LocationGroupFragment.OnLocationGroupListFragmentInteractionListener, GroupsListFragment.OnGroupsListFragmentInteractionListener {
 
 
     public static final String KEY_PREFRENCES_FILE_NAME="mjo_mision_cba_itinerary_preferences";
@@ -222,36 +224,31 @@ public class MainActivity extends AppCompatActivity
     private void selectItem(int id) {
 
         // Check the id of the menu and replace fragment
+        spinnerViewContainer.setVisibility(View.GONE);
 
         Fragment fragment = null;
         // Create a new fragment and specify the planet to show based on position
 
         if (id == R.id.nav_itinerary) {
             spinnerViewContainer.setVisibility(View.VISIBLE);
-
             int indexSelected = getIndexFromPreferences();
             fragment = ItineraryFragment.newInstance(indexSelected);
         } else if (id == R.id.nav_readings) {
-            spinnerViewContainer.setVisibility(View.GONE);
             fragment = ReadingFragmentListFragment.newInstance();
         } else if (id == R.id.nav_prayer) {
-            spinnerViewContainer.setVisibility(View.GONE);
             fragment = new PrayerFragment();
         }else if (id == R.id.nav_contact) {
-            spinnerViewContainer.setVisibility(View.GONE);
             fragment = new ContactFragment();
         } else if (id == R.id.nav_location_group) {
-            spinnerViewContainer.setVisibility(View.GONE);
             fragment = new LocationGroupFragment();
         } else if (id == R.id.nav_map) {
-            spinnerViewContainer.setVisibility(View.GONE);
             fragment = new MapFragment();
         }else if (id == R.id.nav_songbook){
-            spinnerViewContainer.setVisibility(View.GONE);
             fragment = new SongbookFragment();
         }else if (id == R.id.nav_merchandising){
-            spinnerViewContainer.setVisibility(View.GONE);
             fragment = new MerchandisingFragment();
+        } else if(id == R.id.nav_groups) {
+            fragment = new GroupsListFragment();
         }
 
         // Update download item
@@ -376,6 +373,12 @@ public class MainActivity extends AppCompatActivity
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+    }
+
+    @Override
+    public void onGroupsListFragmentInteraction(SectionGroupsItem groupsItem)
+    {
+      // Open Detail
     }
 }
 
