@@ -47,7 +47,7 @@ public class FeedbackActivityStepTwo extends AppCompatActivity implements PostDa
             resultStepOne = getIntent().getExtras().getParcelableArrayList(FeedbackActivity.FEEDBACK_LIST_RESULTS);
         }
 
-        this.generator = new FeedbackActivityStepTwoUrlGenerator(this);
+        this.generator = new FeedbackActivityStepTwoUrlGenerator();
 
         this.loadingContainer = findViewById(R.id.progressbar_container);
         this.submitButton = (Button) findViewById(R.id.feedback_submit_btn);

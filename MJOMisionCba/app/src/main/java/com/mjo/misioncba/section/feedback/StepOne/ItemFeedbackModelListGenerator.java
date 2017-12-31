@@ -14,24 +14,6 @@ public class ItemFeedbackModelListGenerator {
     public List<ItemFeedbackModelList> getData(SectionFeedback feedback){
 
         List<ItemFeedbackModelList> data = new ArrayList<>();
-
-        /*Resources res = ctx.getResources();
-        String[] feedbackItemsTitles = res.getStringArray(R.array.feedback_item_list_title);
-        String[] feedbackItemsKeys = res.getStringArray(R.array.feedback_item_list_key);
-
-
-        for (int i = 0; i < feedbackItemsTitles.length; i++) {
-
-            String title = feedbackItemsTitles[i];
-            String key = feedbackItemsKeys[i];
-
-            if(title != null){
-                ItemFeedbackModelList item = new ItemFeedbackModelList (title);
-                item.setKeyType(key);
-                data.add(item);
-            }
-        }*/
-
         for (SectionFeedbackQuestion feedbackQuestion : feedback.getQuestions())
         {
             if(feedbackQuestion.isCloseQuestion())
