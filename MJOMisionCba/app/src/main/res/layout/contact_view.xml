@@ -12,7 +12,7 @@
     <ImageView
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:src="@drawable/mjo_logo_nuevo"
+        android:src="@drawable/coordinator_list_icon_2"
         android:layout_gravity="center_vertical"
         android:id="@+id/frament_itinerary_list_event_image"
         />
@@ -21,7 +21,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/contact_view_name"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="20dp"
             android:layout_gravity="center_vertical"
             android:textSize="17sp"
             android:text="Julio Castillo"

@@ -53,4 +53,14 @@ public class SectionFeedbackQuestion
     public void setType(String type) {
         this.type = type;
     }
+
+    public boolean isCloseQuestion() {
+
+        return this.type != null && this.type.isEmpty()== false && this.type.equals("close");
+    }
+
+    public boolean isOpenQuestion() {
+
+        return this.type != null && this.type.isEmpty()== false && this.type.equals("open");
+    }
 }

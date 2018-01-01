@@ -15,7 +15,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.mjo.misioncba.MisionCbaApplication;
 import com.mjo.misioncba.R;
+import com.mjo.misioncba.model.SectionFeedback;
 import com.mjo.misioncba.section.feedback.StepOne.FeedbackActivity;
 import com.mjo.misioncba.section.feedback.StepOne.ItemFeedbackDataResult;
 import com.mjo.misioncba.section.feedback.congrats.FeedbackCongratsActivity;
@@ -45,7 +47,7 @@ public class FeedbackActivityStepTwo extends AppCompatActivity implements PostDa
             resultStepOne = getIntent().getExtras().getParcelableArrayList(FeedbackActivity.FEEDBACK_LIST_RESULTS);
         }
 
-        this.generator = new FeedbackActivityStepTwoUrlGenerator(this);
+        this.generator = new FeedbackActivityStepTwoUrlGenerator();
 
         this.loadingContainer = findViewById(R.id.progressbar_container);
         this.submitButton = (Button) findViewById(R.id.feedback_submit_btn);
@@ -147,9 +149,12 @@ public class FeedbackActivityStepTwo extends AppCompatActivity implements PostDa
 
     private void startPostDataTask(){
 
-        task = new PostDataTask(this);
+        MisionCbaApplication appState = ((MisionCbaApplication) getApplication());
+        SectionFeedback sectionFeedback = appState.getSections().getFeedback();
 
-        String body = this.generator.generatePostBody(resultStepOne, textArea.getText().toString());
+        task = new PostDataTask(this, sectionFeedback.getUrlForm());
+
+        String body = this.generator.generatePostBody(resultStepOne, textArea.getText().toString(),sectionFeedback );
         task.execute(body);
     }
 

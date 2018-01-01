@@ -20,9 +20,9 @@ public class SectionGroupsItem
     @SerializedName("map")
     @Expose
     private String  map;
-    @SerializedName("cordinator")
+    @SerializedName("coordinator")
     @Expose
-    private SectionGroupsItemCoordinator cordinator;
+    private ArrayList<ContactCoordinator> coordinator;
     @SerializedName("food")
     @Expose
     private SectionGroupsItemFood food;
@@ -54,14 +54,6 @@ public class SectionGroupsItem
         this.map = map;
     }
 
-    public SectionGroupsItemCoordinator getCordinator() {
-        return cordinator;
-    }
-
-    public void setCordinator(SectionGroupsItemCoordinator cordinator) {
-        this.cordinator = cordinator;
-    }
-
     public SectionGroupsItemFood getFood() {
         return food;
     }
@@ -76,5 +68,26 @@ public class SectionGroupsItem
 
     public void setMembers(ArrayList<String> members) {
         this.members = members;
+    }
+
+    public ArrayList<ContactCoordinator> getCoordinator() {
+        return coordinator;
+    }
+
+    public void setCoordinator(ArrayList<ContactCoordinator> coordinator) {
+        this.coordinator = coordinator;
+    }
+
+    public boolean hasCoordinators() {
+        return this.coordinator != null && this.coordinator.size() > 0;
+    }
+
+    public boolean hasFood()
+    {
+        return  this.food!=null && this.food.getText()!=null;
+    }
+
+    public boolean hasMembers() {
+        return this.members!= null && this.members.size() >0;
     }
 }

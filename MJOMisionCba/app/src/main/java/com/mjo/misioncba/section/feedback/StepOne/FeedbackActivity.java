@@ -11,6 +11,8 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+
+import com.mjo.misioncba.MisionCbaApplication;
 import com.mjo.misioncba.R;
 import com.mjo.misioncba.section.feedback.stepTwo.FeedbackActivityStepTwo;
 
@@ -57,7 +59,9 @@ public class FeedbackActivity extends AppCompatActivity implements FeedbackStepO
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         ItemFeedbackModelListGenerator generator = new ItemFeedbackModelListGenerator();
-        data = generator.getData(this);
+
+        MisionCbaApplication appState = ((MisionCbaApplication) getApplication());
+        data = generator.getData(appState.getSections().getFeedback());
 
         adapterList = new FeedbackStepOneListRecyclerViewAdapter(data, this);
 

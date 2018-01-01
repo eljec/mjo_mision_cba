@@ -1,9 +1,7 @@
 package com.mjo.misioncba.section.feedback.StepOne;
 
-import android.content.Context;
-import android.content.res.Resources;
-
-import com.mjo.misioncba.R;
+import com.mjo.misioncba.model.SectionFeedback;
+import com.mjo.misioncba.model.SectionFeedbackQuestion;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,23 +11,16 @@ import java.util.List;
  */
 public class ItemFeedbackModelListGenerator {
 
-    public List<ItemFeedbackModelList> getData(Context ctx){
-
+    public List<ItemFeedbackModelList> getData(SectionFeedback feedback){
 
         List<ItemFeedbackModelList> data = new ArrayList<>();
-
-        Resources res = ctx.getResources();
-        String[] feedbackItemsTitles = res.getStringArray(R.array.feedback_item_list_title);
-        String[] feedbackItemsKeys = res.getStringArray(R.array.feedback_item_list_key);
-
-        for (int i = 0; i < feedbackItemsTitles.length; i++) {
-
-            String title = feedbackItemsTitles[i];
-            String key = feedbackItemsKeys[i];
-
-            if(title != null){
-                ItemFeedbackModelList item = new ItemFeedbackModelList (title);
-                item.setKeyType(key);
+        for (SectionFeedbackQuestion feedbackQuestion : feedback.getQuestions())
+        {
+            if(feedbackQuestion.isCloseQuestion())
+            {
+                ItemFeedbackModelList item = new ItemFeedbackModelList ();
+                item.setText(feedbackQuestion.getText());
+                item.setKeyType(feedbackQuestion.getFormKey());
                 data.add(item);
             }
         }
