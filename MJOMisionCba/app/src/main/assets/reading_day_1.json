@@ -1,0 +1,27 @@
+{
+  "firstReading": {
+    "title": "Primera Lectura",
+    "subtitle": "Lectura del libro de Isaías, Is 60, 1-6",
+    "content": "¡Levántate, resplandece, porque llega tu luz y la gloria del Señor brilla sobre ti! Porque las tinieblas cubren la tierra y una densa oscuridad, a las naciones, pero sobre ti brillará el Señor y su gloria aparecerá sobre ti. Las naciones caminarán a tu luz y los reyes, al esplendor de tu aurora. Mira a tu alrededor y observa: todos se han reunido y vienen hacia ti; tus hijos llegan desde lejos y tus hijas son llevadas en brazos. Al ver esto, estarás radiante, palpitará y se ensanchará tu corazón, porque se volcarán sobre ti los tesoros del mar y las riquezas de las naciones llegarán hasta ti. Te cubrirá una multitud de camellos, de dromedarios de Madián y de Efá. Todos ellos vendrán desde Sabá, trayendo oro e incienso, y pregonarán las alabanzas del Señor.\nPalabra de Dios."
+  },
+  "psalm": {
+    "title": "Salmo",
+    "subtitle": "Sal 71, 1-2. 7-8. 10-13 \n R. ¡Pueblos de la tierra, alaben al Señor!",
+    "content": [
+      "Que en sus días florezca la justicia y abunde la paz, mientras dure la luna; que domine de un mar hasta el otro, y desde el Río hasta los confines de la tierra. R.",
+      "Que en sus días florezca la justicia y abunde la paz, mientras dure la luna; que domine de un mar hasta el otro, y desde el Río hasta los confines de la tierra. R.",
+      "Que los reyes de Tarsis y de las costas lejanas le paguen tributo. Que los reyes de Arabia y de Sabá le traigan regalos; que todos los reyes le rindan homenaje y lo sirvan todas las naciones. R.",
+      "Porque él librará al pobre que suplica y al humilde que está desamparado. Tendrá compasión del débil y del pobre, y salvará la vida de los indigentes. R."
+    ]
+  },
+  "secondReading": {
+    "title": "Segunda Lectura",
+    "subtitle": "Lectura de la carta del apóstol san Pablo a los cristianos de Éfeso, Ef 3, 2-6",
+    "content": "Hermanos: Seguramente habrán oído hablar de la gracia de Dios, que me ha sido dispensada en beneficio de ustedes. Fue por medio de una revelación como se me dio a conocer este misterio, tal como acabo de exponérselo en pocas palabras. Al leerlas, se darán cuenta de la comprensión que tengo del misterio de Cristo, que no fue manifestado a las generaciones pasadas, pero que ahora ha sido revelado por medio del Espíritu a sus santos apóstoles y profetas. Este misterio consiste en que también los paganos participan de una misma herencia, son miembros de un mismo Cuerpo y beneficiarios de la misma promesa en Cristo Jesús, por medio del Evangelio.\n Palabra de Dios."
+  },
+  "gospelReading": {
+    "title": "Evangelio",
+    "subtitle": "Evangelio de nuestro Señor Jesucristo según san Mateo, Mt 2, 1-12",
+    "content": "Cuando nació Jesús, en Belén de Judea, bajo el reinado de Herodes, unos magos de oriente se presentaron en Jerusalén y preguntaron: “¿Dónde está el rey de los judíos que acaba de nacer? Porque vimos su estrella en oriente y hemos venido a adorarlo”. Al enterarse, el rey Herodes quedó desconcertado y con él toda Jerusalén. Entonces reunió a todos los sumos sacerdotes y a los escribas del pueblo, para preguntarles en qué lugar debía nacer el Mesías. “En Belén de Judea, le respondieron, porque así está escrito por el Profeta: ‘Y tú, Belén, tierra de Judá, ciertamente no eres la menor entre las principales ciudades de Judá, porque de ti surgirá un jefe que será el Pastor de mi pueblo, Israel’”. Herodes mandó llamar secretamente a los magos y, después de averiguar con precisión la fecha en que había aparecido la estrella, los envió a Belén, diciéndoles: “Vayan e infórmense cuidadosamente acerca del niño, y cuando lo hayan encontrado, avísenme para que yo también vaya a rendirle homenaje”. Después de oír al rey, ellos partieron. La estrella que habían visto en oriente los precedía, hasta que se detuvo en el lugar donde estaba el niño. Cuando vieron la estrella se llenaron de alegría y, al entrar en la casa, encontraron al niño con María, su madre, y postrándose, le rindieron homenaje. Luego, abriendo sus cofres, le ofrecieron dones: oro, incienso y mirra. Y como recibieron en sueños la advertencia de no regresar al palacio de Herodes, volvieron a su tierra por otro camino.\n Palabra del Señor."
+  }
+}
