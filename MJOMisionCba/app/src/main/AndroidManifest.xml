@@ -89,6 +89,16 @@
             android:name=".section.groups.detail.GroupDetailActivity"
             android:screenOrientation="portrait"></activity>
 
+        <service android:name=".Notification.MisionMjoFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@mipmap/ic_event_black_24dp" />
+
     </application>
 
 </manifest>
