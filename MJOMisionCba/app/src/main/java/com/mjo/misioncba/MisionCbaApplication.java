@@ -2,7 +2,6 @@ package com.mjo.misioncba;
 
 import android.app.Application;
 
-import com.mjo.misioncba.model.SectionItinerary;
 import com.mjo.misioncba.model.Sections;
 
 /**
@@ -10,17 +9,7 @@ import com.mjo.misioncba.model.Sections;
  */
 public class MisionCbaApplication extends Application {
 
-    private SectionItinerary sectionItinerary;
-
     private Sections sections;
-
-    public SectionItinerary getSectionItinerary() {
-        return sectionItinerary;
-    }
-
-    public void setSectionItinerary(SectionItinerary sectionItinerary) {
-        this.sectionItinerary = sectionItinerary;
-    }
 
     public Sections getSections() {
         return sections;

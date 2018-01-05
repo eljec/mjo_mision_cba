@@ -32,6 +32,7 @@ import com.mjo.misioncba.section.groups.detail.GroupDetailActivity;
 import com.mjo.misioncba.section.itinerary.ItineraryFragment;
 import com.mjo.misioncba.section.itinerary.detail.ItineraryActivityEventDetail;
 import com.mjo.misioncba.section.maps.MapFragment;
+import com.mjo.misioncba.section.message.MessageFragment;
 import com.mjo.misioncba.section.prayer.PrayerFragment;
 import com.mjo.misioncba.section.readings.list.ReadingFragmentListFragment;
 import com.mjo.misioncba.section.songbook.SongbookFragment;
@@ -142,6 +143,13 @@ public class MainActivity extends AppCompatActivity
             ;
             visibleSections.add(R.id.nav_map);
         }
+
+        if(sections.hasMessage()) {
+            menu.add(R.id.section_groups, R.id.nav_message, Menu.NONE, R.string.navigation_item_message).setIcon(R.mipmap.ic_chat_black_24dp).setCheckable(true).setChecked(false);
+            ;
+            visibleSections.add(R.id.nav_message);
+        }
+
         if(sections.hasFeedback())
         {
             menu.add(R.id.section_groups,R.id.nav_feedback,Menu.NONE,R.string.navigation_item_feedback).setIcon(R.mipmap.ic_star_black_24dp).setCheckable(true).setChecked(false);;
@@ -238,6 +246,8 @@ public class MainActivity extends AppCompatActivity
             fragment = new SongbookFragment();
         } else if(id == R.id.nav_groups) {
             fragment = new GroupsListFragment();
+        }else if(id == R.id.nav_message) {
+            fragment = new MessageFragment();
         }
 
         // Update download item

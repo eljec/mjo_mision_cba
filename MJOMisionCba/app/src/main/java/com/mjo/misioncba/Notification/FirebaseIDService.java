@@ -1,4 +1,4 @@
-package com.mjo.misioncba.Notification;
+package com.mjo.misioncba.notification;
 
 import android.util.Log;
 

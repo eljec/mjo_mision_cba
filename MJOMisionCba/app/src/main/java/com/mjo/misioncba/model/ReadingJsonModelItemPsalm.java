@@ -51,4 +51,9 @@ public class ReadingJsonModelItemPsalm
         }
         return content.toString();
     }
+
+    public boolean isEmpty()
+    {
+        return this.title.isEmpty() && this.subtitle.isEmpty() && this.content.isEmpty();
+    }
 }

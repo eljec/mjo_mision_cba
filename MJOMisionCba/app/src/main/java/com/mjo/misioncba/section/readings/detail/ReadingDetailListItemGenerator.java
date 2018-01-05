@@ -40,17 +40,25 @@ public class ReadingDetailListItemGenerator {
         if(day > 0 && day <= 9 && jsonModel!=null)
         {
             // Create  view model
-            Readings reading = new Readings(jsonModel.getFirstReading().getTitle(), jsonModel.getFirstReading().getSubtitle(), jsonModel.getFirstReading().getContent());
-            readingForDay.add(reading);
 
-            Readings readingPsalm = new Readings(jsonModel.getPsalm().getTitle(), jsonModel.getPsalm().getSubtitle(), jsonModel.getPsalm().getFullContent());
-            readingForDay.add(readingPsalm);
+            if(jsonModel.getFirstReading().isEmpty() == false) {
+                Readings reading = new Readings(jsonModel.getFirstReading().getTitle(), jsonModel.getFirstReading().getSubtitle(), jsonModel.getFirstReading().getContent());
+                readingForDay.add(reading);
+            }
 
-            Readings readingSecond = new Readings(jsonModel.getSecondReading().getTitle(), jsonModel.getSecondReading().getSubtitle(), jsonModel.getSecondReading().getContent());
-            readingForDay.add(readingSecond);
+            if(jsonModel.getPsalm().isEmpty() == false) {
+                Readings readingPsalm = new Readings(jsonModel.getPsalm().getTitle(), jsonModel.getPsalm().getSubtitle(), jsonModel.getPsalm().getFullContent());
+                readingForDay.add(readingPsalm);
+            }
 
-            Readings readingGospel = new Readings(jsonModel.getGospelReading().getTitle(), jsonModel.getGospelReading().getSubtitle(), jsonModel.getGospelReading().getContent());
-            readingForDay.add(readingGospel);
+            if(jsonModel.getSecondReading().isEmpty() == false) {
+                Readings readingSecond = new Readings(jsonModel.getSecondReading().getTitle(), jsonModel.getSecondReading().getSubtitle(), jsonModel.getSecondReading().getContent());
+                readingForDay.add(readingSecond);
+            }
+            if(jsonModel.getGospelReading().isEmpty() == false) {
+                Readings readingGospel = new Readings(jsonModel.getGospelReading().getTitle(), jsonModel.getGospelReading().getSubtitle(), jsonModel.getGospelReading().getContent());
+                readingForDay.add(readingGospel);
+            }
         }
 
         return readingForDay;

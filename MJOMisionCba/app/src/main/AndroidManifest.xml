@@ -94,7 +94,7 @@
             android:screenOrientation="portrait"></activity>
 
 
-        <service android:name=".Notification.MisionMjoFirebaseMessagingService">
+        <service android:name=".notification.MisionMjoFirebaseMessagingService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT"/>
             </intent-filter>
@@ -102,7 +102,7 @@
 
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_icon"
-            android:resource="@mipmap/ic_chat_black_24dp" />
+            android:resource="@mipmap/ic_speaker_notes_white_24dp" />
 
     </application>
 

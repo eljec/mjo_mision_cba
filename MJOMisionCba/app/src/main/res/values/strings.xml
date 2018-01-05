@@ -102,6 +102,7 @@
     <string name="navigation_item_group">Grupos misioneros</string>
     <string name="navigation_item_group_places">Lugares por grupo</string>
     <string name="navigation_item_maps">Mapa de barrios</string>
+    <string name="navigation_item_message">Avisos</string>
     <string name="navigation_item_songbook">Cancionero</string>
     <string name="fragment_map_title">Mapa de los barrios</string>
     <string name="reading_detail_title">"Lecturas:  "</string>

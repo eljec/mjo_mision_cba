@@ -42,4 +42,9 @@ public class ReadingJsonModelItem
     public void setContent(String content) {
         this.content = content;
     }
+
+    public boolean isEmpty()
+    {
+        return this.title.isEmpty() && this.subtitle.isEmpty() && this.content.isEmpty();
+    }
 }
