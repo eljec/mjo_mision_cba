@@ -66,6 +66,35 @@
 
             </LinearLayout>
 
+        <!-- Map -->
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:id="@+id/group_map_container"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:paddingLeft="5dp"
+                android:textSize="22dp"
+                android:text="Lugar Mision"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/group_map_label"
+                android:textSize="18dp"
+                android:text="Barrio Congreso"
+                android:drawableLeft="@mipmap/ic_trending_flat_black_24dp"/>
+
+        </LinearLayout>
+
             <!-- Food -->
             <LinearLayout
                 android:layout_marginTop="10dp"

@@ -1,8 +1,6 @@
 package com.mjo.misioncba.section.locations.list.detail;
 
 import android.content.Context;
-import android.graphics.drawable.Drawable;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.mjo.misioncba.R;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -43,7 +42,22 @@ public class LocationDetailListRecyclerViewAdapter extends RecyclerView.Adapter 
 
         LocationDetailItemViewHolder ownHolder = (LocationDetailItemViewHolder) holder;
         ownHolder.mTitleView.setText(model.getNeighborhoodName());
-        ownHolder.mImage.setImageDrawable(LocationDetailItemListImageFactory.getImageForType(model.getImageType(), mContext));
+
+        // Check if we have url, in that case we use it
+
+        if(model.getUrl()!=null && model.getUrl().isEmpty() == false)
+        {
+            // Uso Picasso
+            Picasso.with(mContext)
+                    .load(model.getUrl())
+                    .placeholder(R.drawable.loading_bg)
+                    .error(R.drawable.loading_bg)
+                    .into(ownHolder.mImage);
+        }else
+        {
+            ownHolder.mImage.setImageDrawable(LocationDetailItemListImageFactory.getImageForType(model.getImageType(), mContext));
+        }
+
         ownHolder.mSeparatorLine.setVisibility(View.VISIBLE);
 
         if(position == mValues.size() -1){

@@ -97,17 +97,7 @@
         <item>La Esperanza</item>
     </string-array>
 
-    <string name="fragment_map_description">Durante esta misión se recorrerá la parte sur de la ciudad, uno de los laterales del Don Orione Córdoba.\nLos barrios son:
-        "\n    - Santa Isabel 3º Sección"
-        "\n    - Vicor"
-        "\n    - Vicor Anexo"
-        "\n    - Ampliación Vicor"
-        "\n    - Héroes de Malvinas"
-        "\n    - Kairo"
-        "\n    - San Isable Anexo"
-        "\n    - San Luis de Francia"
-        "\n    - Parque Futura"
-        "\n    - La Esperanza"
+    <string name="fragment_map_description">Durante esta misión se recorrerá la parte sur de la ciudad, uno de los laterales del Don Orione Córdoba. Los barrios son:\n
     </string>
     <string name="navigation_item_group">Grupos misioneros</string>
     <string name="navigation_item_group_places">Lugares por grupo</string>

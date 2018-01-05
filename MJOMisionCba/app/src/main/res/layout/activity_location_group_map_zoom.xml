@@ -11,7 +11,7 @@
         android:id="@+id/location_group_map_zoom_image"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/mapa_h_de_malvinas"
+        android:src="@drawable/map_ampliacion_cabildo"
         android:layout_centerInParent="true"/>
 
 </RelativeLayout>

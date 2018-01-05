@@ -31,10 +31,7 @@ import com.mjo.misioncba.section.groups.GroupsListFragment;
 import com.mjo.misioncba.section.groups.detail.GroupDetailActivity;
 import com.mjo.misioncba.section.itinerary.ItineraryFragment;
 import com.mjo.misioncba.section.itinerary.detail.ItineraryActivityEventDetail;
-import com.mjo.misioncba.section.locations.list.LocationGroupFragment;
-import com.mjo.misioncba.section.locations.list.LocationGroupItem;
 import com.mjo.misioncba.section.maps.MapFragment;
-import com.mjo.misioncba.section.merchandasing.MerchandisingFragment;
 import com.mjo.misioncba.section.prayer.PrayerFragment;
 import com.mjo.misioncba.section.readings.list.ReadingFragmentListFragment;
 import com.mjo.misioncba.section.songbook.SongbookFragment;
@@ -46,7 +43,7 @@ import static com.mjo.misioncba.section.itinerary.detail.ItineraryActivityEventD
 import static com.mjo.misioncba.section.itinerary.detail.ItineraryActivityEventDetail.EVENT_ID_SELECTED;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, ItineraryFragment.OnListFragmentInteractionListener, ReadingFragmentListFragment.OnReadingListFragmentInteractionListener, LocationGroupFragment.OnLocationGroupListFragmentInteractionListener, GroupsListFragment.OnGroupsListFragmentInteractionListener {
+        implements NavigationView.OnNavigationItemSelectedListener, ItineraryFragment.OnListFragmentInteractionListener, ReadingFragmentListFragment.OnReadingListFragmentInteractionListener, GroupsListFragment.OnGroupsListFragmentInteractionListener {
 
 
     public static final String KEY_PREFRENCES_FILE_NAME="mjo_mision_cba_itinerary_preferences";
@@ -145,13 +142,6 @@ public class MainActivity extends AppCompatActivity
             ;
             visibleSections.add(R.id.nav_map);
         }
-
-        if(sections.hasMerchandising())
-        {
-            menu.add(R.id.section_groups,R.id.nav_merchandising,Menu.NONE,R.string.navigation_item_merchandising).setIcon(R.mipmap.ic_store_black_24dp).setCheckable(true).setChecked(false);;
-            visibleSections.add(R.id.nav_merchandising);
-        }
-
         if(sections.hasFeedback())
         {
             menu.add(R.id.section_groups,R.id.nav_feedback,Menu.NONE,R.string.navigation_item_feedback).setIcon(R.mipmap.ic_star_black_24dp).setCheckable(true).setChecked(false);;
@@ -242,14 +232,10 @@ public class MainActivity extends AppCompatActivity
             fragment = new PrayerFragment();
         }else if (id == R.id.nav_contact) {
             fragment = new ContactFragment();
-        } else if (id == R.id.nav_location_group) {
-            fragment = new LocationGroupFragment();
         } else if (id == R.id.nav_map) {
             fragment = new MapFragment();
         }else if (id == R.id.nav_songbook){
             fragment = new SongbookFragment();
-        }else if (id == R.id.nav_merchandising){
-            fragment = new MerchandisingFragment();
         } else if(id == R.id.nav_groups) {
             fragment = new GroupsListFragment();
         }
@@ -269,14 +255,6 @@ public class MainActivity extends AppCompatActivity
     @Override
     public void onReadingListFragmentInteraction(int position) {
         openReadingDetailActivity (position + 1);
-    }
-
-    @Override
-    public void onLocationGroupListFragmentInteraction(LocationGroupItem item) {
-
-        // Open detail location maps
-        Intent intent = new Intent(this, LocationGroupDetailActivity.class);
-        startActivity(intent);
     }
 
     private int getIndexFromPreferences(){

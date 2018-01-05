@@ -8,19 +8,21 @@ import android.os.Parcelable;
  */
 public class LocationDetailItemList implements Parcelable {
 
-    static public final int LOCATION_TYPE_SANTA_ISABLE_TERCERA = 0;
-    static public final int LOCATION_TYPE_VICOR = 1;
-    static public final int LOCATION_TYPE_VICOR_ANEXO = 2;
-    static public final int LOCATION_TYPE_VICOR_AMPLIACION = 3;
-    static public final int LOCATION_TYPE_HEROES_DE_MALVINAS = 4;
-    static public final int LOCATION_TYPE_KAIROS = 5;
-    static public final int LOCATION_TYPE_SANTA_ISABLE_ANEXO = 6;
-    static public final int LOCATION_TYPE_SAN_LUIS_DE_FRANCIA = 7;
-    static public final int LOCATION_TYPE_PARQUE_FUTURA = 8;
-    static public final int LOCATION_TYPE_LA_ESPERANZA = 9;
+    static public final int LOCATION_TYPE_LOS_CEDROS = 1;
+    static public final int LOCATION_TYPE_AMPLIACION_CABILDO = 2;
+    static public final int LOCATION_TYPE_CABILDO_ANEXO = 3;
+    static public final int LOCATION_TYPE_HOGAR_CLASE_MEDIA = 4;
+    static public final int LOCATION_TYPE_PARQUE_UNIVERSIDAD = 5;
+    static public final int LOCATION_TYPE_CABILDO = 6;
 
     private int imageType;
     private String neighborhoodName;
+    private String url;
+
+    public LocationDetailItemList ()
+    {
+
+    }
 
     public LocationDetailItemList(int imageType, String neighborhoodName) {
         this.imageType = imageType;
@@ -35,9 +37,26 @@ public class LocationDetailItemList implements Parcelable {
         return neighborhoodName;
     }
 
+    public String getUrl() {
+        return url;
+    }
+
+    public void setImageType(int imageType) {
+        this.imageType = imageType;
+    }
+
+    public void setNeighborhoodName(String neighborhoodName) {
+        this.neighborhoodName = neighborhoodName;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
     protected LocationDetailItemList(Parcel in) {
         imageType = in.readInt();
         neighborhoodName = in.readString();
+        url = in.readString();
     }
 
     @Override
@@ -49,6 +68,7 @@ public class LocationDetailItemList implements Parcelable {
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeInt(imageType);
         dest.writeString(neighborhoodName);
+        dest.writeString(url);
     }
 
     @SuppressWarnings("unused")

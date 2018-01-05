@@ -97,7 +97,7 @@
 
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_icon"
-            android:resource="@mipmap/ic_event_black_24dp" />
+            android:resource="@mipmap/ic_chat_black_24dp" />
 
     </application>
 
