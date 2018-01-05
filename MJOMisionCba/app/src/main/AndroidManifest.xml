@@ -102,7 +102,7 @@
 
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_icon"
-            android:resource="@mipmap/ic_speaker_notes_white_24dp" />
+            android:resource="@drawable/ic_notification_icon" />
 
     </application>
 

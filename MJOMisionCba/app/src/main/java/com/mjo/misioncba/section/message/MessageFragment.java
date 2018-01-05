@@ -31,7 +31,7 @@ public class MessageFragment extends Fragment
         title.setText(sectionMsg.getMessage().getTitle());
 
         TextView info = (TextView) view.findViewById(R.id.fragment_message_info);
-        title.setText(sectionMsg.getMessage().getContent());
+        info.setText(sectionMsg.getMessage().getContent());
 
         return view;
     }
