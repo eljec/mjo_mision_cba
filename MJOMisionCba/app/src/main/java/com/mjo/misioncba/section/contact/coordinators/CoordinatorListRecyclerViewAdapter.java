@@ -34,6 +34,7 @@ public class CoordinatorListRecyclerViewAdapter extends RecyclerView.Adapter
             case CoordinatorListViewItemModel.HEADER_TYPE:
                 view =  LayoutInflater.from(parent.getContext())
                         .inflate(android.R.layout.simple_list_item_1, parent, false);
+                view.setBackgroundColor(mContext.getResources().getColor(android.R.color.background_dark));
 
                 holder = new HeaderContactSectionViewHolder (view);
                 break;
@@ -92,6 +93,7 @@ public class CoordinatorListRecyclerViewAdapter extends RecyclerView.Adapter
             super(view);
             mView = view;
             mTitleTextView = (TextView) view.findViewById(android.R.id.text1);
+            mTitleTextView.setTextColor(mContext.getResources().getColor(android.R.color.white));
         }
 
         @Override

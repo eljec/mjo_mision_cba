@@ -71,7 +71,7 @@ public class ContactFragmentInfoGenerator {
         ArrayList<CoordinatorListViewItemModel> coordinatorListModelView = new ArrayList<>();
 
         // Header General
-        CoordinatorListViewItemModel headerGeneral = new CoordinatorListViewItemModel(HEADER_TYPE, "Coordinadores Generales");
+        CoordinatorListViewItemModel headerGeneral = new CoordinatorListViewItemModel(HEADER_TYPE, "Generales");
         coordinatorListModelView.add(headerGeneral);
 
         for (ContactCoordinator contact: getReferentsContactCoordinators())
@@ -81,7 +81,7 @@ public class ContactFragmentInfoGenerator {
         }
 
         // Header Normal
-        CoordinatorListViewItemModel headerNormal = new CoordinatorListViewItemModel(HEADER_TYPE, "Coordinadores de Grupos");
+        CoordinatorListViewItemModel headerNormal = new CoordinatorListViewItemModel(HEADER_TYPE, "Grupales");
         coordinatorListModelView.add(headerNormal);
 
         for (ContactCoordinator contact: getGroupsContactCoordinators())
