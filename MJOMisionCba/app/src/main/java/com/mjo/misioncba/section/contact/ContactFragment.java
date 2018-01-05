@@ -18,10 +18,10 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.mjo.misioncba.ContactDetailActivity;
 import com.mjo.misioncba.MisionCbaApplication;
 import com.mjo.misioncba.R;
 import com.mjo.misioncba.model.ContactCoordinator;
+import com.mjo.misioncba.section.contact.coordinators.CoordinatorListActivity;
 import com.mjo.misioncba.section.cotto.CottoDetailActivity;
 
 import java.util.ArrayList;
@@ -179,8 +179,11 @@ public class ContactFragment extends Fragment implements ContactView.OnContactVi
     public void onClickView(ContactCoordinator contactModel) {
         // Open detail contact view
 
-        Intent contactDetail = new Intent(getActivity(), ContactDetailActivity.class);
+        /*Intent contactDetail = new Intent(getActivity(), ContactDetailActivity.class);
         contactDetail.putExtra("CONTACT_DETAIL_CONTACT_MODEL", contactModel);
+        startActivity(contactDetail);*/
+
+        Intent contactDetail = new Intent(getActivity(), CoordinatorListActivity.class);
         startActivity(contactDetail);
     }
 

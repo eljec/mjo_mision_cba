@@ -25,6 +25,7 @@ public class LocationGroupDetailActivity extends AppCompatActivity  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_location_group_detail);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle("Mapa de Barrios");
 
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.location_group_detail_list);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));

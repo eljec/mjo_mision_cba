@@ -91,7 +91,7 @@
                 android:id="@+id/group_map_label"
                 android:textSize="18dp"
                 android:text="Barrio Congreso"
-                android:drawableLeft="@mipmap/ic_trending_flat_black_24dp"/>
+                android:drawableRight="@mipmap/ic_trending_flat_black_24dp"/>
 
         </LinearLayout>
 
