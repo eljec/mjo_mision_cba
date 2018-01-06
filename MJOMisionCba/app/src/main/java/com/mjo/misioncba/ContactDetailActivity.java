@@ -15,7 +15,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.mjo.misioncba.Server.ContactDrawableHandler;
+import com.mjo.misioncba.section.contact.ContactDrawableHandler;
 import com.mjo.misioncba.model.ContactCoordinator;
 import com.mjo.misioncba.section.contact.ContactFragment;
 import com.squareup.picasso.Picasso;

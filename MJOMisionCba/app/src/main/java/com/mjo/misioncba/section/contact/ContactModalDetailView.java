@@ -7,7 +7,6 @@ import android.view.LayoutInflater;
 import android.widget.LinearLayout;
 
 import com.mjo.misioncba.R;
-import com.mjo.misioncba.Server.ContactDrawableHandler;
 import com.mjo.misioncba.model.ContactCoordinator;
 import com.squareup.picasso.Picasso;
 

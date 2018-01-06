@@ -1,4 +1,4 @@
-package com.mjo.misioncba.Server;
+package com.mjo.misioncba.section.contact;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;

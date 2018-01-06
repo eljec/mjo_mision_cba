@@ -1,5 +1,6 @@
 package com.mjo.misioncba.Server;
 
+import com.mjo.misioncba.model.SectionMessage;
 import com.mjo.misioncba.model.Sections;
 
 import retrofit2.Call;
@@ -13,4 +14,7 @@ public interface BackEndApiEndpoIntInterface
 {
     @GET("/sections.json")
     Call<Sections> getConfigurationSection();
+
+    @GET("/sections/messages.json")
+    Call<SectionMessage> getSectionMessage();
 }
