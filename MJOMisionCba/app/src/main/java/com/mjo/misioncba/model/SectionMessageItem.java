@@ -17,6 +17,10 @@ public class SectionMessageItem
     @Expose
     private String content;
 
+    @SerializedName("show_refresh_btn")
+    @Expose
+    private boolean showBtn;
+
     public String getTitle() {
         return title;
     }
@@ -31,5 +35,13 @@ public class SectionMessageItem
 
     public void setContent(String content) {
         this.content = content;
+    }
+
+    public boolean isShowBtn() {
+        return showBtn;
+    }
+
+    public void setShowBtn(boolean showBtn) {
+        this.showBtn = showBtn;
     }
 }

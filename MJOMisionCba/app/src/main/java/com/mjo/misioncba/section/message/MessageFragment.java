@@ -1,14 +1,17 @@
 package com.mjo.misioncba.section.message;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.mjo.misioncba.MisionCbaApplication;
 import com.mjo.misioncba.R;
+import com.mjo.misioncba.SplashActivity;
 import com.mjo.misioncba.model.SectionMessage;
 
 /**
@@ -32,6 +35,28 @@ public class MessageFragment extends Fragment
 
         TextView info = (TextView) view.findViewById(R.id.fragment_message_info);
         info.setText(sectionMsg.getMessage().getContent());
+
+        Button reload = (Button) view.findViewById(R.id.fragment_message_reload);
+
+        if(sectionMsg.getMessage().isShowBtn())
+        {
+
+            reload.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    Intent intent = new Intent(getContext(), SplashActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+
+                    startActivity(intent);
+
+                    getActivity().finish();
+                }
+            });
+
+        }else{
+            reload.setVisibility(View.GONE);
+        }
 
         return view;
     }
