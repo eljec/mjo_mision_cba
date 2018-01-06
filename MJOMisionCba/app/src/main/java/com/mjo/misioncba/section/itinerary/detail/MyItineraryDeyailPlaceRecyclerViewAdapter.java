@@ -37,7 +37,16 @@ public class MyItineraryDeyailPlaceRecyclerViewAdapter extends RecyclerView.Adap
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position)
     {
-        ((EventDetailPlaceViewHolder) holder).mTitleTextView.setText(data.get(position).getPlace());
+        ItineraryDayEventPlace place =   data.get(position);
+        EventDetailPlaceViewHolder eventHolder = (EventDetailPlaceViewHolder) holder;
+
+        eventHolder.mTitleTextView.setText(place.getPlace());
+        eventHolder.mTitleTextView.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
+
+        if(place.getSpecificPlaceMap()!= null && place.getSpecificPlaceMap().hasLocation())
+        {
+            eventHolder.mTitleTextView.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.mipmap.ic_trending_flat_black_24dp, 0);
+        }
     }
 
     @Override

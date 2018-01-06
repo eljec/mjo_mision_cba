@@ -29,9 +29,11 @@ public class LocationDetailItemListImageFactory {
                 break;
 
             case LocationDetailItemList.LOCATION_TYPE_CABILDO_ANEXO:
+                image = ContextCompat.getDrawable(context, R.drawable.map_cabildo_anexo );
                 break;
 
             case LocationDetailItemList.LOCATION_TYPE_HOGAR_CLASE_MEDIA:
+                image = ContextCompat.getDrawable(context, R.drawable.map_hogar_clase_media );
                 break;
 
             case LocationDetailItemList.LOCATION_TYPE_PARQUE_UNIVERSIDAD:
