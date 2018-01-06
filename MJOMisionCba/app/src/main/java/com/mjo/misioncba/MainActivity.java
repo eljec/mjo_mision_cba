@@ -218,7 +218,6 @@ public class MainActivity extends AppCompatActivity
     @Override
     public void onListFragmentInteraction(ItineraryDayEvent item) {
         // Click on item of itinerary list
-        //openReadingDetailActivity(item.event.getDayId());
         openEventDetail(item);
     }
 

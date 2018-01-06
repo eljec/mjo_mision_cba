@@ -63,14 +63,14 @@
     </string>
 
     <string-array name="reading_days_titles">
-        <item>Sabado 6 </item>
+        <item>Sábado 6 </item>
         <item>Domingo 7</item>
         <item>Lunes 8</item>
         <item>Martes 9</item>
-        <item>Miercoles 10</item>
+        <item>Miércoles 10</item>
         <item>Jueves 11</item>
         <item>Viernes 12</item>
-        <item>Sabado 13</item>
+        <item>Sábado 13</item>
         <item>Domingo 14</item>
     </string-array>
 
