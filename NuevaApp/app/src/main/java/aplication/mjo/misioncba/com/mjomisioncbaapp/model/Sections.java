@@ -3,6 +3,8 @@ package aplication.mjo.misioncba.com.mjomisioncbaapp.model;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import aplication.mjo.misioncba.com.mjomisioncbaapp.model.Reading.SectionReadings;
+
 /**
  * Created by jucastillo on 24/12/17.
  */

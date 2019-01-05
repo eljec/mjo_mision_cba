@@ -65,7 +65,7 @@ public class GroupDetailActivity extends AppCompatActivity implements  ContactVi
             }
 
             // Coordinadores
-            if(groupSelected.hasCoordinators())
+            if(appState.getSections().hasContactSection() && groupSelected.hasCoordinators())
             {
                 coordinatorView = (LinearLayout)findViewById(R.id.group_coordinator_container_view);
 
@@ -83,7 +83,7 @@ public class GroupDetailActivity extends AppCompatActivity implements  ContactVi
             }
 
             // Map
-            if(groupSelected.getMap()!= null && groupSelected.getMap().isEmpty() == false)
+            if(appState.getSections().hasPlaces() && groupSelected.getMap()!= null && groupSelected.getMap().isEmpty() == false)
             {
                 TextView mapLabel = (TextView) findViewById(R.id.group_map_label);
                 mapLabel.setText(groupSelected.getMap());

@@ -10,8 +10,9 @@ import android.support.v7.widget.RecyclerView;
 
 import java.util.List;
 
+import aplication.mjo.misioncba.com.mjomisioncbaapp.model.Sections;
 import aplication.mjo.misioncba.com.mjomisioncbaapp.section.readings.Readings;
-import aplication.mjo.misioncba.com.mjomisioncbaapp.section.readings.detail.ReadingDetailListItemGenerator;
+import aplication.mjo.misioncba.com.mjomisioncbaapp.section.readings.detail.ReadingDetailListItemServerGenerator;
 import aplication.mjo.misioncba.com.mjomisioncbaapp.section.readings.detail.ReadingDetailRecyclerViewAdapter;
 
 
@@ -40,7 +41,14 @@ public class ReadingsDatailsActivity extends AppCompatActivity {
         recyclerView.setItemAnimator(new DefaultItemAnimator());
 
 
-        ReadingDetailListItemGenerator generator = new ReadingDetailListItemGenerator(getApplicationContext());
+        //ReadingDetailListItemLocalGenerator generator = new ReadingDetailListItemLocalGenerator(getApplicationContext());
+        //List<Readings> data = generator.getReadingForDay(day);
+
+        // JULIO
+        MisionCbaApplication application = ((MisionCbaApplication) getApplication());
+        Sections sections = application.getSections();
+
+        ReadingDetailListItemServerGenerator generator = new ReadingDetailListItemServerGenerator(sections.getReading());
         List<Readings> data = generator.getReadingForDay(day);
         recyclerView.setAdapter(new ReadingDetailRecyclerViewAdapter(data));
 
