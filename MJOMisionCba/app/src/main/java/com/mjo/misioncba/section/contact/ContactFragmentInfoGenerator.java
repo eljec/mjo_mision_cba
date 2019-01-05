@@ -4,8 +4,12 @@ import android.content.Context;
 
 import com.mjo.misioncba.model.ContactCoordinator;
 import com.mjo.misioncba.model.SectionContact;
+import com.mjo.misioncba.section.contact.coordinators.CoordinatorListViewItemModel;
 
 import java.util.ArrayList;
+
+import static com.mjo.misioncba.section.contact.coordinators.CoordinatorListViewItemModel.CONTACT_TYPE;
+import static com.mjo.misioncba.section.contact.coordinators.CoordinatorListViewItemModel.HEADER_TYPE;
 
 /**
  * Created by jucastillo on 20/12/16.
@@ -55,12 +59,39 @@ public class ContactFragmentInfoGenerator {
 
         return animadores;
     }
+
     public ContactCottoModel getCottoContactCoordinator(){
 
         return new ContactCottoModel();
     }
 
 
+    public ArrayList<CoordinatorListViewItemModel> getListModelCoordinators()
+    {
+        ArrayList<CoordinatorListViewItemModel> coordinatorListModelView = new ArrayList<>();
+
+        // Header General
+        CoordinatorListViewItemModel headerGeneral = new CoordinatorListViewItemModel(HEADER_TYPE, "Generales");
+        coordinatorListModelView.add(headerGeneral);
+
+        for (ContactCoordinator contact: getReferentsContactCoordinators())
+        {
+            CoordinatorListViewItemModel contactGeneral = new CoordinatorListViewItemModel(CONTACT_TYPE,  contact.getName(), contact);
+            coordinatorListModelView.add(contactGeneral);
+        }
+
+        // Header Normal
+        CoordinatorListViewItemModel headerNormal = new CoordinatorListViewItemModel(HEADER_TYPE, "Grupales");
+        coordinatorListModelView.add(headerNormal);
+
+        for (ContactCoordinator contact: getGroupsContactCoordinators())
+        {
+            CoordinatorListViewItemModel contactNormal = new CoordinatorListViewItemModel(CONTACT_TYPE,  contact.getName(), contact);
+            coordinatorListModelView.add(contactNormal);
+        }
+
+        return coordinatorListModelView;
+    }
 
     public String getPolicePhoe(){
 

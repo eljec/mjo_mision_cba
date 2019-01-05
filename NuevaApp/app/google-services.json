@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1094807726930",
+    "firebase_url": "https://mjo-mision-cordoba.firebaseio.com",
+    "project_id": "mjo-mision-cordoba",
+    "storage_bucket": "mjo-mision-cordoba.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1094807726930:android:05105d880662e215",
+        "android_client_info": {
+          "package_name": "aplication.mjo.misioncba.com.mjomisioncbaapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1094807726930-mmt9a4rni90k487nbpmakpi71qc11r04.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCzBOsBvOI_pcC8vQpKCOPtl7Eiq8PxT3w"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

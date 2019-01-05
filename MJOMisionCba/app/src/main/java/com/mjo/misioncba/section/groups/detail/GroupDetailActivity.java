@@ -11,6 +11,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.mjo.misioncba.ContactDetailActivity;
+import com.mjo.misioncba.LocationGroupDetailActivity;
 import com.mjo.misioncba.MisionCbaApplication;
 import com.mjo.misioncba.R;
 import com.mjo.misioncba.model.ContactCoordinator;
@@ -79,6 +80,24 @@ public class GroupDetailActivity extends AppCompatActivity implements  ContactVi
             }else
             {
                 findViewById(R.id.group_coordinator_container).setVisibility(View.GONE);
+            }
+
+            // Map
+            if(groupSelected.getMap()!= null && groupSelected.getMap().isEmpty() == false)
+            {
+                TextView mapLabel = (TextView) findViewById(R.id.group_map_label);
+                mapLabel.setText(groupSelected.getMap());
+                mapLabel.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        // Open map list
+                        Intent intent = new Intent(getApplicationContext(), LocationGroupDetailActivity.class);
+                        startActivity(intent);
+                    }
+                });
+            }else
+            {
+                findViewById(R.id.group_map_container).setVisibility(View.GONE);
             }
 
             // Food

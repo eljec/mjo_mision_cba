@@ -1,16 +1,16 @@
 package com.mjo.misioncba;
 
 import android.content.res.Resources;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.OrientationHelper;
 import android.support.v7.widget.RecyclerView;
 
 import com.mjo.misioncba.section.readings.Readings;
-import com.mjo.misioncba.section.readings.detail.ReadingDetailRecyclerViewAdapter;
 import com.mjo.misioncba.section.readings.detail.ReadingDetailListItemGenerator;
+import com.mjo.misioncba.section.readings.detail.ReadingDetailRecyclerViewAdapter;
 
 import java.util.List;
 
@@ -41,7 +41,6 @@ public class ReadingsDatailsActivity extends AppCompatActivity {
 
         ReadingDetailListItemGenerator generator = new ReadingDetailListItemGenerator(getApplicationContext());
         List<Readings> data = generator.getReadingForDay(day);
-
         recyclerView.setAdapter(new ReadingDetailRecyclerViewAdapter(data));
 
         String title = getTitleByDay(day);

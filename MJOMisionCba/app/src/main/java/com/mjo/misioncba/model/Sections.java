@@ -37,6 +37,10 @@ public class Sections
     @Expose
     private SectionPlaces places;
 
+    @SerializedName("messages")
+    @Expose
+    private SectionMessage messages;
+
 
 
     public SectionPrayers getPrayers() {
@@ -111,6 +115,14 @@ public class Sections
         this.places = places;
     }
 
+    public SectionMessage getMessages() {
+        return messages;
+    }
+
+    public void setMessages(SectionMessage messages) {
+        this.messages = messages;
+    }
+
     // Available helpers
 
     public boolean hasItinerary()
@@ -153,7 +165,12 @@ public class Sections
     }
 
     public boolean hasPlaces()
+{
+    return this.places != null && this.places.isActive();
+}
+
+    public boolean hasMessage()
     {
-        return this.places != null && this.places.isActive();
+        return this.messages != null && this.messages.isActive();
     }
 }

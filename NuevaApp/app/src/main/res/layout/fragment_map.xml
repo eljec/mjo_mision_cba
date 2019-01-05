@@ -1,0 +1,41 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    tools:context="com.mjo.misioncba.section.maps.MapFragment">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        android:text="@string/fragment_map_title" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fragment_map_label"
+        android:layout_marginTop="10dp"
+        android:lineSpacingExtra="10dp"
+        android:textSize="16dp"
+        android:drawableRight="@mipmap/ic_trending_flat_black_24dp"
+        android:text="@string/fragment_map_description" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:layout_marginTop="15dp"
+        android:scaleType="fitXY"
+        android:id="@+id/fragment_map_image"
+        android:src="@drawable/mapa_barrios_mision"/>
+
+</LinearLayout>
+</ScrollView>

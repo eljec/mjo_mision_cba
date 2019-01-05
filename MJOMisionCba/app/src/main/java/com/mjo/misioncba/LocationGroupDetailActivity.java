@@ -1,6 +1,5 @@
 package com.mjo.misioncba;
 
-import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,9 +7,8 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
-import com.mjo.misioncba.R;
+import com.mjo.misioncba.model.SectionPlaces;
 import com.mjo.misioncba.section.itinerary.RecyclerViewItemClickListener;
-import com.mjo.misioncba.section.locations.list.LocationGroupItem;
 import com.mjo.misioncba.section.locations.list.detail.LocationDetailGeneratorData;
 import com.mjo.misioncba.section.locations.list.detail.LocationDetailItemList;
 import com.mjo.misioncba.section.locations.list.detail.LocationDetailListRecyclerViewAdapter;
@@ -27,12 +25,16 @@ public class LocationGroupDetailActivity extends AppCompatActivity  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_location_group_detail);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle("Mapa de Barrios");
 
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.location_group_detail_list);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
+        MisionCbaApplication appState = ((MisionCbaApplication) getApplication());
+        SectionPlaces sectionPlaces = appState.getSections().getPlaces();
+
         LocationDetailGeneratorData generator = new LocationDetailGeneratorData();
-        data = generator.getData(this);
+        data = generator.getData(this, sectionPlaces);
 
         recyclerView.setAdapter(new LocationDetailListRecyclerViewAdapter(data, this));
 

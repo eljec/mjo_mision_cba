@@ -89,6 +89,21 @@
             android:name=".section.groups.detail.GroupDetailActivity"
             android:screenOrientation="portrait"></activity>
 
+        <activity
+            android:name=".section.contact.coordinators.CoordinatorListActivity"
+            android:screenOrientation="portrait"></activity>
+
+
+        <service android:name=".notification.MisionMjoFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_notification_icon" />
+
     </application>
 
 </manifest>

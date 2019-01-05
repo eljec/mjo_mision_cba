@@ -78,11 +78,17 @@ public class ItineraryActivityEventDetail extends AppCompatActivity
                                 if(place.getSpecificPlaceMap()!= null && place.getSpecificPlaceMap().hasLocation())
                                 {
                                     // Open google map
-                                    Uri gmmIntentUri = Uri.parse("geo:" + place.getSpecificPlaceMap().getLatitude() + "," + place.getSpecificPlaceMap().getLongitude());
-                                    Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
-                                    mapIntent.setPackage("com.google.android.apps.maps");
-                                    if (mapIntent.resolveActivity(getPackageManager()) != null) {
-                                        startActivity(mapIntent);
+                                    String googleMapsPackageName = "com.google.android.apps.maps";
+                                    PackageManager pm = getPackageManager();
+                                    boolean isInstalled = isPackageInstalled(googleMapsPackageName, pm);
+                                    if(isInstalled) {
+
+                                        String urlAddress = "http://maps.google.com/maps?q=" + place.getSpecificPlaceMap().getLatitude() + "," + place.getSpecificPlaceMap().getLongitude() + "(" + place.getPlace() + ")&iwloc=A&hl=es";
+                                        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(urlAddress));
+                                        startActivity(intent);
+                                    }else
+                                    {
+                                        Toast.makeText(getApplicationContext(),"Necesitas tener instalado Google Maps para ver el punto en el mapa", Toast.LENGTH_LONG).show();
                                     }
                                 }
                             }
@@ -141,6 +147,15 @@ public class ItineraryActivityEventDetail extends AppCompatActivity
         }else
         {
             finish();
+        }
+    }
+
+    private boolean isPackageInstalled(String packagename, PackageManager packageManager) {
+        try {
+            packageManager.getPackageInfo(packagename, 0);
+            return true;
+        } catch (PackageManager.NameNotFoundException e) {
+            return false;
         }
     }
 

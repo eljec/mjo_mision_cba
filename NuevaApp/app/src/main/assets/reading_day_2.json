@@ -1,0 +1,26 @@
+{
+  "firstReading": {
+    "title": "Primera Lectura",
+    "subtitle": "Lectura del libro de Isaías, Is 55, 1-11",
+    "content": "Así habla el Señor: ¡Vengan a tomar agua, todos los sedientos, y el que no tenga dinero, venga también! Coman gratuitamente su ración de trigo, y sin pagar, tomen vino y leche. ¿Por qué gastan dinero en algo que no alimenta, y sus ganancias, en algo que no sacia? Háganme caso, y comerán buena comida, se deleitarán con sabrosos manjares. Presten atención y vengan a mí, escuchen bien y vivirán. Yo haré con ustedes una alianza eterna, obra de mi inquebrantable amor a David. Yo lo he puesto como testigo para los pueblos, jefe y soberano de naciones. Tú llamarás a una nación que no conocías, y una nación que no te conocía correrá hacia ti, a causa del Señor, tu Dios, y por el Santo de Israel, que te glorifica. ¡Busquen al Señor mientras se deja encontrar, llámenlo mientras está cerca! Que el malvado abandone su camino y el hombre perverso, sus pensamientos; que vuelva al Señor, y él le tendrá compasión, a nuestro Dios, que es generoso en perdonar. Porque los pensamientos de ustedes no son los míos, ni los caminos de ustedes son mis caminos –oráculo del Señor–. Como el cielo se alza por encima de la tierra, así sobrepasan mis caminos y mis pensamientos a los caminos y a los pensamientos de ustedes. Así como la lluvia y la nieve descienden del cielo y no vuelven a él sin haber empapado la tierra, sin haberla fecundado y hecho germinar, para que dé la semilla al sembrador y el pan al que come, así sucede con la palabra que sale de mi boca: ella no vuelve a mí estéril, sino que realiza todo lo que yo quiero y cumple la misión que yo le encomendé.\nPalabra de Dios."
+  },
+  "psalm": {
+    "title": "Salmo",
+    "subtitle": "(Sal) Is 12, 2-6 \n R. Sacarán agua con alegría de las fuentes de la salvación",
+    "content": [
+      "Este es el Dios de mi salvación: yo tengo confianza y no temo, porque el Señor es mi fuerza y mi protección; él fue mi salvación. R.",
+      "Ustedes sacarán agua con alegría de las fuentes de la salvación. Y dirán en aquel día: Den gracias al Señor, invoquen su Nombre, anuncien entre los pueblos sus proezas, proclamen qué sublime es su Nombre. R.",
+      "Canten al Señor porque ha hecho algo grandioso: ¡Que sea conocido en toda la tierra! ¡Aclama y grita de alegría, habitante de Sión, porque es grande en medio de ti el Santo de Israel! R."
+    ]
+  },
+  "secondReading": {
+    "title": "Segunda Lectura",
+    "subtitle": "Lectura de la primera carta de San Juan, 1Jn 5, 1-9",
+    "content": "Queridos hermanos: El que cree que Jesús es el Cristo ha nacido de Dios; y el que ama al Padre ama también al que ha nacido de él. La señal de que amamos a los hijos de Dios es que amamos a Dios y cumplimos sus mandamientos. El amor a Dios consiste en cumplir sus mandamientos, y sus mandamientos no son una carga, porque el que ha nacido de Dios, vence al mundo. Y la victoria que triunfa sobre el mundo es nuestra fe. ¿Quién es el que vence al mundo, sino el que cree que Jesús es el Hijo de Dios? Jesucristo vino por el agua y por la sangre; no solamente con el agua, sino con el agua y con la sangre. Y el Espíritu da testimonio porque el Espíritu es la verdad. Son tres los que dan testimonio: el Espíritu, el agua y la sangre; y los tres están de acuerdo. Si damos fe al testimonio de los hombres, con mayor razón tenemos que aceptar el testimonio de Dios. Y Dios ha dado testimonio de su Hijo.\n Palabra de Dios."
+  },
+  "gospelReading": {
+    "title": "Evangelio",
+    "subtitle": "Evangelio de nuestro Señor Jesucristo según San Marcos, Mc 1, 7-11",
+    "content": "Juan Bautista predicaba, diciendo: “Detrás de mí vendrá el que es más poderoso que yo, y yo ni siquiera soy digno de ponerme a sus pies para desatar la correa de sus sandalias. Yo los he bautizado a ustedes con agua, pero él los bautizará con el Espíritu Santo”. En aquellos días, Jesús llegó desde Nazaret de Galilea y fue bautizado por Juan en el Jordán. Y al salir del agua, vio que los cielos se abrían y que el Espíritu Santo descendía sobre él como una paloma; y una voz desde el cielo dijo: 'Tú eres mi Hijo muy querido, en ti tengo puesta toda mi predilección'.\n Palabra del Señor."
+  }
+}

@@ -11,12 +11,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.mjo.misioncba.LocationGroupDetailActivity;
+import com.mjo.misioncba.MisionCbaApplication;
 import com.mjo.misioncba.R;
+import com.mjo.misioncba.model.SectionPlaces;
 import com.mjo.misioncba.section.locations.list.detail.LocationDetailItemList;
 import com.mjo.misioncba.section.locations.list.detail.LocationDetailItemListImageFactory;
 import com.mjo.misioncba.section.locations.list.zoom.LocationGroupMapZoomActivity;
-
-import uk.co.senab.photoview.PhotoViewAttacher;
 
 public class MapFragment extends Fragment {
 
@@ -59,8 +59,18 @@ public class MapFragment extends Fragment {
                 startActivity(intent);
             }
         });
+        contentLabel.setText(generateDataDescriptionLabel());
 
         return view;
+    }
+
+
+    private String generateDataDescriptionLabel()
+    {
+        MisionCbaApplication appState = ((MisionCbaApplication) getActivity().getApplication());
+        SectionPlaces sectionPlaces = appState.getSections().getPlaces();
+
+        return getString(R.string.fragment_map_description) + sectionPlaces.getListNamePlaces();
     }
 
 }

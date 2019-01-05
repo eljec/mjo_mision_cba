@@ -1,14 +1,14 @@
 package com.mjo.misioncba.section.locations.list.zoom;
 
-import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 
 import com.mjo.misioncba.R;
 import com.mjo.misioncba.section.locations.list.detail.LocationDetailItemList;
 import com.mjo.misioncba.section.locations.list.detail.LocationDetailItemListImageFactory;
+import com.squareup.picasso.Picasso;
 
 import uk.co.senab.photoview.PhotoViewAttacher;
 
@@ -33,10 +33,26 @@ public class LocationGroupMapZoomActivity extends AppCompatActivity {
         if(getIntent().getExtras() != null){
 
             model = getIntent().getExtras().getParcelable(GROUP_MAP_MODEL_SECETED);
-            Drawable drwb = LocationDetailItemListImageFactory.getImageForType(model.getImageType(), this);
 
-            mImageView.setImageDrawable(drwb);
-            mAttacher = new PhotoViewAttacher(mImageView);
+
+            if(model.getUrl()!=null && model.getUrl().isEmpty() == false)
+            {
+                // Uso Picasso
+                Picasso.with(getApplicationContext())
+                        .load(model.getUrl())
+                        .placeholder(R.drawable.loading_bg)
+                        .error(R.drawable.loading_bg)
+                        .into(mImageView);
+
+                mAttacher = new PhotoViewAttacher(mImageView);
+
+            }else
+            {
+                Drawable drwb = LocationDetailItemListImageFactory.getImageForType(model.getImageType(), this);
+
+                mImageView.setImageDrawable(drwb);
+                mAttacher = new PhotoViewAttacher(mImageView);
+            }
 
             getSupportActionBar().setTitle(model.getNeighborhoodName());
         }

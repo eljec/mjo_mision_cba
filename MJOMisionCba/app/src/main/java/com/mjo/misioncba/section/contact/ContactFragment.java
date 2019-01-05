@@ -18,33 +18,28 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.mjo.misioncba.ContactDetailActivity;
 import com.mjo.misioncba.MisionCbaApplication;
 import com.mjo.misioncba.R;
-import com.mjo.misioncba.model.ContactCoordinator;
+import com.mjo.misioncba.section.contact.coordinators.CoordinatorListActivity;
 import com.mjo.misioncba.section.cotto.CottoDetailActivity;
-
-import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class ContactFragment extends Fragment implements ContactView.OnContactViewButtonsListener {
+public class ContactFragment extends Fragment {
 
     public static final int REQUEST_PHONE_CALL = 1;
 
-    private LinearLayout contactContainer;
     private LinearLayout cottoContainer;
     private TextView cottoAddressLineTextView;
     private TextView cottoPhoneTextView;
     private ImageButton cottoImageButtonMap;
     private TextView cottoSectionLabel;
-
     private Button firemanButton;
     private Button policeButton;
     private Button hospitalButton;
-    private LinearLayout aniamdoresContainer;
     private TextView misionWeb;
+    private TextView coordinatorLabel;
 
     public ContactFragment() {
         // Required empty public constructor
@@ -57,10 +52,7 @@ public class ContactFragment extends Fragment implements ContactView.OnContactVi
         // Inflate the layout for this fragment
         View fragmentView =  inflater.inflate(R.layout.fragment_contact, container, false);
 
-        this.contactContainer = (LinearLayout) fragmentView.findViewById(R.id.fragment_contact_referents_container_view);
         this.cottoContainer = (LinearLayout) fragmentView.findViewById(R.id.fragment_contact_cotto_container_view);
-        this.aniamdoresContainer = (LinearLayout) fragmentView.findViewById(R.id.fragment_contact_animadores_container_view);
-
         this.cottoAddressLineTextView = (TextView) fragmentView.findViewById(R.id.fragment_contact_cotto_address_line);
         this.cottoPhoneTextView = (TextView) fragmentView.findViewById(R.id.fragment_contact_cotto_phone);
         this.cottoImageButtonMap = (ImageButton) fragmentView.findViewById(R.id.fragment_contact_cotto_image);
@@ -69,8 +61,8 @@ public class ContactFragment extends Fragment implements ContactView.OnContactVi
         this.policeButton = (Button) fragmentView.findViewById(R.id.fragment_contact_cotto_button_police);
 
         this.cottoSectionLabel = (TextView) fragmentView.findViewById(R.id.fragment_contact_cotto_section_label);
-
         this.misionWeb = (TextView) fragmentView.findViewById(R.id.fragment_contact_mision_web_content_label);
+        this.coordinatorLabel = (TextView) fragmentView.findViewById(R.id.fragment_contact_coordinator_content_label);
 
         setUpView();
 
@@ -94,34 +86,16 @@ public class ContactFragment extends Fragment implements ContactView.OnContactVi
         MisionCbaApplication application = ((MisionCbaApplication) getActivity().getApplication());
 
         final ContactFragmentInfoGenerator infoGenerator = new ContactFragmentInfoGenerator(getContext(),application.getSections().getContact());
-
-        ArrayList<ContactCoordinator> generalCoordinators = infoGenerator.getReferentsContactCoordinators();
-        ArrayList<ContactCoordinator> groupCoordinators = infoGenerator.getGroupsContactCoordinators();
-
         final ContactCottoModel contactCottoModel = infoGenerator.getCottoContactCoordinator();
 
-
-        // Coordinadores generales
-
-        for (ContactCoordinator contact: generalCoordinators) {
-
-            ContactView contactView = new ContactView(getContext());
-            contactView.setListener(this);
-            contactView.configureForModel(contact);
-
-            this.contactContainer.addView(contactView);
-        }
-
-        // Coordinadores de grupos
-
-        for (ContactCoordinator contact: groupCoordinators) {
-
-            ContactView contactView = new ContactView(getContext());
-            contactView.setListener(this);
-            contactView.configureForModel(contact);
-
-            this.aniamdoresContainer.addView(contactView);
-        }
+        // Coordinators
+        this.coordinatorLabel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent contactDetail = new Intent(getActivity(), CoordinatorListActivity.class);
+                startActivity(contactDetail);
+            }
+        });
 
         // Cotto
 
@@ -173,15 +147,6 @@ public class ContactFragment extends Fragment implements ContactView.OnContactVi
                 openDialApp(infoGenerator.getFiremanPhone());
             }
         });
-    }
-
-    @Override
-    public void onClickView(ContactCoordinator contactModel) {
-        // Open detail contact view
-
-        Intent contactDetail = new Intent(getActivity(), ContactDetailActivity.class);
-        contactDetail.putExtra("CONTACT_DETAIL_CONTACT_MODEL", contactModel);
-        startActivity(contactDetail);
     }
 
     private void openDialApp(String phoneNumber){

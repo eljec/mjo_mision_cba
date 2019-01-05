@@ -9,21 +9,9 @@ import com.google.gson.annotations.SerializedName;
 
 public class SectionReadings
 {
-    @SerializedName("script")
-    @Expose
-    private String script;
-
     @SerializedName("active")
     @Expose
     private boolean active;
-
-    public String getScript() {
-        return script;
-    }
-
-    public void setScript(String script) {
-        this.script = script;
-    }
 
     public boolean isActive() {
         return active;

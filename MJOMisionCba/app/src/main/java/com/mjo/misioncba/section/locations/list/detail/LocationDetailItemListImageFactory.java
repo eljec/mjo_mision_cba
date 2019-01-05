@@ -20,43 +20,28 @@ public class LocationDetailItemListImageFactory {
 
         switch (type){
 
-            case LocationDetailItemList.LOCATION_TYPE_SANTA_ISABLE_TERCERA:
-                image = ContextCompat.getDrawable(context, R.drawable.mapa_santa_isabel_tercera );
+            case LocationDetailItemList.LOCATION_TYPE_LOS_CEDROS:
+                image = ContextCompat.getDrawable(context, R.drawable.map_los_cedros );
                 break;
 
-            case LocationDetailItemList.LOCATION_TYPE_VICOR:
-                image = ContextCompat.getDrawable(context, R.drawable.mapa_vicor );
+            case LocationDetailItemList.LOCATION_TYPE_AMPLIACION_CABILDO:
+                image = ContextCompat.getDrawable(context, R.drawable.map_ampliacion_cabildo );
                 break;
 
-            case LocationDetailItemList.LOCATION_TYPE_VICOR_ANEXO:
+            case LocationDetailItemList.LOCATION_TYPE_CABILDO_ANEXO:
+                image = ContextCompat.getDrawable(context, R.drawable.map_cabildo_anexo );
                 break;
 
-            case LocationDetailItemList.LOCATION_TYPE_VICOR_AMPLIACION:
-                image = ContextCompat.getDrawable(context, R.drawable.mapa_amp_vicor );
+            case LocationDetailItemList.LOCATION_TYPE_HOGAR_CLASE_MEDIA:
+                image = ContextCompat.getDrawable(context, R.drawable.map_hogar_clase_media );
                 break;
 
-            case LocationDetailItemList.LOCATION_TYPE_HEROES_DE_MALVINAS:
-                image = ContextCompat.getDrawable(context, R.drawable.mapa_h_de_malvinas );
+            case LocationDetailItemList.LOCATION_TYPE_PARQUE_UNIVERSIDAD:
+                image = ContextCompat.getDrawable(context, R.drawable.map_parque_universidad );
                 break;
 
-            case LocationDetailItemList.LOCATION_TYPE_KAIROS:
-                image = ContextCompat.getDrawable(context, R.drawable.mapa_kairos );
-                break;
-
-            case LocationDetailItemList.LOCATION_TYPE_SANTA_ISABLE_ANEXO:
-                image = ContextCompat.getDrawable(context, R.drawable.mapa_santa_isable_anexo );
-                break;
-
-            case LocationDetailItemList.LOCATION_TYPE_SAN_LUIS_DE_FRANCIA:
-                image = ContextCompat.getDrawable(context, R.drawable.mapa_san_luis_de_francia );
-                break;
-
-            case LocationDetailItemList.LOCATION_TYPE_PARQUE_FUTURA:
-                image = ContextCompat.getDrawable(context, R.drawable.mapa_parque_futura );
-                break;
-
-            case LocationDetailItemList.LOCATION_TYPE_LA_ESPERANZA:
-                image = ContextCompat.getDrawable(context, R.drawable.mapa_esperanza );
+            case LocationDetailItemList.LOCATION_TYPE_CABILDO:
+                image = ContextCompat.getDrawable(context, R.drawable.map_cabildo );
                 break;
 
             case LOCATION_TYPE_ZONA:
@@ -64,7 +49,6 @@ public class LocationDetailItemListImageFactory {
                 break;
 
             default:
-                image = ContextCompat.getDrawable(context, R.drawable.mapa_amp_vicor );
                 break;
 
         }
