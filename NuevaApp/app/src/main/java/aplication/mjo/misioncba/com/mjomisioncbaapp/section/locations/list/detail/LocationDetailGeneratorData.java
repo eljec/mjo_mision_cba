@@ -16,12 +16,10 @@ public class LocationDetailGeneratorData {
 
     public List<LocationDetailItemList> getData(Context context, SectionPlaces sectionPlaces)
     {
-
         List<LocationDetailItemList> data = new ArrayList<>();
 
         for (SectionPlacesItem place: sectionPlaces.getList())
         {
-
             // Get drawable for id
             Drawable image = LocationDetailItemListImageFactory.getImageForType(place.getId(), context);
 

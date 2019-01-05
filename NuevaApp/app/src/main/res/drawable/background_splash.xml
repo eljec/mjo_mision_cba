@@ -7,7 +7,7 @@
     <item>
         <bitmap
             android:gravity="center"
-            android:src="@drawable/logo_mision_text_2018_splash_2"/>
+            android:src="@drawable/logo_mision_splash_2019"/>
     </item>
 
 </layer-list>

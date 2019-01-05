@@ -168,7 +168,7 @@ public class MyItineraryRecyclerViewAdapter extends RecyclerView.Adapter{
             if( isNotEmpty(place.getPlace()) ){
                 line = "+ " + place.getPlace();
                 if (isNotEmpty(place.getPriest())){
-                    line = line + ", Padre " + place.getPriest() + "\n";
+                    line = line + ", " + place.getPriest() + "\n";
                 }else{
                     line = line + "\n";
                 }

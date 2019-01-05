@@ -20,7 +20,7 @@
         android:layout_marginTop="10dp"
         android:layout_gravity="center_horizontal"
         android:id="@+id/location_group_detail_item_list_image"
-        android:src="@drawable/map_los_cedros"/>
+        android:src="@drawable/mapa_sachi"/>
 
     <View
         android:layout_marginTop="10dp"

@@ -8,12 +8,11 @@ import android.os.Parcelable;
  */
 public class LocationDetailItemList implements Parcelable {
 
-    static public final int LOCATION_TYPE_LOS_CEDROS = 1;
-    static public final int LOCATION_TYPE_AMPLIACION_CABILDO = 2;
-    static public final int LOCATION_TYPE_CABILDO_ANEXO = 3;
-    static public final int LOCATION_TYPE_HOGAR_CLASE_MEDIA = 4;
-    static public final int LOCATION_TYPE_PARQUE_UNIVERSIDAD = 5;
-    static public final int LOCATION_TYPE_CABILDO = 6;
+    static public final int LOCATION_TYPE_SACHI = 1;
+    static public final int LOCATION_TYPE_CARRARA_SUR = 2;
+    static public final int LOCATION_TYPE_CARRARA_NORTE = 3;
+    static public final int LOCATION_TYPE_COLINA_LOS_PINOS = 4;
+    static public final int LOCATION_TYPE_ASENTAMIENTO_RANAULT = 5;
 
     private int imageType;
     private String neighborhoodName;

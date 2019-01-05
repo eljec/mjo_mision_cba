@@ -21,28 +21,24 @@ public class LocationDetailItemListImageFactory {
 
         switch (type){
 
-            case LocationDetailItemList.LOCATION_TYPE_LOS_CEDROS:
-                image = ContextCompat.getDrawable(context, R.drawable.map_los_cedros );
+            case LocationDetailItemList.LOCATION_TYPE_SACHI:
+                image = ContextCompat.getDrawable(context, R.drawable.mapa_sachi );
                 break;
 
-            case LocationDetailItemList.LOCATION_TYPE_AMPLIACION_CABILDO:
-                image = ContextCompat.getDrawable(context, R.drawable.map_ampliacion_cabildo );
+            case LocationDetailItemList.LOCATION_TYPE_CARRARA_NORTE:
+                image = ContextCompat.getDrawable(context, R.drawable.mapa_carrara_norte );
                 break;
 
-            case LocationDetailItemList.LOCATION_TYPE_CABILDO_ANEXO:
-                image = ContextCompat.getDrawable(context, R.drawable.map_cabildo_anexo );
+            case LocationDetailItemList.LOCATION_TYPE_CARRARA_SUR:
+                image = ContextCompat.getDrawable(context, R.drawable.mapa_carrara_sur );
                 break;
 
-            case LocationDetailItemList.LOCATION_TYPE_HOGAR_CLASE_MEDIA:
-                image = ContextCompat.getDrawable(context, R.drawable.map_hogar_clase_media );
+            case LocationDetailItemList.LOCATION_TYPE_COLINA_LOS_PINOS:
+                image = ContextCompat.getDrawable(context, R.drawable.mapa_colina_los_pinos );
                 break;
 
-            case LocationDetailItemList.LOCATION_TYPE_PARQUE_UNIVERSIDAD:
-                image = ContextCompat.getDrawable(context, R.drawable.map_parque_universidad );
-                break;
-
-            case LocationDetailItemList.LOCATION_TYPE_CABILDO:
-                image = ContextCompat.getDrawable(context, R.drawable.map_cabildo );
+            case LocationDetailItemList.LOCATION_TYPE_ASENTAMIENTO_RANAULT:
+                image = ContextCompat.getDrawable(context, R.drawable.mapa_asentamiento_renault );
                 break;
 
             case LOCATION_TYPE_ZONA:

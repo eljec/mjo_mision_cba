@@ -25,6 +25,7 @@ import aplication.mjo.misioncba.com.mjomisioncbaapp.model.ItineraryDay;
 import aplication.mjo.misioncba.com.mjomisioncbaapp.model.ItineraryDayEvent;
 import aplication.mjo.misioncba.com.mjomisioncbaapp.model.ItineraryDayEventPlace;
 import aplication.mjo.misioncba.com.mjomisioncbaapp.model.SectionItinerary;
+import aplication.mjo.misioncba.com.mjomisioncbaapp.model.Sections;
 import aplication.mjo.misioncba.com.mjomisioncbaapp.section.itinerary.RecyclerViewItemClickListener;
 
 
@@ -104,10 +105,12 @@ public class ItineraryActivityEventDetail extends AppCompatActivity
             scheduleView.setText("Horario: " + eventModel.getEventDate());
 
             // Lecturas
-
+            // Check if reading is online
             View readingContainer = findViewById(R.id.reading_container);
+            MisionCbaApplication application = ((MisionCbaApplication) getApplication());
+            Sections sections = application.getSections();
 
-            if(eventModel.getEventImageType() == 2) // MISA
+            if(sections.hasReadings() && eventModel.getEventImageType() == 2) // MISA
             {
                 Button redaing = (Button) findViewById(R.id.event_detail_reading);
                 redaing.setOnClickListener(new View.OnClickListener() {

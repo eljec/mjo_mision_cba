@@ -11,7 +11,7 @@
         android:id="@+id/location_group_map_zoom_image"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/map_ampliacion_cabildo"
+        android:src="@drawable/mapa_sachi"
         android:layout_centerInParent="true"/>
 
 </RelativeLayout>

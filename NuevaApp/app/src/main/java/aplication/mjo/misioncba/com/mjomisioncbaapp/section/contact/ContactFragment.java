@@ -89,16 +89,21 @@ public class ContactFragment extends Fragment {
         final ContactCottoModel contactCottoModel = infoGenerator.getCottoContactCoordinator();
 
         // Coordinators
-        this.coordinatorLabel.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent contactDetail = new Intent(getActivity(), CoordinatorListActivity.class);
-                startActivity(contactDetail);
-            }
-        });
+        // Check if cordinator is enable
+        if(application.getSections().hasContactSection()) {
+            this.coordinatorLabel.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent contactDetail = new Intent(getActivity(), CoordinatorListActivity.class);
+                    startActivity(contactDetail);
+                }
+            });
+            this.coordinatorLabel.setVisibility(View.VISIBLE);
+        }else {
+            this.coordinatorLabel.setVisibility(View.GONE);
+        }
 
         // Cotto
-
         this.cottoPhoneTextView.setText("Tel: " + contactCottoModel.getContactCottoModelPhoneNUmber());
         this.cottoSectionLabel.setOnClickListener(new View.OnClickListener() {
             @Override

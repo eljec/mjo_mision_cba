@@ -34,11 +34,11 @@ public class ContactFragmentInfoGenerator {
 
         ArrayList<ContactCoordinator> contacts = new ArrayList<>();
 
-        for (ContactCoordinator contact: sectionGroups.getCoordinators())
-        {
-            if(contact.isGeneralCoordinatior())
-            {
-                contacts.add(contact);
+        if(sectionGroups !=  null) {
+            for (ContactCoordinator contact : sectionGroups.getCoordinators()) {
+                if (contact.isGeneralCoordinatior()) {
+                    contacts.add(contact);
+                }
             }
         }
 
@@ -50,11 +50,11 @@ public class ContactFragmentInfoGenerator {
 
         ArrayList<ContactCoordinator> animadores = new ArrayList<>();
 
-        for (ContactCoordinator contact: sectionGroups.getCoordinators())
-        {
-            if(contact.isGeneralCoordinatior() == false)
-            {
-                animadores.add(contact);
+        if(sectionGroups != null) {
+            for (ContactCoordinator contact : sectionGroups.getCoordinators()) {
+                if (contact.isGeneralCoordinatior() == false) {
+                    animadores.add(contact);
+                }
             }
         }
 

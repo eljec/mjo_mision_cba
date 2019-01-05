@@ -133,15 +133,14 @@ public class MainActivity extends AppCompatActivity
             visibleSections.add(R.id.nav_songbook);
         }
 
-        //if(sections.hasGroups())
-        //{
+        if(sections.hasGroups())
+        {
             menu.add(R.id.section_groups,R.id.nav_groups,Menu.NONE, R.string.navigation_item_groups).setIcon(R.mipmap.ic_group_black_24dp).setCheckable(true).setChecked(false);
             visibleSections.add(R.id.nav_groups);
-        //}
+        }
 
         if(sections.hasPlaces()) {
             menu.add(R.id.section_groups, R.id.nav_map, Menu.NONE, R.string.navigation_item_maps).setIcon(android.R.drawable.ic_dialog_map).setCheckable(true).setChecked(false);
-            ;
             visibleSections.add(R.id.nav_map);
         }
 
@@ -157,11 +156,11 @@ public class MainActivity extends AppCompatActivity
             visibleSections.add(R.id.nav_feedback);
         }
 
-        if(sections.hasContactSection())
-        {
+        //if(sections.hasContactSection())
+        //{
             menu.add(R.id.section_groups,R.id.nav_contact,Menu.NONE,R.string.navigation_item_contact).setIcon(R.mipmap.ic_info_black_24dp).setCheckable(true).setChecked(false);;
             visibleSections.add(R.id.nav_contact);
-        }
+        //}
 
         navView.invalidate();
     }
