@@ -263,7 +263,7 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public void onReadingListFragmentInteraction(int position) {
-        openReadingDetailActivity (position + 1);
+        openReadingDetailActivity (position);
     }
 
     private int getIndexFromPreferences(){

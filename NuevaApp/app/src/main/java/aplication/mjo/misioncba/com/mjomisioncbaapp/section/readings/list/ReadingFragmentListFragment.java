@@ -11,13 +11,20 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.util.ArrayList;
+
+import aplication.mjo.misioncba.com.mjomisioncbaapp.MisionCbaApplication;
 import aplication.mjo.misioncba.com.mjomisioncbaapp.R;
+import aplication.mjo.misioncba.com.mjomisioncbaapp.model.Reading.ReadingDay;
+import aplication.mjo.misioncba.com.mjomisioncbaapp.model.Reading.SectionReadings;
+import aplication.mjo.misioncba.com.mjomisioncbaapp.model.Sections;
 import aplication.mjo.misioncba.com.mjomisioncbaapp.section.itinerary.RecyclerViewItemClickListener;
 
 public class ReadingFragmentListFragment extends Fragment {
 
     private OnReadingListFragmentInteractionListener mListener;
-    private String[] readingDayTitles;
+    private ArrayList<String > readingDayTitles;
+    private SectionReadings section;
 
     public ReadingFragmentListFragment() {
     }
@@ -33,7 +40,12 @@ public class ReadingFragmentListFragment extends Fragment {
         super.onCreate(savedInstanceState);
 
         Resources res = getActivity().getResources();
-        this.readingDayTitles = res.getStringArray(R.array.reading_days_titles);
+
+        MisionCbaApplication application = ((MisionCbaApplication) getActivity().getApplication());
+        Sections sections = application.getSections();
+        section = sections.getReading();
+
+        this.readingDayTitles = section.getArrayTitleNames();
     }
 
     @Override
@@ -51,7 +63,9 @@ public class ReadingFragmentListFragment extends Fragment {
             recyclerView.addOnItemTouchListener(
                     new RecyclerViewItemClickListener(context, new RecyclerViewItemClickListener.OnItemClickListener() {
                         @Override public void onItemClick(View view, int position) {
-                            mListener.onReadingListFragmentInteraction(position);
+
+                            ReadingDay day = section.getReadingModelForPosition(position);
+                            mListener.onReadingListFragmentInteraction(day.getDayId());
                         }
                     })
             );

@@ -49,4 +49,20 @@ public class SectionReadings
         }
         return reading;
     }
+
+    public ReadingDay getReadingModelForPosition(int position) {
+        return  days.get(position);
+    }
+
+    public  ArrayList<String > getArrayTitleNames() {
+        ArrayList<String > titles = new ArrayList<>();
+
+        if(days != null) {
+            for (ReadingDay readingDay: days) {
+                titles.add(readingDay.getDayTitle());
+            }
+        }
+
+        return titles;
+    }
 }

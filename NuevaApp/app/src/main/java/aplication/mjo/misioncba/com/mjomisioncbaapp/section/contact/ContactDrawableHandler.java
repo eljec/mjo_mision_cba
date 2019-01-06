@@ -26,44 +26,10 @@ public class ContactDrawableHandler
                 drawable = ContextCompat.getDrawable(ctx, R.drawable.coordinadores_tamara);
                 break;
             case 3:
-                drawable = ContextCompat.getDrawable(ctx,R.drawable.coordinadores_ana_laura_fotop);
+                drawable = ContextCompat.getDrawable(ctx, R.drawable.coordinadores_luciano);
                 break;
-            case 4:
-                drawable = ContextCompat.getDrawable(ctx,R.drawable.coordinadores_sancho_foto);
-                break;
-            case 5:
-                drawable = ContextCompat.getDrawable(ctx,R.drawable.coordinadores_lautaro_foto_perfil);
-                break;
-            case 6:
-                drawable = ContextCompat.getDrawable(ctx,R.drawable.coordinadores_flor_rivero_foto);
-                break;
-            case 7:
-                drawable = ContextCompat.getDrawable(ctx,R.drawable.coordinadores_rosario);
-                break;
-            case 9:
-                drawable = ContextCompat.getDrawable(ctx,R.drawable.coordinadores_sabrina_foto);
-                break;
-            case 10:
-                drawable = ContextCompat.getDrawable(ctx,R.drawable.coordinadores_eli_bazan);
-                break;
-            case 11:
-                drawable = ContextCompat.getDrawable(ctx,R.drawable.coordinadores_sofi);
-                break;
-            case 12:
-                drawable = ContextCompat.getDrawable(ctx,R.drawable.coordinadores_braian);
-                break;
-            case 13:
-                drawable = ContextCompat.getDrawable(ctx,R.drawable.coordinadores_elian);
-                break;
-            case 14:
-                drawable = ContextCompat.getDrawable(ctx,R.drawable.coordinadores_lucia);
-                break;
-            case 15:
-                drawable = ContextCompat.getDrawable(ctx,R.drawable.coordinadores_yami);
-                break;
-
             default:
-                drawable = ContextCompat.getDrawable(ctx,R.drawable.user_default_icon );
+                drawable = ContextCompat.getDrawable(ctx,R.drawable.user_default_icon_2);
                 break;
         }
 

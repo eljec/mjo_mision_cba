@@ -59,8 +59,6 @@ public class ReadingDetailListItemServerGenerator implements ReadingDetailListIt
                 textBuilder.append("\n");
                 if(model.isDoubleBrakeLine()) {
                     textBuilder.append("\n");
-                    textBuilder.append("\n");
-                    textBuilder.append("\n");
                 }
             }
         }

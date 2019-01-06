@@ -75,8 +75,8 @@ public class ContactDetailActivity extends AppCompatActivity {
             // Uso Picasso
             Picasso.with(this)
                     .load(contact.getImageUrl())
-                    .placeholder(R.drawable.user_default_icon)
-                    .error(R.drawable.user_default_icon)
+                    .placeholder(R.drawable.user_default_icon_2)
+                    .error(R.drawable.user_default_icon_2)
                     .into(this.profileImageView);
         }else
         {

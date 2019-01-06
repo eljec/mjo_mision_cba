@@ -10,6 +10,8 @@ import android.support.v7.widget.RecyclerView;
 
 import java.util.List;
 
+import aplication.mjo.misioncba.com.mjomisioncbaapp.model.Reading.ReadingDay;
+import aplication.mjo.misioncba.com.mjomisioncbaapp.model.Reading.SectionReadings;
 import aplication.mjo.misioncba.com.mjomisioncbaapp.model.Sections;
 import aplication.mjo.misioncba.com.mjomisioncbaapp.section.readings.Readings;
 import aplication.mjo.misioncba.com.mjomisioncbaapp.section.readings.detail.ReadingDetailListItemServerGenerator;
@@ -40,21 +42,21 @@ public class ReadingsDatailsActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
 
-
-        //ReadingDetailListItemLocalGenerator generator = new ReadingDetailListItemLocalGenerator(getApplicationContext());
-        //List<Readings> data = generator.getReadingForDay(day);
-
-        // JULIO
         MisionCbaApplication application = ((MisionCbaApplication) getApplication());
         Sections sections = application.getSections();
+        SectionReadings sectionReadings = sections.getReading();
 
-        ReadingDetailListItemServerGenerator generator = new ReadingDetailListItemServerGenerator(sections.getReading());
+        ReadingDetailListItemServerGenerator generator = new ReadingDetailListItemServerGenerator(sectionReadings);
         List<Readings> data = generator.getReadingForDay(day);
         recyclerView.setAdapter(new ReadingDetailRecyclerViewAdapter(data));
 
-        String title = getTitleByDay(day);
+        ReadingDay readingDay = sectionReadings.getReadingModelForDay(day);
+        String title = "No hay datos cargados";
 
-        getSupportActionBar().setTitle(getString(R.string.reading_detail_title) + title);
+        if(readingDay != null) {
+             title = getString(R.string.reading_detail_title) + readingDay.getDayTitle();
+        }
+        getSupportActionBar().setTitle(title);
     }
 
     @Override

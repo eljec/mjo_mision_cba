@@ -6,13 +6,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 import aplication.mjo.misioncba.com.mjomisioncbaapp.R;
 
 public class ReadingFragmentListRecyclerViewAdapter extends RecyclerView.Adapter {
 
-    private final String[] mValues;
+    private final ArrayList<String > mValues;
 
-    public ReadingFragmentListRecyclerViewAdapter(String[] items) {
+    public ReadingFragmentListRecyclerViewAdapter(ArrayList<String > items) {
         mValues = items;
     }
 
@@ -27,12 +29,12 @@ public class ReadingFragmentListRecyclerViewAdapter extends RecyclerView.Adapter
     @Override
     public void onBindViewHolder(final RecyclerView.ViewHolder holder, int position) {
         ReadingItemViewHolder ownHolder = (ReadingItemViewHolder) holder;
-        ownHolder.mTitleView.setText(mValues[position]);
+        ownHolder.mTitleView.setText(mValues.get(position));
     }
 
     @Override
     public int getItemCount() {
-        return mValues.length;
+        return mValues.size();
     }
 
     public class ReadingItemViewHolder extends RecyclerView.ViewHolder {

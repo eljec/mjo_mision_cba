@@ -110,7 +110,7 @@ public class ItineraryActivityEventDetail extends AppCompatActivity
             MisionCbaApplication application = ((MisionCbaApplication) getApplication());
             Sections sections = application.getSections();
 
-            if(sections.hasReadings() && eventModel.getEventImageType() == 2) // MISA
+            if(sections.hasReadings() && sections.getReading().getReadingModelForDay(selectedDayId) != null && eventModel.getEventImageType() == 2) // MISA
             {
                 Button redaing = (Button) findViewById(R.id.event_detail_reading);
                 redaing.setOnClickListener(new View.OnClickListener() {
