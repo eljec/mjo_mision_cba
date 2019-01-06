@@ -72,23 +72,32 @@ public class ContactFragmentInfoGenerator {
         ArrayList<CoordinatorListViewItemModel> coordinatorListModelView = new ArrayList<>();
 
         // Header General
-        CoordinatorListViewItemModel headerGeneral = new CoordinatorListViewItemModel(HEADER_TYPE, "Generales");
-        coordinatorListModelView.add(headerGeneral);
+        ArrayList<ContactCoordinator> groupsRefContactCoordinators =  getReferentsContactCoordinators();
 
-        for (ContactCoordinator contact: getReferentsContactCoordinators())
-        {
-            CoordinatorListViewItemModel contactGeneral = new CoordinatorListViewItemModel(CONTACT_TYPE,  contact.getName(), contact);
-            coordinatorListModelView.add(contactGeneral);
+        if(groupsRefContactCoordinators.isEmpty() == false){
+            CoordinatorListViewItemModel headerGeneral = new CoordinatorListViewItemModel(HEADER_TYPE, "Generales");
+            coordinatorListModelView.add(headerGeneral);
+
+            for (ContactCoordinator contact: groupsRefContactCoordinators)
+            {
+                CoordinatorListViewItemModel contactGeneral = new CoordinatorListViewItemModel(CONTACT_TYPE,  contact.getName(), contact);
+                coordinatorListModelView.add(contactGeneral);
+            }
         }
 
-        // Header Normal
-        CoordinatorListViewItemModel headerNormal = new CoordinatorListViewItemModel(HEADER_TYPE, "Grupales");
-        coordinatorListModelView.add(headerNormal);
 
-        for (ContactCoordinator contact: getGroupsContactCoordinators())
-        {
-            CoordinatorListViewItemModel contactNormal = new CoordinatorListViewItemModel(CONTACT_TYPE,  contact.getName(), contact);
-            coordinatorListModelView.add(contactNormal);
+        // Header Normal
+        ArrayList<ContactCoordinator> groupsContactCoordinators =  getGroupsContactCoordinators();
+
+        if(groupsContactCoordinators.isEmpty() == false){
+            CoordinatorListViewItemModel headerNormal = new CoordinatorListViewItemModel(HEADER_TYPE, "Grupales");
+            coordinatorListModelView.add(headerNormal);
+
+            for (ContactCoordinator contact: groupsContactCoordinators)
+            {
+                CoordinatorListViewItemModel contactNormal = new CoordinatorListViewItemModel(CONTACT_TYPE,  contact.getName(), contact);
+                coordinatorListModelView.add(contactNormal);
+            }
         }
 
         return coordinatorListModelView;

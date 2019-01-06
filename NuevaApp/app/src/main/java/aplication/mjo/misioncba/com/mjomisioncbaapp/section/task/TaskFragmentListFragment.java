@@ -30,16 +30,15 @@ public class TaskFragmentListFragment extends Fragment {
         MisionCbaApplication application = ((MisionCbaApplication) getActivity().getApplication());
         Sections sections = application.getSections();
 
-        // Set the adapter
-        if (view instanceof RecyclerView) {
-            Context context = view.getContext();
-            RecyclerView recyclerView = (RecyclerView) view;
-            recyclerView.setLayoutManager(new LinearLayoutManager(context));
-            recyclerView.setItemAnimator(new DefaultItemAnimator());
 
-            TaskRecyclerViewAdapter adapter = new TaskRecyclerViewAdapter(sections.getTasks());
-            recyclerView.setAdapter(adapter);
-        }
+        RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.fragment_task_list_view);
+        Context context = recyclerView.getContext();
+        recyclerView.setLayoutManager(new LinearLayoutManager(context));
+        recyclerView.setItemAnimator(new DefaultItemAnimator());
+
+        TaskRecyclerViewAdapter adapter = new TaskRecyclerViewAdapter(sections.getTasks());
+        recyclerView.setAdapter(adapter);
+
         return view;
     }
 }

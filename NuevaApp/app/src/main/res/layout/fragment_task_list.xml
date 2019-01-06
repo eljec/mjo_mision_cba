@@ -10,17 +10,25 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="10dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="10dp"
         android:textSize="20dp"
         android:textStyle="bold"
         android:id="@+id/task_item_title"
         android:gravity="center"
         android:text="Tareas por grupo"/>
 
-    <android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/colorAccent">
+    </View>
+
+    <android.support.v7.widget.RecyclerView
         xmlns:tools="http://schemas.android.com/tools"
-        android:id="@+id/fragment"
+        android:id="@+id/fragment_task_list_view"
         android:name="com.mjo.misioncba.section.task.TaskFragmentListFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
