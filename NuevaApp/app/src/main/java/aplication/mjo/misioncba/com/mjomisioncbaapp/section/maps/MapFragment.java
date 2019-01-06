@@ -13,7 +13,7 @@ import android.widget.TextView;
 import aplication.mjo.misioncba.com.mjomisioncbaapp.LocationGroupDetailActivity;
 import aplication.mjo.misioncba.com.mjomisioncbaapp.MisionCbaApplication;
 import aplication.mjo.misioncba.com.mjomisioncbaapp.R;
-import aplication.mjo.misioncba.com.mjomisioncbaapp.model.SectionPlaces;
+import aplication.mjo.misioncba.com.mjomisioncbaapp.model.Places.SectionPlaces;
 import aplication.mjo.misioncba.com.mjomisioncbaapp.section.locations.list.detail.LocationDetailItemList;
 import aplication.mjo.misioncba.com.mjomisioncbaapp.section.locations.list.detail.LocationDetailItemListImageFactory;
 import aplication.mjo.misioncba.com.mjomisioncbaapp.section.locations.list.zoom.LocationGroupMapZoomActivity;

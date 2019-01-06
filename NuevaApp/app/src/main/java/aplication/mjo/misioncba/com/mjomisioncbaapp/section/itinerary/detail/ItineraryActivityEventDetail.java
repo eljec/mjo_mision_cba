@@ -21,10 +21,10 @@ import android.widget.Toast;
 import aplication.mjo.misioncba.com.mjomisioncbaapp.MisionCbaApplication;
 import aplication.mjo.misioncba.com.mjomisioncbaapp.R;
 import aplication.mjo.misioncba.com.mjomisioncbaapp.ReadingsDatailsActivity;
-import aplication.mjo.misioncba.com.mjomisioncbaapp.model.ItineraryDay;
-import aplication.mjo.misioncba.com.mjomisioncbaapp.model.ItineraryDayEvent;
-import aplication.mjo.misioncba.com.mjomisioncbaapp.model.ItineraryDayEventPlace;
-import aplication.mjo.misioncba.com.mjomisioncbaapp.model.SectionItinerary;
+import aplication.mjo.misioncba.com.mjomisioncbaapp.model.Itinerary.ItineraryDay;
+import aplication.mjo.misioncba.com.mjomisioncbaapp.model.Itinerary.ItineraryDayEvent;
+import aplication.mjo.misioncba.com.mjomisioncbaapp.model.Itinerary.ItineraryDayEventPlace;
+import aplication.mjo.misioncba.com.mjomisioncbaapp.model.Itinerary.SectionItinerary;
 import aplication.mjo.misioncba.com.mjomisioncbaapp.model.Sections;
 import aplication.mjo.misioncba.com.mjomisioncbaapp.section.itinerary.RecyclerViewItemClickListener;
 

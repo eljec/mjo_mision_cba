@@ -14,8 +14,8 @@ import java.util.ArrayList;
 
 import aplication.mjo.misioncba.com.mjomisioncbaapp.MisionCbaApplication;
 import aplication.mjo.misioncba.com.mjomisioncbaapp.R;
-import aplication.mjo.misioncba.com.mjomisioncbaapp.model.SectionGroups;
-import aplication.mjo.misioncba.com.mjomisioncbaapp.model.SectionGroupsItem;
+import aplication.mjo.misioncba.com.mjomisioncbaapp.model.Group.SectionGroups;
+import aplication.mjo.misioncba.com.mjomisioncbaapp.model.Group.SectionGroupsItem;
 import aplication.mjo.misioncba.com.mjomisioncbaapp.section.itinerary.RecyclerViewItemClickListener;
 
 /**

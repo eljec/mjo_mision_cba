@@ -1,4 +1,4 @@
-package aplication.mjo.misioncba.com.mjomisioncbaapp.model;
+package aplication.mjo.misioncba.com.mjomisioncbaapp.model.Reading.Local;
 
 /**
  * Created by jucastillo on 1/1/18.

@@ -3,7 +3,11 @@ package aplication.mjo.misioncba.com.mjomisioncbaapp.model;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import aplication.mjo.misioncba.com.mjomisioncbaapp.model.Group.SectionGroups;
+import aplication.mjo.misioncba.com.mjomisioncbaapp.model.Itinerary.SectionItinerary;
+import aplication.mjo.misioncba.com.mjomisioncbaapp.model.Places.SectionPlaces;
 import aplication.mjo.misioncba.com.mjomisioncbaapp.model.Reading.SectionReadings;
+import aplication.mjo.misioncba.com.mjomisioncbaapp.model.Task.SectionTask;
 
 /**
  * Created by jucastillo on 24/12/17.
@@ -38,10 +42,12 @@ public class Sections
     @SerializedName("places")
     @Expose
     private SectionPlaces places;
-
     @SerializedName("messages")
     @Expose
     private SectionMessage messages;
+    @SerializedName("tasks")
+    @Expose
+    private SectionTask tasks;
 
 
 
@@ -125,6 +131,14 @@ public class Sections
         this.messages = messages;
     }
 
+    public SectionTask getTasks() {
+        return tasks;
+    }
+
+    public void setTasks(SectionTask tasks) {
+        this.tasks = tasks;
+    }
+
     // Available helpers
 
     public boolean hasItinerary()
@@ -174,5 +188,10 @@ public class Sections
     public boolean hasMessage()
     {
         return this.messages != null && this.messages.isActive();
+    }
+
+    public boolean hasTasks()
+    {
+        return this.tasks != null && this.tasks.isActive();
     }
 }

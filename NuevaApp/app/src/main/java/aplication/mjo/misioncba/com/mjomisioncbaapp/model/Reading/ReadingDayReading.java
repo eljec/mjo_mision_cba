@@ -7,37 +7,37 @@ public class ReadingDayReading {
 
     @SerializedName("title")
     @Expose
-    private ReadingTextContentModel title;
+    private GenericTextContentModel title;
 
     @SerializedName("subtitle")
     @Expose
-    private ReadingTextContentModel subtitle;
+    private GenericTextContentModel subtitle;
 
     @SerializedName("content")
     @Expose
-    private ReadingTextContentModel content;
+    private GenericTextContentModel content;
 
-    public ReadingTextContentModel getTitle() {
+    public GenericTextContentModel getTitle() {
         return title;
     }
 
-    public void setTitle(ReadingTextContentModel title) {
+    public void setTitle(GenericTextContentModel title) {
         this.title = title;
     }
 
-    public ReadingTextContentModel getSubtitle() {
+    public GenericTextContentModel getSubtitle() {
         return subtitle;
     }
 
-    public void setSubtitle(ReadingTextContentModel subtitle) {
+    public void setSubtitle(GenericTextContentModel subtitle) {
         this.subtitle = subtitle;
     }
 
-    public ReadingTextContentModel getContent() {
+    public GenericTextContentModel getContent() {
         return content;
     }
 
-    public void setContent(ReadingTextContentModel content) {
+    public void setContent(GenericTextContentModel content) {
         this.content = content;
     }
 }

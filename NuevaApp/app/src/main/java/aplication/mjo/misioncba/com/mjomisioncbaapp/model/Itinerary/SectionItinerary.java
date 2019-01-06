@@ -1,4 +1,4 @@
-package aplication.mjo.misioncba.com.mjomisioncbaapp.model;
+package aplication.mjo.misioncba.com.mjomisioncbaapp.model.Itinerary;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

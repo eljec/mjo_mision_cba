@@ -1,9 +1,11 @@
-package aplication.mjo.misioncba.com.mjomisioncbaapp.model;
+package aplication.mjo.misioncba.com.mjomisioncbaapp.model.Group;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
+
+import aplication.mjo.misioncba.com.mjomisioncbaapp.model.ContactCoordinator;
 
 /**
  * Created by jucastillo on 27/12/17.

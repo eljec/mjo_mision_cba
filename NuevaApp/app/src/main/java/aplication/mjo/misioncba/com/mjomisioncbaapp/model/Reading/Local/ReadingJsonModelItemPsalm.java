@@ -1,4 +1,4 @@
-package aplication.mjo.misioncba.com.mjomisioncbaapp.model;
+package aplication.mjo.misioncba.com.mjomisioncbaapp.model.Reading.Local;
 
 import java.util.ArrayList;
 

@@ -6,8 +6,8 @@ import android.graphics.drawable.Drawable;
 import java.util.ArrayList;
 import java.util.List;
 
-import aplication.mjo.misioncba.com.mjomisioncbaapp.model.SectionPlaces;
-import aplication.mjo.misioncba.com.mjomisioncbaapp.model.SectionPlacesItem;
+import aplication.mjo.misioncba.com.mjomisioncbaapp.model.Places.SectionPlaces;
+import aplication.mjo.misioncba.com.mjomisioncbaapp.model.Places.SectionPlacesItem;
 
 /**
  * Created by jucastillo on 3/1/17.

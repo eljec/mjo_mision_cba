@@ -9,7 +9,7 @@ import android.widget.TextView;
 import java.util.List;
 
 import aplication.mjo.misioncba.com.mjomisioncbaapp.R;
-import aplication.mjo.misioncba.com.mjomisioncbaapp.model.ItineraryDayEventPlace;
+import aplication.mjo.misioncba.com.mjomisioncbaapp.model.Itinerary.ItineraryDayEventPlace;
 
 
 /**

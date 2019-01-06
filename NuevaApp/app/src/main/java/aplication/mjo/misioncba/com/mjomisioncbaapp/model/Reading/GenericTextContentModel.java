@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
 
-public class ReadingTextContentModel {
+public class GenericTextContentModel {
 
     @SerializedName("doubleBrakeLine")
     @Expose

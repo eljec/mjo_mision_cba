@@ -24,8 +24,8 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-import aplication.mjo.misioncba.com.mjomisioncbaapp.model.ItineraryDayEvent;
-import aplication.mjo.misioncba.com.mjomisioncbaapp.model.SectionGroupsItem;
+import aplication.mjo.misioncba.com.mjomisioncbaapp.model.Itinerary.ItineraryDayEvent;
+import aplication.mjo.misioncba.com.mjomisioncbaapp.model.Group.SectionGroupsItem;
 import aplication.mjo.misioncba.com.mjomisioncbaapp.model.Sections;
 import aplication.mjo.misioncba.com.mjomisioncbaapp.section.contact.ContactFragment;
 import aplication.mjo.misioncba.com.mjomisioncbaapp.section.feedback.StarFlow.FeedbackStartFlowActivity;
@@ -38,6 +38,7 @@ import aplication.mjo.misioncba.com.mjomisioncbaapp.section.message.MessageFragm
 import aplication.mjo.misioncba.com.mjomisioncbaapp.section.prayer.PrayerFragment;
 import aplication.mjo.misioncba.com.mjomisioncbaapp.section.readings.list.ReadingFragmentListFragment;
 import aplication.mjo.misioncba.com.mjomisioncbaapp.section.songbook.SongbookFragment;
+import aplication.mjo.misioncba.com.mjomisioncbaapp.section.task.TaskFragmentListFragment;
 
 import static aplication.mjo.misioncba.com.mjomisioncbaapp.section.groups.detail.GroupDetailActivity.GROUP_ID_SELECTED;
 import static aplication.mjo.misioncba.com.mjomisioncbaapp.section.itinerary.detail.ItineraryActivityEventDetail.EVENT_DAY_ID_SELECTED;
@@ -162,6 +163,12 @@ public class MainActivity extends AppCompatActivity
             visibleSections.add(R.id.nav_contact);
         //}
 
+        if(sections.hasTasks())
+        {
+            menu.add(R.id.section_groups,R.id.nav_tasks,Menu.NONE,R.string.navigation_item_task).setIcon(android.R.drawable.ic_menu_agenda).setCheckable(true).setChecked(false);;
+            visibleSections.add(R.id.nav_tasks);
+        }
+
         navView.invalidate();
     }
 
@@ -247,6 +254,8 @@ public class MainActivity extends AppCompatActivity
             fragment = new GroupsListFragment();
         }else if(id == R.id.nav_message) {
             fragment = new MessageFragment();
+        }else if(id == R.id.nav_tasks) {
+            fragment = new TaskFragmentListFragment();
         }
 
         // Update download item

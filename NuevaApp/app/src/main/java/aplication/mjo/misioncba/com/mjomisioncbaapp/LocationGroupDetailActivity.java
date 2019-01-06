@@ -9,7 +9,7 @@ import android.view.View;
 
 import java.util.List;
 
-import aplication.mjo.misioncba.com.mjomisioncbaapp.model.SectionPlaces;
+import aplication.mjo.misioncba.com.mjomisioncbaapp.model.Places.SectionPlaces;
 import aplication.mjo.misioncba.com.mjomisioncbaapp.section.itinerary.RecyclerViewItemClickListener;
 import aplication.mjo.misioncba.com.mjomisioncbaapp.section.locations.list.detail.LocationDetailGeneratorData;
 import aplication.mjo.misioncba.com.mjomisioncbaapp.section.locations.list.detail.LocationDetailItemList;

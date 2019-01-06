@@ -18,9 +18,9 @@ import java.util.List;
 
 import aplication.mjo.misioncba.com.mjomisioncbaapp.MisionCbaApplication;
 import aplication.mjo.misioncba.com.mjomisioncbaapp.R;
-import aplication.mjo.misioncba.com.mjomisioncbaapp.model.ItineraryDay;
-import aplication.mjo.misioncba.com.mjomisioncbaapp.model.ItineraryDayEvent;
-import aplication.mjo.misioncba.com.mjomisioncbaapp.model.SectionItinerary;
+import aplication.mjo.misioncba.com.mjomisioncbaapp.model.Itinerary.ItineraryDay;
+import aplication.mjo.misioncba.com.mjomisioncbaapp.model.Itinerary.ItineraryDayEvent;
+import aplication.mjo.misioncba.com.mjomisioncbaapp.model.Itinerary.SectionItinerary;
 
 import static aplication.mjo.misioncba.com.mjomisioncbaapp.MainActivity.KEY_PREFRENCES_FILE_NAME;
 import static aplication.mjo.misioncba.com.mjomisioncbaapp.MainActivity.KEY_PREFRENCES_SELECTED_INDEX;

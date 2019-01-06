@@ -1,7 +1,7 @@
 package aplication.mjo.misioncba.com.mjomisioncbaapp.section.itinerary;
 
 
-import aplication.mjo.misioncba.com.mjomisioncbaapp.model.ItineraryDayEvent;
+import aplication.mjo.misioncba.com.mjomisioncbaapp.model.Itinerary.ItineraryDayEvent;
 
 /**
  * Created by jucastillo on 28/12/16.

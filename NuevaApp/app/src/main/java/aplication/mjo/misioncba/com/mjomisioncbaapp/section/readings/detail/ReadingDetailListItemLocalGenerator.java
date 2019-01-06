@@ -5,8 +5,8 @@ import android.content.Context;
 import java.util.ArrayList;
 import java.util.List;
 
-import aplication.mjo.misioncba.com.mjomisioncbaapp.model.ReadingJsonModel;
-import aplication.mjo.misioncba.com.mjomisioncbaapp.model.ReadingJsonProvider;
+import aplication.mjo.misioncba.com.mjomisioncbaapp.model.Reading.Local.ReadingJsonModel;
+import aplication.mjo.misioncba.com.mjomisioncbaapp.model.Reading.Local.ReadingJsonProvider;
 import aplication.mjo.misioncba.com.mjomisioncbaapp.section.readings.Readings;
 
 

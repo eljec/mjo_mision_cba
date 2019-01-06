@@ -5,7 +5,7 @@ import java.util.List;
 
 import aplication.mjo.misioncba.com.mjomisioncbaapp.model.Reading.ReadingDay;
 import aplication.mjo.misioncba.com.mjomisioncbaapp.model.Reading.ReadingDayReading;
-import aplication.mjo.misioncba.com.mjomisioncbaapp.model.Reading.ReadingTextContentModel;
+import aplication.mjo.misioncba.com.mjomisioncbaapp.model.Reading.GenericTextContentModel;
 import aplication.mjo.misioncba.com.mjomisioncbaapp.model.Reading.SectionReadings;
 import aplication.mjo.misioncba.com.mjomisioncbaapp.section.readings.Readings;
 
@@ -48,7 +48,7 @@ public class ReadingDetailListItemServerGenerator implements ReadingDetailListIt
     }
 
 
-    private String processContentModel (ReadingTextContentModel model) {
+    private String processContentModel (GenericTextContentModel model) {
 
         StringBuilder textBuilder = new StringBuilder();
 
